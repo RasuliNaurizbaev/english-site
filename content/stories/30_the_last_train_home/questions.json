@@ -1,0 +1,103 @@
+{
+  "questions": [
+    {
+      "type": "choice",
+      "q": "Why did Clare go to the concert alone?",
+      "options": [
+        "Her friend Jess was ill and cancelled",
+        "She couldn't buy a second ticket",
+        "She preferred to go to concerts alone"
+      ],
+      "answer": 0,
+      "explain": "Подруга Джесс обещала пойти, но заболела и отменила поездку в последний момент."
+    },
+    {
+      "type": "tf",
+      "q": "The concert finished later than it was supposed to.",
+      "answer": true,
+      "explain": "Верно: концерт должен был закончиться в половине одиннадцатого, а свет включили в десять минут двенадцатого."
+    },
+    {
+      "type": "choice",
+      "q": "Who told Clare about the night bus to Ashford?",
+      "options": [
+        "A woman in the ticket office",
+        "An old man who was cleaning the floor",
+        "The singer of the band"
+      ],
+      "answer": 1,
+      "explain": "Старик, который мыл пол на станции, рассказал ей о ночном автобусе."
+    },
+    {
+      "type": "tf",
+      "q": "When Clare arrived in Ashford, the station was still open.",
+      "answer": false,
+      "explain": "Неверно: станция была закрыта, как и предупреждал водитель автобуса."
+    },
+    {
+      "type": "choice",
+      "q": "Clare said, \"I'm so sorry to bother you.\" What does \"bother\" mean here?",
+      "options": [
+        "To help someone",
+        "To pay someone",
+        "To disturb someone"
+      ],
+      "answer": 2,
+      "explain": "«Bother» — беспокоить, мешать кому-то."
+    },
+    {
+      "type": "choice",
+      "q": "Why had the band been stuck in Ashford thirty years ago?",
+      "options": [
+        "There was a snowstorm",
+        "Their van had broken down",
+        "They had missed the last train"
+      ],
+      "answer": 1,
+      "explain": "После концерта в пабе их фургон сломался, и они застряли в городе на ночь."
+    },
+    {
+      "type": "tf",
+      "q": "Margaret was thinking of closing her shop.",
+      "answer": true,
+      "explain": "Верно: после смерти мужа магазин еле держался, и она думала его закрыть."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Clare's post become so important for the band?",
+      "options": [
+        "It showed that the band was going to stop playing",
+        "It helped them sell more concert tickets",
+        "They had been looking for the shop for years but had forgotten the town's name"
+      ],
+      "answer": 2,
+      "explain": "Певец написал, что они годами искали этот магазин, но забыли название города."
+    },
+    {
+      "type": "tf",
+      "q": "The band played a big concert in the city to help Margaret.",
+      "answer": false,
+      "explain": "Неверно: группа дала небольшой бесплатный концерт в пабе напротив магазина Маргарет в Эшфорде."
+    },
+    {
+      "type": "choice",
+      "q": "What was in the package that Margaret gave Clare?",
+      "options": [
+        "A piano book and a note",
+        "The signed record",
+        "A train ticket"
+      ],
+      "answer": 0,
+      "explain": "В свёртке была книга для фортепиано и записка."
+    }
+  ],
+  "retell": [
+    "Why was the concert important to Clare, and why did she go alone?",
+    "How did Clare miss the last train?",
+    "How did she get to Ashford, and what was the town like at night?",
+    "Who did Clare meet, and how was she welcomed?",
+    "What was the story of the signed record?",
+    "What happened after Clare wrote a post on the train?",
+    "How did the story end for Margaret and for Clare?"
+  ]
+}

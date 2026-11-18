@@ -1,0 +1,103 @@
+{
+  "questions": [
+    {
+      "type": "tf",
+      "q": "Jake worked as a software developer for a large bank.",
+      "answer": true,
+      "explain": "Верно: Джейк был разработчиком программ в крупном банке."
+    },
+    {
+      "type": "choice",
+      "q": "Why did the old farmer often have to throw away food?",
+      "options": [
+        "His vegetables were not fresh",
+        "When it rained, many people stayed at home",
+        "He grew too many tomatoes"
+      ],
+      "answer": 1,
+      "explain": "Фермер сказал, что в дождь половина покупателей остаётся дома, и еду приходится выбрасывать."
+    },
+    {
+      "type": "choice",
+      "q": "What did Nina do for the project?",
+      "options": [
+        "She talked to the farmers and planned the advertising",
+        "She wrote the code for the app",
+        "She lent Jake money from her parents"
+      ],
+      "answer": 0,
+      "explain": "Джейк писал код, а Нина общалась с фермерами и планировала рекламу."
+    },
+    {
+      "type": "tf",
+      "q": "All the farmers were enthusiastic about the app from the start.",
+      "answer": false,
+      "explain": "Неверно: некоторые пожилые фермеры никогда не пользовались смартфоном, а один не хотел учиться."
+    },
+    {
+      "type": "choice",
+      "q": "In the text, the pitch is called \"a disaster\". What does this word mean here?",
+      "options": [
+        "A big success",
+        "A natural event like a storm",
+        "Something that went very badly"
+      ],
+      "answer": 2,
+      "explain": "«A disaster» здесь значит, что выступление прошло очень плохо."
+    },
+    {
+      "type": "choice",
+      "q": "Which question could Jake not answer clearly at the competition?",
+      "options": [
+        "How many farmers used the app",
+        "How they would make money",
+        "Why they had chosen the name"
+      ],
+      "answer": 1,
+      "explain": "Миссис Грант спросила, как они будут зарабатывать, и Джейк не смог ответить ясно."
+    },
+    {
+      "type": "tf",
+      "q": "Jake and Nina won fifty thousand pounds in the competition.",
+      "answer": false,
+      "explain": "Неверно: они не выиграли, и их даже не упомянули в конце."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Nina ask Jake to come to the market?",
+      "options": [
+        "To show him that people were really using the app",
+        "To introduce him to an investor",
+        "To help a farmer sell honey"
+      ],
+      "answer": 0,
+      "explain": "Нина хотела показать, что люди пользуются приложением каждую неделю, значит идея работает."
+    },
+    {
+      "type": "tf",
+      "q": "Mrs Grant's parents had a farm and liked the app.",
+      "answer": true,
+      "explain": "Верно: у родителей миссис Грант была ферма, они скачали приложение, и оно им понравилось."
+    },
+    {
+      "type": "choice",
+      "q": "What did Mrs Grant's money pay for?",
+      "options": [
+        "A new office in the city",
+        "The servers for a year and bringing the app to three more towns",
+        "Advertising on national television"
+      ],
+      "answer": 1,
+      "explain": "Денег хватило на серверы на год и на запуск приложения ещё в трёх городах."
+    }
+  ],
+  "retell": [
+    "What did Jake and Nina use to do every Saturday?",
+    "What problem did the old farmer describe?",
+    "How did they build and test Market Basket?",
+    "Why did they need an investor?",
+    "What went wrong at the pitch?",
+    "What did they change after the competition?",
+    "How did Mrs Grant help them, and how did the story end?"
+  ]
+}

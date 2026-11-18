@@ -1,0 +1,103 @@
+{
+  "questions": [
+    {
+      "type": "tf",
+      "q": "Emma used to spend every summer with her great-aunt Margaret.",
+      "answer": true,
+      "explain": "Верно: в детстве Эмма проводила каждое лето у тёти Маргарет."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Emma feel guilty?",
+      "options": [
+        "She had sold her aunt's house",
+        "She had lost some of her aunt's books",
+        "She had not visited her aunt for nearly fifteen years"
+      ],
+      "answer": 2,
+      "explain": "Она всё собиралась навестить тётю, но так и не нашла времени, а теперь было поздно."
+    },
+    {
+      "type": "choice",
+      "q": "What did the property company want to do with the shop?",
+      "options": [
+        "Turn it into a holiday flat",
+        "Open a new supermarket",
+        "Build a café"
+      ],
+      "answer": 0,
+      "explain": "Компания хотела превратить магазин в квартиру для отдыхающих."
+    },
+    {
+      "type": "tf",
+      "q": "Leila advised Emma to sell the shop immediately.",
+      "answer": false,
+      "explain": "Неверно: Лейла сказала, что на её месте хотя бы попробовала бы спасти магазин."
+    },
+    {
+      "type": "choice",
+      "q": "What brought in some money immediately?",
+      "options": [
+        "The story hour on Saturdays",
+        "Selling rare books online",
+        "The book club in the evenings"
+      ],
+      "answer": 1,
+      "explain": "Эмма сделала сайт и стала продавать редкие книги онлайн, что сразу принесло деньги."
+    },
+    {
+      "type": "tf",
+      "q": "Only three children came to the first story hour.",
+      "answer": true,
+      "explain": "Верно: в первую субботу пришли только трое детей."
+    },
+    {
+      "type": "choice",
+      "q": "In the text, Emma's \"heart sank\" when she saw the accounts. What does this mean?",
+      "options": [
+        "She felt very happy",
+        "She felt ill and needed a doctor",
+        "She felt disappointed and worried"
+      ],
+      "answer": 2,
+      "explain": "«Her heart sank» значит, что она расстроилась и встревожилась, увидев убытки."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Mrs Collins want to work with the bookshop?",
+      "options": [
+        "The school library had been closed because there was no money",
+        "She wanted to buy the building",
+        "Her son needed a part-time job"
+      ],
+      "answer": 0,
+      "explain": "Школьную библиотеку закрыли из-за нехватки денег, поэтому школа предложила занятия в магазине."
+    },
+    {
+      "type": "tf",
+      "q": "Emma left her accounting job completely.",
+      "answer": false,
+      "explain": "Неверно: она перешла на неполный день и работала бухгалтером три дня в неделю."
+    },
+    {
+      "type": "choice",
+      "q": "Who started the campaign \"Save Margaret's Books\"?",
+      "options": [
+        "Arthur",
+        "The teenagers",
+        "A journalist"
+      ],
+      "answer": 1,
+      "explain": "Подростки тайно запустили онлайн-кампанию в поддержку магазина."
+    }
+  ],
+  "retell": [
+    "What news did Emma receive in October?",
+    "What did Emma remember about her childhood in Hollow Bay?",
+    "What did Emma find when she visited the shop?",
+    "What offer did the property company make?",
+    "How did Emma try to save the shop?",
+    "What happened after the three months?",
+    "What was the shop like a year later?"
+  ]
+}

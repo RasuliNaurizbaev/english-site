@@ -1,0 +1,23 @@
+{
+  "questions": [
+    {"type": "tf", "q": "Maya was excited about the project from the very first day.", "answer": false, "explain": "Неверно: Майя застонала громче всех, потому что надеялась на что-то интереснее."},
+    {"type": "choice", "q": "Whose idea was it to count the school's rubbish?", "options": ["Leo's", "Priya's", "Sam's"], "answer": 2, "explain": "Именно тихий Сэм предложил на самом деле посчитать мусор."},
+    {"type": "choice", "q": "Why did the group count the rubbish instead of making a poster?", "options": ["They wanted real numbers as evidence", "Ms Okafor told them to", "They didn't have paper for a poster"], "answer": 0, "explain": "Сэм сказал, что так у них будут реальные цифры, а Прия считала, что плакат ничего не изменит."},
+    {"type": "tf", "q": "After the changes, the school's rubbish was reduced by almost half within two months.", "answer": true, "explain": "Верно: за два месяца количество мусора в школе сократилось почти вдвое."},
+    {"type": "choice", "q": "What made Maya think about changing the whole town?", "options": ["A video she saw online", "The full bins outside the shopping centre", "A letter from the council"], "answer": 1, "explain": "В субботу она увидела переполненные урны у торгового центра с пластиковыми стаканами и бутылками."},
+    {"type": "choice", "q": "What did Priya learn from the town in the north?", "options": ["Many cafés there had closed", "Customers there didn't like the new rule", "The cafés there had actually saved money"], "answer": 2, "explain": "Из ответа совета выяснилось, что кафе там даже сэкономили деньги."},
+    {"type": "tf", "q": "The petition was signed by more than three thousand people.", "answer": true, "explain": "Верно: к февралю петицию подписали более трёх тысяч человек."},
+    {"type": "choice", "q": "Why did Mr Hale's speech surprise people at the meeting?", "options": ["He had been rude to the students at first, but now he supported them", "He was against the new rule", "He was a member of the council"], "answer": 0, "explain": "Сначала он грубо прогнал ребят, а на собрании признал, что их идея сработала."},
+    {"type": "choice", "q": "In the text, the rule \"came into force\" the next January. What does this mean?", "options": ["It was cancelled", "It started to be used officially", "It was discussed again"], "answer": 1, "explain": "«Come into force» значит вступить в силу, начать официально действовать."},
+    {"type": "tf", "q": "Ms Okafor had planned from the beginning that the project would change the town's rules.", "answer": false, "explain": "Неверно: она честно сказала, что просто хотела, чтобы ученики посчитали мусор."}
+  ],
+  "retell": [
+    "What task did Ms Okafor give the class?",
+    "How did Maya's group study the school's rubbish, and what did they find?",
+    "What changes did the school make?",
+    "What did Maya notice in the town centre?",
+    "How did the group run their campaign?",
+    "What happened at the council meeting?",
+    "What did the council decide, and how did the story end?"
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "questions": [
+    {
+      "type": "tf",
+      "q": "The restaurant was opened by Giorgio Rossi in 1976.",
+      "answer": true,
+      "explain": "Верно: ресторан открыл Джорджо Росси в 1976 году, когда только приехал в Англию."
+    },
+    {
+      "type": "choice",
+      "q": "Why did fewer people come to Station Road in the evenings?",
+      "options": [
+        "The road was closed for repairs",
+        "A new shopping centre with modern restaurants had been built",
+        "The prices at Rossi's had become too high"
+      ],
+      "answer": 1,
+      "explain": "На другом конце города построили торговый центр с десятью современными ресторанами и бесплатной парковкой."
+    },
+    {
+      "type": "tf",
+      "q": "Giorgio agreed with Elena's plan at the first family meeting.",
+      "answer": false,
+      "explain": "Неверно: он сказал, что люди приходят именно потому, что ресторан старый, и молча ушёл на кухню."
+    },
+    {
+      "type": "choice",
+      "q": "Who was the rude waiter in the bad review?",
+      "options": [
+        "Marco",
+        "Elena",
+        "A new waiter from the shopping centre"
+      ],
+      "answer": 0,
+      "explain": "Марко признался, что это был он: в тот день повар болел, и он одновременно готовил и обслуживал."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Giorgio finally accept Elena's plan?",
+      "options": [
+        "Because Marco forced him",
+        "Because he wanted to sell the restaurant",
+        "Because he understood he had stopped looking at the present"
+      ],
+      "answer": 2,
+      "explain": "Джорджо понял, что так гордился прошлым, что перестал видеть настоящее."
+    },
+    {
+      "type": "choice",
+      "q": "In the text, Giorgio \"insisted on doing something too\". What does \"insisted on\" mean here?",
+      "options": [
+        "He refused to do it",
+        "He said firmly that he wanted to do it",
+        "He forgot to do it"
+      ],
+      "answer": 1,
+      "explain": "«Insist on doing» — настаивать на том, чтобы что-то сделать."
+    },
+    {
+      "type": "tf",
+      "q": "Elena invited the writer of the bad review to a free dinner.",
+      "answer": true,
+      "explain": "Верно: она написала вежливое письмо и пригласила автора на бесплатный ужин в вечер открытия."
+    },
+    {
+      "type": "choice",
+      "q": "Why was Mrs Clarke surprised by Elena's message?",
+      "options": [
+        "Because most restaurants just argue with her",
+        "Because she had never written a review before",
+        "Because she had forgotten about the restaurant"
+      ],
+      "answer": 0,
+      "explain": "Миссис Кларк написала, что большинство ресторанов просто спорят с ней."
+    },
+    {
+      "type": "tf",
+      "q": "Mrs Clarke wrote a second bad review after the opening night.",
+      "answer": false,
+      "explain": "Неверно: её новый отзыв был с пятью звёздами."
+    },
+    {
+      "type": "choice",
+      "q": "What does Giorgio do every afternoon now?",
+      "options": [
+        "He writes reviews of other restaurants",
+        "He works as a waiter on Saturdays",
+        "He makes the pasta by hand"
+      ],
+      "answer": 2,
+      "explain": "Джорджо каждый день после обеда приходит делать пасту вручную."
+    }
+  ],
+  "retell": [
+    "What was the history of Rossi's restaurant?",
+    "Why were there fewer customers?",
+    "What did Elena suggest, and how did her grandfather react?",
+    "What did the bad online review say?",
+    "What did Giorgio say after reading the review?",
+    "How did the family change the restaurant?",
+    "What happened on the opening night and after it?"
+  ]
+}

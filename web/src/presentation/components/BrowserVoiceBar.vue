@@ -29,7 +29,7 @@ defineExpose({ readFrom });
 
 <template>
   <div class="voice-bar">
-    <div class="voice-note">🗣 Читает голос браузера ({{ reader.voiceName() }}) — {{ reason }}.</div>
+    <div class="voice-note">🗣 Читает голос браузера{{ reader.voiceName() ? ` (${reader.voiceName()})` : "" }} — {{ reason }}.</div>
     <div class="voice-controls">
       <button class="small primary-small" @click="togglePlay">{{ playLabel }}</button>
       <button class="small" title="Остановить" @click="stop">■</button>

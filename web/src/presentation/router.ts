@@ -6,7 +6,7 @@ import { createRouter, createWebHashHistory, type RouteRecordRaw } from "vue-rou
 
 declare module "vue-router" {
   interface RouteMeta {
-    tab: "today" | "stories" | "words" | "grammar" | "audio";
+    tab: "today" | "stories" | "words" | "grammar" | "practice" | "audio";
     reader?: boolean;            // показать настройки чтения в шапке
   }
 }
@@ -19,6 +19,12 @@ const routes: RouteRecordRaw[] = [
   { path: "/words/:level?", name: "words", component: () => import("./pages/WordsPage.vue"), props: true, meta: { tab: "words" } },
   { path: "/grammar", name: "grammar", component: () => import("./pages/GrammarListPage.vue"), meta: { tab: "grammar" } },
   { path: "/grammar/:id", name: "grammarTopic", component: () => import("./pages/GrammarTopicPage.vue"), props: true, meta: { tab: "grammar" } },
+  { path: "/practice", name: "practice", component: () => import("./pages/PracticePage.vue"), meta: { tab: "practice" } },
+  { path: "/tests", name: "tests", component: () => import("./pages/TestsPage.vue"), meta: { tab: "practice" } },
+  { path: "/tests/:id", name: "testRun", component: () => import("./pages/TestRunPage.vue"), props: true, meta: { tab: "practice" } },
+  { path: "/mistakes", name: "mistakes", component: () => import("./pages/MistakesPage.vue"), meta: { tab: "practice" } },
+  { path: "/verbs", name: "verbs", component: () => import("./pages/VerbsPage.vue"), meta: { tab: "practice" } },
+  { path: "/dictation/:id", name: "dictation", component: () => import("./pages/DictationPage.vue"), props: true, meta: { tab: "practice" } },
   { path: "/audio/:level?", name: "audio", component: () => import("./pages/AudioPage.vue"), props: true, meta: { tab: "audio" } },
   { path: "/:pathMatch(.*)*", name: "notFound", component: () => import("./pages/NotFoundPage.vue"), meta: { tab: "today" } },
 ];

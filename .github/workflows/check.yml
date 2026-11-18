@@ -1,0 +1,53 @@
+# Проверка проекта при каждом push и pull request:
+# контент (Python) → данные сайта → типы → модульные тесты → сборка → тесты в браузере (Playwright).
+name: Проверка
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Проверка контента (грамматика, вопросы, тесты, глаголы)
+        working-directory: .
+        run: python3 tools/validate_content.py
+
+      - name: Сборка данных сайта
+        working-directory: .
+        run: python3 tools/build_site_data.py
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - run: npm ci
+
+      - name: Браузер для тестов
+        run: npx playwright install --with-deps chromium
+
+      - name: Типы, модульные тесты, сборка, тесты в браузере
+        run: npm run check
+        env:
+          CI: "true"
+
+      - name: Отчёт Playwright (если тесты упали)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: web/playwright-report
+          retention-days: 7

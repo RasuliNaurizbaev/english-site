@@ -57,7 +57,8 @@ export function useBrowserReader() {
     speechSynthesis.cancel();
   }
 
-  const voiceName = () => (browserVoiceSupported ? pickVoice()?.name : null) ?? "голос браузера";
+  /** Название голоса, если браузер его сообщает (иначе null). */
+  const voiceName = (): string | null => (browserVoiceSupported ? pickVoice()?.name ?? null : null);
 
   onUnmounted(stop);                  // ушли со страницы — замолчать
   return { reading, paused, speed, start, pause, resume, stop, voiceName };

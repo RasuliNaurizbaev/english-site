@@ -4,16 +4,25 @@ import { ProgressRepository } from "@/data/progressRepository";
 import type { KeyValueStorage } from "@/data/storage";
 import { dayNumber } from "@/domain/text";
 import { WordReviewService } from "./wordReview";
+import { MistakesService } from "./mistakesService";
+import { AiTestService } from "./aiTests";
 
 export interface Services {
   content: ContentRepository;
   progress: ProgressRepository;
   review: WordReviewService;
+  mistakes: MistakesService;
+  aiTests: AiTestService;
   today: () => number;
 }
 
 export function createServices(content: ContentRepository, storage: KeyValueStorage): Services {
   const today = () => dayNumber();
   const progress = new ProgressRepository(storage, today);
-  return { content, progress, review: new WordReviewService(content, progress, today), today };
+  return {
+    content, progress, today,
+    review: new WordReviewService(content, progress, today),
+    mistakes: new MistakesService(content, progress, today),
+    aiTests: new AiTestService(progress),
+  };
 }

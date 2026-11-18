@@ -1,0 +1,23 @@
+{
+  "questions": [
+    {"type": "tf", "q": "Lena found the advertisement for film extras herself.", "answer": false, "explain": "Неверно: объявление в интернете ей показала соседка по квартире Хлоя."},
+    {"type": "choice", "q": "What role was Lena given in the film?", "options": ["A flower seller", "A woman at the market", "A waitress"], "answer": 1, "explain": "Её выбрали на роль «женщины на рынке» в сцене 1890 года."},
+    {"type": "choice", "q": "Why did the make-up artist make Lena's face look tired and dirty?", "options": ["Because market women worked hard and didn't look like film stars", "Because Lena asked her to", "Because the scene was filmed in the rain"], "answer": 0, "explain": "Гримёр объяснила, что рыночные женщины много работали и не выглядели как кинозвёзды."},
+    {"type": "tf", "q": "Frank said that most of an extra's job is waiting.", "answer": true, "explain": "Верно: Фрэнк сказал, что девяносто процентов этой работы — ожидание."},
+    {"type": "choice", "q": "What did Frank say was his best role?", "options": ["A soldier", "A passenger on a ship", "A dead body"], "answer": 2, "explain": "Фрэнк сказал, что лучшей ролью было мёртвое тело, потому что он весь день лежал."},
+    {"type": "choice", "q": "What happened on the tenth take?", "options": ["The horse ran away", "Lena tripped and dropped her basket of potatoes", "James Morland fell off his horse"], "answer": 1, "explain": "На десятом дубле Лена споткнулась о камень и уронила корзину с картошкой."},
+    {"type": "tf", "q": "The director was angry and sent Lena home.", "answer": false, "explain": "Неверно: режиссёр улыбалась, сказала, что это было чудесно, и попросила повторить."},
+    {"type": "choice", "q": "In the text, Lena \"froze\" when the potatoes rolled under the horse. What does this mean?", "options": ["She felt very cold", "She started to run", "She stopped moving because of shock"], "answer": 2, "explain": "Здесь «froze» значит, что она застыла на месте от испуга."},
+    {"type": "choice", "q": "Why did Lena not tell her family about the film at first?", "options": ["Frank had warned her that many scenes are cut from the final film", "She was embarrassed about her mistake", "The film company told her to keep it secret"], "answer": 0, "explain": "Фрэнк предупредил, что многие сцены вырезают, и посоветовал не рассказывать, пока она не увидит фильм."},
+    {"type": "tf", "q": "In an interview, James Morland said the potato scene was his favourite moment.", "answer": true, "explain": "Верно: в интервью он назвал сцену с картошкой своим любимым моментом съёмок."}
+  ],
+  "retell": [
+    "Why did Lena decide to work as a film extra?",
+    "What did the film set look like when she arrived?",
+    "How did Lena spend the long hours of waiting?",
+    "What was the scene about, and who was the main actor?",
+    "What mistake did Lena make, and how did James Morland react?",
+    "What did the director and the actor say after the mistake?",
+    "What happened when the film came out?"
+  ]
+}

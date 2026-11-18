@@ -1,0 +1,103 @@
+{
+  "questions": [
+    {
+      "type": "choice",
+      "q": "Why did Maya decide to share a flat?",
+      "options": [
+        "She wanted to make new friends",
+        "She couldn't afford to rent a flat on her own",
+        "Her company told her to"
+      ],
+      "answer": 1,
+      "explain": "Цены были намного выше, чем она ожидала, и она не могла позволить себе снимать квартиру одна."
+    },
+    {
+      "type": "tf",
+      "q": "Greg worked as a taxi driver at night.",
+      "answer": true,
+      "explain": "Верно: Грег — таксист, работал по ночам и спал днём."
+    },
+    {
+      "type": "choice",
+      "q": "What started the worst argument in November?",
+      "options": [
+        "Someone had eaten Greg's cheese",
+        "Sofia had broken the washing machine",
+        "Kevin had burnt the kitchen"
+      ],
+      "answer": 0,
+      "explain": "Грег вернулся после ночной смены и обнаружил, что кто-то съел его подписанный сыр."
+    },
+    {
+      "type": "tf",
+      "q": "After the argument, the flatmates talked to each other more.",
+      "answer": false,
+      "explain": "Неверно: несколько недель они почти не разговаривали и оставляли записки на холодильнике."
+    },
+    {
+      "type": "choice",
+      "q": "Where did the fire start?",
+      "options": [
+        "In Kevin's room",
+        "In Greg's taxi",
+        "In the bakery downstairs"
+      ],
+      "answer": 2,
+      "explain": "Дым шёл из-под пола, из пекарни внизу, где оставили включённой электрическую печь."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Sofia run back to her room?",
+      "options": [
+        "To get her phone",
+        "To get her grandfather's violin",
+        "To wake up Greg"
+      ],
+      "answer": 1,
+      "explain": "Она побежала за скрипкой, которая принадлежала её дедушке."
+    },
+    {
+      "type": "tf",
+      "q": "Kevin finally admitted that he had eaten Greg's cheese.",
+      "answer": true,
+      "explain": "Верно: в такси Кевин тихо признался, что съел сыр Грега в ноябре."
+    },
+    {
+      "type": "choice",
+      "q": "Why had Greg been so strict about the rules?",
+      "options": [
+        "The owner of the flat had asked him to be strict",
+        "He had been a teacher before",
+        "His wife had left him, and the flat was the only thing he felt in control of"
+      ],
+      "answer": 2,
+      "explain": "Жена ушла от него восемь лет назад, и квартира была единственным, что он ещё контролировал."
+    },
+    {
+      "type": "choice",
+      "q": "Sofia was afraid of \"letting them down\". What does \"let someone down\" mean?",
+      "options": [
+        "To disappoint someone",
+        "To help someone",
+        "To call someone"
+      ],
+      "answer": 0,
+      "explain": "«Let someone down» — подвести, разочаровать кого-то."
+    },
+    {
+      "type": "tf",
+      "q": "The new list of flat rules was longer than Greg's old list.",
+      "answer": false,
+      "explain": "Неверно: в новом списке было только пять правил, а в старом — двадцать три."
+    }
+  ],
+  "retell": [
+    "Why did Maya move into the flat, and who lived there?",
+    "What were Greg's rules like?",
+    "What problems did the flatmates have?",
+    "What happened at the flat meeting in November?",
+    "What happened on the night of the fire?",
+    "What did the flatmates learn about each other at Greg's sister's house?",
+    "How did life in the flat change in the end?"
+  ]
+}

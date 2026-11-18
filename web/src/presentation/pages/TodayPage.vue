@@ -3,7 +3,7 @@
 import { computed, ref } from "vue";
 import { useServices } from "../composables/useServices";
 import { breakIfRequested } from "../problems";
-import { audioPlan, grammarPlan, storyPlan, wordsPlan, type PlanItem } from "@/application/todayPlan";
+import { audioPlan, grammarPlan, mistakesPlan, storyPlan, wordsPlan, type PlanItem } from "@/application/todayPlan";
 import { plural } from "@/domain/text";
 import type { Level } from "@/domain/types";
 import PlanCard from "../components/PlanCard.vue";
@@ -35,7 +35,8 @@ const plan = computed(() => {
   void version.value;
   const builders: [string, () => PlanItem | null][] = [
     ["Слова", () => wordsPlan(services, today)], ["Рассказ", () => storyPlan(services, today)],
-    ["Грамматика", () => grammarPlan(services, today)], ["Аудио", () => audioPlan(services, today)],
+    ["Грамматика", () => grammarPlan(services, today)], ["Мои ошибки", () => mistakesPlan(services)],
+    ["Аудио", () => audioPlan(services, today)],
   ];
   return builders.map(([title, build]) => {
     try {

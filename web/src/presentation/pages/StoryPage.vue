@@ -10,8 +10,7 @@ import { computed, ref } from "vue";
 import { useServices } from "../composables/useServices";
 import { useReaderSettings } from "../composables/useReaderSettings";
 import { browserVoiceSupported } from "../composables/useBrowserReader";
-import { breakIfRequested, reportProblem } from "../problems";
-import { createWordFinder, NO_WORD_FINDER, type WordFinder } from "@/domain/wordForms";
+import { breakIfRequested } from "../problems";
 import type { StoryWord } from "@/domain/types";
 import SafeSection from "../components/SafeSection.vue";
 import StoryAudioPlayer from "../components/StoryAudioPlayer.vue";
@@ -23,21 +22,9 @@ import NotFoundPage from "./NotFoundPage.vue";
 
 breakIfRequested("storyPages");
 const props = defineProps<{ id: string }>();
-const { content, progress } = useServices();
+const { content, progress, review } = useServices();
 const settings = useReaderSettings(progress);
 const story = computed(() => content.story(props.id));
-
-// ---------- подсветка слов (если сломается — текст без подсветки) ----------
-const finder = computed<WordFinder>(() => {
-  if (!story.value) return NO_WORD_FINDER;
-  try {
-    breakIfRequested("wordForms");
-    return createWordFinder(story.value.words);
-  } catch (error) {
-    reportProblem("подсветка слов", error);
-    return NO_WORD_FINDER;
-  }
-});
 
 // ---------- кто читает вслух ----------
 type Mode = "mp3" | "browser" | "none";
@@ -63,13 +50,22 @@ function playFrom(index: number) {
   else if (mode.value === "browser") voiceBar.value?.readFrom(index);
 }
 
+// ---------- слова рассказа → в повторение (карточки) ----------
+const storyWordKeys = computed(() => (story.value?.words ?? []).map(w => w.level + "|" + w.en));
+const newWordsCount = ref(storyWordKeys.value.filter(k => review.status(k) === "new").length);
+const addedWords = ref<number | null>(null);
+function addStoryWords() {
+  addedWords.value = review.addWords(storyWordKeys.value);
+  newWordsCount.value = 0;
+}
+
 // ---------- перевод слова ----------
 const popover = ref<InstanceType<typeof WordPopover> | null>(null);
-function showWord(element: HTMLElement, word: StoryWord) { popover.value?.show(element, word); }
+function showWord(element: HTMLElement, meanings: StoryWord[]) { popover.value?.show(element, meanings); }
 
 function levelCounts() {
   const counts: Record<string, number> = {};
-  story.value?.words.forEach(w => { counts[w.level] = (counts[w.level] ?? 0) + 1; });
+  story.value?.words.forEach(w => { counts[w.level] = (counts[w.level] ?? 0) + 1; });   // уникальные словарные записи
   return Object.entries(counts).sort();
 }
 </script>
@@ -97,13 +93,20 @@ function levelCounts() {
     <p v-if="canPlay" class="hint-line">▶ Нажмите на предложение, чтобы послушать его. Нажмите на подсвеченное слово, чтобы увидеть перевод.</p>
 
     <SafeSection title="Текст рассказа">
-      <StoryText :story="story" :finder="finder" :current-sentence="currentSentence" :scroll-to-current="scrollToCurrent"
+      <StoryText :story="story" :current-sentence="currentSentence" :scroll-to-current="scrollToCurrent"
         :clickable="canPlay" :highlight="settings.highlight" :translate="settings.translate"
         @sentence-click="playFrom" @word-click="showWord" />
     </SafeSection>
 
+    <div class="story-actions">
+      <button v-if="newWordsCount" class="small primary-small" @click="addStoryWords">➕ Добавить {{ newWordsCount }} новых слов рассказа в повторение</button>
+      <span v-else-if="addedWords" class="done-line">✓ Добавлено {{ addedWords }} слов — они уже в сегодняшнем повторении</span>
+      <span v-else class="muted">Все слова рассказа уже в повторении</span>
+      <RouterLink class="small story-dictation" :to="'/dictation/' + story.id">✍️ Диктант по рассказу</RouterLink>
+    </div>
+
     <SafeSection title="Задания">
-      <StoryTasks :key="story.id" :story="story" :finder="finder" />
+      <StoryTasks :key="story.id" :story="story" />
     </SafeSection>
 
     <SafeSection title="Перевод слов" silent>

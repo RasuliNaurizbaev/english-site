@@ -1,6 +1,6 @@
 """Формы английских слов: go → goes, went, gone, going; city → cities.
 
-Та же логика есть на сайте (site/js/domain/wordForms.js) — при изменении правьте оба файла.
+Используется в story_words.py. Сайт сам формы не ищет — получает готовые отметки из build_site_data.py.
 """
 import re
 

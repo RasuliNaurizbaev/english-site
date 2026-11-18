@@ -1,0 +1,103 @@
+{
+  "questions": [
+    {
+      "type": "tf",
+      "q": "Daniel's presentation was in Lisbon.",
+      "answer": true,
+      "explain": "Верно: он летел в Лиссабон, чтобы представить продукцию больничной сети."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Daniel put the heart monitor in his suitcase?",
+      "options": [
+        "It was too big for his hand luggage",
+        "He was worried it would be stopped at security",
+        "His boss told him to do it"
+      ],
+      "answer": 1,
+      "explain": "Он боялся, что образец задержат на досмотре, если взять его в ручную кладь."
+    },
+    {
+      "type": "choice",
+      "q": "Where was Daniel's suitcase at first?",
+      "options": [
+        "In Lyon",
+        "In London",
+        "At the hotel"
+      ],
+      "answer": 0,
+      "explain": "Сотрудница сказала, что чемодан отправили не тем рейсом и он, вероятно, в Лионе."
+    },
+    {
+      "type": "tf",
+      "q": "Mrs Hall was very angry when Daniel called her.",
+      "answer": false,
+      "explain": "Неверно: он ожидал, что она рассердится, но она была спокойна."
+    },
+    {
+      "type": "choice",
+      "q": "How did Tiago help Daniel?",
+      "options": [
+        "He lent Daniel his own suit",
+        "He drove Daniel to the airport",
+        "He asked his uncle to open his tailor's shop early"
+      ],
+      "answer": 2,
+      "explain": "Тиагу позвонил дяде-портному, и тот открыл мастерскую раньше ради Дэниела."
+    },
+    {
+      "type": "choice",
+      "q": "In the text, the tailor \"took in the trousers a little\". What does \"took in\" mean here?",
+      "options": [
+        "Made them a little narrower",
+        "Carried them into the shop",
+        "Washed them"
+      ],
+      "answer": 0,
+      "explain": "«Take in» об одежде значит ушить, сделать немного уже."
+    },
+    {
+      "type": "tf",
+      "q": "The tall man from the lift was one of the hospital's senior heart doctors.",
+      "answer": true,
+      "explain": "Верно: Дэниел с удивлением понял, что это один из ведущих кардиологов больницы."
+    },
+    {
+      "type": "choice",
+      "q": "Why did the doctor think Daniel was a good choice?",
+      "options": [
+        "Daniel's product was the cheapest",
+        "Daniel could solve problems, as he showed with the suitcase",
+        "Daniel spoke Portuguese very well"
+      ],
+      "answer": 1,
+      "explain": "Врач сказал, что человек, который так решает проблемы, решит и проблемы с оборудованием."
+    },
+    {
+      "type": "tf",
+      "q": "Daniel returned the tie to the tailor.",
+      "answer": false,
+      "explain": "Неверно: дядя Тиагу отказался забрать галстук и сказал оставить его себе."
+    },
+    {
+      "type": "choice",
+      "q": "What advice did Mrs Hall give Daniel at the end?",
+      "options": [
+        "Always fly a day earlier",
+        "Never take samples abroad",
+        "Pack a spare shirt in his hand luggage"
+      ],
+      "answer": 2,
+      "explain": "Она в шутку посоветовала в следующий раз взять запасную рубашку в ручную кладь."
+    }
+  ],
+  "retell": [
+    "Why was the trip to Lisbon so important for Daniel?",
+    "What happened at the baggage carousel?",
+    "How did Daniel feel at the hotel that night?",
+    "How did Tiago and his uncle help him?",
+    "How did Daniel solve the problem with the heart monitor?",
+    "What happened during the presentation?",
+    "How did the story end?"
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "questions": [
+    {
+      "type": "tf",
+      "q": "Harold had worked as a train driver for forty years.",
+      "answer": true,
+      "explain": "Верно: Гарольд сорок лет проработал машинистом поезда."
+    },
+    {
+      "type": "choice",
+      "q": "Who said he was calling from Harold's bank?",
+      "options": [
+        "A woman called Mrs Patel",
+        "A young man who called himself Daniel",
+        "A police officer"
+      ],
+      "answer": 1,
+      "explain": "Вежливый молодой человек представился Дэниелом из отдела по борьбе с мошенничеством банка."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Daniel tell Harold not to tell anyone about the call?",
+      "options": [
+        "He said the criminals might be watching and the family could be in danger",
+        "He said it was against the bank's rules to talk to neighbours",
+        "He said Lucy was one of the criminals"
+      ],
+      "answer": 0,
+      "explain": "Дэниел сказал, что преступники могут следить и даже семья может оказаться в опасности."
+    },
+    {
+      "type": "tf",
+      "q": "Harold transferred ten thousand pounds before Mrs Patel arrived.",
+      "answer": false,
+      "explain": "Неверно: он только собирался нажать кнопку, когда раздался стук в дверь, и ни один фунт не был потерян."
+    },
+    {
+      "type": "choice",
+      "q": "What did Lucy understand as soon as she heard the words \"safe account\"?",
+      "options": [
+        "That her grandfather needed a new tablet",
+        "That the bank had made a mistake",
+        "That it was a scam"
+      ],
+      "answer": 2,
+      "explain": "Услышав слова «безопасный счёт», Люси сразу поняла, что это мошенничество."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Harold feel ashamed?",
+      "options": [
+        "Because he had lost all his savings",
+        "Because he had nearly given his money to a stranger",
+        "Because he had been rude to Mrs Patel"
+      ],
+      "answer": 1,
+      "explain": "Он чувствовал стыд, что чуть не отдал все деньги незнакомцу по телефону."
+    },
+    {
+      "type": "tf",
+      "q": "The police officer said that more than forty similar calls had been reported.",
+      "answer": true,
+      "explain": "Верно: за последний месяц в их районе сообщили о более чем сорока похожих звонках."
+    },
+    {
+      "type": "choice",
+      "q": "In the text, Harold \"hesitated\" before the transfer. What does \"hesitate\" mean?",
+      "options": [
+        "To stop for a moment because you are not sure",
+        "To act very quickly",
+        "To shout angrily"
+      ],
+      "answer": 0,
+      "explain": "«Hesitate» — колебаться, медлить, потому что не уверен."
+    },
+    {
+      "type": "tf",
+      "q": "Only five or six people came to the first meeting.",
+      "answer": false,
+      "explain": "Неверно: Люси ожидала пять-шесть человек, а пришли тридцать два."
+    },
+    {
+      "type": "choice",
+      "q": "According to Lucy, what is the clearest warning of all?",
+      "options": [
+        "When someone calls you late at night",
+        "When someone asks about your health",
+        "When someone tells you to keep a secret from your family"
+      ],
+      "answer": 2,
+      "explain": "Люси сказала, что просьба скрыть что-то от семьи — самый явный тревожный сигнал."
+    }
+  ],
+  "retell": [
+    "Who was Harold and how did he live?",
+    "What did the man on the phone say and ask Harold to do?",
+    "How was Harold stopped before he lost his money?",
+    "What did Lucy and the real bank do?",
+    "How did Harold feel, and what did Lucy tell him?",
+    "What did the police officer tell them?",
+    "How did Harold and Lucy warn other people?"
+  ]
+}

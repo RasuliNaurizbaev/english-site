@@ -1,0 +1,103 @@
+{
+  "questions": [
+    {
+      "type": "tf",
+      "q": "Oliver used to pretend to be ill at school when he had to give a presentation.",
+      "answer": true,
+      "explain": "Верно: в школе он притворялся больным, когда нужно было выступать."
+    },
+    {
+      "type": "tf",
+      "q": "Ben asked Oliver to organise the whole wedding.",
+      "answer": false,
+      "explain": "Неверно: Бен попросил Оливера быть шафером и произнести речь."
+    },
+    {
+      "type": "tf",
+      "q": "When his mother asked in April, Oliver had already written most of the speech.",
+      "answer": false,
+      "explain": "Неверно: он сказал маме, что всё хорошо, но на самом деле не написал ни слова."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Oliver do nothing about the speech for the first two months?",
+      "options": [
+        "He was too busy at work",
+        "He thought Ben would change his mind",
+        "Thinking about it made him feel sick"
+      ],
+      "answer": 2,
+      "explain": "Каждый раз, когда он думал о речи, ему становилось плохо, и он просто перестал о ней думать."
+    },
+    {
+      "type": "choice",
+      "q": "What did Nadia think of the first speech?",
+      "options": [
+        "The jokes were fine, but it didn't sound like Oliver",
+        "It was too long",
+        "It was perfect"
+      ],
+      "answer": 0,
+      "explain": "Надя сказала, что шутки нормальные, но они могли быть о ком угодно и речь совсем не похожа на Оливера."
+    },
+    {
+      "type": "choice",
+      "q": "What did Oliver find in his old bedroom?",
+      "options": [
+        "A photo of Emma",
+        "A drawing that Ben had made when he was six",
+        "His old school presentation"
+      ],
+      "answer": 1,
+      "explain": "В шкафу он нашёл рисунок, который Бен сделал в шесть лет."
+    },
+    {
+      "type": "tf",
+      "q": "Ben used to be afraid of the dark when he was a child.",
+      "answer": true,
+      "explain": "Верно: маленький Бен боялся темноты и забирался в кровать к Оливеру."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Oliver put his paper down during the speech?",
+      "options": [
+        "Someone took it from him",
+        "He had learned the speech by heart",
+        "His mind went empty, and Ben's nod gave him courage to speak honestly"
+      ],
+      "answer": 2,
+      "explain": "Слова поплыли перед глазами, но, увидев кивок Бена, он отложил бумагу и заговорил честно."
+    },
+    {
+      "type": "choice",
+      "q": "In the text, the guests \"applauded\". What does this mean?",
+      "options": [
+        "They clapped their hands",
+        "They left the room",
+        "They started dancing"
+      ],
+      "answer": 0,
+      "explain": "«Applaud» значит аплодировать, хлопать в ладоши."
+    },
+    {
+      "type": "choice",
+      "q": "What important lesson did Oliver learn?",
+      "options": [
+        "Speeches must always start with a joke",
+        "People need you to be honest, not perfect or funny",
+        "It's better to read a speech from paper"
+      ],
+      "answer": 1,
+      "explain": "Он понял, что людям нужно не совершенство и не юмор, а честность."
+    }
+  ],
+  "retell": [
+    "What kind of person was Oliver, and how was he different from Ben?",
+    "What did Ben ask Oliver, and how did Oliver feel?",
+    "How did Oliver first try to write the speech?",
+    "What did Nadia say about it?",
+    "What did Oliver find at his parents' house, and what did he remember?",
+    "What happened when Oliver stood up to speak at the wedding?",
+    "How did people react, and what did Oliver learn?"
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "questions": [
+    {
+      "type": "tf",
+      "q": "Oliver used to hide in the changing room during football matches at school.",
+      "answer": true,
+      "explain": "Верно: в школе он прятался в раздевалке во время футбольных матчей."
+    },
+    {
+      "type": "choice",
+      "q": "Why was Oliver shocked after the health check?",
+      "options": [
+        "The nurse said he had broken his leg",
+        "His blood pressure was too high and he was too heavy",
+        "He had to stop working at the office"
+      ],
+      "answer": 1,
+      "explain": "Медсестра сказала, что у него высокое давление и лишние пятнадцать килограммов."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Oliver finally agree to run with Grace?",
+      "options": [
+        "Mainly to make her stop asking him",
+        "Because his doctor told him to",
+        "Because he wanted to win a race"
+      ],
+      "answer": 0,
+      "explain": "Грейс спрашивала каждый день, и он согласился в основном, чтобы она перестала."
+    },
+    {
+      "type": "tf",
+      "q": "Oliver could run three kilometres easily on his first run.",
+      "answer": false,
+      "explain": "Неверно: уже через пять минут ему пришлось остановиться."
+    },
+    {
+      "type": "choice",
+      "q": "In the text, Oliver \"gave up the chocolate bars\". What does \"gave up\" mean here?",
+      "options": [
+        "Gave them to a friend",
+        "Bought more of them",
+        "Stopped eating them"
+      ],
+      "answer": 2,
+      "explain": "«Give up» здесь значит «перестать», то есть он перестал есть шоколадки."
+    },
+    {
+      "type": "choice",
+      "q": "How did Oliver hurt his knee?",
+      "options": [
+        "He fell down the stairs at work",
+        "He slipped on wet leaves while running down a hill",
+        "A dog ran into him in the park"
+      ],
+      "answer": 1,
+      "explain": "Он бежал с холма, поскользнулся на мокрых листьях и упал."
+    },
+    {
+      "type": "tf",
+      "q": "During his injury, Oliver went swimming to keep fit.",
+      "answer": true,
+      "explain": "Верно: физиотерапевт посоветовал плавание, и Оливер ходил в бассейн каждое утро."
+    },
+    {
+      "type": "choice",
+      "q": "What did the physiotherapist say Oliver's goal should be?",
+      "options": [
+        "To finish the race",
+        "To get a good time",
+        "To run faster than Grace"
+      ],
+      "answer": 0,
+      "explain": "Он сказал: «Your goal isn't a good time. Your goal is to finish»."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Oliver start running again at kilometre thirty-five?",
+      "options": [
+        "His knee stopped hurting",
+        "Grace came back to help him",
+        "He saw his mother and colleagues supporting him"
+      ],
+      "answer": 2,
+      "explain": "Он увидел маму с плакатом и коллег из офиса, и это придало ему сил."
+    },
+    {
+      "type": "tf",
+      "q": "Oliver finished the marathon before Grace.",
+      "answer": false,
+      "explain": "Неверно: Грейс финишировала на час раньше него."
+    }
+  ],
+  "retell": [
+    "What was Oliver like at school and at thirty-four?",
+    "What did the nurse tell him?",
+    "How did his first runs go?",
+    "Why did he register for the marathon?",
+    "What happened to him in August?",
+    "How did his mother and Grace help him?",
+    "What happened on the day of the marathon?"
+  ]
+}

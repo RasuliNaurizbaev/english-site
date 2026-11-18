@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Проверяет грамматику и вопросы к рассказам на ошибки формата.
+"""Проверяет грамматику, вопросы к рассказам, тесты и список неправильных глаголов.
 
     python3 tools/validate_content.py
 
@@ -115,6 +115,50 @@ def check_story_questions(story_id, errors):
         errors.append(f"{story_id}: retell — список из ≥3 вопросов")
 
 
+def check_test(path, errors):
+    """content/tests/<id>.json — тест уровня или пробный экзамен."""
+    name = f"tests/{path.name}"
+    try:
+        test = json.loads(path.read_text(encoding="utf-8"))
+    except Exception as error:
+        errors.append(f"{name}: не JSON: {error}")
+        return
+    if test.get("id") != path.stem:
+        errors.append(f"{name}: id должен совпадать с именем файла")
+    for key in ("kind", "title", "titleRu", "sections", "bands"):
+        if key not in test:
+            errors.append(f"{name}: нет поля {key}")
+    for s, section in enumerate(test.get("sections", []), 1):
+        where = f"{name} раздел {s}"
+        if section.get("kind") not in ("grammar", "vocabulary", "reading", "listening"):
+            errors.append(f"{where}: kind")
+        if section.get("kind") == "reading" and not section.get("text"):
+            errors.append(f"{where}: нет text")
+        if section.get("kind") == "listening" and not section.get("script"):
+            errors.append(f"{where}: нет script")
+        for i, ex in enumerate(section.get("exercises", []), 1):
+            check_exercise(ex, f"{where} #{i}", errors)
+
+
+def check_verbs(errors):
+    """content/irregular_verbs.csv: base,past,participle,ru,level"""
+    if not paths.IRREGULAR_VERBS.exists():
+        return 0
+    import csv
+    with open(paths.IRREGULAR_VERBS, encoding="utf-8-sig", newline="") as f:
+        rows = list(csv.DictReader(f))
+    seen = set()
+    for n, row in enumerate(rows, 2):
+        if not all((row.get(k) or "").strip() for k in ("base", "past", "participle", "ru", "level")):
+            errors.append(f"irregular_verbs.csv строка {n}: пустое поле")
+        if row.get("level") not in paths.LEVELS:
+            errors.append(f"irregular_verbs.csv строка {n}: level {row.get('level')!r}")
+        if row.get("base") in seen:
+            errors.append(f"irregular_verbs.csv строка {n}: повтор {row.get('base')}")
+        seen.add(row.get("base"))
+    return len(rows)
+
+
 def main():
     errors = []
     topics = content.grammar_files()
@@ -123,10 +167,14 @@ def main():
     stories = paths.story_ids()
     for story_id in stories:
         check_story_questions(story_id, errors)
+    tests = sorted(paths.TESTS_DIR.glob("*.json")) if paths.TESTS_DIR.exists() else []
+    for path in tests:
+        check_test(path, errors)
+    verbs = check_verbs(errors)
     if errors:
         print("\n".join(errors))
         sys.exit(1)
-    print(f"OK: тем грамматики {len(topics)}, рассказов {len(stories)} — ошибок нет")
+    print(f"OK: тем грамматики {len(topics)}, рассказов {len(stories)}, тестов {len(tests)}, глаголов {verbs} — ошибок нет")
 
 
 if __name__ == "__main__":

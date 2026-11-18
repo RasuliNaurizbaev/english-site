@@ -1,0 +1,103 @@
+{
+  "questions": [
+    {
+      "type": "tf",
+      "q": "Anna had gone to the Sunflower Children's Centre when she was a child.",
+      "answer": true,
+      "explain": "Верно: в детстве она ходила туда каждый день, потому что мама работала допоздна."
+    },
+    {
+      "type": "choice",
+      "q": "Why was the centre going to close?",
+      "options": [
+        "The council had cut its budget and the roof needed repairing",
+        "Mrs Patel wanted to retire",
+        "Not enough children came there"
+      ],
+      "answer": 0,
+      "explain": "Совет урезал бюджет, а зданию нужна была новая крыша за двенадцать тысяч фунтов."
+    },
+    {
+      "type": "choice",
+      "q": "Why couldn't they use the town hall?",
+      "options": [
+        "It was too expensive",
+        "A pipe had burst and the floor was damaged",
+        "It was too small"
+      ],
+      "answer": 1,
+      "explain": "В главном зале прорвало трубу, и пол был сильно повреждён."
+    },
+    {
+      "type": "tf",
+      "q": "Mia sang at the concert in the school sports hall.",
+      "answer": false,
+      "explain": "Неверно: Мия отказалась, потому что ей предложили выступление на фестивале в Лондоне."
+    },
+    {
+      "type": "choice",
+      "q": "What mistake did the ticket website make?",
+      "options": [
+        "It sold tickets at the wrong price",
+        "It sold the tickets for the wrong date",
+        "It sold four hundred and fifty tickets instead of three hundred"
+      ],
+      "answer": 2,
+      "explain": "Сайт продал 450 билетов вместо 300, а зал вмещал только 400 человек."
+    },
+    {
+      "type": "choice",
+      "q": "In the text, Raj agreed to \"deal with\" the tickets. What does this mean?",
+      "options": [
+        "To take care of them",
+        "To sell them cheaply",
+        "To throw them away"
+      ],
+      "answer": 0,
+      "explain": "«Deal with» значит заниматься чем-то, отвечать за это."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Anna decide that the children should sing?",
+      "options": [
+        "The children asked for money",
+        "The audience would see exactly who they were helping",
+        "Tom's band could not play"
+      ],
+      "answer": 1,
+      "explain": "Так зрители увидели бы, кому именно они помогают."
+    },
+    {
+      "type": "tf",
+      "q": "The concert raised all twelve thousand pounds that were needed.",
+      "answer": false,
+      "explain": "Неверно: собрали девять тысяч четыреста фунтов, почти трёх тысяч не хватало."
+    },
+    {
+      "type": "choice",
+      "q": "Why did the owner of the building company decide to help?",
+      "options": [
+        "Anna had asked him for help",
+        "He wanted to advertise his company",
+        "He had gone to the centre as a boy"
+      ],
+      "answer": 2,
+      "explain": "Он сам ходил в этот центр, когда был мальчиком, и слышал пение детей."
+    },
+    {
+      "type": "tf",
+      "q": "The money that remained was used to buy books and computers.",
+      "answer": true,
+      "explain": "Верно: на оставшиеся деньги купили новые книги и компьютеры."
+    }
+  ],
+  "retell": [
+    "What was the Sunflower Children's Centre, and why was it important to Anna?",
+    "What did Anna and her colleagues decide to do?",
+    "What problems happened before the concert?",
+    "What did Mrs Patel and Jayden say to Anna?",
+    "What happened on the day of the concert?",
+    "How much money did they raise, and who helped them in the end?",
+    "What did Anna learn from the experience?"
+  ]
+}

@@ -1,59 +1,54 @@
 <!--
   Текст рассказа: каждое предложение — отдельный элемент (для караоке), словарные слова подсвечены.
-  @sentence-click(index) — нажали на предложение;  @word-click(element, word) — нажали на слово.
+  Слова уже найдены заранее (tools/story_words.py) — здесь только отображение.
+  @sentence-click(index) — нажали на предложение;  @word-click(element, meanings) — нажали на слово.
 -->
 <script setup lang="ts">
 import { computed, nextTick, watch } from "vue";
 import type { Story, StoryWord } from "@/domain/types";
-import { NO_WORD_FINDER, type WordFinder } from "@/domain/wordForms";
-import { reportProblem } from "../problems";
+import { highestLevel, marksBySentence, splitSentence, type TextPiece } from "@/domain/storyText";
+import { breakIfRequested, reportProblem } from "../problems";
 
 const props = defineProps<{
   story: Story;
-  finder: WordFinder;
   currentSentence: number;
   scrollToCurrent: boolean;
   clickable: boolean;
   highlight: boolean;
   translate: boolean;
 }>();
-const emit = defineEmits<{ sentenceClick: [index: number]; wordClick: [element: HTMLElement, word: StoryWord] }>();
+const emit = defineEmits<{ sentenceClick: [index: number]; wordClick: [element: HTMLElement, meanings: StoryWord[]] }>();
 
-type Piece = { text: string; word?: StoryWord };
-interface Sentence { index: number; pieces: Piece[] }
+interface Sentence { index: number; pieces: TextPiece[] }
 
-/** Делим каждое предложение на куски: обычный текст и словарные слова. */
-function splitIntoPieces(text: string): Piece[] {
-  let matches;
+/** Если подсветка не сработает — текст без подсветки, но рассказ всё равно читается. */
+function pieces(text: string, marks: Story["marks"]): TextPiece[] {
   try {
-    matches = props.finder.find(text);
+    breakIfRequested("wordMarks");
+    return splitSentence(text, marks, props.story.words);
   } catch (error) {
     reportProblem("подсветка слов", error);
-    matches = NO_WORD_FINDER.find(text);
+    return [{ text }];
   }
-  const pieces: Piece[] = [];
-  let position = 0;
-  for (const match of matches) {
-    if (match.index > position) pieces.push({ text: text.slice(position, match.index) });
-    pieces.push({ text: match.text, word: match.word });
-    position = match.index + match.text.length;
-  }
-  if (position < text.length) pieces.push({ text: text.slice(position) });
-  return pieces;
 }
 
 const paragraphs = computed<Sentence[][]>(() => {
-  let index = 1;                                   // 0 — заголовок
-  return props.story.paragraphs.map(paragraph => paragraph.map(text => ({ index: index++, pieces: splitIntoPieces(text) })));
+  const marks = marksBySentence(props.story);
+  let number = 0;                                  // номер предложения в данных (с 0)
+  return props.story.paragraphs.map(paragraph => paragraph.map(text => {
+    const sentence = { index: number + 1, pieces: pieces(text, marks.get(number) ?? []) };   // +1: 0 — заголовок
+    number++;
+    return sentence;
+  }));
 });
 
 function onClick(event: MouseEvent, sentence: Sentence) {
   const wordElement = (event.target as HTMLElement).closest<HTMLElement>(".w");
   if (wordElement && props.translate) {
     const piece = sentence.pieces[Number(wordElement.dataset.piece)];
-    if (piece?.word) {
+    if (piece?.meanings?.length) {
       event.stopPropagation();                     // чтобы перевод сразу не закрылся
-      emit("wordClick", wordElement, piece.word);
+      emit("wordClick", wordElement, piece.meanings);
       return;
     }
   }
@@ -79,7 +74,7 @@ watch(() => props.currentSentence, async index => {
       <template v-for="(sentence, s) in paragraph" :key="sentence.index">
         <span class="sentence" :class="{ now: sentence.index === currentSentence }" :data-sentence="sentence.index" @click="onClick($event, sentence)"
           ><template v-for="(piece, k) in sentence.pieces" :key="k"
-            ><span v-if="piece.word" class="w" :class="piece.word.level" :data-piece="k">{{ piece.text }}</span
+            ><span v-if="piece.meanings" class="w" :class="highestLevel(piece.meanings)" :data-piece="k">{{ piece.text }}</span
             ><template v-else>{{ piece.text }}</template></template
           ></span
         >{{ s < paragraph.length - 1 ? " " : "" }}

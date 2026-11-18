@@ -1,0 +1,103 @@
+{
+  "questions": [
+    {
+      "type": "tf",
+      "q": "Mark used to take Leo to the park every Saturday when Leo was small.",
+      "answer": true,
+      "explain": "Верно: когда Лео был маленьким, Марк каждую субботу водил его в парк."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Mark miss parents' evening at school?",
+      "options": [
+        "He was ill",
+        "His train had been cancelled",
+        "He forgot about it"
+      ],
+      "answer": 1,
+      "explain": "Его поезд из Лондона отменили, и он не успел."
+    },
+    {
+      "type": "tf",
+      "q": "Leo was given the part of a soldier in the school play.",
+      "answer": false,
+      "explain": "Неверно: Лео получил роль короля."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Mr Graham want Mark at the meeting?",
+      "options": [
+        "Their biggest client wanted to cancel the contract",
+        "Mark had made a mistake in a report",
+        "A new manager was starting work"
+      ],
+      "answer": 0,
+      "explain": "Крупнейший клиент компании хотел расторгнуть контракт."
+    },
+    {
+      "type": "choice",
+      "q": "In the text, Mark \"felt his stomach turn\". What does this mean?",
+      "options": [
+        "He was hungry",
+        "He felt sick with worry",
+        "He wanted to laugh"
+      ],
+      "answer": 1,
+      "explain": "Это выражение значит, что ему стало плохо от волнения."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Mr Graham let Mark leave at four?",
+      "options": [
+        "Sarah asked him to",
+        "Mark threatened to leave the company",
+        "He regretted missing his own daughters' school plays"
+      ],
+      "answer": 2,
+      "explain": "Он вспомнил, что не был ни на одном школьном спектакле своих дочерей."
+    },
+    {
+      "type": "tf",
+      "q": "Mark drove his car all the way to the school door.",
+      "answer": false,
+      "explain": "Неверно: он оставил машину на парковке супермаркета и бежал под дождём."
+    },
+    {
+      "type": "choice",
+      "q": "What did Leo do when he saw his father?",
+      "options": [
+        "He stopped the play",
+        "He smiled and said his line more confidently",
+        "He cried"
+      ],
+      "answer": 1,
+      "explain": "Лео широко улыбнулся и произнёс свою реплику громче и увереннее."
+    },
+    {
+      "type": "tf",
+      "q": "The client decided to stay with the company.",
+      "answer": true,
+      "explain": "Верно: презентация Сары прошла хорошо, и клиент остался."
+    },
+    {
+      "type": "choice",
+      "q": "What did Mark start doing after the play?",
+      "options": [
+        "He changed his job",
+        "He worked every weekend",
+        "He turned off his phone at weekends and went to the park with Leo"
+      ],
+      "answer": 2,
+      "explain": "Он перестал проверять почту за ужином, выключал телефон по выходным и снова ходил с Лео в парк."
+    }
+  ],
+  "retell": [
+    "What kind of father was Mark, and what was his problem?",
+    "What important moments had Mark missed?",
+    "What did Leo ask his father, and what did Mark promise?",
+    "What happened at work on the day of the play?",
+    "What did Mark decide, and how did his boss react?",
+    "How did Mark get to the school, and what happened when Leo saw him?",
+    "How did Mark's life change after that evening?"
+  ]
+}

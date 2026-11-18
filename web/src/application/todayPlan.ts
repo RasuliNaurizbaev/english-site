@@ -3,7 +3,7 @@ import type { Services } from "./services";
 import { formatDuration } from "@/domain/text";
 
 export interface PlanItem {
-  key: "words" | "story" | "grammar" | "audio";
+  key: "words" | "story" | "grammar" | "mistakes" | "audio";
   icon: string;
   title: string;
   text: string;
@@ -48,6 +48,16 @@ export function grammarPlan({ content, progress }: Services, today: number): Pla
     text: next ? `${next.level} · ${next.title}${next.titleRu ? " — " + next.titleRu : ""}` : "Все темы изучены!",
     note: `Изучено ${finished} из ${topics.length} тем`,
     link: next ? "/grammar/" + next.id : "/grammar", action: next ? "Учить" : "Список",
+  };
+}
+
+/** «Мои ошибки»: показываем, только если на сегодня есть что повторить. */
+export function mistakesPlan({ mistakes }: Services): PlanItem | null {
+  const due = mistakes.due().length;
+  if (!due) return null;
+  return {
+    key: "mistakes", icon: "🔁", title: "Мои ошибки", done: false, link: "/mistakes",
+    text: `Повторить упражнения с ошибками: ${due}`, action: "Повторить",
   };
 }
 

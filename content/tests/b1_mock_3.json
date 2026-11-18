@@ -1,0 +1,78 @@
+{
+  "id": "b1_mock_3",
+  "kind": "mock",
+  "title": "B1 Practice Test 3",
+  "titleRu": "Пробный тест B1 — вариант 3",
+  "description": "Тренировочный тест в формате экзамена уровня B1: грамматика, лексика, чтение и аудирование. Займёт около 45 минут.",
+  "minutes": 45,
+  "sections": [
+    {
+      "kind": "grammar",
+      "title": "Грамматика",
+      "exercises": [
+        {"type": "choice", "q": "If you heat ice, it ___.", "options": ["melt", "melts", "will melted", "melted"], "answer": 1, "explain": "Нулевое условное (общий факт): if + Present Simple, Present Simple."},
+        {"type": "choice", "q": "I can't meet you on Friday — I ___ my grandparents. I've already bought the train tickets.", "options": ["visit", "am visiting", "visited", "have visited"], "answer": 1, "explain": "Заранее договорённые планы на будущее выражаются через Present Continuous."},
+        {"type": "choice", "q": "This is the hotel ___ we stayed last summer.", "options": ["where", "which", "who", "whose"], "answer": 0, "explain": "Для места в значении «в котором» используется where."},
+        {"type": "choice", "q": "That's the man ___ car was stolen.", "options": ["who", "whose", "which", "who's"], "answer": 1, "explain": "Whose означает принадлежность: «чья машина»."},
+        {"type": "choice", "q": "I ___ my hair cut yesterday at the new salon.", "options": ["had", "made", "did", "was"], "answer": 0, "explain": "Have something done — когда действие для вас выполняет кто-то другой."},
+        {"type": "input", "q": "Thank you for ___ (help) me with my homework.", "answer": ["helping"], "explain": "После предлога (for) глагол ставится в форму -ing."},
+        {"type": "choice", "q": "___ of my parents speaks English; they only speak Russian.", "options": ["Both", "Either", "Neither", "None"], "answer": 2, "explain": "Neither — «ни один из двух»."},
+        {"type": "choice", "q": "You look ill. You ___ see a doctor.", "options": ["should", "mustn't", "needn't", "ought"], "answer": 0, "explain": "Should используется для совета; ought требует to."},
+        {"type": "choice", "q": "My parents ___ me stay out until midnight on Saturdays.", "options": ["let", "allow", "permit", "agree"], "answer": 0, "explain": "Let + объект + глагол без to; allow и permit требуют to."},
+        {"type": "choice", "q": "___ the rain, we went for a walk.", "options": ["Although", "Despite", "However", "Because"], "answer": 1, "explain": "Despite + существительное — «несмотря на»; although требует целого предложения."},
+        {"type": "choice", "q": "You won't pass the exam ___ you study harder.", "options": ["if", "unless", "when", "because"], "answer": 1, "explain": "Unless означает «если не»: не сдашь, если не будешь заниматься больше."},
+        {"type": "input", "q": "The tickets can ___ (buy) online.", "answer": ["be bought"], "explain": "Пассив с модальным глаголом: can + be + третья форма."}
+      ]
+    },
+    {
+      "kind": "vocabulary",
+      "title": "Лексика",
+      "exercises": [
+        {"type": "choice", "q": "Don't forget to ___ your phone before the trip.", "options": ["charge", "load", "fill", "power"], "answer": 0, "explain": "Charge a phone — зарядить телефон."},
+        {"type": "choice", "q": "I need to ___ some weight, so I've started going to the gym.", "options": ["lose", "miss", "leave", "waste"], "answer": 0, "explain": "Lose weight — похудеть."},
+        {"type": "input", "q": "Regular exercise is good for your ___ (healthy).", "answer": ["health"], "explain": "Здесь нужно существительное: health — здоровье."},
+        {"type": "choice", "q": "Can you ___ me up at the station at six?", "options": ["pick", "take", "get", "bring"], "answer": 0, "explain": "Pick somebody up — забрать кого-то (на машине)."},
+        {"type": "choice", "q": "I'm going to ___ for a job at the new library.", "options": ["apply", "ask", "request", "offer"], "answer": 0, "explain": "Apply for a job — подать заявление на работу."},
+        {"type": "choice", "q": "Can you turn the music ___? It's too loud and I'm trying to study.", "options": ["down", "out", "away", "over"], "answer": 0, "explain": "Turn down — сделать тише."},
+        {"type": "input", "q": "He's a very ___ (success) businessman with three companies.", "answer": ["successful"], "explain": "Прилагательное от success — successful (успешный)."},
+        {"type": "choice", "q": "I'm sorry, I didn't ___ to break your glass. It was an accident.", "options": ["mean", "think", "wish", "hope"], "answer": 0, "explain": "Didn't mean to — не хотел, сделал не нарочно."},
+        {"type": "choice", "q": "Swimming is a great way to ___ fit.", "options": ["keep", "do", "make", "take"], "answer": 0, "explain": "Keep fit — поддерживать хорошую физическую форму."},
+        {"type": "input", "q": "There's a big ___ (different) between the two phones.", "answer": ["difference"], "explain": "Существительное от different — difference (разница)."}
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Чтение",
+      "text": "Eighteen months ago, Hillside Secondary School made a decision that surprised many parents: students were no longer allowed to use their mobile phones during the school day. Now they have to put their phones in a locker when they arrive at 8:30 and can only take them out when lessons finish at 3:30.\n\nHead teacher Mark Jennings says the idea came after a survey of the students themselves. 'Almost seventy per cent said that they felt tired and stressed because of social media,' he explains. 'Many said they couldn't stop checking their phones, even in lessons. We realised that we had to do something.'\n\nNot everyone was happy at first. Some parents worried that they couldn't contact their children in an emergency. The school solved this problem by giving parents a phone number for the school office, which answers calls all day. A few students also complained loudly. 'I thought it was the worst rule ever,' says fifteen-year-old Chloe. 'For the first week I felt like something was missing. But then I started talking to people at lunch instead of looking at a screen. I've made new friends this year, and I don't think that would have happened before.'\n\nTeachers say they have noticed changes too. Students concentrate better, and there are fewer arguments that start online and continue in the classroom. The school library, which used to be almost empty at lunchtime, is now so popular that the school has had to buy more chairs. Exam results have also improved slightly, although Mr Jennings says it is too early to know if the phone rule is the reason.\n\nHowever, the rule has some critics. Technology expert Dr Sara Patel believes schools should teach young people to use phones sensibly rather than taking them away. 'When these students leave school, nobody will lock up their phones,' she says. 'They need to learn to control their own habits.'\n\nThe school agrees that this is important. Next year it plans to start weekly lessons about using technology in a healthy way, so that students are ready for life after school.",
+      "exercises": [
+        {"type": "tf", "q": "Students can use their phones during the lunch break.", "answer": false, "explain": "Телефоны можно забрать из шкафчика только после уроков, в 15:30."},
+        {"type": "choice", "q": "What gave the school the idea for the rule?", "options": ["complaints from parents", "a survey of the students", "a new government law", "an idea from another school"], "answer": 1, "explain": "Идея появилась после опроса самих учеников."},
+        {"type": "choice", "q": "How did the school deal with parents' worries about emergencies?", "options": ["Students can keep phones in their bags.", "Parents can call the school office at any time during the day.", "Teachers carry students' phones.", "Students can use a phone in the library."], "answer": 1, "explain": "Родителям дали номер школьного офиса, который отвечает весь день."},
+        {"type": "tf", "q": "Chloe liked the new rule from the very beginning.", "answer": false, "explain": "Сначала она считала это худшим правилом на свете."},
+        {"type": "choice", "q": "What has been the main result of the rule for Chloe?", "options": ["Her marks have improved.", "She has made new friends.", "She reads more books.", "She sleeps better."], "answer": 1, "explain": "Она начала общаться за обедом и завела новых друзей."},
+        {"type": "choice", "q": "What has happened to the school library?", "options": ["It is now closed at lunchtime.", "It has become so popular that the school bought more chairs.", "It has moved to a bigger room.", "It now has new computers."], "answer": 1, "explain": "Библиотека стала такой популярной, что пришлось купить больше стульев."},
+        {"type": "tf", "q": "Mr Jennings is sure that the phone rule has improved exam results.", "answer": false, "explain": "Он говорит, что пока рано судить, связано ли это с правилом."},
+        {"type": "choice", "q": "What is Dr Patel's opinion?", "options": ["Phones should be banned in all schools.", "Schools should teach students to use phones sensibly.", "Parents should take away their children's phones.", "Phones help students concentrate."], "answer": 1, "explain": "Она считает, что школа должна учить разумно пользоваться телефоном, а не забирать его."}
+      ]
+    },
+    {
+      "kind": "listening",
+      "title": "Аудирование",
+      "script": "Receptionist: Good afternoon, Riverside Sports Centre. How can I help?\nDaniel: Hi. I'm thinking of joining the centre, and I'd like some information about membership.\nReceptionist: Of course. We have two types. The standard membership costs thirty-five pounds a month and includes the gym and the swimming pool. The premium membership is fifty pounds a month, and with that you can also go to all the fitness classes and use the sauna.\nDaniel: I see. I'm mainly interested in swimming, to be honest. And maybe the gym sometimes.\nReceptionist: Then standard is probably the best choice for you. Are you a student, by any chance?\nDaniel: Yes, I'm at the college.\nReceptionist: Great. Students get twenty per cent off, so you'd pay twenty-eight pounds a month. You just need to show your student card when you join.\nDaniel: That's good news. What are the opening hours?\nReceptionist: We're open from six in the morning to ten at night on weekdays, and from eight till eight at weekends. But the pool closes an hour earlier than the rest of the centre every day, because of cleaning.\nDaniel: OK. And is the pool very busy?\nReceptionist: It's busiest between five and seven in the evening, when people finish work. Early in the morning it's usually much quieter.\nDaniel: Right. Do I need to bring anything when I join?\nReceptionist: Just a photo for your membership card, or we can take one here, and your bank details for the monthly payment. Oh, and new members get a free session with a personal trainer in the first month. They'll show you how to use the gym machines safely.\nDaniel: Sounds great. Can I come in tomorrow morning to sign up?\nReceptionist: Of course. Tomorrow's Saturday, so we open at eight. Ask for Claire at the desk.\nDaniel: Thanks very much.",
+      "exercises": [
+        {"type": "choice", "q": "What does the standard membership include?", "options": ["the gym and the pool", "the gym, the pool and fitness classes", "the pool only", "fitness classes and the sauna"], "answer": 0, "explain": "Стандартный абонемент включает спортзал и бассейн."},
+        {"type": "choice", "q": "How much will Daniel pay each month?", "options": ["£28", "£35", "£40", "£50"], "answer": 0, "explain": "Студентам скидка 20%, поэтому 28 фунтов вместо 35."},
+        {"type": "choice", "q": "What must Daniel show to get the discount?", "options": ["his passport", "his student card", "his bank card", "a photo"], "answer": 1, "explain": "Для скидки нужно показать студенческий билет."},
+        {"type": "tf", "q": "On weekdays the pool is open until ten at night.", "answer": false, "explain": "Бассейн закрывается на час раньше центра, то есть в девять вечера."},
+        {"type": "choice", "q": "When is the pool usually quietest?", "options": ["early in the morning", "at lunchtime", "between five and seven in the evening", "at weekends"], "answer": 0, "explain": "Рано утром в бассейне обычно гораздо спокойнее."},
+        {"type": "tf", "q": "New members get a free session with a personal trainer.", "answer": true, "explain": "В первый месяц новичкам положено бесплатное занятие с тренером."},
+        {"type": "choice", "q": "When is Daniel going to the centre to join?", "options": ["this afternoon", "on Saturday morning", "on Sunday morning", "on Monday evening"], "answer": 1, "explain": "Он придёт завтра утром, а завтра суббота."}
+      ]
+    }
+  ],
+  "bands": [
+    {"min": 0, "level": "A2"},
+    {"min": 60, "level": "B1"},
+    {"min": 85, "level": "B1+"}
+  ]
+}

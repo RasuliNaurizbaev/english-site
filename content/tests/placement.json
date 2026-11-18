@@ -1,0 +1,82 @@
+{
+  "id": "placement",
+  "kind": "placement",
+  "title": "Placement Test",
+  "titleRu": "Тест на определение уровня",
+  "description": "Проверяет грамматику, словарный запас, чтение и восприятие на слух от уровня A1 до B1. Займёт около 25 минут; задания идут от простых к сложным.",
+  "minutes": 25,
+  "sections": [
+    {
+      "kind": "grammar",
+      "title": "Грамматика",
+      "exercises": [
+        {"type": "choice", "q": "My sister ___ a teacher.", "options": ["am", "is", "are", "be"], "answer": 1, "explain": "С he/she/it и единственным числом глагол be имеет форму is."},
+        {"type": "choice", "q": "___ you like coffee?", "options": ["Does", "Do", "Are", "Is"], "answer": 1, "explain": "Вопрос в Present Simple с you строится через do."},
+        {"type": "input", "q": "There ___ (be) two cats in the garden.", "answer": ["are"], "explain": "Со множественным числом (two cats) используется there are."},
+        {"type": "choice", "q": "He ___ to work every day.", "options": ["go", "goes", "going", "is go"], "answer": 1, "explain": "В Present Simple с he/she/it к глаголу добавляется -s/-es: goes."},
+        {"type": "choice", "q": "Look! The children ___ in the park.", "options": ["play", "plays", "are playing", "played"], "answer": 2, "explain": "Look! указывает на действие прямо сейчас — нужен Present Continuous."},
+        {"type": "input", "q": "I ___ (not / like) fish.", "answer": ["don't like", "do not like"], "explain": "Отрицание в Present Simple с I: don't + глагол."},
+        {"type": "choice", "q": "We ___ to the cinema last night.", "options": ["go", "went", "gone", "goes"], "answer": 1, "explain": "Last night — прошлое время, go во второй форме — went."},
+        {"type": "input", "q": "___ did you go on holiday? — To Spain.", "answer": ["Where", "where"], "explain": "Ответ «в Испанию» отвечает на вопрос «куда» — where."},
+        {"type": "choice", "q": "This book is ___ than that one.", "options": ["interesting", "more interesting", "most interesting", "interestinger"], "answer": 1, "explain": "Длинные прилагательные образуют сравнительную степень с more."},
+        {"type": "choice", "q": "I'm going ___ my grandmother tomorrow.", "options": ["visit", "to visit", "visiting", "visited"], "answer": 1, "explain": "Конструкция be going to + глагол выражает планы."},
+        {"type": "input", "q": "She ___ (not / go) to school yesterday because she was ill.", "answer": ["didn't go", "did not go"], "explain": "Отрицание в Past Simple: didn't + начальная форма глагола."},
+        {"type": "choice", "q": "Have you ever ___ to London?", "options": ["be", "was", "been", "went"], "answer": 2, "explain": "В Present Perfect нужна третья форма: have been."},
+        {"type": "choice", "q": "You ___ wear a seatbelt in a car. It's the law.", "options": ["must", "can", "might", "would"], "answer": 0, "explain": "Must выражает обязанность, например по закону."},
+        {"type": "input", "q": "I ___ (live) here since 2015.", "answer": ["have lived", "'ve lived", "have been living", "'ve been living"], "explain": "С since для действия, которое продолжается до сих пор, нужен Present Perfect."},
+        {"type": "choice", "q": "If it rains tomorrow, we ___ at home.", "options": ["stay", "will stay", "would stay", "stayed"], "answer": 1, "explain": "Первое условное: if + Present Simple, will + глагол."},
+        {"type": "choice", "q": "When the phone rang, I ___ a shower.", "options": ["take", "was taking", "am taking", "have taken"], "answer": 1, "explain": "Длительное действие в прошлом, которое прервали, — Past Continuous."},
+        {"type": "input", "q": "This bridge ___ (build) in 1890.", "answer": ["was built"], "explain": "Пассив в прошедшем времени: was/were + третья форма."},
+        {"type": "choice", "q": "The woman ___ lives next door is a doctor.", "options": ["who", "which", "what", "whose"], "answer": 0, "explain": "Для людей в придаточных используется who."},
+        {"type": "choice", "q": "If I ___ more money, I would buy a car.", "options": ["have", "had", "will have", "would have"], "answer": 1, "explain": "Второе условное: if + Past Simple, would + глагол."},
+        {"type": "input", "q": "By the time we got to the station, the train ___ (leave).", "answer": ["had left", "'d left", "had already left", "'d already left"], "explain": "Действие, случившееся раньше другого прошлого действия, — Past Perfect."}
+      ]
+    },
+    {
+      "kind": "vocabulary",
+      "title": "Словарный запас",
+      "exercises": [
+        {"type": "choice", "q": "The opposite of «cheap» is ___.", "options": ["expensive", "small", "new", "poor"], "answer": 0, "explain": "Cheap — дешёвый, противоположное — expensive (дорогой)."},
+        {"type": "choice", "q": "My father's sister is my ___.", "options": ["cousin", "niece", "aunt", "uncle"], "answer": 2, "explain": "Сестра отца или матери — aunt (тётя)."},
+        {"type": "choice", "q": "Can you ___ me the time, please?", "options": ["say", "tell", "speak", "talk"], "answer": 1, "explain": "Устойчивое выражение: tell somebody the time."},
+        {"type": "choice", "q": "Please ___ the light; it's dark in here.", "options": ["turn on", "turn off", "give up", "get up"], "answer": 0, "explain": "Turn on — включить; в темноте свет нужно включить."},
+        {"type": "input", "q": "I'm very ___ (interest) in history; I read a lot about it.", "answer": ["interested"], "explain": "О чувствах человека говорят прилагательным на -ed: interested in."},
+        {"type": "choice", "q": "We missed the bus, so we had to ___ a taxi.", "options": ["take", "do", "make", "ride"], "answer": 0, "explain": "По-английски говорят take a taxi."},
+        {"type": "choice", "q": "Can you ___ my bag while I go to the toilet?", "options": ["look at", "look after", "look for", "look like"], "answer": 1, "explain": "Look after — присматривать за кем-то или чем-то."},
+        {"type": "input", "q": "The film was really ___ (bore); I fell asleep.", "answer": ["boring"], "explain": "О том, что вызывает скуку, говорят прилагательным на -ing: boring."},
+        {"type": "choice", "q": "I have ___ my keys. I can't find them anywhere.", "options": ["lost", "missed", "failed", "wasted"], "answer": 0, "explain": "Lose — потерять вещь; miss — пропустить, скучать."},
+        {"type": "choice", "q": "The concert was ___ because of the bad weather.", "options": ["cancelled", "refused", "prevented", "avoided"], "answer": 0, "explain": "Cancel — отменить мероприятие."}
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Чтение",
+      "text": "Last year, Elena moved from a small village to Manchester to study at university. At first, life in the big city was difficult. She didn't know anybody, and the streets were always noisy and full of people. She missed her family and her dog, Bruno.\n\nIn her first month, Elena joined the university photography club. Every Saturday the members walked around the city and took pictures of old buildings, markets and parks. Elena soon made two good friends there, Priya and Jack.\n\nNow Elena loves Manchester. She has a part-time job in a café near the station, and she goes home to the village only once a month. 'I was nervous when I arrived,' she says, 'but moving here was the best decision of my life. Next year I want to organise a photography exhibition with my friends.'",
+      "exercises": [
+        {"type": "tf", "q": "Elena grew up in a big city.", "answer": false, "explain": "Елена переехала в Манчестер из маленькой деревни."},
+        {"type": "choice", "q": "Why was life difficult for Elena at first?", "options": ["She had no money.", "She didn't know anyone.", "She couldn't find a flat.", "Her course was too hard."], "answer": 1, "explain": "В тексте: She didn't know anybody."},
+        {"type": "choice", "q": "What did the club members do on Saturdays?", "options": ["They watched films about cities.", "They took photos around the city.", "They visited museums.", "They worked in a café."], "answer": 1, "explain": "Члены клуба гуляли по городу и фотографировали здания, рынки и парки."},
+        {"type": "tf", "q": "Elena visits her village every weekend.", "answer": false, "explain": "Она ездит домой только раз в месяц (once a month)."},
+        {"type": "choice", "q": "What does Elena want to do next year?", "options": ["Move back to the village.", "Get a job at the station.", "Organise an exhibition.", "Buy a dog."], "answer": 2, "explain": "Она хочет организовать фотовыставку с друзьями."}
+      ]
+    },
+    {
+      "kind": "listening",
+      "title": "Аудирование",
+      "script": "Waiter: Good evening, Rosa's Restaurant. How can I help you?\nTom: Hi. I'd like to book a table for Friday evening, please.\nWaiter: Of course. For how many people?\nTom: For four. Two adults and two children.\nWaiter: And what time would you like?\nTom: Is half past seven possible?\nWaiter: I'm sorry, we're full at seven thirty. We have a table at eight o'clock.\nTom: Eight is fine. Oh, and could we sit near the window? My kids love watching the boats on the river.\nWaiter: No problem. Can I have your name, please?\nTom: Tom Baker. B, A, K, E, R.\nWaiter: Thank you, Mr Baker. And a phone number?\nTom: It's 07700 652 318.\nWaiter: Great. See you on Friday at eight.",
+      "exercises": [
+        {"type": "choice", "q": "Which day is the booking for?", "options": ["Thursday", "Friday", "Saturday", "Sunday"], "answer": 1, "explain": "Том бронирует столик на вечер пятницы (Friday evening)."},
+        {"type": "choice", "q": "How many people is the table for?", "options": ["two", "three", "four", "five"], "answer": 2, "explain": "Столик на четверых: двое взрослых и двое детей."},
+        {"type": "choice", "q": "What time is the table booked for?", "options": ["7:00", "7:30", "8:00", "8:30"], "answer": 2, "explain": "На 7:30 мест нет, поэтому бронь на восемь часов."},
+        {"type": "tf", "q": "Tom wants a table near the window.", "answer": true, "explain": "Том спрашивает: could we sit near the window?"},
+        {"type": "choice", "q": "Why does Tom want this table?", "options": ["It's quieter.", "His children like watching the boats.", "It's warmer there.", "He wants to see the street."], "answer": 1, "explain": "Его дети любят смотреть на лодки на реке."}
+      ]
+    }
+  ],
+  "bands": [
+    {"min": 0, "level": "A1"},
+    {"min": 35, "level": "A2"},
+    {"min": 65, "level": "B1"},
+    {"min": 85, "level": "B1+"}
+  ]
+}

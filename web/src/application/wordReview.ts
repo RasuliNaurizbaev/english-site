@@ -82,6 +82,21 @@ export class WordReviewService {
 
   status(key: string): WordStatus { return statusOf(this.cards[key]); }
 
+  /**
+   * Добавить слова (например, из рассказа) в повторение: они появятся в карточках уже сегодня,
+   * не занимая лимит «новых слов в день». Уже изучаемые слова не трогаем. Возвращает, сколько добавлено.
+   */
+  addWords(keys: string[]): number {
+    let added = 0;
+    for (const key of keys) {
+      if (this.cards[key] || !this.content.hasWord(key)) continue;
+      this.cards[key] = { i: 0, e: 2.5, d: this.today(), r: 0, l: 0 };
+      added++;
+    }
+    if (added) this.progress.saveCards(this.cards);
+    return added;
+  }
+
   /** Из списка слов: «новое» ↔ «уже знаю». */
   toggleKnown(key: string): void {
     if (this.cards[key]) delete this.cards[key];
