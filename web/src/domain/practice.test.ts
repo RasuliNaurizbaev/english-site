@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { checkDictation, pickDictationSentences } from "./dictation";
+import { checkDictation, numberToWords, pickDictationSentences } from "./dictation";
 import { isCorrectForm, pickVerbsForPractice, type IrregularVerb } from "./verbs";
 import { recordMistake, reviewMistake } from "./mistakes";
 
@@ -15,6 +15,22 @@ describe("dictation", () => {
     expect(r.words.map(w => w.ok)).toEqual([true, true, false, true, true]);
     expect(r.extra).toEqual(["the"]);
     expect(r.score).toBeCloseTo(4 / 5);
+  });
+  it("цифры и слова — одно и то же: 25 = twenty-five = twenty five", () => {
+    for (const typed of ["Anna is 25 years old", "anna is twenty-five years old", "Anna is twenty five years old."]) {
+      const r = checkDictation("Anna is twenty-five years old.", typed);
+      expect(r.score, typed).toBe(1);
+      expect(r.words.every(w => w.ok), typed).toBe(true);
+    }
+    expect(checkDictation("It costs 1,500 dollars.", "it costs one thousand five hundred dollars").score).toBe(1);
+  });
+  it("слово из нескольких частей верно, только если совпали все части", () => {
+    const r = checkDictation("She is twenty-five.", "she is twenty");
+    expect(r.words.map(w => w.ok)).toEqual([true, true, false]);
+  });
+  it("numberToWords", () => {
+    expect([0, 7, 13, 40, 99, 105, 2026].map(numberToWords)).toEqual(
+      ["zero", "seven", "thirteen", "forty", "ninety nine", "one hundred five", "two thousand twenty six"]);
   });
   it("выбирает предложения средней длины равномерно", () => {
     const sentences = ["Short.", ...Array.from({ length: 30 }, (_, i) => `This is a normal sentence number ${i}.`)];

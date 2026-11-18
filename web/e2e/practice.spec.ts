@@ -13,32 +13,68 @@ test("тест уровня: все ответы верны → высший у�
   expect(history[0]).toMatchObject({ testId: placement.id, score: 100, level: placement.bands.at(-1)!.level });
 });
 
-test("AI-тест: сайт отправляет запрос, проверяет ответ и открывает новый тест", async ({ page }) => {
-  const aiTest = {
-    title: "AI test", titleRu: "Тест от AI", description: "", minutes: 5,
-    sections: [{ kind: "grammar", title: "Грамматика", exercises: [{ type: "choice", q: "She ___ tea.", options: ["like", "likes"], answer: 1, explain: "" }] }],
-  };
-  let requestBody: any = null;
+const AI_TEST = {
+  title: "AI test", titleRu: "Тест от AI", description: "", minutes: 5,
+  sections: [{ kind: "grammar", title: "Грамматика", exercises: [{ type: "choice", q: "She ___ tea.", options: ["like", "likes"], answer: 1, explain: "" }] }],
+};
+
+test("AI: есть ключ Gemini → сначала Gemini; Gemini отказал → тест создаёт Groq", async ({ page }) => {
+  const calls: string[] = [];
+  let groqBody: any = null;
+  await page.route("https://generativelanguage.googleapis.com/**", async route => {
+    const url = route.request().url();
+    calls.push("gemini " + url.split("/").pop());
+    if (url.endsWith("/models")) return route.fulfill({ json: { data: [{ id: "models/gemini-2.5-flash-lite" }, { id: "models/gemini-2.5-flash" }] } });
+    return route.fulfill({ status: 429, body: "rate limit" });                   // лимит исчерпан
+  });
   await page.route("https://api.groq.com/**", async route => {
-    requestBody = route.request().postDataJSON();
-    await route.fulfill({ json: { choices: [{ message: { content: JSON.stringify(aiTest) } }] } });
+    const url = route.request().url();
+    calls.push("groq " + url.split("/").pop());
+    if (url.endsWith("/models")) return route.fulfill({ json: { data: [{ id: "whisper-large-v3" }, { id: "llama-3.3-70b-versatile" }] } });
+    groqBody = route.request().postDataJSON();
+    return route.fulfill({ json: { choices: [{ message: { content: JSON.stringify(AI_TEST) } }] } });
   });
   await open(page, "/tests");
   await page.locator(".ai-panel summary").click();
-  await page.getByPlaceholder("название модели").fill("test-model");
-  await page.getByPlaceholder("ключ из личного кабинета").fill("test-key");
+  await page.getByPlaceholder("ключ Google Gemini").fill("gemini-key");
+  await page.getByRole("button", { name: "Проверить ключ" }).first().click();
+  await expect(page.getByText("✓ Ключ работает, моделей: 2")).toBeVisible();
+  await page.getByPlaceholder("ключ Groq").fill("groq-key");
+  await page.getByRole("button", { name: "Проверить ключ" }).nth(1).click();
+  await expect(page.getByText("✓ Ключ работает, моделей: 1")).toBeVisible();      // whisper отфильтрован
   await page.getByRole("button", { name: "✨ Создать тест" }).click();
   await expect(page.locator("h1")).toHaveText("Тест от AI");
-  expect(requestBody.model).toBe("test-model");
-  expect(await stored(page, "ai")).toMatchObject({ apiKey: "test-key" });   // ключ — только в этом браузере
+  expect(calls.filter(c => c.endsWith("completions"))).toEqual(["gemini completions", "groq completions"]);   // сначала Gemini, потом Groq
+  expect(groqBody.model).toBe("llama-3.3-70b-versatile");
+  expect(await stored(page, "ai")).toMatchObject({ gemini: { apiKey: "gemini-key", model: "gemini-2.5-flash" }, groq: { apiKey: "groq-key" } });
 });
 
-test("неправильный ответ AI не показывается", async ({ page }) => {
-  await page.route("https://api.groq.com/**", route => route.fulfill({ json: { choices: [{ message: { content: '{"title":"x","sections":[]}' } }] } }));
+test("AI: нет ключа Gemini → сразу Groq", async ({ page }) => {
+  let geminiCalled = false;
+  await page.route("https://generativelanguage.googleapis.com/**", route => { geminiCalled = true; return route.abort(); });
+  await page.route("https://api.groq.com/**", route => route.request().url().endsWith("/models")
+    ? route.fulfill({ json: { data: [{ id: "llama-3.3-70b-versatile" }] } })
+    : route.fulfill({ json: { choices: [{ message: { content: JSON.stringify(AI_TEST) } }] } }));
   await open(page, "/tests");
   await page.locator(".ai-panel summary").click();
-  await page.getByPlaceholder("название модели").fill("m");
-  await page.getByPlaceholder("ключ из личного кабинета").fill("k");
+  await page.getByPlaceholder("ключ Groq").fill("groq-key");
+  await page.getByRole("button", { name: "Проверить ключ" }).nth(1).click();
+  await expect(page.getByText("✓ Ключ работает")).toBeVisible();
+  await page.getByRole("button", { name: "✨ Создать тест" }).click();
+  await expect(page.locator("h1")).toHaveText("Тест от AI");
+  expect(geminiCalled).toBe(false);
+});
+
+test("AI: неверный ключ и плохой тест — понятные сообщения, сломанный тест не показывается", async ({ page }) => {
+  await page.route("https://api.groq.com/**", route => route.request().url().endsWith("/models")
+    ? route.fulfill({ status: 401, body: "bad key" })
+    : route.fulfill({ json: { choices: [{ message: { content: '{"title":"x","sections":[]}' } }] } }));
+  await open(page, "/tests");
+  await page.locator(".ai-panel summary").click();
+  await page.getByPlaceholder("ключ Groq").fill("wrong");
+  await page.getByRole("button", { name: "Проверить ключ" }).nth(1).click();
+  await expect(page.getByText("Groq: ключ не подошёл")).toBeVisible();
+  await page.getByPlaceholder("появится после").nth(1).fill("some-model");
   await page.getByRole("button", { name: "✨ Создать тест" }).click();
   await expect(page.getByText(/AI прислал тест с ошибками/)).toBeVisible();
 });
@@ -64,6 +100,20 @@ test("диктант: проверка по словам", async ({ page }) => {
   await page.getByRole("button", { name: "Проверить" }).click();
   await expect(page.locator(".dictation-result .task-score")).toHaveText("Верно: 100%");
   await expect(page.locator(".dictation-result .bad-word")).toHaveCount(0);
+  // слова результата разделены пробелами (раньше склеивались: «Annaistwenty…»)
+  const shown = (await page.locator(".dictation-result").textContent())!;
+  expect(shown).toContain(heard.split(" ").slice(0, 2).join(" "));
+});
+
+test("диктант: цифры вместо слов засчитываются (25 = twenty-five)", async ({ page }) => {
+  await fakeBrowserVoice(page);
+  const story = STORIES.find(s => s.id === "01_weekend_by_the_sea")!;
+  await open(page, "/dictation/" + story.id);
+  // первое предложение диктанта в этом рассказе: "Anna is twenty-five years old."
+  await page.locator(".dictation-input").fill("Anna is 25 years old");
+  await page.getByRole("button", { name: "Проверить" }).click();
+  await expect(page.locator(".dictation-result .task-score")).toHaveText("Верно: 100%");
+  await expect(page.locator(".dictation-result")).toContainText("Anna is twenty-five years old.");
 });
 
 test("защита от сбоев: сломанная часть заменяется сообщением, остальное работает", async ({ page }) => {

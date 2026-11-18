@@ -58,12 +58,32 @@ export class AiTestService {
     return this.generatedTests().flatMap(t => t.sections.flatMap(s => s.exercises.map(e => e.q ?? "")));
   }
 
-  async generate(provider: AiProvider, options: GenerateOptions): Promise<LevelTest> {
+  /**
+   * Создать тест. Сервисы пробуются по очереди (Gemini, если есть ключ, потом Groq): если первый не ответил
+   * или прислал тест с ошибками — берём следующий. Ошибка, только если не получилось ни у одного.
+   */
+  async generate(providers: AiProvider[], options: GenerateOptions): Promise<LevelTest & { provider: string }> {
+    if (!providers.length) throw new Error("Не настроен ни один сервис: введите ключ Gemini или Groq.");
+    const failures: string[] = [];
+    for (const provider of providers) {
+      try {
+        return { ...this.saveTest(await this.requestTest(provider, options), options), provider: provider.name };
+      } catch (error) {
+        failures.push(error instanceof Error ? error.message : String(error));
+      }
+    }
+    throw new Error(failures.join(" → "));
+  }
+
+  private async requestTest(provider: AiProvider, options: GenerateOptions): Promise<Partial<LevelTest>> {
     const answer = await provider.complete(SYSTEM_PROMPT, buildUserPrompt(options, this.seenQuestions()));
     const raw = extractJson(answer) as Partial<LevelTest>;
     const problems = testProblems(raw);
-    if (problems.length) throw new Error("AI прислал тест с ошибками: " + problems.slice(0, 3).join("; "));
+    if (problems.length) throw new Error(`${provider.name}: AI прислал тест с ошибками: ` + problems.slice(0, 3).join("; "));
+    return raw;
+  }
 
+  private saveTest(raw: Partial<LevelTest>, options: GenerateOptions): LevelTest {
     const test: LevelTest = {
       ...(raw as LevelTest),
       id: "ai_" + this.now(),

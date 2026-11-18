@@ -59,7 +59,9 @@ function next() {
       <button v-if="!result" class="primary" @click="check">Проверить</button>
       <template v-else>
         <div class="dictation-result">
-          <span v-for="(w, i) in result.words" :key="i" :class="w.ok ? 'ok-word' : 'bad-word'">{{ w.word }} </span>
+          <template v-for="(w, i) in result.words" :key="i">
+            <span :class="w.ok ? 'ok-word' : 'bad-word'">{{ w.word }}</span>{{ i < result.words.length - 1 ? " " : "" }}
+          </template>
           <div v-if="result.extra.length" class="muted">Лишние слова: <s>{{ result.extra.join(" ") }}</s></div>
           <div class="task-score">Верно: {{ Math.round(result.score * 100) }}%</div>
         </div>

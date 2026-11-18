@@ -180,3 +180,12 @@
 .ai-form select { font: inherit; padding: 8px; border-radius: 10px; border: 1px solid var(--border); background: var(--surface); color: var(--text); }
 .ai-form .search { margin: 0; }
 @media (max-width: 600px) { .verb-inputs { grid-template-columns: 1fr; } }
+
+/* ---------- страницы списка слов ---------- */
+.words-range { scroll-margin-top: 120px; }
+.pager { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin: 14px 0; }
+.pager button { min-width: 110px; padding: 10px 14px; }
+.pager button:disabled { opacity: .4; cursor: default; }
+.ai-service { border-top: 1px solid var(--border); padding-top: 12px; margin-top: 12px; }
+.ai-service-head { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; }
+.ai-service-head a { margin-left: auto; font-size: 13px; }

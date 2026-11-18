@@ -97,3 +97,20 @@ test("голос браузера: рассказ без mp3 читается, �
   await expect.poll(() => page.evaluate(() => (window as any).spoken.length), { timeout: 30_000 }).toBe(story.paragraphs.flat().length - 2);
   expect(await page.evaluate(() => (window as any).spoken[0])).toBe(story.paragraphs.flat()[2]);
 });
+
+test("список слов: по 100, «Ещё 100 →» заменяет сотню следующей", async ({ page }) => {
+  await open(page, "/words/A2");
+  const rows = page.locator(".word-list li");
+  await expect(rows).toHaveCount(100);
+  const first = await rows.first().locator(".en").textContent();
+  await expect(page.locator(".words-range")).toHaveText(/Слова 1–100 из 906/);
+  await page.getByRole("button", { name: "Ещё 100 →" }).click();
+  await expect(page.locator(".words-range")).toHaveText(/Слова 101–200 из 906/);
+  await expect(rows).toHaveCount(100);
+  expect(await rows.first().locator(".en").textContent()).not.toBe(first);
+  for (let i = 0; i < 8; i++) await page.getByRole("button", { name: "Ещё 100 →" }).click();
+  await expect(page.locator(".words-range")).toHaveText(/Слова 901–906 из 906/);   // последняя страница
+  await expect(page.getByRole("button", { name: "Ещё 100 →" })).toBeDisabled();
+  await page.getByPlaceholder("Поиск").fill("ticket");                          // поиск — снова с начала
+  await expect(page.locator(".words-range")).toHaveText(/Слова 1–/);
+});
