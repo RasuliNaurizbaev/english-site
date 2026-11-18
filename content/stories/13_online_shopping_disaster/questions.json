@@ -1,0 +1,103 @@
+{
+  "questions": [
+    {
+      "type": "choice",
+      "q": "Why did Kate decide to buy everything online?",
+      "options": [
+        "She had no time after work",
+        "She hated going to the crowded shops",
+        "Online things were always cheaper"
+      ],
+      "answer": 1,
+      "explain": "Кейт ненавидела ходить по магазинам: там всегда людно и слишком громкая музыка."
+    },
+    {
+      "type": "tf",
+      "q": "The first parcel had the wrong dress inside it.",
+      "answer": false,
+      "explain": "Неверно: платья в посылке вообще не было, вместо него лежала оранжевая футболка."
+    },
+    {
+      "type": "choice",
+      "q": "Why were the shoes too small?",
+      "options": [
+        "Kate chose the wrong size",
+        "The shop sent a child's size",
+        "Kate's feet were tired"
+      ],
+      "answer": 0,
+      "explain": "Кейт сама ошиблась: выбрала 37 размер вместо 39."
+    },
+    {
+      "type": "tf",
+      "q": "Lily from customer service said that Kate could send the shoes back for free.",
+      "answer": true,
+      "explain": "Верно: Лили сказала, что обувь можно вернуть бесплатно и получить больший размер."
+    },
+    {
+      "type": "choice",
+      "q": "Where did the driver leave the second parcel?",
+      "options": [
+        "Behind Kate's plants",
+        "At the post office",
+        "At number 18"
+      ],
+      "answer": 2,
+      "explain": "На фото водителя была синяя дверь с номером 18, а Кейт живёт в доме 81."
+    },
+    {
+      "type": "tf",
+      "q": "Kate left a note with her phone number at number 18.",
+      "answer": true,
+      "explain": "Верно: никто не открыл, и она бросила в почтовый ящик записку с именем и телефоном."
+    },
+    {
+      "type": "choice",
+      "q": "In the text, Kate \"felt tired and a little hopeless\". What does \"hopeless\" mean here?",
+      "options": [
+        "Very happy and excited",
+        "Without much hope that things will be OK",
+        "Angry with another person"
+      ],
+      "answer": 1,
+      "explain": "«Hopeless» — «без надежды»: Кейт почти не верила, что платье найдётся."
+    },
+    {
+      "type": "tf",
+      "q": "George brought the box to Kate the next morning.",
+      "answer": false,
+      "explain": "Неверно: Джордж принёс коробку в тот же вечер, через десять минут после звонка."
+    },
+    {
+      "type": "choice",
+      "q": "What had happened to George last year?",
+      "options": [
+        "His boots were delivered to number 81",
+        "He lost his dog",
+        "He went to a wedding in the wrong clothes"
+      ],
+      "answer": 0,
+      "explain": "Его новые ботинки доставили в дом 81, и бывшая жительница их так и не вернула."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Kate buy a pair of boots at the end?",
+      "options": [
+        "Her own boots were old",
+        "She wanted to send them back online",
+        "She wanted to thank George"
+      ],
+      "answer": 2,
+      "explain": "Она купила ботинки 44 размера и оставила их у двери Джорджа с запиской «Thank you, George!»."
+    }
+  ],
+  "retell": [
+    "What did Kate need to buy and why?",
+    "What did she order online?",
+    "What was wrong with the first parcel?",
+    "What did Lily from customer service promise?",
+    "What happened with the second delivery?",
+    "How did George help Kate?",
+    "How did Kate thank George at the end?"
+  ]
+}

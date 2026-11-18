@@ -1,0 +1,148 @@
+{
+  "id": "A2_08_comparatives_superlatives",
+  "level": "A2",
+  "order": 8,
+  "title": "Comparatives and superlatives",
+  "titleRu": "Степени сравнения прилагательных",
+  "summary": "Как сравнивать: -er/-est, more/most, исключения good/better/best, конструкции than и as…as.",
+  "theory": "## Когда используем\n\nПрилагательные имеют три степени:\n\n| Степень | Зачем | Пример |\n|---|---|---|\n| положительная | просто качество | Tom is **tall**. — Том высокий. |\n| сравнительная (comparative) | сравниваем **два** предмета | Tom is **taller than** Mike. — Том выше Майка. |\n| превосходная (superlative) | выделяем **один из группы** (3 и больше) | Tom is **the tallest** in the class. — Том самый высокий в классе. |\n\n> My flat is smaller than your house. — Моя квартира меньше твоего дома.\n> This is the most beautiful city in the world. — Это самый красивый город в мире.\n\n## Как образуется\n\n### Короткие прилагательные (1 слог) → -er / -est\n\n| Правило | Прилагательное | Comparative | Superlative |\n|---|---|---|---|\n| обычно + er / est | cheap, old, tall | cheaper, older | the cheapest, the oldest |\n| на -e → + r / st | nice, large | nicer, larger | the nicest, the largest |\n| согласная-гласная-согласная → удвоение | big, hot, thin, fat | bigger, hotter | the biggest, the hottest |\n\n### Прилагательные из 2 слогов на -y → -ier / -iest\n\n| Прилагательное | Comparative | Superlative |\n|---|---|---|\n| happy | happier | the happiest |\n| easy | easier | the easiest |\n| busy | busier | the busiest |\n| funny | funnier | the funniest |\n\n### Длинные прилагательные (2+ слога) → more / most\n\n| Прилагательное | Comparative | Superlative |\n|---|---|---|\n| expensive | more expensive | the most expensive |\n| interesting | more interesting | the most interesting |\n| beautiful | more beautiful | the most beautiful |\n| boring | more boring | the most boring |\n| famous | more famous | the most famous |\n\n!! Противоположность: **less / the least** — менее / наименее: This film is less interesting than the book.\n\n### Исключения — учим наизусть\n\n| Прилагательное | Comparative | Superlative |\n|---|---|---|\n| good — хороший | **better** | **the best** |\n| bad — плохой | **worse** | **the worst** |\n| far — далёкий | **farther / further** | **the farthest / furthest** |\n| much / many — много | **more** | **the most** |\n| little — мало | **less** | **the least** |\n\n> Today is better than yesterday. — Сегодня лучше, чем вчера.\n> It was the worst day of my life. — Это был худший день в моей жизни.\n\n## than, the, in / of\n\n- После сравнительной степени — **than** («чем»):\n> Cats are quieter than dogs. — Кошки тише, чем собаки.\n- В разговоре после than часто идёт **me / him / her**: She is older than me.\n- Перед превосходной степенью — почти всегда **the**: the best, the most expensive.\n- После превосходной степени: **in** + место/группа, **of** + период или число:\n> the biggest city **in** Russia, the best student **in** the class\n> the happiest day **of** my life, the best **of** all\n\n## as … as — такой же, как\n\n**as + прилагательное (обычная форма) + as** — равенство:\n> My brother is as tall as my father. — Мой брат такого же роста, как отец.\n\n**not as … as** — не такой, как (= меньше):\n> This hotel isn't as expensive as that one. — Этот отель не такой дорогой, как тот.\n> My car isn't as fast as yours. — Моя машина не такая быстрая, как твоя.\n\n## Усиление сравнения\n\n**much / a lot / far** — намного; **a bit / a little** — немного:\n> London is much bigger than Oxford. — Лондон намного больше Оксфорда.\n> I feel a bit better today. — Сегодня мне немного лучше.\n\n⚠ Не говорим very bigger. Very — только с обычной степенью: very big, much bigger.\n\n## Сравните с русским\n\n| По-русски | По-английски |\n|---|---|\n| выше, чем он / выше него | taller than him |\n| самый интересный | the most interesting |\n| лучше всех | the best (of all) |\n| такой же большой, как | as big as |\n\n## Слова-подсказки\n\nthan, the ... in / of, as ... as, much, a bit, ever (the best film I've ever seen).\n\n## Типичные ошибки\n\n⚠ more bigger → bigger (не соединяем more и -er)\n⚠ He is taller then me. → He is taller than me. (then — «потом», than — «чем»)\n⚠ the most good → the best; more bad → worse\n⚠ She is most beautiful girl. → She is the most beautiful girl. (нужен the)\n⚠ the biggest city of the world → the biggest city in the world\n⚠ He is as tall like me. → He is as tall as me.\n⚠ very bigger → much bigger\n⚠ expensiver → more expensive\n\n!! Запомните полезную фразу: **This is the best ... I've ever ...** — This is the best book I've ever read. (Это лучшая книга, которую я когда-либо читал.)",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "My sister is ___ than me.",
+      "options": [
+        "old",
+        "older",
+        "oldest"
+      ],
+      "answer": 1,
+      "explain": "Сравниваем двоих с than — сравнительная степень older."
+    },
+    {
+      "type": "choice",
+      "q": "This is ___ restaurant in our town.",
+      "options": [
+        "the most expensive",
+        "more expensive",
+        "the expensivest"
+      ],
+      "answer": 0,
+      "explain": "Один из группы, длинное прилагательное — the most expensive."
+    },
+    {
+      "type": "choice",
+      "q": "Today the weather is ___ than yesterday.",
+      "options": [
+        "more bad",
+        "worse",
+        "the worst"
+      ],
+      "answer": 1,
+      "explain": "Bad — исключение: worse."
+    },
+    {
+      "type": "choice",
+      "q": "He is ___ student in the class.",
+      "options": [
+        "the best",
+        "the better",
+        "the goodest"
+      ],
+      "answer": 0,
+      "explain": "Превосходная степень от good — the best."
+    },
+    {
+      "type": "choice",
+      "q": "My bag is as heavy ___ yours.",
+      "options": [
+        "than",
+        "like",
+        "as"
+      ],
+      "answer": 2,
+      "explain": "Конструкция as ... as."
+    },
+    {
+      "type": "choice",
+      "q": "London is ___ bigger than Oxford.",
+      "options": [
+        "very",
+        "much",
+        "more"
+      ],
+      "answer": 1,
+      "explain": "Перед сравнительной степенью усиливаем much, а не very."
+    },
+    {
+      "type": "input",
+      "q": "Summer is ___ (hot) than spring.",
+      "answer": [
+        "hotter"
+      ],
+      "explain": "Hot: удваиваем t и добавляем er."
+    },
+    {
+      "type": "input",
+      "q": "This test is ___ (easy) than the last one.",
+      "answer": [
+        "easier"
+      ],
+      "explain": "Easy: y → i + er."
+    },
+    {
+      "type": "input",
+      "q": "It was ___ (happy) day of my life.",
+      "answer": [
+        "the happiest"
+      ],
+      "explain": "Превосходная степень: the + happiest."
+    },
+    {
+      "type": "input",
+      "q": "Gold is ___ (expensive) than silver.",
+      "answer": [
+        "more expensive"
+      ],
+      "explain": "Длинное прилагательное — more expensive."
+    },
+    {
+      "type": "input",
+      "q": "My new flat isn't as ___ (big) as my old one.",
+      "answer": [
+        "big"
+      ],
+      "explain": "В конструкции as ... as прилагательное в обычной форме."
+    },
+    {
+      "type": "choice",
+      "q": "Moscow is the largest city ___ Russia.",
+      "options": [
+        "of",
+        "in",
+        "than"
+      ],
+      "answer": 1,
+      "explain": "После превосходной степени с местом — in."
+    },
+    {
+      "type": "input",
+      "q": "This is ___ (bad) film I've ever seen!",
+      "answer": [
+        "the worst"
+      ],
+      "explain": "Bad — исключение: the worst."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "My brother is taller than my father.",
+      "explain": "Сравнительная степень + than."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "This is the most interesting book in the library.",
+      "explain": "The most + прилагательное + in + место."
+    }
+  ]
+}

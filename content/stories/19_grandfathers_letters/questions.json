@@ -1,0 +1,103 @@
+{
+  "questions": [
+    {
+      "type": "choice",
+      "q": "Why did Grandfather Walter want to move to a smaller flat?",
+      "options": [
+        "He wanted to live near Daniel",
+        "The house was too big and the stairs were difficult for him",
+        "He had sold the house to a friend"
+      ],
+      "answer": 1,
+      "explain": "Дом стал слишком большим, а лестница — слишком трудной для его коленей."
+    },
+    {
+      "type": "tf",
+      "q": "The key to the wooden box was lost.",
+      "answer": false,
+      "explain": "Неверно: ключ был привязан верёвкой к ручке коробки."
+    },
+    {
+      "type": "choice",
+      "q": "Who were the letters addressed to?",
+      "options": [
+        "Margaret, Daniel's grandmother",
+        "Helen, Rose's daughter",
+        "Miss Rose Baker"
+      ],
+      "answer": 2,
+      "explain": "Все письма были адресованы мисс Роуз Бейкер в Бристоль."
+    },
+    {
+      "type": "tf",
+      "q": "When he was nineteen, Walter used to work at a bakery.",
+      "answer": true,
+      "explain": "Верно: в девятнадцать лет он работал в пекарне в Бристоле."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Walter go to Canada?",
+      "options": [
+        "His family needed money, and the pay there was good",
+        "He wanted to forget Rose",
+        "He wanted to study at a university"
+      ],
+      "answer": 0,
+      "explain": "Семья была бедной, отец потерял работу, а в лесах Канады хорошо платили."
+    },
+    {
+      "type": "choice",
+      "q": "The envelopes said \"Returned to sender\". What does this mean?",
+      "options": [
+        "Rose read the letters and sent them back",
+        "The letters were sent back to the person who wrote them",
+        "The letters were sent to Rose's new home"
+      ],
+      "answer": 1,
+      "explain": "«Returned to sender» — «возвращено отправителю»: письма вернулись к Уолтеру."
+    },
+    {
+      "type": "tf",
+      "q": "When Walter came back, the bakery was still open.",
+      "answer": false,
+      "explain": "Неверно: пекарня закрылась, а семья Роуз уехала."
+    },
+    {
+      "type": "choice",
+      "q": "Why didn't Walter get Rose's letters?",
+      "options": [
+        "Rose never wrote to him",
+        "Her father burned them",
+        "The company had moved him to another camp"
+      ],
+      "answer": 2,
+      "explain": "Компания перевела его в другой лагерь, и его почту никто не пересылал."
+    },
+    {
+      "type": "tf",
+      "q": "Rose never forgot the boy from the bakery.",
+      "answer": true,
+      "explain": "Верно: на последнем дне рождения она сказала Хелен, что никогда его не забывала."
+    },
+    {
+      "type": "choice",
+      "q": "What present did Daniel give his grandfather?",
+      "options": [
+        "A new wooden box",
+        "A book made from the letters",
+        "A photo of Rose"
+      ],
+      "answer": 1,
+      "explain": "Даниэль отсканировал письма и сделал из них книгу в тёмно-синей обложке."
+    }
+  ],
+  "retell": [
+    "Why was Daniel helping his grandfather?",
+    "What did Daniel find in the attic?",
+    "What did Walter tell Daniel about Rose and his youth?",
+    "Why did Walter go to Canada, and what happened to his letters?",
+    "What did Walter find when he came home?",
+    "What did Helen and Rose's diary explain?",
+    "What did Walter ask Daniel to promise, and what present did Daniel make?"
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "id": "A2_01_was_were",
+  "level": "A2",
+  "order": 1,
+  "title": "Past Simple of to be: was / were",
+  "titleRu": "Прошедшее время глагола to be",
+  "summary": "Как сказать «был, была, были» по-английски: was и were в утверждениях, отрицаниях, вопросах и в конструкции there was / there were.",
+  "theory": "## Когда используем\n\n**Was / were** — это прошедшее время глагола **to be** (быть, находиться, являться). В настоящем времени у нас три формы: am / is / are. В прошедшем — всего две: **was** и **were**.\n\nИспользуем, когда говорим о состоянии, месте, возрасте, погоде, чувствах **в прошлом**:\n\n- где кто-то был:\n> I was at home yesterday. — Вчера я был дома.\n- какой кто-то/что-то был(о):\n> The film was very interesting. — Фильм был очень интересный.\n- возраст в прошлом:\n> She was ten in 2010. — В 2010 году ей было десять.\n- погода и время:\n> It was cold last night. — Вчера вечером было холодно.\n- чувства и состояние:\n> We were tired after the trip. — Мы устали после поездки.\n- профессия или роль в прошлом:\n> My grandfather was a teacher. — Мой дедушка был учителем.\n\nВ русском языке в настоящем времени глагол «быть» пропадает («Я дома»), а в прошедшем появляется («Я был дома»). В английском он есть **всегда**: и в настоящем (I am at home), и в прошедшем (I was at home).\n\n## Как образуется\n\n### Утверждение (+)\n\n| Подлежащее | Глагол | Пример |\n|---|---|---|\n| I | was | I was happy. |\n| he / she / it | was | She was at work. |\n| you | were | You were right. |\n| we | were | We were in London. |\n| they | were | They were late. |\n\n!! Простое правило: **was** — для I, he, she, it (единственное число). **were** — для you, we, they (и для «you» в значении «ты» тоже!).\n\n### Отрицание (−)\n\nДобавляем **not** после was / were. В разговорной речи используем сокращения:\n\n| Полная форма | Сокращение |\n|---|---|\n| I was not | I wasn't |\n| she was not | she wasn't |\n| we were not | we weren't |\n| they were not | they weren't |\n\n> I wasn't at school on Monday. — Меня не было в школе в понедельник.\n> They weren't hungry. — Они не были голодны.\n\n### Вопрос (?)\n\nСтавим was / were **перед подлежащим** — никаких did!\n\n| Вопрос | Краткий ответ «да» | Краткий ответ «нет» |\n|---|---|---|\n| Was I late? | Yes, you were. | No, you weren't. |\n| Was he at home? | Yes, he was. | No, he wasn't. |\n| Were you tired? | Yes, I was. | No, I wasn't. |\n| Were they happy? | Yes, they were. | No, they weren't. |\n\nВопросы с вопросительными словами: **Where / When / Why / How + was / were + подлежащее**:\n> Where were you last night? — Где ты был вчера вечером?\n> How was your holiday? — Как прошёл твой отпуск?\n> Why was she angry? — Почему она злилась?\n> What was the weather like? — Какая была погода?\n\n## There was / there were\n\nКонструкция **there is / there are** («есть, находится») в прошлом превращается в **there was / there were**:\n\n| | Единственное / неисчисляемое | Множественное |\n|---|---|---|\n| + | There was a cat in the garden. | There were two cats in the garden. |\n| − | There wasn't any milk. | There weren't many people. |\n| ? | Was there a bank near the hotel? | Were there any shops? |\n\n> There was a big park near my old house. — Рядом с моим старым домом был большой парк.\n> There were a lot of people at the concert. — На концерте было много людей.\n\n!! Форму выбираем по **первому** существительному после there: There was a table and two chairs. — Там был стол и два стула.\n\n## Слова-подсказки\n\nЭти слова часто показывают, что нужно прошедшее время:\n- **yesterday** — вчера; **the day before yesterday** — позавчера\n- **last** week / month / year / night / Monday — на прошлой неделе / в прошлом месяце...\n- **ago**: two days ago, a year ago — два дня назад, год назад\n- **in** 2015, **when** I was a child — в 2015 году, когда я был ребёнком\n\n> I was in Paris three years ago. — Я был в Париже три года назад.\n\n## Сравните\n\n| Настоящее | Прошедшее |\n|---|---|\n| I am tired now. | I was tired yesterday. |\n| They are at home. | They were at home. |\n| Is she a student? | Was she a student? |\n| There are many cars. | There were many cars. |\n\n## Типичные ошибки\n\n⚠ I were at home. → I was at home.\n⚠ You was right. → You were right. (you — всегда were)\n⚠ Did you be at home? → Were you at home?\n⚠ I didn't was there. → I wasn't there.\n⚠ Yesterday I at home. → Yesterday I was at home. (глагол-связку нельзя пропускать, как в русском)\n⚠ There was many people. → There were many people.\n⚠ Where you were? → Where were you? (в вопросе was/were стоит перед подлежащим)\n⚠ I was born in 1995 year. → I was born in 1995. (слово year не нужно)\n\n!! Запомните выражение **I was born** — «я родился». По-английски это всегда прошедшее время глагола to be: Where were you born? — I was born in Kazan.",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "I ___ at home yesterday evening.",
+      "options": [
+        "was",
+        "were",
+        "am"
+      ],
+      "answer": 0,
+      "explain": "С I в прошедшем времени используем was."
+    },
+    {
+      "type": "choice",
+      "q": "They ___ very tired after the game.",
+      "options": [
+        "was",
+        "were",
+        "are"
+      ],
+      "answer": 1,
+      "explain": "С they в прошедшем — were; after the game указывает на прошлое."
+    },
+    {
+      "type": "choice",
+      "q": "You ___ right yesterday, sorry!",
+      "options": [
+        "was",
+        "were",
+        "is"
+      ],
+      "answer": 1,
+      "explain": "С you всегда were, даже если это «ты»."
+    },
+    {
+      "type": "choice",
+      "q": "___ she at school last Monday?",
+      "options": [
+        "Did",
+        "Was",
+        "Were"
+      ],
+      "answer": 1,
+      "explain": "Вопрос с to be: Was + she, без did."
+    },
+    {
+      "type": "choice",
+      "q": "There ___ a lot of people at the party last night.",
+      "options": [
+        "was",
+        "were",
+        "are"
+      ],
+      "answer": 1,
+      "explain": "People — множественное число, поэтому there were."
+    },
+    {
+      "type": "choice",
+      "q": "— Were you at work on Friday? — No, I ___.",
+      "options": [
+        "didn't",
+        "weren't",
+        "wasn't"
+      ],
+      "answer": 2,
+      "explain": "Краткий ответ для I — No, I wasn't."
+    },
+    {
+      "type": "input",
+      "q": "The weather ___ (be) really nice last weekend.",
+      "answer": [
+        "was"
+      ],
+      "explain": "The weather — единственное число, прошлое: was."
+    },
+    {
+      "type": "input",
+      "q": "We ___ (not / be) hungry, so we didn't eat.",
+      "answer": [
+        "weren't",
+        "were not"
+      ],
+      "explain": "Отрицание с we: weren't / were not."
+    },
+    {
+      "type": "input",
+      "q": "My grandparents ___ (be) doctors.",
+      "answer": [
+        "were"
+      ],
+      "explain": "Grandparents — множественное число: were."
+    },
+    {
+      "type": "input",
+      "q": "There ___ (not / be) any milk in the fridge this morning.",
+      "answer": [
+        "wasn't",
+        "was not"
+      ],
+      "explain": "Milk — неисчисляемое, поэтому there wasn't."
+    },
+    {
+      "type": "input",
+      "q": "Where ___ (be) you born?",
+      "answer": [
+        "were"
+      ],
+      "explain": "Where were you born? — с you используем were."
+    },
+    {
+      "type": "choice",
+      "q": "The film ___ boring, so I left early.",
+      "options": [
+        "wasn't",
+        "was",
+        "were"
+      ],
+      "answer": 1,
+      "explain": "Фильм был скучным — поэтому ушёл: утверждение was."
+    },
+    {
+      "type": "order",
+      "q": "Составьте вопрос",
+      "answer": "Where were you last night?",
+      "explain": "Вопросительное слово + were + подлежащее + время."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "There was a small shop near my house.",
+      "explain": "There was + единственное число + место."
+    },
+    {
+      "type": "order",
+      "q": "Составьте вопрос",
+      "answer": "How was your holiday in Spain?",
+      "explain": "How + was + подлежащее: «Как прошёл...?»"
+    }
+  ]
+}

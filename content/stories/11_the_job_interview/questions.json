@@ -1,0 +1,103 @@
+{
+  "questions": [
+    {
+      "type": "tf",
+      "q": "Sara had worked in a shop for three years.",
+      "answer": true,
+      "explain": "Верно: Сара три года работала в оживлённом магазине в центре города."
+    },
+    {
+      "type": "choice",
+      "q": "What advice did Daniel give Sara?",
+      "options": [
+        "To buy a new dress",
+        "To prepare well and be herself",
+        "To call the company every day"
+      ],
+      "answer": 1,
+      "explain": "Дэниел сказал: «Prepare well and be yourself» — хорошо подготовиться и быть собой."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Sara wake up late on Friday?",
+      "options": [
+        "She forgot to set her alarm",
+        "Lucy turned off her alarm",
+        "Her phone was broken"
+      ],
+      "answer": 0,
+      "explain": "Она не могла уснуть до четырёх утра и забыла поставить будильник."
+    },
+    {
+      "type": "tf",
+      "q": "Sara was late for the interview.",
+      "answer": false,
+      "explain": "Неверно: она пришла без пяти десять, то есть вовремя."
+    },
+    {
+      "type": "choice",
+      "q": "What did Sara leave at home?",
+      "options": [
+        "Her phone",
+        "Her bag",
+        "Her folder with her CV and notes"
+      ],
+      "answer": 2,
+      "explain": "В спешке она оставила дома папку с резюме и записями."
+    },
+    {
+      "type": "tf",
+      "q": "Sara said that the company was twenty years old.",
+      "answer": true,
+      "explain": "Верно: она сказала «двадцать лет», а на самом деле компании пятнадцать."
+    },
+    {
+      "type": "choice",
+      "q": "In the text, Sara says \"my head is a mess\". What does she mean?",
+      "options": [
+        "Her hair looks bad",
+        "She can't think clearly",
+        "She has a headache"
+      ],
+      "answer": 1,
+      "explain": "«My head is a mess» значит, что в голове путаница и она не может ясно думать."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Sara's first trip abroad change her life?",
+      "options": [
+        "She saw that travel isn't only for rich people",
+        "She met her best friend there",
+        "She learned to speak Spanish"
+      ],
+      "answer": 0,
+      "explain": "Она поняла, что путешествия доступны не только богатым людям."
+    },
+    {
+      "type": "tf",
+      "q": "Sara felt sure that the interview had gone well.",
+      "answer": false,
+      "explain": "Неверно: в автобусе она была уверена, что провалила собеседование."
+    },
+    {
+      "type": "choice",
+      "q": "Why did the company choose Sara?",
+      "options": [
+        "She knew every fact about the company",
+        "She was the youngest person",
+        "She was honest and had excellent ideas"
+      ],
+      "answer": 2,
+      "explain": "Миссис Тейлор сказала, что Сара была единственной честной кандидаткой и у неё были отличные идеи."
+    }
+  ],
+  "retell": [
+    "Who was Sara and what job did she want?",
+    "What did Mrs Taylor say on the phone?",
+    "How did Sara prepare for the interview?",
+    "What went wrong on the morning of the interview?",
+    "What mistake did Sara make in the interview?",
+    "What did Sara say when she decided to be honest?",
+    "How did the story end?"
+  ]
+}

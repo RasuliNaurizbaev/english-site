@@ -1,0 +1,101 @@
+{
+  "questions": [
+    {
+      "type": "tf",
+      "q": "Grandma Rose is going to be sixty.",
+      "answer": false,
+      "explain": "Неверно: у бабушки Роуз семидесятый день рождения (seventieth birthday)."
+    },
+    {
+      "type": "choice",
+      "q": "How did Ben send the invitations?",
+      "options": [
+        "By post",
+        "By email and text message",
+        "He phoned everyone"
+      ],
+      "answer": 1,
+      "explain": "Бен разослал приглашения по электронной почте и в сообщениях."
+    },
+    {
+      "type": "choice",
+      "q": "Why did they book a room in a restaurant?",
+      "options": [
+        "Grandma's house was too small for forty people",
+        "Grandma doesn't like cooking",
+        "The restaurant was free"
+      ],
+      "answer": 0,
+      "explain": "Дом бабушки был слишком мал для сорока гостей."
+    },
+    {
+      "type": "choice",
+      "q": "In the story, the owner 'gave them a discount'. A discount is…",
+      "options": [
+        "a lower price",
+        "a free cake",
+        "a bigger room"
+      ],
+      "answer": 0,
+      "explain": "«Discount» — скидка, то есть более низкая цена."
+    },
+    {
+      "type": "tf",
+      "q": "Lucy didn't want to buy a bag because Grandma already has three.",
+      "answer": true,
+      "explain": "Верно: на идею Бена Люси ответила: «She already has three»."
+    },
+    {
+      "type": "choice",
+      "q": "What present did they buy?",
+      "options": [
+        "A warm scarf",
+        "A new bag",
+        "A photo album"
+      ],
+      "answer": 2,
+      "explain": "Люси нашла в маленьком магазине красивый фотоальбом."
+    },
+    {
+      "type": "choice",
+      "q": "What was Ben's job on Friday?",
+      "options": [
+        "To cook the food",
+        "To keep Grandma busy",
+        "To hang the balloons"
+      ],
+      "answer": 1,
+      "explain": "Бен должен был занять бабушку — прогулка в парке и кофе, пока остальные готовили ресторан."
+    },
+    {
+      "type": "tf",
+      "q": "The chocolate cake had seventy candles.",
+      "answer": true,
+      "explain": "Верно: официанты принесли огромный шоколадный торт с семьюдесятью свечами."
+    },
+    {
+      "type": "choice",
+      "q": "How did Grandma feel when everyone shouted 'Surprise!'?",
+      "options": [
+        "She was angry and wanted to go home",
+        "She was tired and bored",
+        "She was so shocked that she couldn't speak"
+      ],
+      "answer": 2,
+      "explain": "Бабушка была так потрясена, что не могла говорить, а потом смеялась и плакала."
+    },
+    {
+      "type": "tf",
+      "q": "Grandma didn't dance at the party.",
+      "answer": false,
+      "explain": "Неверно: бабушка танцевала со всеми внуками до полуночи."
+    }
+  ],
+  "retell": [
+    "Whose birthday is it, and what did Lucy and Ben decide to do?",
+    "How did they plan the party: the guests, the invitations and the place?",
+    "What present did they choose, and how did they prepare it?",
+    "What happened on Friday before the party?",
+    "What happened when Grandma walked into the restaurant?"
+  ]
+}

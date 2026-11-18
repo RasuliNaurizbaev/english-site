@@ -1,0 +1,154 @@
+{
+  "id": "A2_12_first_conditional",
+  "level": "A2",
+  "order": 12,
+  "title": "First Conditional",
+  "titleRu": "Условные предложения первого типа",
+  "summary": "Как говорить о реальных условиях в будущем: if + Present Simple, will + глагол; а также when, as soon as и unless.",
+  "theory": "## Когда используем\n\n**First Conditional** (условное предложение первого типа) — это **реальное условие в будущем**: если что-то случится, то будет результат. Ситуация вполне возможна.\n\n> If it rains, we will stay at home. — Если пойдёт дождь, мы останемся дома.\n> If you study hard, you will pass the exam. — Если будешь усердно заниматься, сдашь экзамен.\n\nИспользуем для:\n- реальных планов, зависящих от условия:\n> If I have time, I'll call you. — Если будет время, я тебе позвоню.\n- предупреждений и угроз:\n> If you touch that, you'll burn your hand. — Если тронешь это, обожжёшь руку.\n- обещаний и договорённостей:\n> If you help me, I'll buy you dinner. — Если поможешь, я угощу тебя ужином.\n- советов-последствий:\n> If you don't hurry, you'll miss the bus. — Если не поторопишься, опоздаешь на автобус.\n\n## Как образуется\n\n| Часть с if (условие) | Главная часть (результат) |\n|---|---|\n| **if + Present Simple** | **will + V1** |\n| If I **see** Tom, | I **will tell** him. |\n| If she **doesn't come**, | we **won't start**. |\n| If it **is** sunny, | we**'ll go** to the beach. |\n\n!! Главное правило: **после if — НЕ will**, а Present Simple, хотя по смыслу это будущее. По-русски мы говорим «если **пойдёт** дождь» (будущее), а по-английски — «if it **rains**» (настоящее).\n\n### Порядок частей\n\nЧасти можно менять местами. Если **if стоит в начале**, ставим **запятую**; если в середине — запятая не нужна:\n> If you call me, I'll come. — Если позвонишь, я приду.\n> I'll come if you call me. — Я приду, если позвонишь.\n\n### Вопросы\n\n> What will you do if you lose your job? — Что ты будешь делать, если потеряешь работу?\n> Will you come if I invite you? — Ты придёшь, если я тебя приглашу?\n\n### Другие формы в главной части\n\nВместо will можно использовать **can, may, might**, повелительное наклонение:\n> If you're tired, you can go home. — Если устал, можешь идти домой.\n> If you see Anna, tell her to call me. — Если увидишь Анну, скажи ей мне позвонить.\n> If it's cold, I might stay in. — Если будет холодно, я, может быть, останусь дома.\n\n## when, as soon as, unless\n\nТакие же правила (Present Simple в придаточной части, will в главной) действуют после слов **when, as soon as, unless, before, after, until**.\n\n| Слово | Значение | Пример |\n|---|---|---|\n| **if** | если (может случиться, а может и нет) | If I see him, I'll tell him. |\n| **when** | когда (точно случится) | When I see him, I'll tell him. |\n| **as soon as** | как только | I'll call you as soon as I arrive. |\n| **unless** | если не (= if ... not) | You'll be late unless you hurry. |\n| **before / after** | до / после того как | I'll have a shower before I go out. |\n| **until** | пока не, до тех пор пока | I'll wait until you come back. |\n\n### if vs when\n\n> If I go to London, I'll visit the British Museum. — Если я поеду в Лондон... (не уверен, что поеду)\n> When I go to London, I'll visit the British Museum. — Когда я поеду в Лондон... (поездка точно будет)\n\n### unless = if not\n\n> Unless you hurry, you'll miss the train. = If you don't hurry, you'll miss the train. — Если не поторопишься, опоздаешь на поезд.\n\n⚠ После unless не ставим ещё одно отрицание: Unless you don't hurry → Unless you hurry.\n\n## Сравните с русским\n\n| По-русски | По-английски |\n|---|---|\n| Если **будет** хорошая погода, мы **пойдём** гулять. | If the weather **is** good, we **will go** for a walk. |\n| Когда **приеду**, **позвоню**. | When I **arrive**, I **will call**. |\n| Как только **закончу**, **скажу** тебе. | As soon as I **finish**, I'**ll tell** you. |\n\nВ русском будущее время стоит в обеих частях, в английском — только в главной.\n\n## Слова-подсказки\n\nif, when, as soon as, unless, before, after, until + **Present Simple**; в другой части — **will / won't / can / imperative**.\n\n## Типичные ошибки\n\n⚠ If it will rain, we will stay at home. → If it rains, we will stay at home.\n⚠ When I will arrive, I will call you. → When I arrive, I will call you.\n⚠ If you will help me, I help you. → If you help me, I'll help you.\n⚠ I'll call you as soon as I will get home. → I'll call you as soon as I get home.\n⚠ Unless you don't study, you will fail. → Unless you study, you will fail.\n⚠ If he come, ... → If he comes, ... (не забывайте -s у he/she/it)\n\n!! Запомните формулу-«пару»: **if + сейчас, will + потом**. Скажите вслух несколько раз: If I have time, I'll call you. If it rains, I'll stay home.",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "If it ___ tomorrow, we'll stay at home.",
+      "options": [
+        "will rain",
+        "rains",
+        "rain"
+      ],
+      "answer": 1,
+      "explain": "После if — Present Simple; it — rains."
+    },
+    {
+      "type": "choice",
+      "q": "If you study hard, you ___ the exam.",
+      "options": [
+        "pass",
+        "will pass",
+        "passed"
+      ],
+      "answer": 1,
+      "explain": "В главной части — will + V1."
+    },
+    {
+      "type": "choice",
+      "q": "I'll call you when I ___ home.",
+      "options": [
+        "get",
+        "will get",
+        "got"
+      ],
+      "answer": 0,
+      "explain": "После when в значении будущего — Present Simple."
+    },
+    {
+      "type": "choice",
+      "q": "You'll miss the bus ___ you hurry.",
+      "options": [
+        "if",
+        "unless",
+        "when"
+      ],
+      "answer": 1,
+      "explain": "Unless = if not: опоздаешь, если не поторопишься."
+    },
+    {
+      "type": "choice",
+      "q": "___ I see Anna tomorrow, I'll give her your message. (не уверен, что увижу)",
+      "options": [
+        "When",
+        "If",
+        "Unless"
+      ],
+      "answer": 1,
+      "explain": "Неуверенность в том, что событие случится, — if."
+    },
+    {
+      "type": "choice",
+      "q": "If she ___ the train, she'll be late for work.",
+      "options": [
+        "miss",
+        "misses",
+        "will miss"
+      ],
+      "answer": 1,
+      "explain": "После if — Present Simple, с she добавляем -es."
+    },
+    {
+      "type": "input",
+      "q": "If you ___ (not / hurry), you'll be late.",
+      "answer": [
+        "don't hurry",
+        "do not hurry"
+      ],
+      "explain": "После if — Present Simple, отрицание don't hurry."
+    },
+    {
+      "type": "input",
+      "q": "If I have enough money, I ___ (buy) a new phone.",
+      "answer": [
+        "will buy",
+        "'ll buy"
+      ],
+      "explain": "Главная часть — will + V1."
+    },
+    {
+      "type": "input",
+      "q": "We ___ (not / go) to the beach if it's cold.",
+      "answer": [
+        "won't go",
+        "will not go"
+      ],
+      "explain": "Главная часть, отрицание — won't go."
+    },
+    {
+      "type": "input",
+      "q": "I'll tell you as soon as I ___ (know) the answer.",
+      "answer": [
+        "know"
+      ],
+      "explain": "После as soon as — Present Simple."
+    },
+    {
+      "type": "input",
+      "q": "What ___ (you / do) if you lose your job?",
+      "answer": [
+        "will you do"
+      ],
+      "explain": "Вопрос в главной части: will + you + do."
+    },
+    {
+      "type": "choice",
+      "q": "I won't go to the party unless you ___ with me.",
+      "options": [
+        "don't come",
+        "come",
+        "will come"
+      ],
+      "answer": 1,
+      "explain": "Unless уже содержит отрицание, поэтому come без don't."
+    },
+    {
+      "type": "choice",
+      "q": "If you see Tom, ___ him to call me.",
+      "options": [
+        "tell",
+        "you tell",
+        "will tell"
+      ],
+      "answer": 0,
+      "explain": "В главной части можно использовать повелительное наклонение: tell."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "If it rains, we will stay at home.",
+      "explain": "If + Present Simple, will + V1."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "I will call you when I arrive.",
+      "explain": "Will + V1 в главной части, when + Present Simple."
+    }
+  ]
+}

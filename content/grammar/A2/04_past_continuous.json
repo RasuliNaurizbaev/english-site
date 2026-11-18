@@ -1,0 +1,150 @@
+{
+  "id": "A2_04_past_continuous",
+  "level": "A2",
+  "order": 4,
+  "title": "Past Continuous and Past Simple",
+  "titleRu": "Прошедшее длительное время",
+  "summary": "Как сказать, что действие было в процессе в прошлом, и как сочетать Past Continuous с Past Simple при помощи when и while.",
+  "theory": "## Когда используем\n\n**Past Continuous** (прошедшее длительное) показывает, что действие **было в процессе** в определённый момент в прошлом. Это «кадр из фильма»: мы смотрим в середину действия, а не на его начало или конец.\n\n- действие в процессе в конкретный момент прошлого:\n> At 8 o'clock yesterday I was having dinner. — Вчера в 8 часов я ужинал (был в процессе ужина).\n> What were you doing at this time last Sunday? — Что ты делал в это время в прошлое воскресенье?\n- длительное действие, которое **прервали** коротким действием (Past Simple):\n> I was walking home when it started to rain. — Я шёл домой, когда начался дождь.\n- два длительных действия **одновременно**:\n> While I was cooking, my husband was watching TV. — Пока я готовила, муж смотрел телевизор.\n- фон, описание обстановки в начале рассказа:\n> The sun was shining and the birds were singing. — Светило солнце, пели птицы.\n\n!! По-русски Past Continuous почти всегда переводится **несовершенным видом**: «шёл», «готовила», «смотрел». Но не наоборот: «я жил в Москве пять лет» — это Past Simple (законченный период), а не Continuous.\n\n## Как образуется\n\n**was / were + глагол-ing**\n\n| | Форма | Пример |\n|---|---|---|\n| + | I / he / she / it **was** + V-ing | She was reading. |\n| + | you / we / they **were** + V-ing | They were playing. |\n| − | wasn't / weren't + V-ing | I wasn't sleeping. |\n| ? | Was / Were + подлежащее + V-ing? | Were you working? |\n\n| Вопрос | Краткий ответ |\n|---|---|\n| Was she sleeping? | Yes, she was. / No, she wasn't. |\n| Were they playing? | Yes, they were. / No, they weren't. |\n| What were you doing? | I was reading. |\n\n### Правописание -ing\n\n| Правило | Пример |\n|---|---|\n| обычно + ing | read → reading, play → playing |\n| немая -e исчезает | write → writing, make → making |\n| короткий глагол на согласная-гласная-согласная → удваиваем | run → running, swim → swimming, sit → sitting |\n| -ie → -ying | lie → lying, die → dying |\n\n## Past Continuous vs Past Simple: when и while\n\nЭто главное в теме. Представьте линию времени: **длинное действие** (фон) — Past Continuous, **короткое действие**, которое произошло на его фоне, — Past Simple.\n\n| Схема | Пример |\n|---|---|\n| длинное (Cont.) + **when** + короткое (Simple) | I was having a shower **when** the phone rang. |\n| **when** + короткое (Simple), длинное (Cont.) | **When** the phone rang, I was having a shower. |\n| **while** + длинное (Cont.), короткое (Simple) | **While** I was having a shower, the phone rang. |\n| длинное + **while** + длинное (оба Cont.) | I was reading **while** she was sleeping. |\n\n- **when** — «когда», обычно перед коротким действием (Past Simple).\n- **while** — «пока, в то время как», обычно перед длинным действием (Past Continuous).\n\n> We were driving to the airport when the car broke down. — Мы ехали в аэропорт, когда сломалась машина.\n> While she was shopping, someone stole her bag. — Пока она ходила по магазинам, у неё украли сумку.\n\n### Сравните\n\n| Past Simple | Past Continuous |\n|---|---|\n| When she arrived, we **had** dinner. — Когда она пришла, мы поужинали (сначала пришла, потом ужин). | When she arrived, we **were having** dinner. — Когда она пришла, мы ужинали (ужин уже шёл). |\n| I **read** a book yesterday. — Я читал (прочитал) книгу вчера. | At 9 pm I **was reading** a book. — В 9 вечера я читал книгу (был в процессе). |\n\nЦепочка законченных действий — только Past Simple: He opened the door, turned on the light and sat down.\n\n## Глаголы, которые не любят -ing\n\nГлаголы состояния обычно не используются в Continuous: **know, like, love, want, need, understand, believe, remember, have** (в значении «иметь»).\n\n> I didn't know the answer. (не I wasn't knowing)\n> She wanted a coffee. (не She was wanting)\n\n## Слова-подсказки\n\n- **at 5 o'clock yesterday**, **at that moment**, **at this time last week**\n- **when**, **while**, **as** (= while)\n- **all day / all evening yesterday** (весь день был занят чем-то)\n\n## Типичные ошибки\n\n⚠ I was watch TV. → I was watching TV. (нужно -ing)\n⚠ They was playing. → They were playing.\n⚠ While I cooked, the phone was ringing. → While I was cooking, the phone rang. (длинное — Continuous, короткое — Simple)\n⚠ When I was coming home, I was seeing an accident. → When I was coming home, I saw an accident.\n⚠ I was knowing him. → I knew him.\n⚠ Did you sleeping? → Were you sleeping?\n\n!! Задайте себе вопрос: «Это действие было фоном (шло какое-то время) или случилось в один момент?» Фон → was/were + ing. Момент → Past Simple.",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "At 7 pm yesterday I ___ dinner.",
+      "options": [
+        "cooked",
+        "was cooking",
+        "were cooking"
+      ],
+      "answer": 1,
+      "explain": "Процесс в конкретный момент прошлого — Past Continuous; с I — was."
+    },
+    {
+      "type": "choice",
+      "q": "They ___ football when it started to rain.",
+      "options": [
+        "was playing",
+        "were playing",
+        "played"
+      ],
+      "answer": 1,
+      "explain": "Длинное действие, прерванное дождём; с they — were playing."
+    },
+    {
+      "type": "choice",
+      "q": "I was reading when the phone ___.",
+      "options": [
+        "was ringing",
+        "rang",
+        "rings"
+      ],
+      "answer": 1,
+      "explain": "Короткое действие, которое прервало чтение, — Past Simple."
+    },
+    {
+      "type": "choice",
+      "q": "___ I was cooking, my son was doing his homework.",
+      "options": [
+        "While",
+        "When",
+        "During"
+      ],
+      "answer": 0,
+      "explain": "Два длинных одновременных действия — while."
+    },
+    {
+      "type": "choice",
+      "q": "— What were you doing at 10 last night? — I ___ TV.",
+      "options": [
+        "watched",
+        "was watching",
+        "watch"
+      ],
+      "answer": 1,
+      "explain": "Вопрос про процесс в момент прошлого — ответ в Past Continuous."
+    },
+    {
+      "type": "choice",
+      "q": "When I was a student, I ___ the answer to every question.",
+      "options": [
+        "knew",
+        "was knowing",
+        "were knowing"
+      ],
+      "answer": 0,
+      "explain": "Know — глагол состояния, не используется в Continuous."
+    },
+    {
+      "type": "input",
+      "q": "She ___ (sleep) when I came home, so I was very quiet.",
+      "answer": [
+        "was sleeping"
+      ],
+      "explain": "Длинное действие на фоне моего прихода — was sleeping."
+    },
+    {
+      "type": "input",
+      "q": "We ___ (walk) in the park when we met Tom.",
+      "answer": [
+        "were walking"
+      ],
+      "explain": "Фоновое действие с we — were walking."
+    },
+    {
+      "type": "input",
+      "q": "While he was driving, he ___ (see) an accident.",
+      "answer": [
+        "saw"
+      ],
+      "explain": "Короткое действие на фоне вождения — Past Simple."
+    },
+    {
+      "type": "input",
+      "q": "I ___ (not / listen) when the teacher explained the rule, so I don't understand it.",
+      "answer": [
+        "wasn't listening",
+        "was not listening"
+      ],
+      "explain": "Процесс в момент объяснения — отрицание wasn't listening."
+    },
+    {
+      "type": "input",
+      "q": "___ (you / work) at 8 o'clock yesterday evening? I called you but you didn't answer.",
+      "answer": [
+        "Were you working",
+        "were you working"
+      ],
+      "explain": "Вопрос про процесс в момент прошлого: Were you working?"
+    },
+    {
+      "type": "choice",
+      "q": "He opened the door, ___ the light and sat down.",
+      "options": [
+        "was turning on",
+        "turned on",
+        "were turning on"
+      ],
+      "answer": 1,
+      "explain": "Цепочка законченных действий одно за другим — Past Simple."
+    },
+    {
+      "type": "input",
+      "q": "When the film ended, everybody ___ (stand) up and left.",
+      "answer": [
+        "stood"
+      ],
+      "explain": "Сначала кончился фильм, потом все встали — последовательные действия, Past Simple."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "I was having a shower when the phone rang.",
+      "explain": "Длинное действие (was having) + when + короткое (rang)."
+    },
+    {
+      "type": "order",
+      "q": "Составьте вопрос",
+      "answer": "What were you doing at this time yesterday?",
+      "explain": "What + were + you + doing + время."
+    }
+  ]
+}

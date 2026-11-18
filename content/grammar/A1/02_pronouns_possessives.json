@@ -1,0 +1,143 @@
+{
+  "id": "A1_02_pronouns_possessives",
+  "level": "A1",
+  "order": 2,
+  "title": "Pronouns and possessives: I / me / my / mine, 's",
+  "titleRu": "Местоимения и притяжательный падеж",
+  "summary": "Личные и объектные местоимения, притяжательные my/mine и притяжательный падеж 's.",
+  "theory": "## Когда используем\n\nВ английском, как и в русском, местоимения меняют форму в зависимости от роли в предложении. Но форм гораздо меньше, чем в русском: нет шести падежей, есть только несколько вариантов. Разберём четыре группы.\n\n### 1. Личные местоимения — подлежащее (кто? что?)\n\nСтоят **перед глаголом** и выполняют действие.\n\n> I live in Kazan. — Я живу в Казани.\n> She works in a bank. — Она работает в банке.\n\n### 2. Объектные местоимения (кого? кому? с кем?)\n\nСтоят **после глагола** или **после предлога** (with, for, to, about…). Они заменяют сразу все русские косвенные падежи: *меня, мне, мной*.\n\n> Call me tomorrow. — Позвони мне завтра.\n> I love him. — Я люблю его.\n> This present is for you. — Этот подарок для тебя.\n> Come with us! — Пойдём с нами!\n\n### 3. Притяжательные прилагательные (чей?) + существительное\n\nСтоят **перед существительным**: *my car, her name*.\n\n> My name is Oleg. — Меня зовут Олег (букв. моё имя Олег).\n> Their house is big. — Их дом большой.\n\n### 4. Притяжательные местоимения (чей?) — без существительного\n\nИспользуются **вместо** «притяжательное + существительное», чтобы не повторять слово.\n\n> This bag is mine. — Эта сумка моя.\n> Is this pen yours? — Эта ручка твоя?\n\n## Как образуется\n\n| Подлежащее | Объект | Притяж. + сущ. | Притяж. без сущ. |\n|---|---|---|---|\n| I (я) | me | my book | mine |\n| you (ты, вы) | you | your book | yours |\n| he (он) | him | his book | his |\n| she (она) | her | her book | hers |\n| it (оно, он/она — о предметах, животных) | it | its name | — |\n| we (мы) | us | our book | ours |\n| they (они) | them | their book | theirs |\n\n!! **It** используем для предметов и животных, даже если по-русски это «он» или «она»: *the table — it*, *the cat — it*.\n\n### Сравните\n\n> This is my phone. → This phone is mine. — Это мой телефон. → Этот телефон мой.\n> Her car is red. Mine is black. — Её машина красная. Моя — чёрная.\n\n## Свой, своя, своё\n\nВ русском есть слово «свой». В английском его нет: используем местоимение того человека, о ком говорим.\n\n> I love my job. — Я люблю свою работу.\n> She lives with her parents. — Она живёт со своими родителями.\n> They wash their car. — Они моют свою машину.\n\n## Притяжательный падеж 's (Anna's car)\n\nЧтобы сказать, **кому что принадлежит**, к имени или существительному добавляем **'s**. Порядок слов обратный русскому: сначала владелец, потом предмет.\n\n> Anna's car — машина Анны\n> my brother's room — комната моего брата\n> the teacher's bag — сумка учителя\n\n| Владелец | Правило | Пример |\n|---|---|---|\n| один (singular) | + 's | my sister's friend |\n| несколько, слово кончается на -s | + ' | my parents' house (дом моих родителей) |\n| несколько, неправильное мн. число | + 's | the children's toys |\n| имя на -s | + 's (чаще) | James's car |\n\nВопрос «чей?» — **Whose?**: *Whose bag is this? — It's Tom's.*\n\n## Типичные ошибки\n\n⚠ Me and my friend go to the park. → My friend and I go to the park.\n⚠ I love she. → I love her.\n⚠ This is the car of Anna. → This is Anna's car.\n⚠ Its my book. → It's my book. (it's = it is; its = его/её)\n⚠ The dog wants it's food. → The dog wants its food.\n⚠ This book is my. → This book is mine.\n⚠ She loves his mother. (о своей маме) → She loves her mother.\n⚠ Give to me the pen. → Give me the pen.\n\n!! Главное различие: **its** (без апострофа) = «его/её» (о предмете), **it's** (с апострофом) = it is. И помните: в английском нет слова «свой» — выбирайте my, your, his, her, our, their по смыслу.",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "___ is my sister. Her name is Kate.",
+      "options": [
+        "She",
+        "Her",
+        "Hers"
+      ],
+      "answer": 0,
+      "explain": "Нужно подлежащее перед глаголом — She."
+    },
+    {
+      "type": "choice",
+      "q": "Can you help ___?",
+      "options": [
+        "I",
+        "me",
+        "my"
+      ],
+      "answer": 1,
+      "explain": "После глагола нужна объектная форма — me."
+    },
+    {
+      "type": "choice",
+      "q": "This is Tom. ___ car is very old.",
+      "options": [
+        "He",
+        "Him",
+        "His"
+      ],
+      "answer": 2,
+      "explain": "Перед существительным car нужно притяжательное his."
+    },
+    {
+      "type": "choice",
+      "q": "— Is this your bag? — Yes, it's ___.",
+      "options": [
+        "my",
+        "mine",
+        "me"
+      ],
+      "answer": 1,
+      "explain": "Без существительного используем mine."
+    },
+    {
+      "type": "choice",
+      "q": "Look at the cat. ___ eyes are green.",
+      "options": [
+        "It's",
+        "Its",
+        "Their"
+      ],
+      "answer": 1,
+      "explain": "Its — «его» о животном; it's = it is."
+    },
+    {
+      "type": "choice",
+      "q": "Choose the correct phrase.",
+      "options": [
+        "the car of my father",
+        "my father's car",
+        "my father car"
+      ],
+      "answer": 1,
+      "explain": "Принадлежность выражаем через 's: my father's car."
+    },
+    {
+      "type": "input",
+      "q": "I don't know these people. Do you know ___ (they)?",
+      "answer": [
+        "them"
+      ],
+      "explain": "После глагола know нужна объектная форма them."
+    },
+    {
+      "type": "input",
+      "q": "We love ___ (we) new flat.",
+      "answer": [
+        "our"
+      ],
+      "explain": "Перед существительным flat — притяжательное our."
+    },
+    {
+      "type": "input",
+      "q": "She lives with ___ (she) parents.",
+      "answer": [
+        "her"
+      ],
+      "explain": "Вместо русского «свой» используем her — местоимение того, о ком говорим."
+    },
+    {
+      "type": "input",
+      "q": "This is ___ (Anna) phone.",
+      "answer": [
+        "Anna's"
+      ],
+      "explain": "Принадлежность: имя + 's."
+    },
+    {
+      "type": "input",
+      "q": "My ___ (parents) house is in the village.",
+      "answer": [
+        "parents'"
+      ],
+      "explain": "Parents оканчивается на -s, поэтому добавляем только апостроф."
+    },
+    {
+      "type": "input",
+      "q": "— Whose books are these? — They're ___ (they).",
+      "answer": [
+        "theirs"
+      ],
+      "explain": "Без существительного «их» = theirs."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "This is my brother's room.",
+      "explain": "Владелец + 's + предмет: my brother's room."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "Please give me your phone number.",
+      "explain": "Give + кому (me) + что (your phone number), без предлога to."
+    },
+    {
+      "type": "order",
+      "q": "Составьте вопрос",
+      "answer": "Whose bag is this?",
+      "explain": "Whose + существительное + is this? — вопрос о принадлежности."
+    }
+  ]
+}

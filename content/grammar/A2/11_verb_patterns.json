@@ -1,0 +1,149 @@
+{
+  "id": "A2_11_verb_patterns",
+  "level": "A2",
+  "order": 11,
+  "title": "Verb patterns: -ing or to-infinitive",
+  "titleRu": "Глагол + -ing или to + инфинитив",
+  "summary": "Какую форму ставить после глаголов: like/love/enjoy/hate + -ing, want/need/decide/hope + to, и вежливое would like to.",
+  "theory": "## Когда используем\n\nКогда после одного глагола идёт второй, английский требует определённую форму второго глагола: либо **-ing** (playing), либо **to + глагол** (to play). По-русски мы всегда используем инфинитив («люблю играть», «хочу играть»), поэтому англичане кажутся нелогичными. На самом деле это просто нужно **запомнить** для каждого глагола.\n\n> I enjoy swimming. — Мне нравится плавать.\n> I want to swim. — Я хочу поплавать.\n\n## Глагол + -ing\n\nПосле глаголов, которые выражают **отношение, чувства** к действию:\n\n| Глагол | Значение | Пример |\n|---|---|---|\n| like | нравится | I like reading. |\n| love | обожаю | She loves dancing. |\n| enjoy | получать удовольствие | We enjoy travelling. |\n| hate | ненавидеть | He hates getting up early. |\n| don't mind | не против | I don't mind waiting. |\n| can't stand | терпеть не могу | I can't stand cleaning. |\n| finish | закончить | Have you finished eating? |\n| stop | перестать | Stop talking! |\n| go | (заниматься активностью) | go swimming, go shopping, go skiing |\n\n> My dad enjoys cooking for the family. — Папа любит готовить для семьи.\n> I don't mind working at weekends. — Я не против работать по выходным.\n\n⚠ **enjoy** — только с -ing: I enjoy to swim — ошибка. Также enjoy требует дополнения: I enjoyed it / I enjoyed myself (не просто I enjoyed).\n\n!! После **like, love, hate** можно использовать и to + V1 (I like to read), разница минимальная. Но на уровне A2 безопаснее говорить **-ing** для общих предпочтений.\n\n## Глагол + to + инфинитив\n\nПосле глаголов, которые выражают **желание, план, решение, надежду** — то, что относится к будущему:\n\n| Глагол | Значение | Пример |\n|---|---|---|\n| want | хотеть | I want to learn Italian. |\n| need | нуждаться, надо | You need to rest. |\n| decide | решить | We decided to stay at home. |\n| hope | надеяться | I hope to see you soon. |\n| plan | планировать | They plan to move. |\n| would like | хотел бы | I'd like to order, please. |\n| try | пытаться | I tried to call you. |\n| learn | учиться (навыку) | She's learning to drive. |\n| forget | забыть (сделать) | Don't forget to buy milk. |\n| promise | обещать | He promised to help. |\n| agree | согласиться | She agreed to come. |\n| offer | предложить | He offered to drive me home. |\n\n> I decided to study English every day. — Я решил заниматься английским каждый день.\n> We need to leave now. — Нам нужно уходить сейчас.\n\n## would like to — вежливое желание\n\n**would like** = «хотел бы» — вежливая форма от want. Сокращение: **I'd like**.\n\n| | Форма | Пример |\n|---|---|---|\n| + | I'd like to + V1 | I'd like to book a table. |\n| + | I'd like + существительное | I'd like a coffee, please. |\n| − | I wouldn't like to + V1 | I wouldn't like to live there. |\n| ? | Would you like to + V1? | Would you like to come with us? |\n| ? | Would you like + сущ.? | Would you like some tea? |\n\nОтвет: — Would you like some tea? — Yes, please. / No, thank you.\n\n### like vs would like\n\n| Фраза | Значение |\n|---|---|\n| I **like** dancing. | Мне (вообще) нравится танцевать — привычка, вкус. |\n| I**'d like to** dance. | Я хотел бы потанцевать — сейчас, конкретное желание. |\n| **Do you like** tea? | Ты любишь чай? |\n| **Would you like** some tea? | Хочешь чаю? (предложение) |\n\n## Как образуется отрицание\n\nОтрицание ставится у **первого** глагола:\n> I don't like waiting. — Я не люблю ждать.\n> She didn't want to go. — Она не хотела идти.\n\nИли у второго, если меняется смысл: I decided **not to** go. — Я решил не идти.\n\n## Сравните\n\n| -ing | to + V1 |\n|---|---|\n| I enjoy cooking. | I want to cook. |\n| She loves travelling. | She hopes to travel. |\n| He finished working. | He decided to work. |\n| Stop eating sweets! | You need to eat less sugar. |\n\n## Слова-подсказки\n\n-ing: like, love, enjoy, hate, don't mind, can't stand, finish, stop, go (activities).\nto: want, need, decide, hope, plan, would like, try, learn, forget, promise, agree, offer.\n\n## Типичные ошибки\n\n⚠ I enjoy to read. → I enjoy reading.\n⚠ I want go home. → I want to go home. (нужно to)\n⚠ I want that you help me. → I want you to help me.\n⚠ I'd like go. → I'd like to go.\n⚠ Do you like a coffee? (предложение) → Would you like a coffee?\n⚠ We decided going. → We decided to go.\n⚠ She hopes seeing you. → She hopes to see you.\n⚠ I need to going. → I need to go. (после to — только начальная форма)\n\n!! Учите глаголы **сразу с формой**: не просто «enjoy», а «enjoy doing»; не «decide», а «decide to do». Так вы никогда не ошибётесь.",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "I really enjoy ___ in the sea.",
+      "options": [
+        "swim",
+        "to swim",
+        "swimming"
+      ],
+      "answer": 2,
+      "explain": "После enjoy — только -ing."
+    },
+    {
+      "type": "choice",
+      "q": "We want ___ a new flat.",
+      "options": [
+        "buy",
+        "to buy",
+        "buying"
+      ],
+      "answer": 1,
+      "explain": "После want — to + V1."
+    },
+    {
+      "type": "choice",
+      "q": "She hates ___ up early.",
+      "options": [
+        "getting",
+        "get",
+        "got"
+      ],
+      "answer": 0,
+      "explain": "После hate используем -ing (getting)."
+    },
+    {
+      "type": "choice",
+      "q": "___ like some coffee?",
+      "options": [
+        "Do you",
+        "Would you",
+        "Are you"
+      ],
+      "answer": 1,
+      "explain": "Вежливое предложение — Would you like...?"
+    },
+    {
+      "type": "choice",
+      "q": "They decided ___ at home because of the rain.",
+      "options": [
+        "staying",
+        "to stay",
+        "stay"
+      ],
+      "answer": 1,
+      "explain": "После decide — to + V1."
+    },
+    {
+      "type": "choice",
+      "q": "I don't mind ___ for you.",
+      "options": [
+        "wait",
+        "to wait",
+        "waiting"
+      ],
+      "answer": 2,
+      "explain": "После don't mind — -ing."
+    },
+    {
+      "type": "input",
+      "q": "I need ___ (call) my mum tonight.",
+      "answer": [
+        "to call"
+      ],
+      "explain": "После need — to + V1."
+    },
+    {
+      "type": "input",
+      "q": "He has finished ___ (paint) the kitchen.",
+      "answer": [
+        "painting"
+      ],
+      "explain": "После finish — -ing."
+    },
+    {
+      "type": "input",
+      "q": "I hope ___ (see) you again soon.",
+      "answer": [
+        "to see"
+      ],
+      "explain": "После hope — to + V1."
+    },
+    {
+      "type": "input",
+      "q": "Would you like ___ (come) to my birthday party?",
+      "answer": [
+        "to come"
+      ],
+      "explain": "Would you like + to + V1."
+    },
+    {
+      "type": "input",
+      "q": "My kids love ___ (play) computer games.",
+      "answer": [
+        "playing",
+        "to play"
+      ],
+      "explain": "После love для общего предпочтения обычно -ing (playing); to play тоже допустимо."
+    },
+    {
+      "type": "choice",
+      "q": "Don't forget ___ the door when you leave.",
+      "options": [
+        "locking",
+        "to lock",
+        "lock"
+      ],
+      "answer": 1,
+      "explain": "Forget to do — забыть сделать: to lock."
+    },
+    {
+      "type": "input",
+      "q": "We go ___ (ski) every winter.",
+      "answer": [
+        "skiing"
+      ],
+      "explain": "Go + -ing для занятий: go skiing."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "I would like to book a table.",
+      "explain": "Would like + to + V1."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "She enjoys reading books in the evening.",
+      "explain": "Enjoy + -ing."
+    }
+  ]
+}

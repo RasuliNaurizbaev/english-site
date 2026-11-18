@@ -1,0 +1,155 @@
+{
+  "id": "A2_09_modals_obligation",
+  "level": "A2",
+  "order": 9,
+  "title": "Must, have to, should",
+  "titleRu": "Модальные глаголы долженствования",
+  "summary": "Как сказать «должен», «нельзя», «не обязательно» и «стоит»: must, have to, mustn't, don't have to, should, shouldn't.",
+  "theory": "## Когда используем\n\nМодальные глаголы показывают **отношение** к действию: нужно, обязательно, нельзя, не нужно, стоит. По-русски это «должен», «надо», «нельзя», «не обязательно», «стоит / следует».\n\n| Глагол | Значение | Пример |\n|---|---|---|\n| **must** | должен (я сам так считаю, правило, сильный совет) | I must call my mum. |\n| **have to** | приходится, надо (так требуют обстоятельства) | I have to wear a uniform at work. |\n| **mustn't** | нельзя, запрещено | You mustn't smoke here. |\n| **don't have to** | не обязательно, не нужно | You don't have to come early. |\n| **should** | следует, стоит (совет) | You should see a doctor. |\n| **shouldn't** | не стоит, не следует | You shouldn't eat so much sugar. |\n\n## must и have to — «должен»\n\nОба означают обязанность, но есть разница в оттенке:\n\n- **must** — обязанность **изнутри**: я сам решил, что это важно; а также письменные правила, инструкции:\n> I must study harder. — Мне надо больше заниматься (я так считаю).\n> Passengers must wear seat belts. — Пассажиры должны пристёгиваться (правило).\n- **have to** — обязанность **извне**: правило, начальник, обстоятельства:\n> I have to get up at 6 because my work starts at 7. — Мне приходится вставать в 6.\n> She has to work on Saturdays. — Ей приходится работать по субботам.\n\n!! В разговорной речи **have to** звучит естественнее и используется чаще. Если сомневаетесь — берите have to.\n\n### Прошедшее и будущее\n\nУ must нет прошедшей формы. Используем have to:\n> Yesterday I **had to** stay late at work. — Вчера мне пришлось задержаться на работе.\n> We **will have to** wait. — Нам придётся подождать.\n\n## mustn't vs don't have to — ловушка!\n\nПо-русски похоже, но смысл противоположный:\n\n| | Значение | Пример |\n|---|---|---|\n| **mustn't** | **нельзя**, запрещено | You mustn't use your phone in the exam. — Нельзя пользоваться телефоном на экзамене. |\n| **don't have to** | **не обязательно**, можно, но не нужно | You don't have to bring food — there's a café. — Не обязательно брать еду — там есть кафе. |\n\n> It's Sunday — I don't have to go to work. — Воскресенье: мне не надо на работу.\n> You mustn't tell anyone. It's a secret. — Никому нельзя говорить. Это секрет.\n\n## should / shouldn't — совет\n\nShould мягче, чем must. Это «стоит, следует, лучше бы»:\n> You look tired. You should go to bed. — Ты выглядишь уставшим. Тебе стоит лечь спать.\n> You shouldn't drink coffee in the evening. — Не стоит пить кофе вечером.\n> What should I do? — Что мне делать?\n\nЧасто с **I think / I don't think**:\n> I think you should apologise. — Думаю, тебе стоит извиниться.\n> I don't think you should go. — Думаю, тебе не стоит идти. (не I think you shouldn't)\n\n## Как образуется\n\n### must / should (модальные глаголы)\n\n| | Форма | Пример |\n|---|---|---|\n| + | подлежащее + must / should + V1 | He must go. She should rest. |\n| − | mustn't / shouldn't + V1 | You mustn't go. |\n| ? | Must / Should + подлежащее + V1? | Should I call him? |\n\nНет -s у he/she/it, нет to после глагола, нет do/does.\n\n### have to (обычный глагол)\n\n| | Форма | Пример |\n|---|---|---|\n| + | have to / **has to** + V1 | She has to work. |\n| − | don't / **doesn't have to** + V1 | He doesn't have to work. |\n| ? | Do / **Does** + подлежащее + have to + V1? | Do you have to wear a uniform? |\n| прошлое | had to / didn't have to / Did ... have to? | Did you have to pay? |\n\n## Сравните\n\n| Ситуация | Фраза |\n|---|---|\n| Правило в бассейне | You must take a shower. |\n| Мой рабочий график | I have to start at 8. |\n| Запрет | You mustn't swim here. |\n| Нет необходимости | You don't have to pay — it's free. |\n| Совет другу | You should try this café. |\n\n## Типичные ошибки\n\n⚠ He musts go. → He must go.\n⚠ You must to go. → You must go. (после must и should нет to)\n⚠ She have to work. → She has to work.\n⚠ I must go to the doctor yesterday. → I had to go to the doctor yesterday.\n⚠ You mustn't come — it's optional. → You don't have to come. (mustn't = нельзя!)\n⚠ Do I should...? → Should I...?\n⚠ He doesn't has to... → He doesn't have to...\n\n!! Запомните пару: **mustn't = «нельзя»**, **don't have to = «не надо, не обязательно»**. Это одна из самых частых ошибок русскоговорящих.",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "You ___ smoke in the hospital. It's forbidden.",
+      "options": [
+        "mustn't",
+        "don't have to",
+        "should"
+      ],
+      "answer": 0,
+      "explain": "Запрет — mustn't."
+    },
+    {
+      "type": "choice",
+      "q": "Tomorrow is Sunday, so I ___ get up early.",
+      "options": [
+        "mustn't",
+        "don't have to",
+        "must"
+      ],
+      "answer": 1,
+      "explain": "Нет необходимости вставать — don't have to."
+    },
+    {
+      "type": "choice",
+      "q": "You have a bad cold. You ___ stay in bed.",
+      "options": [
+        "should",
+        "shouldn't",
+        "mustn't"
+      ],
+      "answer": 0,
+      "explain": "Совет — should."
+    },
+    {
+      "type": "choice",
+      "q": "My sister ___ wear a uniform at school.",
+      "options": [
+        "have to",
+        "has to",
+        "must to"
+      ],
+      "answer": 1,
+      "explain": "С she — has to."
+    },
+    {
+      "type": "choice",
+      "q": "You ___ eat so many sweets. They're bad for your teeth.",
+      "options": [
+        "should",
+        "shouldn't",
+        "don't have to"
+      ],
+      "answer": 1,
+      "explain": "Совет не делать — shouldn't."
+    },
+    {
+      "type": "choice",
+      "q": "Yesterday I ___ wait for the bus for forty minutes.",
+      "options": [
+        "must",
+        "had to",
+        "have to"
+      ],
+      "answer": 1,
+      "explain": "У must нет прошедшей формы — had to."
+    },
+    {
+      "type": "input",
+      "q": "He ___ (not / have to) work on Fridays. He's free.",
+      "answer": [
+        "doesn't have to",
+        "does not have to"
+      ],
+      "explain": "Нет необходимости, he — doesn't have to."
+    },
+    {
+      "type": "input",
+      "q": "___ (you / have to) wear a suit at work?",
+      "answer": [
+        "Do you have to",
+        "do you have to"
+      ],
+      "explain": "Вопрос с have to: Do + you + have to."
+    },
+    {
+      "type": "input",
+      "q": "Students ___ (must / not) use phones during the exam. It's a rule.",
+      "answer": [
+        "mustn't",
+        "must not"
+      ],
+      "explain": "Правило-запрет — mustn't."
+    },
+    {
+      "type": "input",
+      "q": "The museum is free. You ___ (not / have to) buy a ticket.",
+      "answer": [
+        "don't have to",
+        "do not have to"
+      ],
+      "explain": "Бесплатно — не нужно покупать: don't have to."
+    },
+    {
+      "type": "input",
+      "q": "Last year my brother ___ (have to) take the exam twice.",
+      "answer": [
+        "had to"
+      ],
+      "explain": "Прошедшее время — had to."
+    },
+    {
+      "type": "choice",
+      "q": "I don't know what to do. What ___ do?",
+      "options": [
+        "should I",
+        "I should",
+        "do I should"
+      ],
+      "answer": 0,
+      "explain": "Вопрос с should: Should + I + V1."
+    },
+    {
+      "type": "choice",
+      "q": "I think you ___ apologise to her. You were rude.",
+      "options": [
+        "should",
+        "mustn't",
+        "don't have to"
+      ],
+      "answer": 0,
+      "explain": "Совет с I think — should."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "You should see a doctor.",
+      "explain": "Should + V1 без to."
+    },
+    {
+      "type": "order",
+      "q": "Составьте вопрос",
+      "answer": "Does she have to work on Saturdays?",
+      "explain": "Does + she + have to + V1."
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "id": "B1_07_second_conditional",
+  "level": "B1",
+  "order": 7,
+  "title": "Second Conditional",
+  "titleRu": "Второй тип условных: «если бы…»",
+  "summary": "Нереальные ситуации в настоящем и будущем: if + Past, would + V1; If I were you; разница между First и Second.",
+  "theory": "## Когда используем\n\n**Second Conditional** — это «нереальное» условие в **настоящем или будущем**. Мы представляем себе ситуацию, которой нет сейчас или которая маловероятна. В русском это предложения с частицей **«бы»**.\n\n### 1. Ситуация, противоположная реальности сейчас\n> If I had more money, I would buy a car. — Если бы у меня было больше денег, я бы купил машину. (денег нет)\n> If I lived near the sea, I would swim every day. — Если бы я жил у моря, я бы плавал каждый день. (не живу)\n> If she knew the answer, she would tell us. — Если бы она знала ответ, она бы нам сказала. (не знает)\n\n### 2. Маловероятное или воображаемое будущее\n> If I won the lottery, I would travel around the world. — Если бы я выиграл в лотерею, я бы объездил весь мир.\n> What would you do if you lost your job? — Что бы ты делал, если бы потерял работу?\n\n### 3. Совет: If I were you…\n> If I were you, I would talk to her. — На твоём месте я бы поговорил с ней.\n> I wouldn't buy that phone if I were you. — Я бы на твоём месте не покупал этот телефон.\n\n## Как образуется\n\n| Часть с if | Главная часть |\n|---|---|\n| **Past Simple** (did, had, lived, were) | **would + V1** (would buy, would go) |\n\n| | Пример |\n|---|---|\n| + | If I **had** time, I **would help** you. (I'd help) |\n| − | If I **didn't have** to work, I **wouldn't get up** so early. |\n| ? | What **would** you **do** if you **saw** a ghost? |\n\nPast Simple здесь **не означает прошлое**! Это просто «форма нереальности». Речь идёт о настоящем.\n\n### Were для всех лиц\nС глаголом *be* в Second Conditional правильно (особенно в письме и в выражении *If I were you*) использовать **were** для всех лиц:\n> If I were rich… / If he were here… / If it were cheaper…\nВ разговоре можно услышать *If I was*, но *If I were you* — устойчивое выражение, всегда с were.\n\n### Could и might вместо would\n> If I had a car, I could drive you home. — Если бы у меня была машина, я мог бы отвезти тебя домой.\n> If you asked him, he might help. — Если бы ты попросил, он, возможно, помог бы.\n> If I could speak French, I would work in Paris. — Если бы я умел говорить по-французски…\n\n### Порядок частей и запятая\nЧасти можно менять местами. Запятая нужна, только если **if** стоит в начале:\n> If it were warmer, we would go for a walk. — Если бы было теплее, мы бы пошли гулять.\n> We would go for a walk if it were warmer. — То же самое, без запятой.\n\n### Краткие формы\n**would → 'd**, **would not → wouldn't**: *I'd love to, she'd know, we wouldn't mind*.\n> A: Would you help me if I asked? — B: Of course I would. — Ты бы помог мне, если бы я попросил? — Конечно.\n\n## Сравните: First vs Second Conditional\n\n| First (реально) | Second (нереально / маловероятно) |\n|---|---|\n| If + Present, will + V1 | If + Past, would + V1 |\n| If I have time, I'll help you. (вполне возможно) | If I had time, I'd help you. (но времени нет) |\n| If it rains, we'll stay home. | If it snowed in July, I'd be surprised. |\n| If I get the job, I'll move to Moscow. (подал резюме, шансы есть) | If I got the job, I'd move to Moscow. (шансов мало) |\n\nВыбор зависит от того, насколько **реальной** говорящий считает ситуацию:\n> If I see him tomorrow, I'll tell him. — Он обычно приходит, я, скорее всего, его увижу.\n> If I saw a celebrity in the street, I'd ask for a photo. — Это маловероятно, просто фантазия.\n\n## Слова-подсказки\n- **If I were you** — совет\n- **imagine, suppose** — представь, предположим\n- **in your place, I would…** — на твоём месте\n- **lottery, million, ghost, superpower, invisible** — типичные «фантазийные» темы\n\n> Suppose you found a wallet in the street. What would you do? — Предположим, ты нашёл кошелёк на улице. Что бы ты сделал?\n\n## Типичные ошибки\n\n⚠ If I would have time, I would help you. → If I had time, I would help you.\n⚠ If I would be you… → If I were you…\n⚠ If I am you, I would… → If I were you, I would…\n⚠ If I had money, I will buy a house. → If I had money, I would buy a house.\n⚠ If I knew, I would told you. → If I knew, I would tell you. (после would — V1)\n⚠ I would go if I can. → I would go if I could.\n\n!! Русское «бы» стоит в обеих частях («если бы… я бы…»), а в английском **would только в главной части**, никогда после if. Запомните: **if + Past, would + V1**.",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "If I ___ more money, I would buy a new car.",
+      "options": [
+        "have",
+        "had",
+        "would have"
+      ],
+      "answer": 1,
+      "explain": "В части с if во Second Conditional — Past Simple."
+    },
+    {
+      "type": "choice",
+      "q": "If I were you, I ___ that jacket. It's too expensive.",
+      "options": [
+        "won't buy",
+        "wouldn't buy",
+        "didn't buy"
+      ],
+      "answer": 1,
+      "explain": "Совет с If I were you — would/wouldn't + V1."
+    },
+    {
+      "type": "choice",
+      "q": "If she ___ here, she would know what to do. But she's in Paris.",
+      "options": [
+        "is",
+        "were",
+        "would be"
+      ],
+      "answer": 1,
+      "explain": "Нереальное настоящее с be — were."
+    },
+    {
+      "type": "choice",
+      "q": "What would you do if you ___ a million dollars?",
+      "options": [
+        "win",
+        "won",
+        "would win"
+      ],
+      "answer": 1,
+      "explain": "Фантазия о маловероятном — if + Past Simple."
+    },
+    {
+      "type": "choice",
+      "q": "I'm sure I'll see Mark tomorrow. If I ___ him, I'll give him your book.",
+      "options": [
+        "see",
+        "saw",
+        "would see"
+      ],
+      "answer": 0,
+      "explain": "Ситуация реальная (уверен, что увижу) — First Conditional: if + Present."
+    },
+    {
+      "type": "choice",
+      "q": "If I had a car, I ___ drive you to the airport.",
+      "options": [
+        "can",
+        "could",
+        "will"
+      ],
+      "answer": 1,
+      "explain": "Во Second Conditional вместо would можно could (смог бы)."
+    },
+    {
+      "type": "input",
+      "q": "If I ___ you, I would call her and say sorry. (be)",
+      "answer": [
+        "were"
+      ],
+      "explain": "Устойчивое выражение If I were you."
+    },
+    {
+      "type": "input",
+      "q": "If we lived near the sea, we ___ every day. (swim)",
+      "answer": [
+        "would swim",
+        "'d swim"
+      ],
+      "explain": "Главная часть Second Conditional — would + V1."
+    },
+    {
+      "type": "input",
+      "q": "If he ___ so much, he would have more energy. But he works twelve hours a day. (not / work)",
+      "answer": [
+        "didn't work",
+        "did not work"
+      ],
+      "explain": "Нереальное условие в настоящем — Past Simple в отрицании."
+    },
+    {
+      "type": "input",
+      "q": "I would go to the concert if I ___ a ticket, but they're all sold out. (have)",
+      "answer": [
+        "had"
+      ],
+      "explain": "После if — Past Simple, даже если if во второй части."
+    },
+    {
+      "type": "input",
+      "q": "If I spoke French, I ___ a job in Paris. (get)",
+      "answer": [
+        "would get",
+        "'d get",
+        "could get"
+      ],
+      "explain": "Результат нереального условия — would (или could) + V1."
+    },
+    {
+      "type": "order",
+      "q": "Составьте вопрос",
+      "answer": "What would you do if you lost your phone?",
+      "explain": "What + would + подлежащее + V1 + if + Past Simple."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "If I were you, I would see a doctor.",
+      "explain": "Совет: If I were you, I would + V1."
+    },
+    {
+      "type": "choice",
+      "q": "Which sentence is correct?",
+      "options": [
+        "If I would know the answer, I would tell you.",
+        "If I knew the answer, I would tell you.",
+        "If I knew the answer, I will tell you."
+      ],
+      "answer": 1,
+      "explain": "If + Past Simple, would + V1; would после if не используется."
+    }
+  ]
+}

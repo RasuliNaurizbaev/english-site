@@ -1,0 +1,155 @@
+{
+  "id": "B1_09_wish_if_only",
+  "level": "B1",
+  "order": 9,
+  "title": "I wish / If only / would rather",
+  "titleRu": "I wish, If only и would rather",
+  "summary": "Как сказать «жаль, что…» о настоящем и прошлом, выразить раздражение (wish + would) и предпочтение (would rather).",
+  "theory": "## Когда используем\n\n**I wish** и **If only** выражают сожаление: «жаль, что…», «вот бы…», «если бы только…». Главная хитрость: в русском мы говорим «жаль, что **нет**», а в английском — «я хотел бы, чтобы **было**». То есть английское предложение звучит **противоположно** русскому по смыслу отрицания.\n\n> I wish I had a car. — Жаль, что у меня нет машины. (дословно: хотел бы, чтобы была)\n> I wish I didn't have to work today. — Жаль, что мне сегодня надо работать.\n\n**If only** — то же самое, но эмоциональнее: «Если бы только…!»\n> If only I knew her number! — Если бы только я знал её номер!\n\n### 1. Сожаление о настоящем → wish + Past Simple\n> I wish I lived near the sea. — Жаль, что я не живу у моря.\n> I wish I could swim. — Жаль, что я не умею плавать.\n> I wish it were Friday. — Вот бы сегодня была пятница. (с be — **were** для всех лиц, как во Second Conditional)\n\n### 2. Сожаление о прошлом → wish + Past Perfect\n> I wish I had studied harder at school. — Жаль, что я не учился усерднее в школе.\n> I wish I hadn't eaten so much. — Зря я так много съел.\n> If only we had taken a taxi! — Эх, надо было взять такси!\n\n### 3. Раздражение, желание, чтобы кто-то изменил поведение → wish + would\n> I wish you would stop talking. — Хоть бы ты перестал болтать.\n> I wish it would stop raining. — Хоть бы дождь прекратился.\n> I wish my neighbours wouldn't play loud music at night. — Хоть бы соседи не включали громкую музыку по ночам.\n\n!! *wish + would* — не про себя! Нельзя сказать *I wish I would…* Про себя используйте *I wish I could…*\n\n## Как образуется\n\n| Сожаление о… | Форма | Пример |\n|---|---|---|\n| настоящем | wish + **Past Simple / were / could** | I wish I **knew** the answer. |\n| прошлом | wish + **Past Perfect** (had + V3) | I wish I **had known** the answer. |\n| чужом поведении (раздражение) | wish + **would** + V1 | I wish he **would call** me. |\n\n### Сравните с русским\n| Русский | Английский |\n|---|---|\n| Жаль, что я **не** знаю. | I wish I **knew**. |\n| Жаль, что я **знаю**. | I wish I **didn't know**. |\n| Жаль, что я **не** пошёл. | I wish I **had gone**. |\n| Жаль, что я **пошёл**. | I wish I **hadn't gone**. |\n\n## Would rather — предпочтение\n\n**would rather** ('d rather) = «лучше бы», «предпочёл бы».\n\n### Would rather + V1 (о себе)\n> I'd rather stay at home tonight. — Я бы лучше остался дома сегодня.\n> I'd rather walk than take the bus. — Я бы лучше прошёлся, чем ехать на автобусе.\n> I'd rather not talk about it. — Я бы предпочёл не говорить об этом.\n\n### Would rather + somebody + Past Simple (о другом человеке)\n> I'd rather you didn't smoke here. — Я бы предпочёл, чтобы вы здесь не курили.\n> I'd rather you came tomorrow. — Лучше бы ты пришёл завтра.\n\n| Конструкция | Пример |\n|---|---|\n| would rather + V1 | I'd rather **go** by train. |\n| would rather not + V1 | I'd rather **not go**. |\n| would rather + V1 + than + V1 | I'd rather **read** than **watch** TV. |\n| would rather + sb + Past | I'd rather you **stayed**. |\n\n## Сравните: wish vs hope\n\n**hope** — о реальных, возможных вещах (обычное время); **wish** — о нереальных (сдвиг назад).\n> I hope you pass the exam. — Надеюсь, ты сдашь экзамен. (возможно)\n> I wish I had passed the exam. — Жаль, что я не сдал экзамен. (уже не сдал)\n\n## Типичные ошибки\n\n⚠ I wish I have a car. → I wish I had a car.\n⚠ I wish I would be taller. → I wish I were taller.\n⚠ I wish I didn't go to that party yesterday. → I wish I hadn't gone to that party yesterday.\n⚠ I wish I can swim. → I wish I could swim.\n⚠ I wish you pass your exams! → I hope you pass your exams!\n⚠ I'd rather to stay at home. → I'd rather stay at home.\n⚠ I'd rather you don't call me so late. → I'd rather you didn't call me so late.\n\n!! Алгоритм: 1) переведите «жаль, что не…» как «хотел бы, чтобы…» (уберите отрицание); 2) сделайте шаг назад во времени: настоящее → Past Simple, прошлое → Past Perfect.",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "I don't have a car. I wish I ___ a car.",
+      "options": [
+        "have",
+        "had",
+        "would have"
+      ],
+      "answer": 1,
+      "explain": "Сожаление о настоящем — wish + Past Simple."
+    },
+    {
+      "type": "choice",
+      "q": "I wish I ___ to that party last night. It was terrible.",
+      "options": [
+        "didn't go",
+        "hadn't gone",
+        "wouldn't go"
+      ],
+      "answer": 1,
+      "explain": "Сожаление о прошлом — wish + Past Perfect."
+    },
+    {
+      "type": "choice",
+      "q": "I wish I ___ swim. All my friends can.",
+      "options": [
+        "can",
+        "could",
+        "would"
+      ],
+      "answer": 1,
+      "explain": "Сожаление о неумении сейчас — wish + could."
+    },
+    {
+      "type": "choice",
+      "q": "I wish you ___ stop interrupting me!",
+      "options": [
+        "would",
+        "will",
+        "had"
+      ],
+      "answer": 0,
+      "explain": "Раздражение от чужого поведения — wish + would."
+    },
+    {
+      "type": "choice",
+      "q": "Good luck tomorrow! I ___ you get the job.",
+      "options": [
+        "wish",
+        "hope",
+        "would rather"
+      ],
+      "answer": 1,
+      "explain": "Пожелание о реальной возможности — hope + обычное время."
+    },
+    {
+      "type": "choice",
+      "q": "I'd rather ___ at home tonight. I'm tired.",
+      "options": [
+        "stay",
+        "to stay",
+        "stayed"
+      ],
+      "answer": 0,
+      "explain": "Would rather о себе + V1 без to."
+    },
+    {
+      "type": "input",
+      "q": "It's so cold! I wish it ___ summer. (be)",
+      "answer": [
+        "were",
+        "was"
+      ],
+      "explain": "Сожаление о настоящем с be — were (в разговоре допустимо was)."
+    },
+    {
+      "type": "input",
+      "q": "I failed the test. If only I ___ more! (study)",
+      "answer": [
+        "had studied",
+        "'d studied"
+      ],
+      "explain": "Сожаление о прошлом — Past Perfect."
+    },
+    {
+      "type": "input",
+      "q": "I wish I ___ his phone number. I need to call him now. (know)",
+      "answer": [
+        "knew"
+      ],
+      "explain": "Сожаление о настоящем — Past Simple."
+    },
+    {
+      "type": "input",
+      "q": "I ate too much cake. I wish I ___ so much. (not / eat)",
+      "answer": [
+        "hadn't eaten",
+        "had not eaten"
+      ],
+      "explain": "Сожаление о прошлом поступке — hadn't + V3."
+    },
+    {
+      "type": "input",
+      "q": "I'd rather you ___ here. The smoke makes me feel ill. (not / smoke)",
+      "answer": [
+        "didn't smoke",
+        "did not smoke"
+      ],
+      "explain": "Would rather + другой человек + Past Simple."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "I wish I lived near the sea.",
+      "explain": "wish + Past Simple для сожаления о настоящем."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "I would rather walk than take the bus.",
+      "explain": "would rather + V1 + than + V1."
+    },
+    {
+      "type": "choice",
+      "q": "«Жаль, что я не пошёл с вами вчера» —",
+      "options": [
+        "I wish I went with you yesterday.",
+        "I wish I had gone with you yesterday.",
+        "I wish I would go with you yesterday."
+      ],
+      "answer": 1,
+      "explain": "Сожаление о прошлом: wish + had + V3, отрицание убирается."
+    },
+    {
+      "type": "choice",
+      "q": "«Хоть бы дождь прекратился!» —",
+      "options": [
+        "I wish it would stop raining!",
+        "I wish it stopped raining yesterday!",
+        "I hope it had stopped raining!"
+      ],
+      "answer": 0,
+      "explain": "Желание, чтобы ситуация изменилась, — wish + would."
+    }
+  ]
+}

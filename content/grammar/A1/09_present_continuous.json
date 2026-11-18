@@ -1,0 +1,148 @@
+{
+  "id": "A1_09_present_continuous",
+  "level": "A1",
+  "order": 9,
+  "title": "Present Continuous",
+  "titleRu": "Present Continuous: настоящее продолженное",
+  "summary": "Настоящее продолженное время: формы am/is/are + -ing, правила написания и случаи употребления.",
+  "theory": "## Когда используем\n\nPresent Continuous (настоящее продолженное время) описывает действие, которое **происходит прямо сейчас** или **в этот период**. В русском нет отдельного времени для этого — мы просто говорим «я читаю». В английском же есть разница: *I read* (я читаю вообще, регулярно) и *I am reading* (я читаю сейчас, в процессе).\n\n### 1. Действие происходит в момент речи\n\n> I'm reading a book now. — Я сейчас читаю книгу.\n> Look! It's raining. — Смотри! Идёт дождь.\n> Be quiet! The baby is sleeping. — Тише! Ребёнок спит.\n\n### 2. Временная ситуация (в эти дни, на этой неделе)\n\nДействие не обязательно идёт в эту секунду, но оно происходит в текущий период и скоро закончится.\n\n> I'm learning English this year. — В этом году я учу английский.\n> She is living with her friend at the moment. — Сейчас она живёт у подруги (временно).\n\n### 3. Изменения, которые идут сейчас\n\n> The weather is getting warmer. — Погода становится теплее.\n> Prices are going up. — Цены растут.\n\n### 4. Планы на ближайшее будущее (договорённости)\n\n> I'm meeting Tom tomorrow. — Завтра я встречаюсь с Томом.\n> We're flying to Sochi on Friday. — В пятницу мы летим в Сочи.\n\n## Как образуется\n\nФормула: **am / is / are + глагол с -ing**.\n\n### Утверждение (+)\n\n| Подлежащее | to be | глагол + ing |\n|---|---|---|\n| I | am ('m) | working |\n| he / she / it | is ('s) | working |\n| we / you / they | are ('re) | working |\n\n### Отрицание (−)\n\n| Полная форма | Сокращение |\n|---|---|\n| I am not working | I'm not working |\n| She is not working | She isn't working / She's not working |\n| They are not working | They aren't working / They're not working |\n\n### Вопрос (?) и краткие ответы\n\n| Вопрос | Да | Нет |\n|---|---|---|\n| Am I talking too fast? | Yes, you are. | No, you aren't. |\n| Is he sleeping? | Yes, he is. | No, he isn't. |\n| Are they watching TV? | Yes, they are. | No, they aren't. |\n\n> What are you doing? — Что ты делаешь?\n> Where is she going? — Куда она идёт?\n> Why are you laughing? — Почему ты смеёшься?\n\n!! Обе части обязательны: **to be** + **-ing**. Без am/is/are (*I working*) или без -ing (*I am work*) — ошибка.\n\n## Правила написания -ing\n\n| Правило | Примеры |\n|---|---|\n| обычно + ing | read → reading, play → playing, go → going |\n| немая -e на конце убирается | write → writing, make → making, come → coming |\n| -ee не меняется | see → seeing |\n| -ie → y + ing | lie → lying, die → dying, tie → tying |\n| короткий глагол: согласная + ударная гласная + согласная → согласная удваивается | sit → sitting, run → running, swim → swimming, stop → stopping, get → getting |\n| -w, -x, -y не удваиваются | snow → snowing, fix → fixing, play → playing |\n\n!! Удвоение происходит только в **односложных** глаголах (и в двусложных с ударением на последнем слоге: *begin → beginning*). Сравните: *open → opening*, *visit → visiting* (ударение на первом слоге — не удваиваем).\n\n## Слова-подсказки\n\n| Слово / фраза | Перевод |\n|---|---|\n| now, right now | сейчас, прямо сейчас |\n| at the moment | в данный момент |\n| today, this week, this year | сегодня, на этой неделе, в этом году |\n| currently | в настоящее время |\n| Look! Listen! | Смотри! Слушай! |\n| Be quiet! | Тише! |\n\n> Listen! Someone is singing. — Послушай! Кто-то поёт.\n\n## Типичные ошибки\n\n⚠ I reading now. → I'm reading now.\n⚠ She is work now. → She is working now.\n⚠ He is writeing a letter. → He is writing a letter.\n⚠ They are siting on the sofa. → They are sitting on the sofa.\n⚠ Do you working? → Are you working?\n⚠ What you are doing? → What are you doing?\n⚠ Is she sleep? → Is she sleeping?\n⚠ I'm go to work every day. → I go to work every day. (регулярное действие — Present Simple)\n\n!! Ищите в предложении **now, at the moment, Look!, Listen!** — это сигнал для Present Continuous. А если речь идёт о привычке (*every day, usually*), нужен Present Simple.",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "Look! The children ___ in the garden.",
+      "options": [
+        "play",
+        "are playing",
+        "playing"
+      ],
+      "answer": 1,
+      "explain": "Действие сейчас (Look!): are + -ing."
+    },
+    {
+      "type": "choice",
+      "q": "I ___ a letter at the moment.",
+      "options": [
+        "am writing",
+        "am writeing",
+        "writing"
+      ],
+      "answer": 0,
+      "explain": "Немая -e убирается: writing; am обязателен."
+    },
+    {
+      "type": "choice",
+      "q": "She ___ TV now. She's reading.",
+      "options": [
+        "isn't watching",
+        "doesn't watching",
+        "not watching"
+      ],
+      "answer": 0,
+      "explain": "Отрицание Present Continuous: isn't + -ing."
+    },
+    {
+      "type": "choice",
+      "q": "___ you listening to me?",
+      "options": [
+        "Do",
+        "Are",
+        "Is"
+      ],
+      "answer": 1,
+      "explain": "Вопрос в Present Continuous с you: Are you…?"
+    },
+    {
+      "type": "choice",
+      "q": "Choose the correct spelling.",
+      "options": [
+        "swiming",
+        "swimming",
+        "swimeing"
+      ],
+      "answer": 1,
+      "explain": "Короткий глагол на согласная-гласная-согласная: m удваивается."
+    },
+    {
+      "type": "choice",
+      "q": "— Is it raining? — No, it ___.",
+      "options": [
+        "doesn't",
+        "isn't",
+        "not"
+      ],
+      "answer": 1,
+      "explain": "Краткий ответ: No, it isn't."
+    },
+    {
+      "type": "input",
+      "q": "My dad ___ (cook) dinner right now.",
+      "answer": [
+        "is cooking",
+        "'s cooking"
+      ],
+      "explain": "He + is + cooking."
+    },
+    {
+      "type": "input",
+      "q": "We ___ (sit) in a café at the moment.",
+      "answer": [
+        "are sitting",
+        "'re sitting"
+      ],
+      "explain": "Sit → sitting (удвоение t)."
+    },
+    {
+      "type": "input",
+      "q": "I ___ (not / work) today. I'm at home.",
+      "answer": [
+        "'m not working",
+        "am not working"
+      ],
+      "explain": "Отрицание с I: am not + -ing."
+    },
+    {
+      "type": "input",
+      "q": "What ___ you doing?",
+      "answer": [
+        "are"
+      ],
+      "explain": "Вопрос: What are you doing?"
+    },
+    {
+      "type": "input",
+      "q": "Be quiet! The baby ___ (sleep).",
+      "answer": [
+        "is sleeping",
+        "'s sleeping"
+      ],
+      "explain": "Сигнал Be quiet! — действие сейчас."
+    },
+    {
+      "type": "input",
+      "q": "They ___ (make) a cake for Mum's birthday.",
+      "answer": [
+        "are making",
+        "'re making"
+      ],
+      "explain": "Make → making (e убирается)."
+    },
+    {
+      "type": "order",
+      "q": "Составьте вопрос",
+      "answer": "Where are you going now?",
+      "explain": "Вопр. слово + are + подлежащее + -ing."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "My sister isn't studying at the moment.",
+      "explain": "Подлежащее + isn't + -ing + at the moment."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "We are learning English this year.",
+      "explain": "Временная ситуация: are + -ing + this year."
+    }
+  ]
+}

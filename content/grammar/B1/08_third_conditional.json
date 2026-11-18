@@ -1,0 +1,144 @@
+{
+  "id": "B1_08_third_conditional",
+  "level": "B1",
+  "order": 8,
+  "title": "Third Conditional & mixed conditionals",
+  "titleRu": "Третий тип условных: «если бы тогда…»",
+  "summary": "Нереальное прошлое: if + had + V3, would have + V3; сравнение всех типов и смешанные условные.",
+  "theory": "## Когда используем\n\n**Third Conditional** — нереальное условие в **прошлом**. Мы представляем, что было бы, если бы в прошлом всё произошло иначе. Изменить ничего уже нельзя — поэтому это часто сожаление, критика или облегчение.\n\n> If I had known about the party, I would have come. — Если бы я знал о вечеринке, я бы пришёл. (но я не знал и не пришёл)\n> If we had left earlier, we wouldn't have missed the train. — Если бы мы вышли раньше, мы бы не опоздали на поезд. (вышли поздно и опоздали)\n> If she hadn't helped me, I would have failed the exam. — Если бы она мне не помогла, я бы провалил экзамен. (она помогла, и я сдал)\n\n!! В русском нет разницы между «если бы у меня были деньги» (сейчас) и «если бы у меня были деньги» (вчера) — всё решает контекст. В английском это **два разных типа**: Second (сейчас) и Third (в прошлом).\n\n## Как образуется\n\n| Часть с if | Главная часть |\n|---|---|\n| **Past Perfect** (had + V3) | **would have + V3** |\n\n| | Пример |\n|---|---|\n| + | If I **had studied**, I **would have passed**. |\n| − | If you **hadn't called**, I **wouldn't have woken up**. |\n| ? | What **would** you **have done** if you **had lost** your passport? |\n\nКраткие формы: *I'd have gone, she wouldn't have known*. В разговоре *would have* звучит как [wʊdəv] — «вудэв».\n\n!! Сокращение **'d** в if-части = **had**, в главной части = **would**: *If I'd known, I'd have told you.* = If I **had** known, I **would** have told you.\n\n### Could have / might have\n> If I had had more time, I could have visited the museum. — Если бы у меня было больше времени, я мог бы сходить в музей.\n> If you had asked him, he might have said yes. — Если бы ты его спросил, он, может быть, согласился бы.\n\n## Сравните все типы\n\n| Тип | Ситуация | If-часть | Главная часть | Пример |\n|---|---|---|---|---|\n| Zero | всегда правда | Present | Present | If you heat ice, it melts. |\n| First | реальное будущее | Present | will + V1 | If it rains, I'll stay home. |\n| Second | нереальное сейчас | Past | would + V1 | If I had a car, I'd drive. |\n| Third | нереальное прошлое | Past Perfect | would have + V3 | If I'd had a car, I'd have driven. |\n\n### Second vs Third\n> If I had money, I would buy this flat. — Если бы у меня были деньги (сейчас), я бы купил квартиру.\n> If I had had money, I would have bought that flat. — Если бы у меня тогда были деньги, я бы купил ту квартиру.\n\n## Смешанные условные (Mixed conditionals) — обзорно\n\nИногда условие и результат относятся к **разным временам**.\n\n### Прошлое условие → результат сейчас\n**If + Past Perfect, would + V1**\n> If I had studied medicine, I would be a doctor now. — Если бы я учился на врача, я бы сейчас был врачом.\n> If we hadn't missed the plane, we would be in Rome now. — Если бы мы не опоздали на самолёт, мы бы сейчас были в Риме.\n\n### Условие сейчас (всегда) → результат в прошлом\n**If + Past Simple, would have + V3**\n> If I spoke English well, I would have got that job. — Если бы я хорошо говорил по-английски (вообще), я бы получил ту работу.\n\nПодсказки: слова **now, today** в главной части обычно указывают на *would + V1*; **yesterday, last year** в if-части — на Past Perfect.\n\n## Типичные ошибки\n\n⚠ If I would have known, I would have come. → If I had known, I would have come.\n⚠ If I knew about it yesterday, I would come. → If I had known about it yesterday, I would have come.\n⚠ If you had told me, I would helped you. → If you had told me, I would have helped you.\n⚠ I would have went with you. → I would have gone with you. (нужна V3)\n⚠ If I had studied medicine, I would have been a doctor now. → …I would be a doctor now. (результат сейчас — mixed)\n⚠ I would of done it. → I would have done it. (of — ошибка на слух)\n\n!! Third Conditional = **if + had + V3, would have + V3**. Две третьих формы — потому что обе части в прошлом. Если результат — **сейчас**, используйте смешанный тип: *would + V1*.",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "If I ___ about the party, I would have come.",
+      "options": [
+        "knew",
+        "had known",
+        "would have known"
+      ],
+      "answer": 1,
+      "explain": "Нереальное условие в прошлом — Past Perfect в части с if."
+    },
+    {
+      "type": "choice",
+      "q": "If we had left earlier, we ___ the train.",
+      "options": [
+        "wouldn't miss",
+        "wouldn't have missed",
+        "didn't miss"
+      ],
+      "answer": 1,
+      "explain": "Главная часть Third Conditional — would have + V3."
+    },
+    {
+      "type": "choice",
+      "q": "If you had asked me, I would have ___ you.",
+      "options": [
+        "help",
+        "helped",
+        "helping"
+      ],
+      "answer": 1,
+      "explain": "После would have нужна V3: helped."
+    },
+    {
+      "type": "choice",
+      "q": "If I had a car now, I ___ you home.",
+      "options": [
+        "would drive",
+        "would have driven",
+        "will drive"
+      ],
+      "answer": 0,
+      "explain": "Нереальное настоящее (now) — Second Conditional, would + V1."
+    },
+    {
+      "type": "choice",
+      "q": "If I had studied medicine, I ___ a doctor now.",
+      "options": [
+        "would have been",
+        "would be",
+        "had been"
+      ],
+      "answer": 1,
+      "explain": "Прошлое условие, результат сейчас (now) — mixed: would + V1."
+    },
+    {
+      "type": "choice",
+      "q": "If she ___ the alarm, she wouldn't have been late. But she didn't hear it.",
+      "options": [
+        "heard",
+        "had heard",
+        "would hear"
+      ],
+      "answer": 1,
+      "explain": "Условие в прошлом — Past Perfect."
+    },
+    {
+      "type": "input",
+      "q": "If I had seen you, I ___ hello. Sorry, I didn't notice you! (say)",
+      "answer": [
+        "would have said",
+        "'d have said"
+      ],
+      "explain": "Нереальный результат в прошлом — would have + V3."
+    },
+    {
+      "type": "input",
+      "q": "If it ___ so cold yesterday, we would have gone to the beach. (not / be)",
+      "answer": [
+        "hadn't been",
+        "had not been"
+      ],
+      "explain": "Условие в прошлом в отрицании — hadn't been."
+    },
+    {
+      "type": "input",
+      "q": "We would have won the match if our best player ___ ill. (not / be)",
+      "answer": [
+        "hadn't been",
+        "had not been"
+      ],
+      "explain": "If-часть Third Conditional — Past Perfect."
+    },
+    {
+      "type": "input",
+      "q": "If you had told me about the problem, I ___ you. (could / help)",
+      "answer": [
+        "could have helped"
+      ],
+      "explain": "Could have + V3 — «мог бы помочь» в прошлом."
+    },
+    {
+      "type": "input",
+      "q": "If I ___ harder at school, I would have a better job now. (study)",
+      "answer": [
+        "had studied",
+        "'d studied"
+      ],
+      "explain": "Прошлое условие с результатом сейчас — Past Perfect в if-части."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "If I had known, I would have told you.",
+      "explain": "if + had + V3, would have + V3."
+    },
+    {
+      "type": "order",
+      "q": "Составьте вопрос",
+      "answer": "What would you have done if you had lost your passport?",
+      "explain": "What + would + you + have + V3 + if + Past Perfect."
+    },
+    {
+      "type": "choice",
+      "q": "Which sentence is correct?",
+      "options": [
+        "If I would have known, I would have come.",
+        "If I had known, I would have come.",
+        "If I had known, I would come yesterday."
+      ],
+      "answer": 1,
+      "explain": "В if-части Past Perfect, без would."
+    }
+  ]
+}

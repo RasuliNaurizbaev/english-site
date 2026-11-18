@@ -1,0 +1,152 @@
+{
+  "id": "B1_06_conditionals_0_1",
+  "level": "B1",
+  "order": 6,
+  "title": "Zero & First Conditional",
+  "titleRu": "Условные предложения 0 и 1 типа",
+  "summary": "Реальные условия: общие истины (Zero), возможное будущее (First), а также unless, as long as, provided that, in case.",
+  "theory": "## Когда используем\n\nУсловные предложения (*conditionals*) состоят из двух частей: **условие** (с *if*) и **результат**. В этой теме — два «реальных» типа.\n\n### Zero Conditional — общие истины и законы\nВсегда, когда выполняется условие, происходит результат. Факты, законы природы, правила, привычки.\n> If you heat ice, it melts. — Если нагреть лёд, он тает.\n> If I drink coffee in the evening, I can't sleep. — Если я пью кофе вечером, я не могу уснуть.\n> If you press this button, the machine stops. — Если нажать эту кнопку, машина останавливается.\n\nЗдесь **if** почти = **when** (каждый раз, когда).\n\n### First Conditional — реальная ситуация в будущем\nВозможное, вероятное условие в будущем и его результат.\n> If it rains tomorrow, we will stay at home. — Если завтра пойдёт дождь, мы останемся дома.\n> If you don't hurry, you'll miss the bus. — Если не поторопишься, опоздаешь на автобус.\n> If I see Mark, I'll tell him. — Если увижу Марка, скажу ему.\n\n## Как образуется\n\n| Тип | Часть с if | Главная часть | Пример |\n|---|---|---|---|\n| Zero | Present Simple | Present Simple | If you mix red and blue, you get purple. |\n| First | Present Simple | will + V1 | If you study, you will pass. |\n\nЧасти можно поменять местами. Если **if** стоит в начале — ставим запятую; если в середине — запятая не нужна:\n> If I have time, I'll call you. = I'll call you if I have time.\n\nВместо will в главной части могут быть **can, may, might, should**, а также повелительное наклонение:\n> If you finish early, you can go home. — Если закончишь рано, можешь идти домой.\n> If you see Anna, tell her to call me. — Если увидишь Анну, скажи ей, чтобы позвонила.\n\n!! Главное правило: **после if — НЕ will**, даже когда речь о будущем. В русском «если пойдёт дождь» — будущее время, а в английском — *if it rains*.\n\n## Слова-подсказки: другие союзы условия\n\n| Союз | Значение | Пример |\n|---|---|---|\n| **unless** | если не… | I won't go unless you come with me. — Я не пойду, если ты не пойдёшь со мной. |\n| **as long as** | при условии что, если только | You can borrow my car as long as you drive carefully. |\n| **provided (that)** | при условии что (официальнее) | We'll start at 9, provided that everyone is here. |\n| **in case** | на случай, если | Take an umbrella in case it rains. — Возьми зонт на случай дождя. |\n| **when** | когда (точно произойдёт) | When I get home, I'll call you. |\n\n### Unless = if … not\n> Unless you hurry, you'll be late. = If you don't hurry, you'll be late.\n⚠ Unless you don't hurry… → Unless you hurry… (unless уже содержит отрицание)\n\n### If vs in case\n> I'll take an umbrella if it rains. — Возьму зонт, если пойдёт дождь (сначала посмотрю, идёт ли).\n> I'll take an umbrella in case it rains. — Возьму зонт на всякий случай (беру сейчас, вдруг пойдёт).\n\n### If vs when\n> If I see him, I'll tell him. — Если увижу (не уверен, что увижу).\n> When I see him, I'll tell him. — Когда увижу (точно увижу).\n\nПосле всех этих союзов тоже используем **Present Simple**, а не will.\n\n## Сравните\n\n| Zero | First |\n|---|---|\n| If I'm tired, I go to bed early. (всегда так) | If I'm tired tonight, I'll go to bed early. (конкретный вечер) |\n| If you don't water plants, they die. (закон) | If you don't water this plant, it will die. (конкретное растение) |\n\n### Вопросы и отрицания\n> What will you do if you don't get the job? — Что ты будешь делать, если не получишь эту работу?\n> If he doesn't call, will you be worried? — Если он не позвонит, ты будешь волноваться?\n\n## Типичные ошибки\n\n⚠ If it will rain, we will stay at home. → If it rains, we will stay at home.\n⚠ If you will need help, call me. → If you need help, call me.\n⚠ Unless you don't study, you'll fail. → Unless you study, you'll fail.\n⚠ I'll take a sandwich if I get hungry. (беру заранее) → I'll take a sandwich in case I get hungry.\n⚠ When I will finish, I'll call you. → When I finish, I'll call you.\n⚠ If you heat water to 100 degrees, it will boil. — не ошибка, но для закона природы обычнее Zero: …it boils.\n\n!! Формула-шпаргалка First Conditional: **If + Present, will + V1**. А для «на всякий случай» — **in case**, для «если не» — **unless**.",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "If you heat water to 100°C, it ___.",
+      "options": [
+        "boils",
+        "boiled",
+        "would boil"
+      ],
+      "answer": 0,
+      "explain": "Закон природы — Zero Conditional, Present Simple в обеих частях."
+    },
+    {
+      "type": "choice",
+      "q": "If it ___ tomorrow, we'll stay at home.",
+      "options": [
+        "will rain",
+        "rains",
+        "rained"
+      ],
+      "answer": 1,
+      "explain": "После if о будущем используем Present Simple."
+    },
+    {
+      "type": "choice",
+      "q": "If you don't hurry, you ___ the train.",
+      "options": [
+        "are missing",
+        "'ll miss",
+        "missed"
+      ],
+      "answer": 1,
+      "explain": "Результат в будущем — will + V1."
+    },
+    {
+      "type": "choice",
+      "q": "I won't go to the party ___ you come with me.",
+      "options": [
+        "if",
+        "unless",
+        "in case"
+      ],
+      "answer": 1,
+      "explain": "Unless = если не: не пойду, если ты не пойдёшь."
+    },
+    {
+      "type": "choice",
+      "q": "Take your umbrella ___ it rains later.",
+      "options": [
+        "unless",
+        "in case",
+        "as long as"
+      ],
+      "answer": 1,
+      "explain": "In case — на всякий случай, если вдруг пойдёт дождь."
+    },
+    {
+      "type": "choice",
+      "q": "You can use my laptop ___ you're careful with it.",
+      "options": [
+        "unless",
+        "in case",
+        "as long as"
+      ],
+      "answer": 2,
+      "explain": "As long as — при условии, что."
+    },
+    {
+      "type": "input",
+      "q": "If I ___ Tom, I'll give him your message. (see)",
+      "answer": [
+        "see"
+      ],
+      "explain": "В части с if — Present Simple."
+    },
+    {
+      "type": "input",
+      "q": "If you press this button, the light ___ on. It always works like that. (go)",
+      "answer": [
+        "goes"
+      ],
+      "explain": "Всегда так происходит — Zero Conditional, Present Simple."
+    },
+    {
+      "type": "input",
+      "q": "If she doesn't study harder, she ___ the exam. (not / pass)",
+      "answer": [
+        "won't pass",
+        "will not pass"
+      ],
+      "explain": "Результат в будущем в отрицании — won't pass."
+    },
+    {
+      "type": "input",
+      "q": "Unless we ___ now, we'll be late. (leave)",
+      "answer": [
+        "leave"
+      ],
+      "explain": "После unless — Present Simple в утвердительной форме."
+    },
+    {
+      "type": "input",
+      "q": "I'll call you when I ___ home. (get)",
+      "answer": [
+        "get"
+      ],
+      "explain": "После when в значении будущего — Present Simple."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "If you need help, call me.",
+      "explain": "If + Present Simple, затем повелительное наклонение."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "We will go to the beach if the weather is nice.",
+      "explain": "Главная часть с will в начале — запятая перед if не нужна."
+    },
+    {
+      "type": "choice",
+      "q": "Unless you ___, you'll fail the test.",
+      "options": [
+        "study",
+        "don't study",
+        "will study"
+      ],
+      "answer": 0,
+      "explain": "Unless уже содержит отрицание, поэтому глагол в утвердительной форме."
+    },
+    {
+      "type": "choice",
+      "q": "I'll bring some sandwiches ___ we get hungry on the way. (I'll take them anyway)",
+      "options": [
+        "if",
+        "in case",
+        "unless"
+      ],
+      "answer": 1,
+      "explain": "Берём заранее на всякий случай — in case."
+    }
+  ]
+}

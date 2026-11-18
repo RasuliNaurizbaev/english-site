@@ -1,0 +1,101 @@
+{
+  "questions": [
+    {
+      "type": "tf",
+      "q": "When Sophie was a child, she often helped her mother in the kitchen.",
+      "answer": false,
+      "explain": "Неверно: в детстве Софи помогала на кухне отцу (her father)."
+    },
+    {
+      "type": "choice",
+      "q": "What was the first prize in the competition?",
+      "options": [
+        "A weekend in Paris",
+        "A new cooker",
+        "A famous cookbook"
+      ],
+      "answer": 0,
+      "explain": "Главный приз — выходные в Париже."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Sophie change the recipe again and again?",
+      "options": [
+        "The judges asked her to",
+        "Her family said it was too salty or not sweet enough",
+        "She didn't like fish"
+      ],
+      "answer": 1,
+      "explain": "Семья пробовала блюда: брат сказал «слишком солёно», мама — «недостаточно сладко»."
+    },
+    {
+      "type": "tf",
+      "q": "There were three judges at the competition.",
+      "answer": true,
+      "explain": "Верно: судей было трое — известный повар, журналист и директор колледжа."
+    },
+    {
+      "type": "choice",
+      "q": "What went wrong after forty minutes?",
+      "options": [
+        "She cut her hand",
+        "The potatoes were cold",
+        "The cake was burning"
+      ],
+      "answer": 2,
+      "explain": "Через сорок минут Софи открыла духовку и увидела, что торт горит."
+    },
+    {
+      "type": "choice",
+      "q": "In the story, 'Sophie stayed calm' means she…",
+      "options": [
+        "started to cry",
+        "didn't panic and kept control",
+        "stopped cooking"
+      ],
+      "answer": 1,
+      "explain": "«Stay calm» — сохранять спокойствие, не паниковать."
+    },
+    {
+      "type": "choice",
+      "q": "What did Sophie make for dessert instead of the cake?",
+      "options": [
+        "A new chocolate cake",
+        "Ice cream with fruit",
+        "Biscuits, strawberries and melted chocolate in glasses"
+      ],
+      "answer": 2,
+      "explain": "Она разломала печенье, положила в стаканы и добавила клубнику и растопленный шоколад."
+    },
+    {
+      "type": "tf",
+      "q": "The judges talked a lot while they tasted the food.",
+      "answer": false,
+      "explain": "Неверно: судьи ничего не говорили, только делали записи."
+    },
+    {
+      "type": "choice",
+      "q": "What did Sophie call her dessert?",
+      "options": [
+        "'The Mistake'",
+        "'The Winner'",
+        "'Paris'"
+      ],
+      "answer": 0,
+      "explain": "Софи назвала десерт «Ошибка», потому что её торт сгорел."
+    },
+    {
+      "type": "tf",
+      "q": "Sophie went to Paris with her father.",
+      "answer": true,
+      "explain": "Верно: через неделю Софи с отцом поехали в Париж."
+    }
+  ],
+  "retell": [
+    "Who is Sophie, and what does she love?",
+    "What competition did she see, and how did she prepare for it?",
+    "What happened during the competition?",
+    "How did Sophie solve her problem?",
+    "Who won, and what happened after the competition?"
+  ]
+}

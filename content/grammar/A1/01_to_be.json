@@ -1,0 +1,148 @@
+{
+  "id": "A1_01_to_be",
+  "level": "A1",
+  "order": 1,
+  "title": "To be: am / is / are",
+  "titleRu": "Глагол to be",
+  "summary": "Глагол «быть» в настоящем времени: формы am, is, are, отрицания, вопросы и краткие ответы.",
+  "theory": "## Когда используем\n\nВ русском языке мы говорим «Я студент», «Она дома», «Погода хорошая» — без всякого глагола. В английском так нельзя: в каждом предложении обязательно должен быть глагол. Если другого глагола нет, его место занимает **to be** (быть). В настоящем времени у него три формы: **am, is, are**.\n\nГлагол to be нужен, когда мы говорим:\n\n- **кто или что это** (имя, профессия, национальность):\n> I am Anna. — Я Анна.\n> He is a doctor. — Он врач.\n> We are from Russia. — Мы из России.\n- **какой** человек или предмет (прилагательное):\n> The room is big. — Комната большая.\n> They are tired. — Они устали.\n- **где** находится кто-то или что-то:\n> She is at home. — Она дома.\n> The keys are on the table. — Ключи на столе.\n- **возраст**, погода, время, цена:\n> I am 25 (years old). — Мне 25 лет.\n> It is cold today. — Сегодня холодно.\n> It is five o'clock. — Сейчас пять часов.\n> The apple is 1 dollar. — Яблоко стоит 1 доллар.\n\n!! Возраст в английском «бывает»: не «мне 25», а «я есть 25» — **I am 25**. Не говорите *I have 25*.\n\n## Как образуется\n\n### Утверждение (+)\n\n| Лицо | Полная форма | Сокращение |\n|---|---|---|\n| I | I am | I'm |\n| he / she / it | he is | he's / she's / it's |\n| we / you / they | we are | we're / you're / they're |\n\nФорма зависит от подлежащего: **I → am**, один человек или предмет (**he, she, it, Tom, the car**) → **is**, несколько (**we, you, they, my friends**) → **are**. Обратите внимание: **you** всегда с **are**, даже если «ты» — один человек.\n\n> My sister is a teacher. — Моя сестра учительница.\n> My parents are at work. — Мои родители на работе.\n\nВ разговоре почти всегда используют сокращения: *I'm, she's, they're*.\n\n### Отрицание (−)\n\nЧтобы сделать отрицание, просто добавляем **not** после am / is / are.\n\n| Полная форма | Сокращение |\n|---|---|\n| I am not | I'm not |\n| he / she / it is not | he isn't / he's not |\n| we / you / they are not | we aren't / we're not |\n\n> I'm not hungry. — Я не голоден.\n> It isn't expensive. — Это не дорого.\n> They aren't at school. — Их нет в школе.\n\n!! Сокращения *amn't* не существует. Говорим только **I'm not**.\n\n### Вопрос (?)\n\nВ вопросе глагол to be **меняется местами** с подлежащим: сначала am / is / are, потом подлежащее. Никаких do / does здесь не нужно!\n\n| Утверждение | Вопрос |\n|---|---|\n| You are ready. | Are you ready? |\n| She is a student. | Is she a student? |\n| They are at home. | Are they at home? |\n\nС вопросительным словом: **Where / What / How / Who + am/is/are + подлежащее**.\n\n> Where are you from? — Откуда ты?\n> What is your name? — Как тебя зовут?\n> How old is he? — Сколько ему лет?\n\n### Краткие ответы\n\n| Вопрос | Да | Нет |\n|---|---|---|\n| Are you tired? | Yes, I am. | No, I'm not. |\n| Is he at home? | Yes, he is. | No, he isn't. |\n| Are they friends? | Yes, they are. | No, they aren't. |\n\n!! В положительном кратком ответе сокращения **не используются**: *Yes, I am* (не *Yes, I'm*), *Yes, she is* (не *Yes, she's*).\n\n## It и they для предметов\n\nДля одного предмета, животного, погоды и времени используем **it**: *It is a nice car. It's sunny.* Для нескольких предметов — **they**: *These are my shoes. They are new.*\n\n## Типичные ошибки\n\n⚠ I student. → I am a student.\n⚠ She very nice. → She is very nice.\n⚠ I have 20 years. → I am 20.\n⚠ Do you are hungry? → Are you hungry?\n⚠ He are my brother. → He is my brother.\n⚠ You is right. → You are right.\n⚠ Yes, I'm. → Yes, I am.\n⚠ I am agree. → I agree. (agree — это уже глагол, to be не нужен)\n⚠ It is cold for me. → I am cold. (когда холодно *вам*, говорим I am cold)\n\n!! Простое правило: если в русском предложении нет глагола («Он дома», «Я устал», «Это дорого»), в английском почти наверняка нужен am / is / are.",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "I ___ a student.",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": 0,
+      "explain": "С местоимением I всегда используется am."
+    },
+    {
+      "type": "choice",
+      "q": "My brother ___ 15 years old.",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": 1,
+      "explain": "My brother = he, поэтому is."
+    },
+    {
+      "type": "choice",
+      "q": "You ___ my best friend.",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": 2,
+      "explain": "С you всегда are, даже если это один человек."
+    },
+    {
+      "type": "choice",
+      "q": "___ they at home now?",
+      "options": [
+        "Is",
+        "Are",
+        "Do"
+      ],
+      "answer": 1,
+      "explain": "В вопросе to be ставится перед подлежащим; they → are, do не нужно."
+    },
+    {
+      "type": "choice",
+      "q": "— Is your mother a teacher? — Yes, she ___.",
+      "options": [
+        "is",
+        "'s",
+        "does"
+      ],
+      "answer": 0,
+      "explain": "В положительном кратком ответе сокращение не используется: Yes, she is."
+    },
+    {
+      "type": "choice",
+      "q": "Choose the correct sentence.",
+      "options": [
+        "I have 30 years.",
+        "I am 30.",
+        "I is 30."
+      ],
+      "answer": 1,
+      "explain": "Возраст передаётся глаголом to be: I am 30."
+    },
+    {
+      "type": "input",
+      "q": "It ___ (be) very cold today.",
+      "answer": [
+        "is",
+        "'s"
+      ],
+      "explain": "It — одно лицо, единственное число, поэтому is."
+    },
+    {
+      "type": "input",
+      "q": "We ___ (be) from Moscow.",
+      "answer": [
+        "are",
+        "'re"
+      ],
+      "explain": "We — множественное число, поэтому are."
+    },
+    {
+      "type": "input",
+      "q": "I ___ (not / be) hungry.",
+      "answer": [
+        "am not",
+        "'m not"
+      ],
+      "explain": "Отрицание с I: am not (сокращённо I'm not); amn't не существует."
+    },
+    {
+      "type": "input",
+      "q": "Tom and Kate ___ (not / be) at school today.",
+      "answer": [
+        "aren't",
+        "are not"
+      ],
+      "explain": "Tom and Kate = they, отрицание are not / aren't."
+    },
+    {
+      "type": "input",
+      "q": "___ (be) your phone new?",
+      "answer": [
+        "Is"
+      ],
+      "explain": "Your phone = it, вопрос начинается с Is."
+    },
+    {
+      "type": "input",
+      "q": "— Are you tired? — No, I ___.",
+      "answer": [
+        "'m not",
+        "am not"
+      ],
+      "explain": "Отрицательный краткий ответ с I: No, I'm not."
+    },
+    {
+      "type": "order",
+      "q": "Составьте вопрос",
+      "answer": "Where are you from?",
+      "explain": "Вопросительное слово, затем are, затем подлежащее you."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "My parents aren't at work today.",
+      "explain": "Подлежащее + aren't + место + время."
+    },
+    {
+      "type": "order",
+      "q": "Составьте вопрос",
+      "answer": "How old is your sister?",
+      "explain": "How old + is + подлежащее — так спрашивают возраст."
+    }
+  ]
+}

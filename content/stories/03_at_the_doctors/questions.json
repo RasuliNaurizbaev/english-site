@@ -1,0 +1,101 @@
+{
+  "questions": [
+    {
+      "type": "tf",
+      "q": "Maria works part-time in a bookshop.",
+      "answer": true,
+      "explain": "Верно: Мария учится в университете и подрабатывает в книжном магазине."
+    },
+    {
+      "type": "choice",
+      "q": "What did Maria think when she started to cough?",
+      "options": [
+        "She thought it was just a cold",
+        "She thought it was the flu",
+        "She thought it was dangerous"
+      ],
+      "answer": 0,
+      "explain": "Мария думала, что это просто простуда, и ничего не делала."
+    },
+    {
+      "type": "choice",
+      "q": "Who booked the appointment at the clinic?",
+      "options": [
+        "Maria",
+        "Her boss",
+        "Her flatmate Anna"
+      ],
+      "answer": 2,
+      "explain": "Соседка Анна позвонила в клинику и записала Марию на одиннадцать часов."
+    },
+    {
+      "type": "choice",
+      "q": "Why did they take a taxi?",
+      "options": [
+        "The clinic was very far",
+        "Maria felt too weak to walk",
+        "It was raining"
+      ],
+      "answer": 1,
+      "explain": "Клиника была недалеко, но Мария была слишком слаба, чтобы идти пешком."
+    },
+    {
+      "type": "tf",
+      "q": "They waited in the waiting room for ten minutes.",
+      "answer": false,
+      "explain": "Неверно: они ждали сорок минут (forty minutes)."
+    },
+    {
+      "type": "choice",
+      "q": "What was Maria's temperature?",
+      "options": [
+        "Thirty-seven degrees",
+        "Thirty-eight degrees",
+        "Thirty-nine degrees"
+      ],
+      "answer": 2,
+      "explain": "Врач измерил температуру — тридцать девять градусов."
+    },
+    {
+      "type": "tf",
+      "q": "The doctor said Maria must take one pill three times a day, after meals.",
+      "answer": true,
+      "explain": "Верно: «Take one pill three times a day, after meals»."
+    },
+    {
+      "type": "choice",
+      "q": "In the story, they bought the medicine at a 'pharmacy'. A pharmacy is…",
+      "options": [
+        "a shop where you buy medicine",
+        "a place where you study",
+        "a kind of hospital bed"
+      ],
+      "answer": 0,
+      "explain": "«Pharmacy» — аптека, магазин, где продают лекарства."
+    },
+    {
+      "type": "choice",
+      "q": "What did Anna cook in the evening?",
+      "options": [
+        "Fish soup",
+        "Chicken soup",
+        "Pasta with vegetables"
+      ],
+      "answer": 1,
+      "explain": "Анна сварила большую кастрюлю куриного супа по рецепту бабушки."
+    },
+    {
+      "type": "tf",
+      "q": "Maria went back to university on Sunday.",
+      "answer": false,
+      "explain": "Неверно: в воскресенье ей стало лучше, а в университет она вернулась в понедельник."
+    }
+  ],
+  "retell": [
+    "Who is Maria and how did she feel last week?",
+    "What happened on Wednesday morning?",
+    "What happened at the clinic?",
+    "What did the doctor say?",
+    "How did Anna help Maria, and how did the story end?"
+  ]
+}

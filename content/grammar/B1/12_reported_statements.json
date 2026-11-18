@@ -1,0 +1,142 @@
+{
+  "id": "B1_12_reported_statements",
+  "level": "B1",
+  "order": 12,
+  "title": "Reported speech: statements",
+  "titleRu": "Косвенная речь: утверждения",
+  "summary": "Как пересказывать чужие слова: сдвиг времён, say и tell, изменение местоимений и слов here/now/yesterday.",
+  "theory": "## Когда используем\n\n**Косвенная речь** (*reported speech*) — пересказ чужих слов: «Он сказал, что…».\n\n> Direct: \"I am tired,\" Anna said. — «Я устала», — сказала Анна.\n> Reported: Anna said (that) she was tired. — Анна сказала, что она устала.\n\nГлавное отличие от русского: в русском время при пересказе **не меняется** («Анна сказала, что она устала / что она устаёт»). В английском, если глагол-вступление стоит в прошедшем (**said, told**), время в пересказе обычно **сдвигается на шаг назад**. Это называется *backshift* — сдвиг времён.\n\n## Как образуется\n\n### Сдвиг времён\n| Прямая речь | Косвенная речь |\n|---|---|\n| Present Simple: \"I **live** in Rome.\" | Past Simple: He said he **lived** in Rome. |\n| Present Continuous: \"I **am working**.\" | Past Continuous: She said she **was working**. |\n| Present Perfect: \"I **have finished**.\" | Past Perfect: He said he **had finished**. |\n| Past Simple: \"I **saw** him.\" | Past Perfect: She said she **had seen** him. (или saw) |\n| will: \"I **will** call.\" | would: He said he **would** call. |\n| can: \"I **can** swim.\" | could: She said she **could** swim. |\n| must: \"I **must** go.\" | had to: He said he **had to** go. (или must) |\n| am going to: \"I'**m going to** leave.\" | was going to: She said she **was going to** leave. |\n\nНе меняются: **would, could, should, might, had + V3** (Past Perfect).\n> \"I would help you.\" → He said he would help me.\n\n### Изменение местоимений\nМестоимения меняются по смыслу — как и в русском:\n> \"I like **your** dress,\" Tom said to me. → Tom said (that) he liked **my** dress.\n\n### Изменение слов места и времени\nЕсли пересказываем позже и в другом месте, меняются указатели:\n\n| Прямая речь | Косвенная речь |\n|---|---|\n| now | then, at that moment |\n| today | that day |\n| tonight | that night |\n| yesterday | the day before, the previous day |\n| tomorrow | the next day, the following day |\n| last week | the week before, the previous week |\n| next week | the following week, the week after |\n| ago | before |\n| here | there |\n| this | that |\n\n> \"I'm leaving tomorrow,\" she said. → She said she was leaving the next day. — Она сказала, что уезжает на следующий день.\n> \"I saw him here yesterday.\" → He said he had seen him there the day before.\n\n### That можно опустить\n> She said (that) she was busy. — Оба варианта правильные; в разговоре that часто опускают.\n\n## Say vs tell\n\n| say | tell |\n|---|---|\n| **say** (что-то) | **tell + кому** (что-то) |\n| He said (that) he was ill. | He told **me** (that) he was ill. |\n| He said **to me** that… (редко) | He told **me**… (кому — без to!) |\n\n> She said she was hungry. — Она сказала, что голодна.\n> She told us she was hungry. — Она сказала нам, что голодна.\n\nУстойчивые выражения с tell: *tell the truth, tell a lie, tell a story, tell a joke, tell the time*. С say: *say hello, say goodbye, say sorry, say something, say yes/no*.\n\n!! Если после глагола стоит **человек** (me, him, Anna) — используйте **tell**. Если сразу «что» — **say**.\n\n## Сравните: когда время можно не сдвигать\n\n1. Глагол-вступление в настоящем (**says, has said**) — сдвига нет:\n> \"I'm hungry.\" → He says he's hungry. — Он говорит, что голоден.\n2. Информация всё ещё правдива сейчас — сдвиг необязателен:\n> \"I live in Paris.\" → She said she lives / lived in Paris. (она до сих пор там живёт)\n3. Общие истины:\n> The teacher said that water boils at 100°C.\n\nНа уровне B1 надёжнее всего **сдвигать** — это никогда не будет ошибкой после said/told.\n\n## Типичные ошибки\n\n⚠ He said me that he was tired. → He told me that he was tired.\n⚠ She told that she was busy. → She said that she was busy.\n⚠ He told to me the truth. → He told me the truth.\n⚠ Anna said she is tired yesterday. → Anna said she was tired.\n⚠ He said he will come tomorrow. (пересказываем через неделю) → He said he would come the next day.\n⚠ She said she can't swim. → She said she couldn't swim.\n⚠ Tom said, that he was happy. → Tom said that he was happy. (без запятой)\n\n!! Алгоритм пересказа: 1) say или tell (есть ли «кому»?); 2) поменять местоимения; 3) сдвинуть время на шаг назад; 4) поменять here/now/tomorrow, если нужно.",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "\"I am tired,\" Anna said last night. → Anna said she ___ tired.",
+      "options": [
+        "is",
+        "was",
+        "has been"
+      ],
+      "answer": 1,
+      "explain": "После said Present Simple сдвигается в Past Simple."
+    },
+    {
+      "type": "choice",
+      "q": "He ___ me that he was leaving.",
+      "options": [
+        "said",
+        "told",
+        "spoke"
+      ],
+      "answer": 1,
+      "explain": "После глагола стоит «кому» (me) — нужен tell."
+    },
+    {
+      "type": "choice",
+      "q": "She ___ that she was hungry.",
+      "options": [
+        "said",
+        "told",
+        "told to"
+      ],
+      "answer": 0,
+      "explain": "Нет «кому» — используем say."
+    },
+    {
+      "type": "choice",
+      "q": "\"I will call you,\" he said. → He said he ___ call me.",
+      "options": [
+        "will",
+        "would",
+        "can"
+      ],
+      "answer": 1,
+      "explain": "Will в косвенной речи меняется на would."
+    },
+    {
+      "type": "choice",
+      "q": "\"I'm leaving tomorrow,\" she said last week. → She said she was leaving ___.",
+      "options": [
+        "tomorrow",
+        "the next day",
+        "yesterday"
+      ],
+      "answer": 1,
+      "explain": "Tomorrow при пересказе в прошлом меняется на the next day."
+    },
+    {
+      "type": "choice",
+      "q": "\"I can't swim,\" Tom said. → Tom said he ___ swim.",
+      "options": [
+        "can't",
+        "couldn't",
+        "doesn't"
+      ],
+      "answer": 1,
+      "explain": "Can сдвигается в could."
+    },
+    {
+      "type": "input",
+      "q": "\"I have finished my homework,\" said Kate. → Kate said she ___ her homework. (finish)",
+      "answer": [
+        "had finished",
+        "'d finished"
+      ],
+      "explain": "Present Perfect сдвигается в Past Perfect."
+    },
+    {
+      "type": "input",
+      "q": "\"We are watching TV,\" they said. → They said they ___ TV. (watch)",
+      "answer": [
+        "were watching"
+      ],
+      "explain": "Present Continuous сдвигается в Past Continuous."
+    },
+    {
+      "type": "input",
+      "q": "\"I saw the film yesterday,\" he said. → He said he ___ the film the day before. (see)",
+      "answer": [
+        "had seen",
+        "'d seen"
+      ],
+      "explain": "Past Simple сдвигается в Past Perfect."
+    },
+    {
+      "type": "input",
+      "q": "\"I live here,\" she said. → She said she lived ___. (here — измените слово места)",
+      "answer": [
+        "there"
+      ],
+      "explain": "При пересказе here меняется на there."
+    },
+    {
+      "type": "input",
+      "q": "\"I must go,\" he said. → He said he ___ go. (must — выберите форму с to)",
+      "answer": [
+        "had to"
+      ],
+      "explain": "Must в косвенной речи часто меняется на had to."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "She told me that she was busy.",
+      "explain": "tell + кому + that + сдвинутое время."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "He said that he would come the next day.",
+      "explain": "say + that; will → would; tomorrow → the next day."
+    },
+    {
+      "type": "choice",
+      "q": "Which sentence is correct?",
+      "options": [
+        "He said me the truth.",
+        "He told me the truth.",
+        "He told to me the truth."
+      ],
+      "answer": 1,
+      "explain": "Tell the truth — устойчивое выражение; «кому» без предлога to."
+    }
+  ]
+}

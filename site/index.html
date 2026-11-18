@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>English</title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+<link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="nav">
+    <a href="#" class="brand">English</a>
+    <nav class="tabs">
+      <a href="#" data-tab="today">☀️ <span>Сегодня</span></a>
+      <a href="#stories" data-tab="stories">📖 <span>Рассказы</span></a>
+      <a href="#words" data-tab="words">🗂 <span>Слова</span></a>
+      <a href="#grammar" data-tab="grammar">📐 <span>Грамматика</span></a>
+      <a href="#audio" data-tab="audio">🎧 <span>Аудио</span></a>
+    </nav>
+  </div>
+  <!-- настройки чтения: видны только на странице рассказа -->
+  <div class="controls" id="readerControls" hidden>
+    <button id="fontDown" title="Меньше шрифт">A−</button>
+    <button id="fontUp" title="Больше шрифт">A+</button>
+    <label class="toggle"><input type="checkbox" id="hlToggle" checked> Подсветка</label>
+    <label class="toggle"><input type="checkbox" id="trToggle" checked> Перевод</label>
+  </div>
+</header>
+
+<main id="app"></main>
+
+<!-- перевод слова по нажатию -->
+<div id="popover" class="popover" hidden></div>
+
+<!-- плеер рассказа внизу экрана -->
+<div id="player" class="player" hidden>
+  <div class="player-inner">
+    <div class="player-row">
+      <div id="playerTitle" class="player-title"></div>
+      <div id="playerVoices" class="segmented small voices"></div>
+    </div>
+    <audio id="playerAudio" controls preload="metadata"></audio>
+    <div class="player-row2">
+      <div class="segmented small" id="playerSpeed">
+        <button data-rate="0.75">0.75×</button><button data-rate="1">1×</button><button data-rate="1.25">1.25×</button>
+      </div>
+      <label class="toggle" id="followWrap"><input type="checkbox" id="followToggle" checked> Караоке</label>
+      <label class="toggle" id="repeatWrap"><input type="checkbox" id="repeatToggle"> Пауза для повтора</label>
+    </div>
+  </div>
+</div>
+
+<!-- Защита от сбоев — загружается самой первой -->
+<script src="js/core/safe.js"></script>
+
+<!-- Данные (создаёт tools/build_site_data.py) -->
+<script src="data/stories.js"></script>
+<script src="data/words.js"></script>
+<script src="data/audio.js"></script>
+<script src="data/grammar.js"></script>
+
+<!-- core: утилиты -->
+<script src="js/core/utils.js"></script>
+<script src="js/core/storage.js"></script>
+<script src="js/core/dom.js"></script>
+<script src="js/core/router.js"></script>
+
+<!-- data: контент и прогресс -->
+<script src="js/data/content.js"></script>
+<script src="js/data/progress.js"></script>
+
+<!-- domain: логика -->
+<script src="js/domain/wordForms.js"></script>
+<script src="js/domain/spacedRepetition.js"></script>
+<script src="js/domain/storyTasks.js"></script>
+
+<!-- ui: компоненты -->
+<script src="js/ui/speech.js"></script>
+<script src="js/ui/wordPopover.js"></script>
+<script src="js/ui/player.js"></script>
+<script src="js/ui/browserReader.js"></script>
+<script src="js/ui/readerSettings.js"></script>
+<script src="js/ui/markdown.js"></script>
+<script src="js/ui/exercises.js"></script>
+
+<!-- pages: страницы -->
+<script src="js/pages/todayPage.js"></script>
+<script src="js/pages/reviewPage.js"></script>
+<script src="js/pages/storyPages.js"></script>
+<script src="js/pages/wordsPage.js"></script>
+<script src="js/pages/grammarPages.js"></script>
+<script src="js/pages/audioPage.js"></script>
+
+<!-- запуск -->
+<script src="js/app.js"></script>
+</body>
+</html>

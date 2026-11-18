@@ -1,0 +1,151 @@
+{
+  "id": "A2_10_adjectives_adverbs",
+  "level": "A2",
+  "order": 10,
+  "title": "Adjectives and adverbs; -ed / -ing adjectives",
+  "titleRu": "Прилагательные и наречия",
+  "summary": "Как отличать прилагательные от наречий (quick/quickly, good/well, hard, fast) и прилагательные на -ed и -ing (bored/boring).",
+  "theory": "## Когда используем\n\n**Прилагательное** (adjective) описывает **предмет или человека** — отвечает на вопрос «какой?». **Наречие** (adverb) описывает **действие** — отвечает на вопрос «как?».\n\n| | Что описывает | Пример |\n|---|---|---|\n| прилагательное | существительное | She is a **careful** driver. — Она осторожный водитель. |\n| наречие | глагол | She drives **carefully**. — Она водит осторожно. |\n\nВ русском тоже есть эта разница: «быстрый» — «быстро», «хороший» — «хорошо». В английском наречие чаще всего образуется с помощью **-ly**.\n\n> He is a slow walker. → He walks slowly. — Он медленно ходит.\n> Your English is good. → You speak English well. — Ты хорошо говоришь по-английски.\n\n## Как образуется наречие\n\n| Правило | Прилагательное | Наречие |\n|---|---|---|\n| обычно + **ly** | quick, slow, quiet, bad, careful | quickly, slowly, quietly, badly, carefully |\n| -y → **-ily** | easy, happy, angry | easily, happily, angrily |\n| -le → **-ly** | terrible, possible, gentle | terribly, possibly, gently |\n| -ic → **-ically** | automatic | automatically |\n\n### Исключения\n\n| Прилагательное | Наречие | Пример |\n|---|---|---|\n| good | **well** | She is a good singer. She sings well. |\n| fast | **fast** | a fast car — he drives fast |\n| hard | **hard** | hard work — they work hard |\n| early | **early** | an early train — I got up early |\n| late | **late** | a late lunch — he arrived late |\n\n⚠ **hardly** — это НЕ «упорно», а «едва, почти не»: I hardly know him. — Я его почти не знаю. Аналогично **lately** = «в последнее время».\n⚠ **fastly** и **goodly** не существует.\n\n!! Слова **friendly, lovely, lonely, ugly** заканчиваются на -ly, но это прилагательные: a friendly man. Наречие — in a friendly way.\n\n## Где стоит наречие\n\nНаречие образа действия обычно стоит **после глагола** или **после дополнения**, но не между глаголом и дополнением:\n> She speaks English very well. (не She speaks very well English)\n> He opened the door quietly. — Он тихо открыл дверь.\n\n## После глаголов-связок — прилагательное!\n\nПосле глаголов **be, look, seem, feel, sound, smell, taste, become, get** используется **прилагательное**, потому что оно описывает подлежащее, а не действие:\n> You look tired. — Ты выглядишь уставшим. (не tiredly)\n> This soup tastes good. — Этот суп вкусный. (не well)\n> I feel bad today. — Мне сегодня плохо.\n> That sounds great! — Звучит здорово!\n\nИсключение: **I feel well** — «я здоров» (well как прилагательное о здоровье).\n\n## Прилагательные на -ed и -ing\n\nМногие прилагательные о чувствах имеют две формы, и русскоговорящие их часто путают.\n\n| Форма | Значение | Пример |\n|---|---|---|\n| **-ed** | что **человек чувствует** | I'm bored. — Мне скучно. |\n| **-ing** | **какой предмет/ситуация** (что вызывает чувство) | The film is boring. — Фильм скучный. |\n\n| -ed (я чувствую) | -ing (оно вызывает) |\n|---|---|\n| bored — скучающий | boring — скучный |\n| interested — заинтересованный | interesting — интересный |\n| tired — уставший | tiring — утомительный |\n| excited — взволнованный (в предвкушении) | exciting — захватывающий |\n| surprised — удивлённый | surprising — удивительный |\n| worried — обеспокоенный | worrying — тревожный |\n| frightened — испуганный | frightening — страшный |\n| annoyed — раздражённый | annoying — раздражающий |\n| relaxed — расслабленный | relaxing — расслабляющий |\n| confused — сбитый с толку | confusing — запутанный |\n\n> I was bored because the lesson was boring. — Мне было скучно, потому что урок был скучный.\n> We're excited about the trip. It will be exciting! — Мы в предвкушении поездки. Будет здорово!\n\n!! Человек тоже может быть -ing: He is boring = он **скучный человек** (с ним скучно). He is bored = **ему скучно**. Очень важная разница!\n\n## Сравните\n\n| Прилагательное | Наречие |\n|---|---|\n| He's a good cook. | He cooks well. |\n| It was a quick lunch. | We ate quickly. |\n| She's a hard worker. | She works hard. |\n| The test was easy. | I passed it easily. |\n\n## Типичные ошибки\n\n⚠ He speaks English very good. → He speaks English very well.\n⚠ She drives very careful. → She drives very carefully.\n⚠ He runs fastly. → He runs fast.\n⚠ I work hardly. → I work hard. (hardly = почти не)\n⚠ I'm boring at work. → I'm bored at work. (иначе получится «я скучный человек»)\n⚠ The film was very interested. → The film was very interesting.\n⚠ You look happily. → You look happy.\n⚠ She speaks very well English. → She speaks English very well.\n\n!! Задайте вопрос: «какой?» → прилагательное, «как?» → наречие. А с -ed/-ing: «кто чувствует?» → -ed, «что вызывает?» → -ing.",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "She is a very ___ driver.",
+      "options": [
+        "careful",
+        "carefully",
+        "care"
+      ],
+      "answer": 0,
+      "explain": "Описываем существительное driver — прилагательное."
+    },
+    {
+      "type": "choice",
+      "q": "Please speak ___. The baby is sleeping.",
+      "options": [
+        "quiet",
+        "quietly",
+        "quieter"
+      ],
+      "answer": 1,
+      "explain": "Описываем действие speak — наречие quietly."
+    },
+    {
+      "type": "choice",
+      "q": "My brother plays the guitar very ___.",
+      "options": [
+        "good",
+        "well",
+        "goodly"
+      ],
+      "answer": 1,
+      "explain": "Наречие от good — well."
+    },
+    {
+      "type": "choice",
+      "q": "He works very ___ and he's always tired in the evening.",
+      "options": [
+        "hard",
+        "hardly",
+        "harder"
+      ],
+      "answer": 0,
+      "explain": "Hard — наречие без -ly; hardly значит «почти не»."
+    },
+    {
+      "type": "choice",
+      "q": "I was ___ because the lecture was so long.",
+      "options": [
+        "boring",
+        "bored",
+        "bore"
+      ],
+      "answer": 1,
+      "explain": "Человек чувствует скуку — bored."
+    },
+    {
+      "type": "choice",
+      "q": "This soup tastes ___. Can I have some more?",
+      "options": [
+        "good",
+        "well",
+        "goodly"
+      ],
+      "answer": 0,
+      "explain": "После taste — прилагательное good."
+    },
+    {
+      "type": "input",
+      "q": "The bus was very ___ (slow) today.",
+      "answer": [
+        "slow"
+      ],
+      "explain": "Описываем bus после was — прилагательное slow."
+    },
+    {
+      "type": "input",
+      "q": "He drove ___ (slow) because of the snow.",
+      "answer": [
+        "slowly"
+      ],
+      "explain": "Описываем действие drove — наречие slowly."
+    },
+    {
+      "type": "input",
+      "q": "She answered all the questions ___ (easy).",
+      "answer": [
+        "easily"
+      ],
+      "explain": "Наречие от easy: y → ily."
+    },
+    {
+      "type": "input",
+      "q": "That was a really ___ (excite) match! I loved it.",
+      "answer": [
+        "exciting"
+      ],
+      "explain": "Матч вызывает чувство — exciting."
+    },
+    {
+      "type": "input",
+      "q": "Are you ___ (interest) in football?",
+      "answer": [
+        "interested"
+      ],
+      "explain": "Чувство человека — interested in."
+    },
+    {
+      "type": "choice",
+      "q": "The train was late, so we arrived ___.",
+      "options": [
+        "lately",
+        "late",
+        "latest"
+      ],
+      "answer": 1,
+      "explain": "Наречие late без -ly; lately = в последнее время."
+    },
+    {
+      "type": "choice",
+      "q": "The instructions were very ___. I didn't understand anything.",
+      "options": [
+        "confused",
+        "confusing",
+        "confusingly"
+      ],
+      "answer": 1,
+      "explain": "Инструкции вызывают путаницу — confusing."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "She speaks English very well.",
+      "explain": "Наречие well стоит после дополнения English."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "I was tired after a tiring day.",
+      "explain": "Tired — чувство человека, tiring — описание дня."
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "questions": [
+    {
+      "type": "choice",
+      "q": "What did Ben think about Mr Harris at first?",
+      "options": [
+        "He looked a bit scary",
+        "He was very funny",
+        "He was a good football player"
+      ],
+      "answer": 0,
+      "explain": "Бену казалось, что Мистер Харрис выглядит немного страшно."
+    },
+    {
+      "type": "tf",
+      "q": "The noises came every night between one and three o'clock.",
+      "answer": true,
+      "explain": "Верно: каждую ночь с часа до трёх из квартиры Мистера Харриса доносились звуки."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Mrs Patel say Mr Harris was lonely?",
+      "options": [
+        "His children lived abroad",
+        "His wife had died last year",
+        "He had no friends in the town"
+      ],
+      "answer": 1,
+      "explain": "Миссис Пател сказала, что он одинок с тех пор, как в прошлом году умерла его жена."
+    },
+    {
+      "type": "tf",
+      "q": "Mrs Patel also heard the noises at night.",
+      "answer": false,
+      "explain": "Неверно: она сказала, что спит очень хорошо и ничего не слышит."
+    },
+    {
+      "type": "choice",
+      "q": "What was in the package that Anna found?",
+      "options": [
+        "Money and a letter",
+        "A radio and some photos",
+        "Pieces of wood, glue and drawings"
+      ],
+      "answer": 2,
+      "explain": "В пакете были кусочки дерева, тюбик клея и листок с рисунками."
+    },
+    {
+      "type": "choice",
+      "q": "In the text, \"He hesitated for a second.\" What does \"hesitated\" mean?",
+      "options": [
+        "He laughed loudly",
+        "He waited because he wasn't sure",
+        "He closed the door quickly"
+      ],
+      "answer": 1,
+      "explain": "«Hesitated» значит «помедлил, засомневался» — он не сразу решил пригласить их."
+    },
+    {
+      "type": "tf",
+      "q": "Mr Harris used to be a carpenter.",
+      "answer": true,
+      "explain": "Верно: он сказал «I used to be a carpenter» — раньше он был плотником."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Mr Harris work at night?",
+      "options": [
+        "He couldn't sleep well at night",
+        "He worked in a hospital during the day",
+        "He wanted to keep the toys a secret from Ben"
+      ],
+      "answer": 0,
+      "explain": "Он сказал, что плохо спит ночью, поэтому работает в это время."
+    },
+    {
+      "type": "tf",
+      "q": "Ben went to Mr Harris's flat every Saturday night.",
+      "answer": false,
+      "explain": "Неверно: Бен ходил к нему по субботам днём — «only in the daytime»."
+    },
+    {
+      "type": "choice",
+      "q": "Where did they take the toys in December?",
+      "options": [
+        "To a school",
+        "To a toy shop",
+        "To St Mary's hospital"
+      ],
+      "answer": 2,
+      "explain": "В декабре они вместе отвезли игрушки в детскую больницу Святой Марии."
+    }
+  ],
+  "retell": [
+    "Who were Anna and Ben, and where did they move?",
+    "What was Mr Harris like?",
+    "What did Anna hear at night?",
+    "What did Mrs Patel tell Anna?",
+    "What did Anna find in front of the door?",
+    "What did they see in Mr Harris's flat, and what was his secret?",
+    "How did things change after that?"
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "id": "A1_10_simple_vs_continuous",
+  "level": "A1",
+  "order": 10,
+  "title": "Present Simple vs Present Continuous",
+  "titleRu": "Present Simple или Present Continuous",
+  "summary": "Как выбрать между Present Simple и Present Continuous; глаголы состояния like, know, want.",
+  "theory": "## Главная разница\n\nВ русском одно настоящее время: «я работаю» может значить и «я работаю каждый день», и «я работаю прямо сейчас». В английском это **два разных времени**, и выбор между ними — одна из главных трудностей для русскоговорящих.\n\n| Present Simple | Present Continuous |\n|---|---|\n| обычно, регулярно, всегда | сейчас, в данный момент |\n| привычки, факты, расписания | процесс, временная ситуация |\n| I **work** in a bank. | I'm **working** now. |\n| *Я работаю в банке (это моя работа).* | *Я сейчас работаю (занят).* |\n\n## Когда используем\n\n### Present Simple — постоянное и регулярное\n\n> She speaks Spanish. — Она говорит по-испански (умеет, знает язык).\n> I usually drink tea in the morning. — Утром я обычно пью чай.\n> Cats eat fish. — Кошки едят рыбу (факт).\n\n### Present Continuous — сейчас и временно\n\n> She is speaking Spanish now. — Сейчас она говорит по-испански (в этот момент).\n> I'm drinking coffee today. — Сегодня я пью кофе (не как обычно).\n> The cat is eating. — Кошка (сейчас) ест.\n\n### Сравните пары\n\n> I live in Moscow. — Я живу в Москве. (постоянно)\n> I'm living in a hotel this week. — На этой неделе я живу в гостинице. (временно)\n> He plays tennis on Fridays. — Он играет в теннис по пятницам. (регулярно)\n> He is playing tennis now. — Он сейчас играет в теннис. (в процессе)\n> What do you do? — Кем ты работаешь?\n> What are you doing? — Что ты (сейчас) делаешь?\n\n## Слова-подсказки\n\n| Present Simple | Present Continuous |\n|---|---|\n| always, usually, often, sometimes, never | now, right now |\n| every day / week / year | at the moment |\n| on Mondays, at weekends | today, this week, this month |\n| once a week, twice a year | Look! Listen! Be quiet! |\n| in the morning (как правило) | still (всё ещё) |\n\n!! Подсказки помогают, но главное — **смысл**: действие повторяется (Simple) или идёт сейчас/временно (Continuous)?\n\n## Глаголы состояния (stative verbs)\n\nЕсть глаголы, которые обозначают не действие, а **состояние**: чувства, мысли, желания, принадлежность. Они обычно **не используются в Continuous**, даже если речь идёт о «сейчас».\n\n| Группа | Глаголы |\n|---|---|\n| Чувства, отношение | like, love, hate, prefer |\n| Желания | want, need |\n| Мысли, знания | know, understand, believe, remember, forget, mean |\n| Принадлежность | have (иметь), own, belong |\n| Восприятие | see, hear, smell, taste |\n| Другие | cost, seem, agree |\n\n> I know the answer. — Я знаю ответ. (не *I'm knowing*)\n> I want a coffee now. — Я хочу кофе сейчас. (не *I'm wanting*)\n> Do you understand me? — Ты меня понимаешь? (не *Are you understanding*)\n> This bag costs 50 euros. — Эта сумка стоит 50 евро.\n\n### Have: состояние или действие?\n\n**Have** в значении «иметь, обладать» — глагол состояния: *I have a car* (не *I'm having a car*). Но в выражениях-действиях он может быть в Continuous:\n\n> I'm having breakfast. — Я завтракаю.\n> We're having a party. — У нас вечеринка.\n> She's having a shower. — Она принимает душ.\n\n### Think\n\n> I think it's a good idea. — Я думаю (считаю), это хорошая идея. (мнение — Simple)\n> I'm thinking about my holiday. — Я думаю (размышляю) об отпуске. (процесс — Continuous)\n\n## Типичные ошибки\n\n⚠ I'm knowing him. → I know him.\n⚠ I'm wanting a pizza. → I want a pizza.\n⚠ Are you understanding? → Do you understand?\n⚠ I work now. → I'm working now.\n⚠ She is going to school every day. → She goes to school every day.\n⚠ Look! It rains. → Look! It's raining.\n⚠ I'm having a dog. → I have a dog.\n⚠ I am agree with you. → I agree with you.\n⚠ What do you do now? (о текущем моменте) → What are you doing now?\n\n!! Алгоритм выбора: 1) Глагол состояния (know, like, want…)? → Present Simple. 2) Действие регулярное или факт? → Present Simple. 3) Действие идёт сейчас или временно? → Present Continuous.",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "I ___ in a bank. I'm a manager.",
+      "options": [
+        "work",
+        "am working",
+        "works"
+      ],
+      "answer": 0,
+      "explain": "Постоянная работа — Present Simple."
+    },
+    {
+      "type": "choice",
+      "q": "Look! Tom ___ the dog.",
+      "options": [
+        "walks",
+        "is walking",
+        "walk"
+      ],
+      "answer": 1,
+      "explain": "Look! — действие сейчас, Present Continuous."
+    },
+    {
+      "type": "choice",
+      "q": "I ___ the answer to this question.",
+      "options": [
+        "know",
+        "am knowing",
+        "knowing"
+      ],
+      "answer": 0,
+      "explain": "Know — глагол состояния, в Continuous не используется."
+    },
+    {
+      "type": "choice",
+      "q": "She usually ___ to work by bus.",
+      "options": [
+        "is going",
+        "goes",
+        "go"
+      ],
+      "answer": 1,
+      "explain": "Usually — регулярное действие, Present Simple."
+    },
+    {
+      "type": "choice",
+      "q": "— What ___? — I'm making a sandwich.",
+      "options": [
+        "do you do",
+        "are you doing",
+        "you are doing"
+      ],
+      "answer": 1,
+      "explain": "Вопрос о том, что происходит сейчас: What are you doing?"
+    },
+    {
+      "type": "choice",
+      "q": "Choose the correct sentence.",
+      "options": [
+        "I'm wanting a new phone.",
+        "I want a new phone.",
+        "I wanting a new phone."
+      ],
+      "answer": 1,
+      "explain": "Want — глагол состояния, только Present Simple."
+    },
+    {
+      "type": "input",
+      "q": "Be quiet! I ___ (talk) on the phone.",
+      "answer": [
+        "'m talking",
+        "am talking"
+      ],
+      "explain": "Be quiet! — действие происходит сейчас."
+    },
+    {
+      "type": "input",
+      "q": "My brother ___ (like) pizza very much.",
+      "answer": [
+        "likes"
+      ],
+      "explain": "Like — глагол состояния; he → likes."
+    },
+    {
+      "type": "input",
+      "q": "We ___ (have) dinner now. Can I call you later?",
+      "answer": [
+        "'re having",
+        "are having"
+      ],
+      "explain": "Have dinner — действие, поэтому возможно Continuous."
+    },
+    {
+      "type": "input",
+      "q": "It often ___ (rain) in London.",
+      "answer": [
+        "rains"
+      ],
+      "explain": "Often — регулярность, Present Simple, it → rains."
+    },
+    {
+      "type": "input",
+      "q": "___ you understand this word?",
+      "answer": [
+        "Do"
+      ],
+      "explain": "Understand — глагол состояния, вопрос с do."
+    },
+    {
+      "type": "input",
+      "q": "This week my parents ___ (stay) at a hotel in Sochi.",
+      "answer": [
+        "are staying",
+        "'re staying"
+      ],
+      "explain": "This week — временная ситуация, Present Continuous."
+    },
+    {
+      "type": "order",
+      "q": "Составьте вопрос",
+      "answer": "What are you doing at the moment?",
+      "explain": "At the moment — Present Continuous: are + you + -ing."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "My father doesn't drink coffee in the evening.",
+      "explain": "Привычка — Present Simple, отрицание doesn't + глагол."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "I don't understand this question.",
+      "explain": "Understand — глагол состояния, Present Simple."
+    }
+  ]
+}

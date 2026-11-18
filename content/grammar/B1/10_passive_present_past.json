@@ -1,0 +1,152 @@
+{
+  "id": "B1_10_passive_present_past",
+  "level": "B1",
+  "order": 10,
+  "title": "Passive: Present & Past Simple",
+  "titleRu": "Пассивный залог: Present и Past Simple",
+  "summary": "Как и когда использовать пассив (is made, was built), как добавить исполнителя с by.",
+  "theory": "## Когда используем\n\n**Пассивный залог** (*the passive*) показывает, что действие совершается **над** подлежащим, а не самим подлежащим.\n\n> Active: Someone stole my bike. — Кто-то украл мой велосипед.\n> Passive: My bike was stolen. — Мой велосипед украли. / Мой велосипед был украден.\n\nВ русском мы часто говорим «украли», «построили», «говорят» без подлежащего — в английском так нельзя, предложению нужно подлежащее. Поэтому английский пассив встречается **намного чаще**, чем русское «был украден».\n\n### 1. Неизвестно или неважно, кто сделал\n> My car was stolen last night. — Мою машину угнали вчера ночью. (не знаем кто)\n> This bridge was built in 1890. — Этот мост построили в 1890 году.\n> English is spoken all over the world. — На английском говорят по всему миру.\n\n### 2. Важнее объект (результат), чем исполнитель\n> The museum is visited by thousands of tourists every year. — Музей посещают тысячи туристов каждый год.\n\n### 3. Процессы, инструкции, новости, официальный стиль\n> The letters are sorted and then delivered. — Письма сортируют, а затем доставляют.\n> Two people were injured in the accident. — В аварии пострадали два человека.\n\n## Как образуется\n\nФормула: **be (в нужном времени) + V3** (третья форма глагола).\n\n### Present Simple Passive: am / is / are + V3\n| | Пример |\n|---|---|\n| + | Coffee **is grown** in Brazil. / Cars **are made** here. |\n| − | Breakfast **isn't included** in the price. |\n| ? | **Is** English **spoken** here? — Yes, it is. |\n\n### Past Simple Passive: was / were + V3\n| | Пример |\n|---|---|\n| + | The window **was broken**. / The houses **were built** in 1950. |\n| − | The letter **wasn't sent**. |\n| ? | **Were** you **invited**? — No, I wasn't. |\n\nВопрос с вопросительным словом:\n> When was the Eiffel Tower built? — Когда была построена Эйфелева башня?\n> Where are these phones made? — Где делают эти телефоны?\n\n### Как превратить актив в пассив\n| Шаг | Актив → Пассив |\n|---|---|\n| 1. Дополнение становится подлежащим | Shakespeare wrote *Hamlet*. → *Hamlet*… |\n| 2. Ставим be в том же времени | wrote (Past) → was |\n| 3. Основной глагол → V3 | wrote → written |\n| 4. Исполнитель (если нужен) → by | …by Shakespeare. |\n\n> Hamlet was written by Shakespeare. — «Гамлет» был написан Шекспиром.\n\n## By + агент\n\n**by** вводит исполнителя действия (*агента*). Добавляем его, только если это **важная или новая информация**.\n> The Mona Lisa was painted by Leonardo da Vinci. — «Мону Лизу» написал Леонардо да Винчи.\n> The film was directed by Christopher Nolan. — Фильм снял Кристофер Нолан.\n\nНе используем by, если исполнитель очевиден или неизвестен:\n> The thief was arrested (by the police). — «by the police» лишнее: кто ещё арестовывает?\n> My wallet was stolen (by someone). — «by someone» не несёт информации.\n\n!! **by** — кто сделал, **with** — чем (инструмент): *The door was opened with a key.* — Дверь открыли ключом.\n\n## Сравните\n\n| Актив | Пассив |\n|---|---|\n| They **clean** the office every day. | The office **is cleaned** every day. |\n| Somebody **cleaned** the office yesterday. | The office **was cleaned** yesterday. |\n| People **speak** Spanish in Mexico. | Spanish **is spoken** in Mexico. |\n\n### Глаголы, которые не бывают в пассиве\nНепереходные глаголы (без дополнения): *happen, arrive, die, sleep, come, go, appear*.\n> The accident happened at 5 pm. (НЕ *was happened*)\n\n### Born\n«Я родился» по-английски — всегда пассив: **I was born** in 1990. (НЕ *I born / I am born*)\n\n## Типичные ошибки\n\n⚠ The accident was happened yesterday. → The accident happened yesterday.\n⚠ This house built in 1900. → This house was built in 1900.\n⚠ English is speak in many countries. → English is spoken in many countries.\n⚠ I born in Moscow. → I was born in Moscow.\n⚠ The book was written from Tolstoy. → The book was written by Tolstoy.\n⚠ Where was made this phone? → Where was this phone made?\n⚠ The cars is made in Japan. → The cars are made in Japan. (be согласуется с подлежащим)\n\n!! Пассив = **be + V3**. Всё время «живёт» в глаголе *be* (is/are, was/were), а основной глагол всегда в третьей форме.",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "English ___ in many countries.",
+      "options": [
+        "speaks",
+        "is spoken",
+        "is speaking"
+      ],
+      "answer": 1,
+      "explain": "Язык не говорит сам — на нём говорят: пассив is + V3."
+    },
+    {
+      "type": "choice",
+      "q": "This bridge ___ in 1890.",
+      "options": [
+        "built",
+        "was built",
+        "is built"
+      ],
+      "answer": 1,
+      "explain": "Действие в прошлом над подлежащим — was + V3."
+    },
+    {
+      "type": "choice",
+      "q": "These phones ___ in China.",
+      "options": [
+        "is made",
+        "are made",
+        "made"
+      ],
+      "answer": 1,
+      "explain": "Подлежащее во множественном числе — are + V3."
+    },
+    {
+      "type": "choice",
+      "q": "The accident ___ at 5 o'clock.",
+      "options": [
+        "happened",
+        "was happened",
+        "is happened"
+      ],
+      "answer": 0,
+      "explain": "Happen — непереходный глагол, пассива не бывает."
+    },
+    {
+      "type": "choice",
+      "q": "Hamlet was written ___ Shakespeare.",
+      "options": [
+        "from",
+        "with",
+        "by"
+      ],
+      "answer": 2,
+      "explain": "Исполнитель действия вводится предлогом by."
+    },
+    {
+      "type": "choice",
+      "q": "I ___ in Kazan in 1995.",
+      "options": [
+        "born",
+        "am born",
+        "was born"
+      ],
+      "answer": 2,
+      "explain": "«Родился» в английском — пассив в прошлом: was born."
+    },
+    {
+      "type": "input",
+      "q": "My bike ___ last night. I left it outside the shop. (steal)",
+      "answer": [
+        "was stolen"
+      ],
+      "explain": "Неизвестно, кто украл; прошлое — was + V3."
+    },
+    {
+      "type": "input",
+      "q": "Breakfast ___ in the price of the room. You pay for it separately. (not / include)",
+      "answer": [
+        "isn't included",
+        "is not included"
+      ],
+      "explain": "Настоящее время, отрицание в пассиве — isn't + V3."
+    },
+    {
+      "type": "input",
+      "q": "The letters ___ every morning at 9. (deliver)",
+      "answer": [
+        "are delivered"
+      ],
+      "explain": "Регулярное действие над подлежащим во мн. ч. — are + V3."
+    },
+    {
+      "type": "input",
+      "q": "When ___ the Eiffel Tower built? (be)",
+      "answer": [
+        "was"
+      ],
+      "explain": "Вопрос в пассиве в прошлом: When + was + подлежащее + V3."
+    },
+    {
+      "type": "input",
+      "q": "Two people ___ in the accident yesterday. (injure)",
+      "answer": [
+        "were injured"
+      ],
+      "explain": "Подлежащее во мн. ч., прошлое — were + V3."
+    },
+    {
+      "type": "order",
+      "q": "Составьте вопрос",
+      "answer": "Where are these cars made?",
+      "explain": "Вопрос в пассиве: Where + are + подлежащее + V3."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "The Mona Lisa was painted by Leonardo da Vinci.",
+      "explain": "was + V3 + by + исполнитель."
+    },
+    {
+      "type": "choice",
+      "q": "Which is the passive form of «Someone cleaned the room»?",
+      "options": [
+        "The room cleaned.",
+        "The room was cleaned.",
+        "The room is cleaned by someone."
+      ],
+      "answer": 1,
+      "explain": "Past Simple в активе → was + V3 в пассиве; by someone не нужен."
+    },
+    {
+      "type": "choice",
+      "q": "The door was opened ___ a key.",
+      "options": [
+        "by",
+        "with",
+        "from"
+      ],
+      "answer": 1,
+      "explain": "Инструмент (чем сделано) вводится предлогом with."
+    }
+  ]
+}

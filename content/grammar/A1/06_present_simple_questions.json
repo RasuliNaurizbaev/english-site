@@ -1,0 +1,146 @@
+{
+  "id": "A1_06_present_simple_questions",
+  "level": "A1",
+  "order": 6,
+  "title": "Present Simple: questions and negatives",
+  "titleRu": "Present Simple: вопросы и отрицания",
+  "summary": "Вопросы и отрицания в Present Simple с do/does, краткие ответы и вопросительные слова.",
+  "theory": "## Главная идея\n\nВ утвердительном предложении Present Simple нет вспомогательного глагола: *I work, she works*. Но для **вопросов** и **отрицаний** английскому нужен помощник — **do** или **does**. По-русски он не переводится, он просто «служебный».\n\n| Подлежащее | Помощник |\n|---|---|\n| I, you, we, they | **do** |\n| he, she, it (Tom, my mum, the dog) | **does** |\n\n!! Окончание -s «переходит» в does. Поэтому после does основной глагол стоит **в начальной форме, без -s**: *She works → She doesn't work → Does she work?*\n\n## Отрицание (−)\n\nПодлежащее + **don't / doesn't** + глагол в начальной форме.\n\n| Полная форма | Сокращение | Пример |\n|---|---|---|\n| do not | don't | I don't like milk. — Я не люблю молоко. |\n| does not | doesn't | He doesn't eat meat. — Он не ест мясо. |\n\n> We don't live here. — Мы здесь не живём.\n> My mum doesn't drive. — Моя мама не водит машину.\n> It doesn't matter. — Это не важно.\n\n## Вопрос (?)\n\n**Do / Does** + подлежащее + глагол в начальной форме?\n\n> Do you speak English? — Ты говоришь по-английски?\n> Does your brother play football? — Твой брат играет в футбол?\n> Do they have a car? — У них есть машина?\n\n### Краткие ответы\n\nВ кратком ответе повторяем только do / does (основной глагол не повторяем).\n\n| Вопрос | Да | Нет |\n|---|---|---|\n| Do you like tea? | Yes, I do. | No, I don't. |\n| Does she work here? | Yes, she does. | No, she doesn't. |\n| Do they live in Moscow? | Yes, they do. | No, they don't. |\n\n!! Не отвечайте *Yes, I like* или *Yes, I am* на вопрос с do. Отвечаем тем же помощником: **Yes, I do.**\n\n## Вопросительные слова\n\nСпециальный вопрос строится так: **Вопросительное слово + do/does + подлежащее + глагол?**\n\n| Слово | Значение | Пример |\n|---|---|---|\n| What | что, какой | What do you do? — Кем ты работаешь? |\n| Where | где, куда | Where does she live? — Где она живёт? |\n| When | когда | When do you get up? — Когда ты встаёшь? |\n| What time | во сколько | What time does the film start? — Во сколько начинается фильм? |\n| Why | почему | Why do you learn English? — Почему ты учишь английский? |\n| How | как | How do you go to work? — Как ты добираешься до работы? |\n| How often | как часто | How often do you play tennis? — Как часто ты играешь в теннис? |\n| Who | кто, кого | Who do you live with? — С кем ты живёшь? |\n| Which | который | Which bus do you take? — На каком автобусе ты ездишь? |\n\n!! **What do you do?** — это вопрос о профессии («Кем вы работаете?»), а не «Что ты делаешь (сейчас)?».\n\n### Вопрос к подлежащему (Who…?)\n\nЕсли **who** или **what** — само подлежащее (мы спрашиваем, *кто* делает), do/does **не нужен**, а глагол стоит с -s:\n\n> Who lives here? — Кто здесь живёт? (не *Who does live here?*)\n> What happens next? — Что происходит дальше?\n\n## Do / does и to be — не путайте!\n\nС глаголом **to be** (am/is/are) помощник do **не используется**. Do/does — только для обычных глаголов.\n\n| С to be | С обычным глаголом |\n|---|---|\n| Are you a student? | Do you study? |\n| She isn't at home. | She doesn't live here. |\n| Is he hungry? | Does he want pizza? |\n\n## Типичные ошибки\n\n⚠ She doesn't works. → She doesn't work.\n⚠ Does he lives here? → Does he live here?\n⚠ You like coffee? → Do you like coffee?\n⚠ Where you live? → Where do you live?\n⚠ He don't like sport. → He doesn't like sport.\n⚠ I not understand. → I don't understand.\n⚠ Do you are a teacher? → Are you a teacher?\n⚠ — Do you like cats? — Yes, I like. → Yes, I do.\n⚠ Where does she works? → Where does she work?\n\n!! Формула для запоминания: **does + глагол без -s**. Окончание -s может быть только в одном месте — либо у does, либо у основного глагола, но никогда у обоих сразу.",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "I ___ like horror films.",
+      "options": [
+        "don't",
+        "doesn't",
+        "am not"
+      ],
+      "answer": 0,
+      "explain": "С I в отрицании используем don't."
+    },
+    {
+      "type": "choice",
+      "q": "___ your sister speak French?",
+      "options": [
+        "Do",
+        "Does",
+        "Is"
+      ],
+      "answer": 1,
+      "explain": "Your sister = she, поэтому Does."
+    },
+    {
+      "type": "choice",
+      "q": "He doesn't ___ in this city.",
+      "options": [
+        "live",
+        "lives",
+        "living"
+      ],
+      "answer": 0,
+      "explain": "После doesn't глагол в начальной форме, без -s."
+    },
+    {
+      "type": "choice",
+      "q": "— Do you have a dog? — Yes, I ___.",
+      "options": [
+        "have",
+        "do",
+        "am"
+      ],
+      "answer": 1,
+      "explain": "Краткий ответ на вопрос с do: Yes, I do."
+    },
+    {
+      "type": "choice",
+      "q": "Choose the correct question.",
+      "options": [
+        "Where you work?",
+        "Where do you work?",
+        "Where are you work?"
+      ],
+      "answer": 1,
+      "explain": "Вопросительное слово + do + подлежащее + глагол."
+    },
+    {
+      "type": "choice",
+      "q": "Who ___ in that house?",
+      "options": [
+        "live",
+        "lives",
+        "does live"
+      ],
+      "answer": 1,
+      "explain": "Who — подлежащее, поэтому do не нужен, глагол с -s."
+    },
+    {
+      "type": "input",
+      "q": "My father ___ (not / drink) coffee.",
+      "answer": [
+        "doesn't drink",
+        "does not drink"
+      ],
+      "explain": "My father = he: doesn't + глагол без -s."
+    },
+    {
+      "type": "input",
+      "q": "We ___ (not / watch) TV in the morning.",
+      "answer": [
+        "don't watch",
+        "do not watch"
+      ],
+      "explain": "С we отрицание don't + глагол."
+    },
+    {
+      "type": "input",
+      "q": "___ they live near the station?",
+      "answer": [
+        "Do"
+      ],
+      "explain": "They — помощник do."
+    },
+    {
+      "type": "input",
+      "q": "— Does Kate work on Saturdays? — No, she ___.",
+      "answer": [
+        "doesn't",
+        "does not"
+      ],
+      "explain": "Отрицательный краткий ответ: No, she doesn't."
+    },
+    {
+      "type": "input",
+      "q": "What time ___ the lesson start?",
+      "answer": [
+        "does"
+      ],
+      "explain": "The lesson = it, поэтому does."
+    },
+    {
+      "type": "input",
+      "q": "How often ___ you go to the cinema?",
+      "answer": [
+        "do"
+      ],
+      "explain": "С you используем do."
+    },
+    {
+      "type": "order",
+      "q": "Составьте вопрос",
+      "answer": "Where does your brother work?",
+      "explain": "Вопр. слово + does + подлежащее + глагол без -s."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "My mother doesn't eat meat.",
+      "explain": "Подлежащее + doesn't + глагол в начальной форме."
+    },
+    {
+      "type": "order",
+      "q": "Составьте вопрос",
+      "answer": "What do you do at weekends?",
+      "explain": "What + do + you + do (основной глагол)."
+    }
+  ]
+}

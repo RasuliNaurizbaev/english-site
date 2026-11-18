@@ -1,0 +1,103 @@
+{
+  "questions": [
+    {
+      "type": "choice",
+      "q": "Why did Michael need to learn to drive?",
+      "options": [
+        "He got a new job as a driver",
+        "He moved to a village far from the shops",
+        "His wife couldn't drive"
+      ],
+      "answer": 1,
+      "explain": "Они переехали в деревню: до супермаркета восемь километров, а автобус ходит раз в день."
+    },
+    {
+      "type": "tf",
+      "q": "Mrs Grant had been a driving instructor for thirty years.",
+      "answer": true,
+      "explain": "Верно: в тексте сказано, что она работала инструктором тридцать лет."
+    },
+    {
+      "type": "choice",
+      "q": "Mrs Grant said, \"Your feet are not elephants.\" What did she want Michael to do?",
+      "options": [
+        "Use the pedals more gently",
+        "Drive faster",
+        "Take off his shoes"
+      ],
+      "answer": 0,
+      "explain": "Она сказала «Gently!» — ей нужно было, чтобы Майкл мягче нажимал на педали."
+    },
+    {
+      "type": "tf",
+      "q": "Michael failed the theory test the first time.",
+      "answer": false,
+      "explain": "Неверно: он сдал теорию с первой попытки и гордился собой."
+    },
+    {
+      "type": "choice",
+      "q": "What was the weather like on the day of the first practical test?",
+      "options": [
+        "It was snowing",
+        "It was sunny",
+        "It was raining heavily"
+      ],
+      "answer": 2,
+      "explain": "Утром в день первого экзамена шёл сильный дождь."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Michael fail his first test?",
+      "options": [
+        "He hit another car",
+        "He drove through a red light",
+        "He couldn't park the car"
+      ],
+      "answer": 1,
+      "explain": "Он так думал о повороте, что не заметил красный свет и проехал на него."
+    },
+    {
+      "type": "tf",
+      "q": "Mrs Grant was angry with Michael when she called him.",
+      "answer": false,
+      "explain": "Неверно: Майкл ожидал гнева, но она говорила спокойно и поддержала его."
+    },
+    {
+      "type": "tf",
+      "q": "Mrs Grant also failed her first driving test.",
+      "answer": true,
+      "explain": "Верно: она рассказала, что при парковке задела край дороги и не сдала экзамен."
+    },
+    {
+      "type": "choice",
+      "q": "What did Michael say quietly before every turn?",
+      "options": [
+        "\"Slow down, slow down\"",
+        "\"I can do it\"",
+        "\"Mirror, signal, lights\""
+      ],
+      "answer": 2,
+      "explain": "Перед каждым поворотом он делал медленный вдох и говорил «Mirror, signal, lights»."
+    },
+    {
+      "type": "choice",
+      "q": "What did Mrs Grant say after Michael passed?",
+      "options": [
+        "\"Good. Really good.\"",
+        "\"You were lucky.\"",
+        "\"Drive more slowly next time.\""
+      ],
+      "answer": 0,
+      "explain": "Впервые улыбнувшись, она сказала «Good. Really good.»"
+    }
+  ],
+  "retell": [
+    "Why did Michael decide to learn to drive?",
+    "What was Mrs Grant like?",
+    "What were the first lessons like?",
+    "What happened during the first practical test?",
+    "What did Mrs Grant tell Michael on the phone?",
+    "How did Michael prepare for the second test?",
+    "What happened at the second test and after it?"
+  ]
+}

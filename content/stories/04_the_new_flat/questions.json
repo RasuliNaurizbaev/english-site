@@ -1,0 +1,101 @@
+{
+  "questions": [
+    {
+      "type": "choice",
+      "q": "Why did Peter and Emma want to move?",
+      "options": [
+        "Their old flat was small, dark and in a noisy street",
+        "Their old flat was too expensive",
+        "They wanted to live near their family"
+      ],
+      "answer": 0,
+      "explain": "Старая квартира была маленькой, тёмной и на шумной улице у автострады."
+    },
+    {
+      "type": "tf",
+      "q": "Emma found the new flat on the internet.",
+      "answer": false,
+      "explain": "Неверно: квартиру в интернете нашёл Питер, а Эмма уже почти сдалась."
+    },
+    {
+      "type": "choice",
+      "q": "Where is the new flat?",
+      "options": [
+        "On the top floor in the city centre",
+        "On the ground floor in a quiet neighbourhood near a park",
+        "Next to the motorway"
+      ],
+      "answer": 1,
+      "explain": "Квартира на первом этаже, с садиком, в тихом районе у парка."
+    },
+    {
+      "type": "tf",
+      "q": "Mr Brown is the landlord of the new flat.",
+      "answer": true,
+      "explain": "Верно: они встретились с хозяином квартиры, пожилым мистером Брауном (the landlord)."
+    },
+    {
+      "type": "choice",
+      "q": "Why did they have to turn the sofa on its side?",
+      "options": [
+        "It was too heavy for two men",
+        "It was too old",
+        "It was too wide for the door"
+      ],
+      "answer": 2,
+      "explain": "Диван был слишком широким для двери, поэтому его повернули на бок."
+    },
+    {
+      "type": "choice",
+      "q": "In the story, 'everything was a mess' means…",
+      "options": [
+        "everything was clean and tidy",
+        "everything was untidy and not in its place",
+        "everything was new and expensive"
+      ],
+      "answer": 1,
+      "explain": "«A mess» — беспорядок: вещи не на своих местах."
+    },
+    {
+      "type": "choice",
+      "q": "What did they eat on the first evening?",
+      "options": [
+        "Soup that they cooked",
+        "A cake from a neighbour",
+        "A pizza that they ordered"
+      ],
+      "answer": 2,
+      "explain": "Они слишком устали, чтобы готовить, и заказали пиццу; торт соседка принесла только на следующий день."
+    },
+    {
+      "type": "tf",
+      "q": "Their neighbour, Mrs Taylor, brought them a cake.",
+      "answer": true,
+      "explain": "Верно: на следующий день соседка миссис Тейлор пришла с тортом."
+    },
+    {
+      "type": "choice",
+      "q": "What colour did they paint the bedroom walls?",
+      "options": [
+        "Light green",
+        "White",
+        "Blue"
+      ],
+      "answer": 0,
+      "explain": "Стены в спальне покрасили в светло-зелёный цвет."
+    },
+    {
+      "type": "tf",
+      "q": "The party was on a cold Saturday in December.",
+      "answer": false,
+      "explain": "Неверно: вечеринка была в тёплую субботу в июне."
+    }
+  ],
+  "retell": [
+    "Why did Peter and Emma decide to move?",
+    "How did they find their new flat, and what was it like?",
+    "What happened on moving day?",
+    "Who visited them the next day, and what did she bring?",
+    "How did they make the flat their home, and how did the story end?"
+  ]
+}

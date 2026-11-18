@@ -1,0 +1,9 @@
+# Системные файлы
+.DS_Store
+__pycache__/
+*.pyc
+
+# Сайт на Vue: библиотеки (npm install), сборка (npm run build), личные настройки сервера
+web/node_modules/
+web/dist/
+web/.env.production

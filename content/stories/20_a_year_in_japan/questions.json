@@ -1,0 +1,103 @@
+{
+  "questions": [
+    {
+      "type": "tf",
+      "q": "Kate had visited Asia many times before.",
+      "answer": false,
+      "explain": "Неверно: она интересовалась Японией, но никогда не была в Азии."
+    },
+    {
+      "type": "choice",
+      "q": "What happened on Kate's first night in her flat?",
+      "options": [
+        "She lost her key",
+        "She pressed the wrong button on the toilet and got wet",
+        "She couldn't turn on the lights"
+      ],
+      "answer": 1,
+      "explain": "Она нажала не ту кнопку на унитазе и облила одежду водой."
+    },
+    {
+      "type": "choice",
+      "q": "What did Kate put in her coffee by mistake?",
+      "options": [
+        "Salt",
+        "Rice",
+        "Milk"
+      ],
+      "answer": 0,
+      "explain": "Она купила соль, думая, что это сахар, и положила её в кофе."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Mr Tanaka's face turn red on Kate's first day?",
+      "options": [
+        "He was angry with her",
+        "He was ill",
+        "She gave him a hug, and colleagues in Japan usually bow"
+      ],
+      "answer": 2,
+      "explain": "Кейт его обняла, а в Японии коллеги обычно кланяются, а не обнимаются."
+    },
+    {
+      "type": "tf",
+      "q": "Kate learned that people in Japan take off their shoes before they go into someone's house.",
+      "answer": true,
+      "explain": "Верно: Кейт узнала, что перед входом в чужой дом снимают обувь."
+    },
+    {
+      "type": "choice",
+      "q": "How did Kate find out that Kenji liked football?",
+      "options": [
+        "He told the class about it",
+        "She saw his drawing of a footballer",
+        "Mr Tanaka told her"
+      ],
+      "answer": 1,
+      "explain": "Она увидела в его тетради рисунок английского футболиста."
+    },
+    {
+      "type": "tf",
+      "q": "Mr Tanaka used to dream about visiting London.",
+      "answer": true,
+      "explain": "Верно: он сказал, что студентом мечтал побывать в Лондоне."
+    },
+    {
+      "type": "choice",
+      "q": "Why was there a strange silence when Yuki's mother opened Kate's present?",
+      "options": [
+        "The plates were broken",
+        "She didn't like white plates",
+        "The number four sounds like the word for \"death\""
+      ],
+      "answer": 2,
+      "explain": "В японском число «четыре» звучит как слово «смерть», а тарелок было четыре."
+    },
+    {
+      "type": "choice",
+      "q": "\"Kate's contract was almost finished.\" What is a \"contract\" here?",
+      "options": [
+        "A work agreement for a fixed time",
+        "A school exam",
+        "A plane ticket"
+      ],
+      "answer": 0,
+      "explain": "«Contract» — трудовой договор, здесь на один год работы."
+    },
+    {
+      "type": "tf",
+      "q": "Kate stayed in England after the summer.",
+      "answer": false,
+      "explain": "Неверно: в сентябре она вернулась в Японию на второй год."
+    }
+  ],
+  "retell": [
+    "Why did Kate decide to go to Japan?",
+    "What problems did she have in her first weeks?",
+    "What happened with Mr Tanaka, and what rules did Kate learn?",
+    "How did Kate help Kenji in her third month?",
+    "How did Kate's life in Japan become easier?",
+    "What mistake did she make at New Year?",
+    "What happened at the end of the year, and what did Kate learn?"
+  ]
+}

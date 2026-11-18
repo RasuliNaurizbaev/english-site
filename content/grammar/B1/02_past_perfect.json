@@ -1,0 +1,146 @@
+{
+  "id": "B1_02_past_perfect",
+  "level": "B1",
+  "order": 2,
+  "title": "Past Perfect",
+  "titleRu": "Past Perfect: «уже» в прошлом",
+  "summary": "Как показать, что одно действие в прошлом произошло раньше другого: had + V3, by the time, before, after, already.",
+  "theory": "## Когда используем\n\n**Past Perfect** (had + V3) — это «прошедшее в прошедшем». Мы рассказываем о прошлом и хотим показать, что одно действие произошло **раньше** другого прошлого действия.\n\nПредставьте линию времени: *сейчас* ← *момент в прошлом (Past Simple)* ← *ещё раньше (Past Perfect)*.\n\n> When I arrived at the station, the train had left. — Когда я приехал на вокзал, поезд уже ушёл.\n> She was sad because she had lost her keys. — Она была грустной, потому что потеряла ключи (раньше).\n> I didn't go to the cinema because I had already seen the film. — Я не пошёл в кино, потому что уже видел этот фильм.\n\n### 1. Действие до определённого момента в прошлом\n> By 10 o'clock, we had finished the work. — К десяти часам мы уже закончили работу.\n> By the time the police came, the thief had escaped. — К тому времени, как приехала полиция, вор уже сбежал.\n\n### 2. Объяснение причины в прошлом\n> He was hungry because he hadn't eaten all day. — Он был голоден, потому что не ел весь день.\n\n### 3. Опыт до момента в прошлом (never / ever / before)\n> I had never flown before that trip. — До той поездки я никогда не летал на самолёте.\n> Had you ever been to Italy before 2015? — Ты бывал в Италии до 2015 года?\n\n## Как образуется\n\nФормула: **had + третья форма глагола (V3)** — одинаково для всех лиц.\n\n| | Пример |\n|---|---|\n| + | I / she / they **had finished** (I'd finished) |\n| − | I / she / they **hadn't finished** |\n| ? | **Had** you **finished**? — Yes, I had. / No, I hadn't. |\n\nПравильные глаголы: V3 = -ed (*worked, finished*). Неправильные — третья колонка: *go → gone, see → seen, leave → left, eat → eaten, forget → forgotten*.\n\n!! Сокращение **'d** может означать и *had*, и *would*. Смотрите на следующий глагол: *I'd finished* (had + V3), *I'd go* (would + V1).\n\n## Слова-подсказки\n\n| Слово | Как используется | Пример |\n|---|---|---|\n| by the time | к тому времени, как | By the time we got there, the shop had closed. |\n| by (+ время) | к (моменту) | By 2010, he had moved to London. |\n| before | до того как | I had cleaned the room before my parents came. |\n| after | после того как | After she had done her homework, she watched TV. |\n| already | уже | The film had already started. |\n| just | только что | He had just left when I called. |\n| never / ever | никогда / когда-либо | I had never seen snow before. |\n| when | когда | When I woke up, everyone had gone. |\n\n### Before и after — когда Past Perfect не обязателен\nЕсли **before** или **after** уже показывают порядок событий, можно использовать два Past Simple:\n> After I finished work, I went home. = After I had finished work, I went home. — После того как я закончил работу, я пошёл домой.\nНо с **when** разница важна!\n\n## Сравните\n\n### When + Past Simple vs When + Past Perfect\n> When I arrived, the film started. — Когда я пришёл, фильм начался (я пришёл → потом фильм начался, я всё видел).\n> When I arrived, the film had started. — Когда я пришёл, фильм уже начался (сначала фильм, потом я — начало я пропустил).\n\n### Present Perfect vs Past Perfect\n| Present Perfect | Past Perfect |\n|---|---|\n| связь с **настоящим** | связь с моментом в **прошлом** |\n| I have lost my keys (сейчас их нет). | I had lost my keys (тогда, в тот момент, их не было). |\n| The train has left. | The train had left when I arrived. |\n\n!! Past Perfect нужен только тогда, когда есть «точка» в прошлом, относительно которой мы смотрим назад. Не используйте его просто для «давно прошедших» событий: *I was born in 1995* (НЕ *I had been born*).\n\n## Типичные ошибки\n\n⚠ When I came, he already left. → When I came, he had already left.\n⚠ I had gone to Paris last year. → I went to Paris last year. (нет второй точки в прошлом)\n⚠ By the time we arrived, the party has finished. → By the time we arrived, the party had finished.\n⚠ She had went home. → She had gone home. (нужна V3, а не V2)\n⚠ I didn't know him because I never met him before. → I didn't know him because I had never met him before.\n⚠ Did you had finished? → Had you finished?\n\n!! Простой тест: можно ли в русском вставить слово «уже» или «до этого» в прошлом? «Когда я пришёл, они **уже** поели» → *they had eaten*. Если да — скорее всего нужен Past Perfect.",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "When we got to the cinema, the film ___ already ___.",
+      "options": [
+        "has / started",
+        "had / started",
+        "was / started"
+      ],
+      "answer": 1,
+      "explain": "Фильм начался раньше нашего прихода (в прошлом) — Past Perfect had started."
+    },
+    {
+      "type": "choice",
+      "q": "She was hungry because she ___ breakfast.",
+      "options": [
+        "didn't have",
+        "hadn't had",
+        "hasn't had"
+      ],
+      "answer": 1,
+      "explain": "Причина в прошлом, произошедшая раньше, — Past Perfect hadn't had."
+    },
+    {
+      "type": "choice",
+      "q": "By the time I was 20, I ___ in three countries.",
+      "options": [
+        "have lived",
+        "had lived",
+        "lived"
+      ],
+      "answer": 1,
+      "explain": "By the time + прошлое → действие до этого момента: had lived."
+    },
+    {
+      "type": "choice",
+      "q": "I ___ in 1998.",
+      "options": [
+        "was born",
+        "had been born",
+        "have been born"
+      ],
+      "answer": 0,
+      "explain": "Просто факт в прошлом без второй точки отсчёта — Past Simple."
+    },
+    {
+      "type": "choice",
+      "q": "When I called him, he ___ just ___ home. That's why he didn't answer.",
+      "options": [
+        "has / left",
+        "had / left",
+        "did / leave"
+      ],
+      "answer": 1,
+      "explain": "Он ушёл до моего звонка — had just left."
+    },
+    {
+      "type": "choice",
+      "q": "I'd ___ the book before I saw the film.",
+      "options": [
+        "read",
+        "reading",
+        "to read"
+      ],
+      "answer": 0,
+      "explain": "Здесь 'd = had, поэтому нужна V3: read."
+    },
+    {
+      "type": "input",
+      "q": "When we arrived at the station, the train ___. We had to wait an hour for the next one. (leave)",
+      "answer": [
+        "had left",
+        "'d left",
+        "had already left"
+      ],
+      "explain": "Поезд ушёл раньше, чем мы приехали, — had left."
+    },
+    {
+      "type": "input",
+      "q": "I ___ sushi before I went to Japan, so it was my first time. (never / try)",
+      "answer": [
+        "had never tried",
+        "'d never tried"
+      ],
+      "explain": "Опыт до момента в прошлом с never — had never tried."
+    },
+    {
+      "type": "input",
+      "q": "By the time the police arrived, the thieves ___. (escape)",
+      "answer": [
+        "had escaped",
+        "'d escaped"
+      ],
+      "explain": "By the time + Past Simple → в главной части Past Perfect."
+    },
+    {
+      "type": "input",
+      "q": "He couldn't open the door because he ___ his keys. (lose)",
+      "answer": [
+        "had lost",
+        "'d lost"
+      ],
+      "explain": "Ключи потерялись раньше, чем он пытался открыть дверь, — had lost."
+    },
+    {
+      "type": "input",
+      "q": "When she got to the office, the meeting ___. She missed the beginning. (already / start)",
+      "answer": [
+        "had already started",
+        "'d already started"
+      ],
+      "explain": "Собрание началось до её прихода — had already started."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "She had already gone to bed when I came home.",
+      "explain": "Порядок: подлежащее + had + already + V3; затем when + Past Simple."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "I had never seen snow before that winter.",
+      "explain": "had + never + V3 — опыт до момента в прошлом."
+    },
+    {
+      "type": "choice",
+      "q": "When I opened the fridge, I saw that somebody ___ all the cake.",
+      "options": [
+        "ate",
+        "has eaten",
+        "had eaten"
+      ],
+      "answer": 2,
+      "explain": "Сначала кто-то съел торт, потом я открыл холодильник — had eaten."
+    }
+  ]
+}

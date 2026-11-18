@@ -1,0 +1,103 @@
+{
+  "questions": [
+    {
+      "type": "tf",
+      "q": "Anna often took long holidays.",
+      "answer": false,
+      "explain": "Неверно: Анна всегда была занята и никогда не брала настоящий отпуск."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Anna miss her flight?",
+      "options": [
+        "She forgot her passport",
+        "Her meeting finished late and her taxi got stuck in traffic",
+        "The flight was cancelled because of snow"
+      ],
+      "answer": 1,
+      "explain": "Последняя встреча закончилась поздно, а такси застряло в пробке."
+    },
+    {
+      "type": "choice",
+      "q": "What was Henry doing when Anna came into the compartment?",
+      "options": [
+        "Drawing in a notebook",
+        "Sleeping",
+        "Reading a newspaper"
+      ],
+      "answer": 0,
+      "explain": "Генри что-то рисовал в блокноте."
+    },
+    {
+      "type": "tf",
+      "q": "Henry met his wife because he missed a train.",
+      "answer": true,
+      "explain": "Верно: он опоздал на поезд, остался в городке в Швейцарии и встретил там Марию."
+    },
+    {
+      "type": "choice",
+      "q": "Why does Henry draw the places he visits?",
+      "options": [
+        "He sells the drawings",
+        "He is an art teacher",
+        "It helps him remember his wife"
+      ],
+      "answer": 2,
+      "explain": "Он ездит по местам, где бывал с Марией, и рисунки помогают ему её вспоминать."
+    },
+    {
+      "type": "choice",
+      "q": "What did Anna use to love doing?",
+      "options": [
+        "Painting",
+        "Photography",
+        "Singing"
+      ],
+      "answer": 1,
+      "explain": "Анна сказала: «I used to love photography»."
+    },
+    {
+      "type": "tf",
+      "q": "Anna slept very well on the train.",
+      "answer": false,
+      "explain": "Неверно: она лежала на узкой полке и не могла уснуть, думая о словах Генри."
+    },
+    {
+      "type": "choice",
+      "q": "\"The meeting had been moved to Wednesday.\" What does \"moved\" mean here?",
+      "options": [
+        "Cancelled forever",
+        "Made shorter",
+        "Changed to a different day"
+      ],
+      "answer": 2,
+      "explain": "Здесь «moved» значит «перенесли» на другой день — на среду."
+    },
+    {
+      "type": "tf",
+      "q": "Anna got off the train with Henry in Switzerland.",
+      "answer": true,
+      "explain": "Верно: она не пересела на поезд в Лондон, а сошла с Генри в Швейцарии."
+    },
+    {
+      "type": "choice",
+      "q": "What did Anna send Henry in the summer?",
+      "options": [
+        "A letter with her best photo",
+        "A new notebook",
+        "A train ticket to London"
+      ],
+      "answer": 0,
+      "explain": "Летом она отправила Генри письмо со своей лучшей фотографией."
+    }
+  ],
+  "retell": [
+    "What was Anna's life like, and why was she in Vienna?",
+    "How did she miss her flight, and what did she decide to do?",
+    "Who did she meet on the train?",
+    "What story did Henry tell her about missing a train?",
+    "What did Anna tell Henry about her life and her old hobby?",
+    "What happened in the morning, and what did Anna decide?",
+    "How did Anna's life change after the trip?"
+  ]
+}

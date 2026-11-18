@@ -1,0 +1,144 @@
+{
+  "id": "B1_05_future_continuous_perfect",
+  "level": "B1",
+  "order": 5,
+  "title": "Future Continuous & Future Perfect",
+  "titleRu": "Будущее: will be doing и will have done",
+  "summary": "Повторяем will, going to и Present Continuous для будущего и учим Future Continuous и Future Perfect.",
+  "theory": "## Когда используем\n\nВ английском нет одного «будущего времени», как в русском. Есть несколько способов говорить о будущем, и выбор зависит от того, **как** вы видите это будущее. Сначала повторим основные, а потом изучим два новых: **Future Continuous** и **Future Perfect**.\n\n### Повторение: will, going to, Present Continuous\n\n| Форма | Когда используем | Пример |\n|---|---|---|\n| **will** + V1 | решение в момент речи, обещание, предсказание-мнение | I'll help you. / I think it will rain. |\n| **be going to** + V1 | план, намерение (решили заранее); прогноз по признакам | I'm going to buy a car. / Look at those clouds — it's going to rain. |\n| **Present Continuous** | договорённость: время и место уже назначены | I'm meeting Anna at 7 tonight. |\n| **Present Simple** | расписание (поезда, уроки, фильмы) | The train leaves at 6:15. |\n\n> A: The phone is ringing. — B: I'll answer it. — Телефон звонит. — Я отвечу. (решение сейчас)\n> I'm going to study medicine. — Я собираюсь учиться на врача. (намерение)\n> We're flying to Rome on Friday. — Мы летим в Рим в пятницу. (билеты куплены)\n\n### Future Continuous — процесс в момент в будущем\n**will be + -ing**: действие будет **в процессе** в определённый момент в будущем.\n> This time tomorrow I'll be lying on the beach. — Завтра в это время я буду лежать на пляже.\n> At 8 o'clock I'll be having dinner, so call me later. — В 8 я буду ужинать, так что позвони попозже.\n> Don't call between 2 and 4 — I'll be working. — Не звони с 2 до 4 — я буду работать.\n\nТакже для вежливого вопроса о планах:\n> Will you be using the car tonight? — Ты будешь пользоваться машиной вечером? (мягче, чем Will you use…?)\n\n### Future Perfect — «уже сделаю к…»\n**will have + V3**: действие **закончится до** определённого момента в будущем.\n> By 6 pm I'll have finished the report. — К шести вечера я уже закончу отчёт.\n> By the time you arrive, we'll have cooked dinner. — К твоему приезду мы уже приготовим ужин.\n> In June we'll have been married for ten years. — В июне будет десять лет, как мы женаты.\n\n## Как образуется\n\n### Future Continuous: will be + V-ing\n| | Пример |\n|---|---|\n| + | I **will be working** (I'll be working) |\n| − | I **won't be working** |\n| ? | **Will** you **be working**? |\n\n### Future Perfect: will have + V3\n| | Пример |\n|---|---|\n| + | She **will have finished** (She'll have finished) |\n| − | She **won't have finished** |\n| ? | **Will** she **have finished**? |\n\n## Слова-подсказки\n\n| Время | Подсказки |\n|---|---|\n| Future Continuous | this time tomorrow, this time next week, at 10 o'clock tomorrow, all day tomorrow |\n| Future Perfect | by + время (by Friday, by 2030, by then), by the time…, before…, in two years' time |\n| going to | Look! (видимые признаки), I've decided, my plan is |\n| Present Continuous | tonight, tomorrow + конкретное время/место (договорённость) |\n\n!! **by** = «к» (не позже), **until** = «до» (всё это время). *I'll have finished by 5* — к пяти закончу. *I'll be working until 5* — буду работать до пяти.\n\n## Сравните\n\n| Пример | Смысл |\n|---|---|\n| At 7 I **will have** dinner. | В 7 я поужинаю (начну ужинать в 7). |\n| At 7 I **will be having** dinner. | В 7 я буду ужинать (процесс уже идёт). |\n| By 7 I **will have had** dinner. | К 7 я уже поужинаю (ужин закончен). |\n\n### Придаточные времени: после when / before / after / by the time — НЕ will\nКак и в условных предложениях, после союзов времени используем **настоящее** время:\n> By the time you **get** home, I'll have cooked dinner. (НЕ *will get*)\n> I'll call you when I **arrive**. — Я позвоню, когда приеду.\n\nВ русском здесь будущее («когда приеду»), поэтому это частая ошибка.\n\n## Типичные ошибки\n\n⚠ I'll call you when I will arrive. → I'll call you when I arrive.\n⚠ Tomorrow at 10 I will work. (процесс) → Tomorrow at 10 I'll be working.\n⚠ By Friday I will finish the project. → By Friday I'll have finished the project.\n⚠ I will have finish it by Monday. → I will have finished it by Monday. (нужна V3)\n⚠ I meet my friends tonight. → I'm meeting my friends tonight. (договорённость)\n⚠ Wait, I'm going to help you! (решение сейчас) → Wait, I'll help you!\n⚠ I'll have finished it until Friday. → I'll have finished it by Friday.\n\n!! Спросите себя: в тот момент в будущем действие **идёт** (will be doing) или **уже готово** (will have done)? «Буду делать» → Future Continuous; «уже сделаю к…» → Future Perfect.",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "A: I've forgotten my wallet! — B: Don't worry, I ___ for you.",
+      "options": [
+        "'ll pay",
+        "'m going to pay",
+        "'m paying"
+      ],
+      "answer": 0,
+      "explain": "Решение, принятое в момент речи, — will."
+    },
+    {
+      "type": "choice",
+      "q": "Look at those black clouds! It ___ rain.",
+      "options": [
+        "will",
+        "is going to",
+        "is raining to"
+      ],
+      "answer": 1,
+      "explain": "Прогноз по видимым признакам — be going to."
+    },
+    {
+      "type": "choice",
+      "q": "I can't come on Saturday. I ___ my grandparents — we arranged it last week.",
+      "options": [
+        "visit",
+        "'m visiting",
+        "'ll visit"
+      ],
+      "answer": 1,
+      "explain": "Договорённость на конкретное время — Present Continuous."
+    },
+    {
+      "type": "choice",
+      "q": "This time tomorrow I ___ on a beach in Turkey.",
+      "options": [
+        "will lie",
+        "will be lying",
+        "will have lain"
+      ],
+      "answer": 1,
+      "explain": "Процесс в определённый момент в будущем — Future Continuous."
+    },
+    {
+      "type": "choice",
+      "q": "By the end of the year, I ___ 20 books.",
+      "options": [
+        "will read",
+        "will be reading",
+        "will have read"
+      ],
+      "answer": 2,
+      "explain": "By + момент в будущем, действие будет завершено, — Future Perfect."
+    },
+    {
+      "type": "choice",
+      "q": "I'll phone you when I ___ to the hotel.",
+      "options": [
+        "will get",
+        "get",
+        "will have got"
+      ],
+      "answer": 1,
+      "explain": "После when в значении будущего используем Present Simple."
+    },
+    {
+      "type": "input",
+      "q": "Don't call me at 9 — I ___ dinner then. (have) — Future Continuous",
+      "answer": [
+        "will be having",
+        "'ll be having"
+      ],
+      "explain": "Ужин будет в процессе в 9 часов — will be having."
+    },
+    {
+      "type": "input",
+      "q": "By the time you get home, I ___ the kitchen. (clean) — Future Perfect",
+      "answer": [
+        "will have cleaned",
+        "'ll have cleaned"
+      ],
+      "explain": "Действие закончится до вашего прихода — will have cleaned."
+    },
+    {
+      "type": "input",
+      "q": "Next June my parents ___ married for 30 years. (be) — Future Perfect",
+      "answer": [
+        "will have been",
+        "'ll have been"
+      ],
+      "explain": "К моменту в будущем исполнится 30 лет — will have been."
+    },
+    {
+      "type": "input",
+      "q": "Hurry up! The train ___ at 6:15. (leave) — расписание",
+      "answer": [
+        "leaves"
+      ],
+      "explain": "Расписание транспорта — Present Simple."
+    },
+    {
+      "type": "input",
+      "q": "I ___ for my exams all weekend, so I can't go out. (study) — Future Continuous",
+      "answer": [
+        "will be studying",
+        "'ll be studying"
+      ],
+      "explain": "Длительный процесс в будущем (all weekend) — will be studying."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "I will have finished the report by Friday.",
+      "explain": "will have + V3 + by + момент — Future Perfect."
+    },
+    {
+      "type": "order",
+      "q": "Составьте вопрос",
+      "answer": "Will you be using the car tonight?",
+      "explain": "Вежливый вопрос о планах — Will + подлежащее + be + -ing."
+    },
+    {
+      "type": "choice",
+      "q": "Which is correct?",
+      "options": [
+        "I'll have finished it until Monday.",
+        "I'll have finished it by Monday.",
+        "I'll finish it until Monday."
+      ],
+      "answer": 1,
+      "explain": "«К понедельнику» = by Monday; until означает «до» (всё время)."
+    }
+  ]
+}

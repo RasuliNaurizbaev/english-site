@@ -1,0 +1,103 @@
+{
+  "questions": [
+    {
+      "type": "tf",
+      "q": "Emily wanted to stay in a hotel by the sea.",
+      "answer": false,
+      "explain": "Неверно: Эмили предложила поехать в горы с палаткой, а не в отель у моря."
+    },
+    {
+      "type": "choice",
+      "q": "How did Josh feel about the camping idea at first?",
+      "options": [
+        "Happy",
+        "Angry",
+        "Not sure"
+      ],
+      "answer": 1,
+      "explain": "Джош разозлился: «No Wi-Fi for a whole week? That's terrible!»; не уверена была мама."
+    },
+    {
+      "type": "choice",
+      "q": "Where was the campsite?",
+      "options": [
+        "Next to a clear blue lake",
+        "In a small town",
+        "Next to the sea"
+      ],
+      "answer": 0,
+      "explain": "Кемпинг находился рядом с чистым голубым озером."
+    },
+    {
+      "type": "tf",
+      "q": "On the third day, Josh caught a big fish.",
+      "answer": true,
+      "explain": "Верно: на третий день Джош поймал большую рыбу и сделал двадцать фотографий."
+    },
+    {
+      "type": "choice",
+      "q": "What advice did the park worker give them?",
+      "options": [
+        "Don't climb the mountain",
+        "Take warm clothes and rain jackets, and come back before three",
+        "Stay at the top for the night"
+      ],
+      "answer": 1,
+      "explain": "Сотрудник парка сказал взять тёплую одежду и дождевики и вернуться до трёх часов."
+    },
+    {
+      "type": "choice",
+      "q": "Who first saw that a storm was coming?",
+      "options": [
+        "Their father",
+        "Josh",
+        "Emily"
+      ],
+      "answer": 2,
+      "explain": "Эмили заметила тёмное небо и чёрные тучи на западе."
+    },
+    {
+      "type": "choice",
+      "q": "How did they find the small wooden house?",
+      "options": [
+        "Emily remembered it from the way up",
+        "A park worker showed it to them",
+        "Josh found it on his phone"
+      ],
+      "answer": 0,
+      "explain": "Эмили вспомнила, что по пути наверх видела домик у тропы."
+    },
+    {
+      "type": "tf",
+      "q": "Josh's knee was broken.",
+      "answer": false,
+      "explain": "Неверно: колено не было сломано, но сильно болело."
+    },
+    {
+      "type": "choice",
+      "q": "In the story, 'nobody complained' means…",
+      "options": [
+        "nobody talked at all",
+        "nobody was hungry",
+        "nobody said they were unhappy about the situation"
+      ],
+      "answer": 2,
+      "explain": "«Complain» — жаловаться; никто не жаловался, хотя все замёрзли и устали."
+    },
+    {
+      "type": "tf",
+      "q": "After the storm, there was a huge rainbow over the valley.",
+      "answer": true,
+      "explain": "Верно: вышло солнце, и над долиной появилась огромная радуга."
+    }
+  ],
+  "retell": [
+    "Who are the Millers, and what was Emily's idea for the holiday?",
+    "How did the family travel to the national park, and what did they see on the way?",
+    "What was the campsite like, and what did the family do in the first days?",
+    "What did they decide to do on the fifth day, and what advice did they get?",
+    "What happened at the top of the mountain and on the way down?",
+    "How did the family stay safe during the storm?",
+    "How did the day end, and what did Josh say about the adventure?"
+  ]
+}

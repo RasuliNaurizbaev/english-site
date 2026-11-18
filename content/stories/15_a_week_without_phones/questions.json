@@ -1,0 +1,103 @@
+{
+  "questions": [
+    {
+      "type": "choice",
+      "q": "What did the number on the board show?",
+      "options": [
+        "How many students had phones",
+        "The time the class spent on phones every day",
+        "How long the school day was"
+      ],
+      "answer": 1,
+      "explain": "7 часов 20 минут — столько класс в среднем проводил в телефоне каждый день."
+    },
+    {
+      "type": "tf",
+      "q": "Jake was the first student to agree to the experiment.",
+      "answer": false,
+      "explain": "Неверно: первой согласилась Оливия, а Джейк согласился последним."
+    },
+    {
+      "type": "tf",
+      "q": "Jake's mother offered to stop using her smartphone too.",
+      "answer": true,
+      "explain": "Верно: мама Джейка так обрадовалась, что предложила участвовать тоже."
+    },
+    {
+      "type": "choice",
+      "q": "What did Olivia notice on the bus?",
+      "options": [
+        "A new school",
+        "Her teacher in a car",
+        "A bakery, a man with five dogs and an old church"
+      ],
+      "answer": 2,
+      "explain": "Без телефона она впервые заметила пекарню, мужчину с пятью собаками и старую церковь."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Jake start playing the guitar again?",
+      "options": [
+        "He was bored at home without his phone",
+        "His teacher told him to do it",
+        "He wanted to join a band"
+      ],
+      "answer": 0,
+      "explain": "В среду дома ему было так скучно, что он открыл футляр со старой гитарой."
+    },
+    {
+      "type": "choice",
+      "q": "In the text, Mia \"had to ask three people for directions\". What are \"directions\"?",
+      "options": [
+        "Information about the weather",
+        "Information about how to get to a place",
+        "Telephone numbers"
+      ],
+      "answer": 1,
+      "explain": "«Directions» — указания, как пройти куда-то; Мия заблудилась без карты в телефоне."
+    },
+    {
+      "type": "tf",
+      "q": "Most students said that they slept better during the week.",
+      "answer": true,
+      "explain": "Верно: они не смотрели в экраны поздно вечером и засыпали раньше."
+    },
+    {
+      "type": "choice",
+      "q": "What did Sam do during the week?",
+      "options": [
+        "He learned to play cards",
+        "He wrote a song",
+        "He read a whole novel"
+      ],
+      "answer": 2,
+      "explain": "Сэм за три дня прочитал целый роман — первую книгу со времён начальной школы."
+    },
+    {
+      "type": "tf",
+      "q": "Olivia felt very excited when she got her phone back.",
+      "answer": false,
+      "explain": "Неверно: включив телефон, она не почувствовала восторга, а просто чувствовала себя нормально."
+    },
+    {
+      "type": "choice",
+      "q": "What new rule did the class decide to keep?",
+      "options": [
+        "No phones during lunch breaks",
+        "No phones at home",
+        "No phones on the bus"
+      ],
+      "answer": 0,
+      "explain": "Класс решил оставить правило: никаких телефонов во время обеденного перерыва."
+    }
+  ],
+  "retell": [
+    "What were the students doing when Mr Hughes came in?",
+    "What did Mr Hughes show the class and what did he suggest?",
+    "How did the students agree to the experiment?",
+    "How did the students feel in the first days?",
+    "What good things happened during the week?",
+    "What did the students say on Friday?",
+    "What changed after the experiment?"
+  ]
+}

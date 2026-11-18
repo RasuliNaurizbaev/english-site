@@ -1,0 +1,143 @@
+{
+  "id": "A1_03_articles_plurals",
+  "level": "A1",
+  "order": 3,
+  "title": "Articles and plurals: a / an / the",
+  "titleRu": "Артикли и множественное число",
+  "summary": "Когда ставить a, an, the или не ставить артикль, и как образуется множественное число существительных.",
+  "theory": "## Зачем нужны артикли\n\nВ русском языке артиклей нет, поэтому русскоговорящим их легко забыть. Но для англичанина фраза *I have car* звучит так же странно, как для нас «Я имею машиной». Артикль — маленькое слово перед существительным, которое показывает: это **какой-то** предмет (a/an) или **конкретный, известный** (the).\n\n## Когда используем\n\n### A / an — «один, какой-то»\n\nТолько с **исчисляемыми существительными в единственном числе**.\n\n- когда упоминаем предмет **впервые** или он один из многих:\n> I have a dog. — У меня есть собака.\n> There is a bank near here. — Здесь рядом есть банк.\n- когда говорим, **кто** человек по профессии или что это за предмет:\n> She is a nurse. — Она медсестра.\n> It's an apple. — Это яблоко.\n\n### The — «тот самый, конкретный»\n\nС **любыми** существительными (ед. и мн. число, неисчисляемые).\n\n- когда предмет **уже упоминался** или понятно, о каком речь:\n> I have a dog. The dog is very small. — У меня есть собака. Эта собака очень маленькая.\n> Close the door, please. — Закрой дверь, пожалуйста. (понятно, какую)\n- когда предмет **единственный** в мире или в ситуации:\n> the sun, the moon, the sky, the world\n> the President, the kitchen (в моей квартире)\n- в некоторых устойчивых выражениях: *in the morning, at the cinema, play the guitar*.\n\n### Без артикля (нулевой артикль)\n\n- с существительными во **множественном числе** и **неисчисляемыми**, когда говорим вообще:\n> I like cats. — Я люблю кошек (вообще).\n> Water is important. — Вода важна.\n- перед **именами**, городами, странами, языками: *Anna, London, Russia, English*\n- перед **my, your, this** и т. п.: *my car* (не *a my car*)\n- в выражениях: *at home, at work, go to school, go to bed, by bus, have breakfast*\n\n## A или an?\n\nВыбор зависит от **звука**, а не от буквы.\n\n| Артикль | Перед | Примеры |\n|---|---|---|\n| a | согласным звуком | a book, a car, a university [ju:], a European |\n| an | гласным звуком | an apple, an egg, an orange, an hour [aʊə] (h не читается) |\n\n## Множественное число\n\n### Правильные формы\n\n| Правило | Пример |\n|---|---|\n| обычно + s | book → books, car → cars |\n| после -s, -ss, -sh, -ch, -x, -o + es | bus → buses, dress → dresses, box → boxes, watch → watches, potato → potatoes |\n| согласная + y → ies | city → cities, baby → babies |\n| гласная + y → s | boy → boys, day → days |\n| -f / -fe → ves | knife → knives, wife → wives, leaf → leaves |\n\n!! Исключения на -o: *photo → photos, piano → pianos, radio → radios*.\n\n### Неправильные формы — их надо запомнить\n\n| Ед. число | Мн. число | Перевод |\n|---|---|---|\n| man | men | мужчины |\n| woman | women | женщины |\n| child | children | дети |\n| person | people | люди |\n| foot | feet | ступни |\n| tooth | teeth | зубы |\n| mouse | mice | мыши |\n| fish | fish | рыбы |\n| sheep | sheep | овцы |\n\n> Three children are in the park. — В парке трое детей.\n> Many people live in this city. — В этом городе живёт много людей.\n\n!! **People** — это уже множественное число: *people are*, а не *people is*.\n\n## Типичные ошибки\n\n⚠ I am doctor. → I am a doctor.\n⚠ She has a blue eyes. → She has blue eyes.\n⚠ I like the music. (музыку вообще) → I like music.\n⚠ a apple → an apple\n⚠ an university → a university\n⚠ two childs → two children\n⚠ The people is nice. → The people are nice.\n⚠ I go to the home. → I go home.\n⚠ The sun is a star. Moon is small. → The moon is small.\n\n!! Быстрая проверка: существительное в единственном числе и исчисляемое? Тогда перед ним **обязательно** что-то стоит: a/an, the, my, this… «Голое» *car*, *book*, *teacher* в единственном числе — почти всегда ошибка.",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "I have ___ orange.",
+      "options": [
+        "a",
+        "an",
+        "—"
+      ],
+      "answer": 1,
+      "explain": "Orange начинается с гласного звука, поэтому an."
+    },
+    {
+      "type": "choice",
+      "q": "My brother is ___ engineer.",
+      "options": [
+        "a",
+        "an",
+        "the"
+      ],
+      "answer": 1,
+      "explain": "Профессия — a/an; engineer начинается с гласного звука."
+    },
+    {
+      "type": "choice",
+      "q": "Look at ___ moon! It's beautiful.",
+      "options": [
+        "a",
+        "the",
+        "—"
+      ],
+      "answer": 1,
+      "explain": "Луна единственная, поэтому the."
+    },
+    {
+      "type": "choice",
+      "q": "I like ___ dogs.",
+      "options": [
+        "a",
+        "the",
+        "—"
+      ],
+      "answer": 2,
+      "explain": "Говорим о собаках вообще во множественном числе — без артикля."
+    },
+    {
+      "type": "choice",
+      "q": "This is ___ useful book.",
+      "options": [
+        "a",
+        "an",
+        "—"
+      ],
+      "answer": 0,
+      "explain": "Useful начинается со звука [ju:] — согласного, поэтому a, хотя первая буква гласная."
+    },
+    {
+      "type": "choice",
+      "q": "There are five ___ in my family.",
+      "options": [
+        "person",
+        "people",
+        "peoples"
+      ],
+      "answer": 1,
+      "explain": "Множественное число от person — people."
+    },
+    {
+      "type": "input",
+      "q": "I have two ___ (child).",
+      "answer": [
+        "children"
+      ],
+      "explain": "Child — неправильное существительное: children."
+    },
+    {
+      "type": "input",
+      "q": "Brush your ___ (tooth) every day.",
+      "answer": [
+        "teeth"
+      ],
+      "explain": "Tooth → teeth — неправильная форма."
+    },
+    {
+      "type": "input",
+      "q": "There are three ___ (box) on the table.",
+      "answer": [
+        "boxes"
+      ],
+      "explain": "После -x добавляем -es."
+    },
+    {
+      "type": "input",
+      "q": "Moscow and London are big ___ (city).",
+      "answer": [
+        "cities"
+      ],
+      "explain": "Согласная + y → ies."
+    },
+    {
+      "type": "input",
+      "q": "I need two ___ (knife).",
+      "answer": [
+        "knives"
+      ],
+      "explain": "Knife → knives: -fe меняется на -ves."
+    },
+    {
+      "type": "input",
+      "q": "I have a cat and a dog. ___ (артикль) cat is black.",
+      "answer": [
+        "The"
+      ],
+      "explain": "Кошка уже упоминалась, поэтому the."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "My sister is a nurse.",
+      "explain": "Перед профессией в единственном числе нужен артикль a."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "The children are in the garden.",
+      "explain": "Children — множественное число, поэтому are."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "I go to work by bus.",
+      "explain": "В выражениях go to work и by bus артикль не нужен."
+    }
+  ]
+}

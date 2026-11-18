@@ -1,0 +1,151 @@
+{
+  "id": "A2_13_quantifiers_too_enough",
+  "level": "A2",
+  "order": 13,
+  "title": "too, enough, a few, a little",
+  "titleRu": "Слишком, достаточно, немного, мало",
+  "summary": "Как сказать «слишком», «достаточно», «несколько», «немного» и «мало»: too, enough, too much/many, a few, a little, few, little.",
+  "theory": "## Когда используем\n\nЭти слова помогают сказать **сколько** чего-то и **достаточно ли** этого. Чтобы использовать их правильно, нужно помнить разницу между **исчисляемыми** (можно посчитать: apples, people, books) и **неисчисляемыми** (нельзя посчитать: water, money, time, milk, information) существительными.\n\n## too — слишком\n\n**too + прилагательное / наречие** — «слишком», больше, чем нужно; обычно это проблема:\n> This coffee is too hot. I can't drink it. — Кофе слишком горячий. Я не могу его пить.\n> You're driving too fast! — Ты едешь слишком быстро!\n> I'm too tired to go out. — Я слишком устал, чтобы куда-то идти.\n\nСхема: **too + прил. + to + V1** — «слишком..., чтобы...»\n\n⚠ **too** ≠ **very**: very — «очень» (может быть и хорошо), too — «слишком» (это плохо).\n> The bag is very heavy, but I can carry it. — Сумка очень тяжёлая, но я её донесу.\n> The bag is too heavy. I can't carry it. — Сумка слишком тяжёлая. Я не могу её нести.\n\n## too much / too many — слишком много\n\n| | С чем | Пример |\n|---|---|---|\n| **too many** | исчисляемые (мн. ч.) | There are too many people here. — Здесь слишком много людей. |\n| **too much** | неисчисляемые | I drink too much coffee. — Я пью слишком много кофе. |\n| **too much** | после глагола | You work too much. — Ты слишком много работаешь. |\n\n## enough — достаточно\n\nМесто **enough** зависит от того, с чем оно стоит:\n\n| Схема | Пример |\n|---|---|\n| прилагательное / наречие + **enough** (после!) | He isn't old enough to drive. — Он недостаточно взрослый, чтобы водить. |\n| **enough** + существительное (перед!) | We have enough time. — У нас достаточно времени. |\n| глагол + **enough** | I didn't sleep enough. — Я недостаточно спал. |\n\n> Is the room big enough? — Комната достаточно большая?\n> There aren't enough chairs for everyone. — Стульев на всех не хватает.\n\n⚠ enough old → old enough (с прилагательным enough стоит **после**).\n\n!! not + прил. + enough = «недостаточно...» и часто = too + противоположное прил.: The water isn't warm enough = The water is too cold.\n\n## a few / a little — несколько, немного (хорошо!)\n\n| | С чем | Пример |\n|---|---|---|\n| **a few** | исчисляемые (мн. ч.) | I have a few friends in London. — У меня есть несколько друзей в Лондоне. |\n| **a little** | неисчисляемые | Can I have a little milk? — Можно немного молока? |\n\nA few и a little имеют **позитивный** смысл: немного, но **достаточно**, есть кое-что.\n\n## few / little — мало (плохо!)\n\nБез артикля **a** смысл меняется на **негативный**: «мало, почти нет, недостаточно».\n\n| | С чем | Пример |\n|---|---|---|\n| **few** | исчисляемые | Few people came to the party. — Мало кто пришёл на вечеринку. |\n| **little** | неисчисляемые | We have little time. Hurry up! — У нас мало времени. Поторопись! |\n\n### Сравните\n\n| Фраза | Смысл |\n|---|---|\n| I have **a little** money. Let's go to a café. | немного денег — хватит на кафе |\n| I have **little** money. I can't go out. | мало денег — не хватает |\n| She has **a few** friends. | у неё есть несколько друзей |\n| She has **few** friends. She's often lonely. | у неё мало друзей |\n\n!! В разговорной речи вместо few / little часто говорят **not many / not much**: I don't have much money. There weren't many people.\n\n## Итоговая таблица\n\n| Значение | Исчисляемые (books, people) | Неисчисляемые (water, time) |\n|---|---|---|\n| много | many / a lot of | much / a lot of |\n| слишком много | too many | too much |\n| несколько / немного (+) | a few | a little |\n| мало (−) | few | little |\n| достаточно | enough books | enough time |\n\n## Слова-подсказки\n\nПосмотрите на существительное: можно ли его посчитать? Есть ли окончание -s? Это подскажет many/few или much/little.\n\n## Типичные ошибки\n\n⚠ There are too much cars. → There are too many cars.\n⚠ I have too many work. → I have too much work. (work — неисчисляемое)\n⚠ He's enough old. → He's old enough.\n⚠ We have time enough. → We have enough time.\n⚠ It's too much hot. → It's too hot. (с прилагательным — просто too)\n⚠ I have a little friends. → I have a few friends.\n⚠ This is too good! (в значении «очень хорошо») → This is very good!\n⚠ I'm too tired for go out. → I'm too tired to go out.\n\n!! Помните: **money, time, information, advice, news, furniture, homework, bread** — неисчисляемые в английском (хотя некоторые из них исчисляемые в русском). С ними — much, a little, little.",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "There are ___ people on this bus. I can't move!",
+      "options": [
+        "too much",
+        "too many",
+        "enough"
+      ],
+      "answer": 1,
+      "explain": "People — исчисляемое мн. ч., слишком много — too many."
+    },
+    {
+      "type": "choice",
+      "q": "I drink ___ coffee. I can't sleep at night.",
+      "options": [
+        "too much",
+        "too many",
+        "a few"
+      ],
+      "answer": 0,
+      "explain": "Coffee — неисчисляемое: too much."
+    },
+    {
+      "type": "choice",
+      "q": "He isn't ___ to drive a car. He's only fifteen.",
+      "options": [
+        "enough old",
+        "old enough",
+        "too old"
+      ],
+      "answer": 1,
+      "explain": "Enough стоит после прилагательного: old enough."
+    },
+    {
+      "type": "choice",
+      "q": "Can I have ___ sugar in my tea, please?",
+      "options": [
+        "a few",
+        "a little",
+        "many"
+      ],
+      "answer": 1,
+      "explain": "Sugar — неисчисляемое: a little."
+    },
+    {
+      "type": "choice",
+      "q": "I have ___ friends in Moscow, so I'm never bored there.",
+      "options": [
+        "a few",
+        "a little",
+        "few"
+      ],
+      "answer": 0,
+      "explain": "Исчисляемые и позитивный смысл (никогда не скучно) — a few."
+    },
+    {
+      "type": "choice",
+      "q": "This soup is ___ salty. I can't eat it.",
+      "options": [
+        "very",
+        "too",
+        "enough"
+      ],
+      "answer": 1,
+      "explain": "Не могу есть — проблема, значит too."
+    },
+    {
+      "type": "input",
+      "q": "The water isn't ___ (warm / enough) to swim today.",
+      "answer": [
+        "warm enough"
+      ],
+      "explain": "С прилагательным enough стоит после него: warm enough."
+    },
+    {
+      "type": "input",
+      "q": "There were ___ (too / many / much) cars on the road this morning.",
+      "answer": [
+        "too many"
+      ],
+      "explain": "Cars — исчисляемое мн. ч.: too many."
+    },
+    {
+      "type": "input",
+      "q": "There isn't ___ (much / many) milk left. Can you buy some?",
+      "answer": [
+        "much"
+      ],
+      "explain": "Milk — неисчисляемое: much."
+    },
+    {
+      "type": "input",
+      "q": "The film was boring and ___ (few / a few) people liked it.",
+      "answer": [
+        "few"
+      ],
+      "explain": "Негативный смысл (почти никому) — few без a."
+    },
+    {
+      "type": "input",
+      "q": "I'm sorry, I have very ___ (little / a little) free time this week.",
+      "answer": [
+        "little"
+      ],
+      "explain": "Very little — мало, негативный смысл."
+    },
+    {
+      "type": "choice",
+      "q": "You make ___ mistakes. Please be more careful.",
+      "options": [
+        "too much",
+        "too many",
+        "too"
+      ],
+      "answer": 1,
+      "explain": "Mistakes — исчисляемое мн. ч.: too many."
+    },
+    {
+      "type": "choice",
+      "q": "The room isn't big ___ for ten people.",
+      "options": [
+        "enough",
+        "too",
+        "a little"
+      ],
+      "answer": 0,
+      "explain": "Прилагательное + enough: big enough."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "This coffee is too hot to drink.",
+      "explain": "Too + прилагательное + to + V1."
+    },
+    {
+      "type": "order",
+      "q": "Составьте вопрос",
+      "answer": "Do we have enough time for lunch?",
+      "explain": "Enough стоит перед существительным time."
+    }
+  ]
+}

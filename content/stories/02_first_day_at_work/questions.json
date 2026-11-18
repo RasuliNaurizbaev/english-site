@@ -1,0 +1,101 @@
+{
+  "questions": [
+    {
+      "type": "tf",
+      "q": "Tom finished university last year.",
+      "answer": false,
+      "explain": "Неверно: Том окончил университет в прошлом месяце (Last month)."
+    },
+    {
+      "type": "choice",
+      "q": "Why couldn't Tom eat much breakfast?",
+      "options": [
+        "He was late",
+        "He was a little worried",
+        "He didn't have any food"
+      ],
+      "answer": 1,
+      "explain": "Том немного волновался, поэтому не смог много съесть на завтрак."
+    },
+    {
+      "type": "choice",
+      "q": "On which floor was the office?",
+      "options": [
+        "The fifth floor",
+        "The first floor",
+        "The tenth floor"
+      ],
+      "answer": 0,
+      "explain": "Офис был на пятом этаже современного здания."
+    },
+    {
+      "type": "choice",
+      "q": "Who is Sam?",
+      "options": [
+        "A funny man who always tells jokes",
+        "A quiet girl who works with computers",
+        "An engineer from Canada"
+      ],
+      "answer": 2,
+      "explain": "Сэм — инженер из Канады; шутит Марк, а с компьютерами работает Лиза."
+    },
+    {
+      "type": "tf",
+      "q": "Tom's desk was next to a window with a view of the river.",
+      "answer": true,
+      "explain": "Верно: стол стоял у большого окна с прекрасным видом на реку."
+    },
+    {
+      "type": "choice",
+      "q": "In the story, 'At first he felt confused.' 'Confused' means…",
+      "options": [
+        "very happy",
+        "not able to understand things clearly",
+        "very hungry"
+      ],
+      "answer": 1,
+      "explain": "«Confused» — растерянный, когда не всё понятно."
+    },
+    {
+      "type": "tf",
+      "q": "Mark plays the guitar in a band at the weekend.",
+      "answer": true,
+      "explain": "Верно: Марк рассказал, что по выходным играет на гитаре в группе."
+    },
+    {
+      "type": "choice",
+      "q": "What was Tom's first project?",
+      "options": [
+        "To fix the office computers",
+        "To write a long report",
+        "To design a new website for a customer"
+      ],
+      "answer": 2,
+      "explain": "Миссис Грин поручила Тому спроектировать новый сайт для клиента."
+    },
+    {
+      "type": "tf",
+      "q": "Tom had to finish the project on the same day.",
+      "answer": false,
+      "explain": "Неверно: миссис Грин сказала «You don't have to finish it today»."
+    },
+    {
+      "type": "choice",
+      "q": "How did Tom describe his first day to his mother?",
+      "options": [
+        "Boring and long",
+        "Tiring, but great",
+        "Easy and short"
+      ],
+      "answer": 1,
+      "explain": "Том ответил маме: «Tiring, but great» — утомительно, но здорово."
+    }
+  ],
+  "retell": [
+    "Who is Tom and what job did he find?",
+    "What did Tom do on Monday morning, and what happened at reception?",
+    "Who did Tom meet in the office?",
+    "What did Tom do in the morning and at lunch?",
+    "What was his first project, and what did Mrs Green say at the end of the day?"
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "id": "A2_03_past_simple_questions",
+  "level": "A2",
+  "order": 3,
+  "title": "Past Simple: questions and negatives with did",
+  "titleRu": "Простое прошедшее: вопросы и отрицания",
+  "summary": "Как задавать вопросы и строить отрицания в прошедшем времени с помощью did, и как правильно использовать ago, last, yesterday.",
+  "theory": "## Когда используем\n\nВопросы и отрицания в Past Simple нужны постоянно: «Что ты делал вчера?», «Я не видел этот фильм», «Когда вы приехали?». Для них используется вспомогательный глагол **did** — прошедшая форма от do.\n\n> Did you call Anna yesterday? — Ты звонил Анне вчера?\n> I didn't see him at the party. — Я не видел его на вечеринке.\n> Where did you go last summer? — Куда ты ездил прошлым летом?\n\n## Как образуется\n\nГлавное правило: **did уже показывает прошедшее время**, поэтому основной глагол возвращается в **начальную форму** (V1, без -ed и без второй формы).\n\n### Отрицание (−)\n\n**подлежащее + didn't (did not) + V1**\n\n| Утверждение | Отрицание |\n|---|---|\n| I worked. | I didn't work. |\n| She went home. | She didn't go home. |\n| They saw the film. | They didn't see the film. |\n| He bought a car. | He didn't buy a car. |\n\n> We didn't have time for lunch. — У нас не было времени на обед.\n> My brother didn't like the soup. — Моему брату не понравился суп.\n\n### Общий вопрос (?) и краткие ответы\n\n**Did + подлежащее + V1 ...?**\n\n| Вопрос | Да | Нет |\n|---|---|---|\n| Did you sleep well? | Yes, I did. | No, I didn't. |\n| Did she call you? | Yes, she did. | No, she didn't. |\n| Did they win? | Yes, they did. | No, they didn't. |\n\n⚠ Краткий ответ строится с did, а не с основным глаголом: Did you like it? — Yes, I did. (не Yes, I liked.)\n\n### Специальный вопрос (с вопросительным словом)\n\n**Вопросительное слово + did + подлежащее + V1 ...?**\n\n| Слово | Пример | Перевод |\n|---|---|---|\n| What | What did you do yesterday? | Что ты делал вчера? |\n| Where | Where did they go? | Куда они пошли? |\n| When | When did she arrive? | Когда она приехала? |\n| Why | Why did you leave early? | Почему ты ушёл рано? |\n| Who | Who did you meet? | Кого ты встретил? |\n| How | How did you get there? | Как ты туда добрался? |\n| What time | What time did the film start? | Во сколько начался фильм? |\n| How long | How long did you stay? | Сколько ты там пробыл? |\n| How much | How much did it cost? | Сколько это стоило? |\n\n### Вопрос к подлежащему — без did!\n\nЕсли вопрос **к подлежащему** (Who? What? — кто сделал, что случилось), did не нужен, а глагол стоит во второй форме:\n\n> Who called you? — Кто тебе звонил? (кто-то звонил — ответ: Mike called me.)\n> Who did you call? — Кому ты звонил? (ты звонил кому-то — ответ: I called Mike.)\n> What happened? — Что случилось?\n\n!! Если в вопросе «кто/что» является подлежащим (тот, кто совершил действие) — did не используем.\n\n### Was / were — тоже без did\n\nГлагол to be образует вопросы и отрицания сам: Were you tired? I wasn't at home. Не говорим «Did you be...».\n\n## Слова-подсказки: ago, last, yesterday\n\n| Слово | Как использовать | Пример |\n|---|---|---|\n| **yesterday** | вчера; yesterday morning / afternoon / evening | I saw her yesterday morning. |\n| **last** | прошлый: last night, last week, last month, last year, last Friday | We moved last year. |\n| **ago** | назад; ставится **после** отрезка времени | He left two hours ago. |\n| **in** | с годами и месяцами | She was born in 1998. |\n\n⚠ Перед last, yesterday, ago **не ставим** предлоги и артикли: in last week → last week; the last year (= в прошлом году) → last year.\n⚠ Ago стоит после времени: ago two days → two days ago.\n⚠ Говорим yesterday evening, но last night (не yesterday night).\n\n> I started this job three months ago. — Я начал эту работу три месяца назад.\n> Did you watch the match last night? — Ты смотрел матч вчера вечером?\n\n## Сравните\n\n| Present Simple | Past Simple |\n|---|---|\n| Do you like tea? | Did you like the tea? |\n| She doesn't work here. | She didn't work here. |\n| Where does he live? | Where did he live? |\n\nСхема одинаковая — меняется только do/does → **did**. И у did нет формы с -s: she did, he did.\n\n## Типичные ошибки\n\n⚠ Did you went to the party? → Did you go to the party?\n⚠ I didn't saw him. → I didn't see him.\n⚠ She didn't liked it. → She didn't like it.\n⚠ Where you went? → Where did you go? (нельзя без did — порядок слов как в утверждении не работает)\n⚠ Who did call you? → Who called you? (вопрос к подлежащему)\n⚠ What did happen? → What happened?\n⚠ Did you be at home? → Were you at home?\n⚠ I not went. → I didn't go.\n\n!! Проверка: в предложении с **did/didn't** должна быть только **одна** «прошедшая» форма — сам did. Глагол после него всегда в начальной форме: didn't go, did see, did buy.",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "I ___ my keys this morning, so I took them.",
+      "options": [
+        "didn't forget",
+        "didn't forgot",
+        "not forgot"
+      ],
+      "answer": 0,
+      "explain": "После didn't глагол в начальной форме: forget."
+    },
+    {
+      "type": "choice",
+      "q": "___ you see the new film last weekend?",
+      "options": [
+        "Do",
+        "Did",
+        "Were"
+      ],
+      "answer": 1,
+      "explain": "Общий вопрос в Past Simple: Did + you + V1."
+    },
+    {
+      "type": "choice",
+      "q": "— Did your brother call you? — Yes, he ___.",
+      "options": [
+        "called",
+        "did",
+        "does"
+      ],
+      "answer": 1,
+      "explain": "Краткий ответ строится с did: Yes, he did."
+    },
+    {
+      "type": "choice",
+      "q": "Where ___ last summer?",
+      "options": [
+        "you went",
+        "did you go",
+        "did you went"
+      ],
+      "answer": 1,
+      "explain": "Вопрос: where + did + подлежащее + V1."
+    },
+    {
+      "type": "choice",
+      "q": "Who ___ the window? — Tom did.",
+      "options": [
+        "did break",
+        "broke",
+        "did broke"
+      ],
+      "answer": 1,
+      "explain": "Вопрос к подлежащему (кто разбил?) — без did, глагол во второй форме."
+    },
+    {
+      "type": "choice",
+      "q": "I met her three years ___.",
+      "options": [
+        "ago",
+        "last",
+        "before ago"
+      ],
+      "answer": 0,
+      "explain": "Ago ставится после отрезка времени: three years ago."
+    },
+    {
+      "type": "choice",
+      "q": "We moved to this city ___ year.",
+      "options": [
+        "in last",
+        "the last",
+        "last"
+      ],
+      "answer": 2,
+      "explain": "Перед last не нужен ни предлог, ни артикль: last year."
+    },
+    {
+      "type": "input",
+      "q": "She ___ (not / like) the food at the hotel.",
+      "answer": [
+        "didn't like",
+        "did not like"
+      ],
+      "explain": "Отрицание: didn't + начальная форма like."
+    },
+    {
+      "type": "input",
+      "q": "What time ___ (you / get) up yesterday?",
+      "answer": [
+        "did you get"
+      ],
+      "explain": "Вопрос: what time + did + you + get (V1)."
+    },
+    {
+      "type": "input",
+      "q": "We ___ (not / go) out last night because it was raining.",
+      "answer": [
+        "didn't go",
+        "did not go"
+      ],
+      "explain": "Отрицание: didn't + go."
+    },
+    {
+      "type": "input",
+      "q": "How much ___ (it / cost)? I want to buy the same bag.",
+      "answer": [
+        "did it cost"
+      ],
+      "explain": "Вопрос: how much + did + it + cost (V1)."
+    },
+    {
+      "type": "input",
+      "q": "Who ___ (tell) you about the party? — Maria told me.",
+      "answer": [
+        "told"
+      ],
+      "explain": "Вопрос к подлежащему — без did, вторая форма told."
+    },
+    {
+      "type": "order",
+      "q": "Составьте вопрос",
+      "answer": "Why did you leave so early?",
+      "explain": "Why + did + you + leave (V1)."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "I didn't see him two days ago.",
+      "explain": "Отрицание didn't + see; ago — после отрезка времени."
+    },
+    {
+      "type": "order",
+      "q": "Составьте вопрос",
+      "answer": "What did you have for breakfast?",
+      "explain": "What + did + you + have."
+    }
+  ]
+}

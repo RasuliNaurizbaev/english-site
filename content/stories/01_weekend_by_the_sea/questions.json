@@ -1,0 +1,101 @@
+{
+  "questions": [
+    {
+      "type": "tf",
+      "q": "Anna lives in a big house.",
+      "answer": false,
+      "explain": "Неверно: в рассказе сказано, что Анна живёт в маленькой квартире (a small flat) в большом городе."
+    },
+    {
+      "type": "tf",
+      "q": "Kate booked a room in a hotel near the beach.",
+      "answer": true,
+      "explain": "Верно: Кейт говорит «I've already booked a room in a hotel near the beach»."
+    },
+    {
+      "type": "choice",
+      "q": "What did Anna have for breakfast on Saturday?",
+      "options": [
+        "Eggs and tea",
+        "Toast with butter and a cup of coffee",
+        "Fruit and orange juice"
+      ],
+      "answer": 1,
+      "explain": "На завтрак у Анны были тост с маслом и чашка кофе."
+    },
+    {
+      "type": "choice",
+      "q": "Why was Anna worried at the station?",
+      "options": [
+        "The train was late",
+        "She lost her ticket",
+        "Kate didn't come"
+      ],
+      "answer": 0,
+      "explain": "Женщина в справочном бюро сказала, что поезд опаздывает, и Анна заволновалась."
+    },
+    {
+      "type": "tf",
+      "q": "The train journey took five hours.",
+      "answer": false,
+      "explain": "Неверно: поездка заняла три часа (The journey took three hours)."
+    },
+    {
+      "type": "choice",
+      "q": "What does Anna hope to do in the future?",
+      "options": [
+        "Travel abroad next year",
+        "Buy a house by the sea",
+        "Find a new job with a better salary"
+      ],
+      "answer": 2,
+      "explain": "Анна надеется найти новую работу с более высокой зарплатой, а путешествовать за границу хочет Кейт."
+    },
+    {
+      "type": "choice",
+      "q": "In the story, the waiter was 'polite'. 'Polite' means…",
+      "options": [
+        "very fast",
+        "speaking nicely, with good manners",
+        "angry and rude"
+      ],
+      "answer": 1,
+      "explain": "«Polite» — вежливый, то есть говорит приятно и с хорошими манерами."
+    },
+    {
+      "type": "choice",
+      "q": "What was in Anna's wallet?",
+      "options": [
+        "Only her train ticket",
+        "Photos and her keys",
+        "Her money, credit card and driving licence"
+      ],
+      "answer": 2,
+      "explain": "В кошельке были деньги, кредитная карта и водительские права."
+    },
+    {
+      "type": "choice",
+      "q": "Who brought Anna her wallet?",
+      "options": [
+        "Kate",
+        "The waiter",
+        "A police officer"
+      ],
+      "answer": 1,
+      "explain": "Официант догнал подруг с кошельком в руке: «You forgot this on the table»."
+    },
+    {
+      "type": "tf",
+      "q": "On Sunday it rained, so the friends visited a museum.",
+      "answer": true,
+      "explain": "Верно: в воскресенье пошёл дождь, и подруги пошли в музей и купили сувениры."
+    }
+  ],
+  "retell": [
+    "Who is Anna and why is she often tired?",
+    "What did Kate suggest, and what happened at the station?",
+    "What did the friends do on Saturday at the beach and in the restaurant?",
+    "What happened after dinner on the way to the hotel?",
+    "What did they do on Sunday, and how did Anna feel at the end?"
+  ]
+}

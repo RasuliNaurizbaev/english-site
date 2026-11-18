@@ -1,0 +1,147 @@
+{
+  "id": "A2_06_perfect_vs_past",
+  "level": "A2",
+  "order": 6,
+  "title": "Present Perfect vs Past Simple; for / since",
+  "titleRu": "Present Perfect или Past Simple",
+  "summary": "Как выбрать между Present Perfect и Past Simple и как говорить, сколько длится действие: for, since, How long…?",
+  "theory": "## Когда используем\n\nPresent Perfect и Past Simple часто переводятся на русский одинаково («я видел», «она приехала»), поэтому их легко перепутать. Разница не в самом действии, а в том, **как мы на него смотрим**.\n\n### Past Simple — законченное прошлое, время известно\n\n- называем или подразумеваем **конкретное время** в прошлом:\n> I saw Tom yesterday. — Я видел Тома вчера.\n> She graduated in 2020. — Она окончила университет в 2020 году.\n- рассказываем историю, детали события:\n> We went to Rome last summer. We visited the Colosseum and ate a lot of pizza.\n- период **закончился**:\n> He lived in Berlin for three years. (сейчас он там не живёт)\n\n### Present Perfect — связь с настоящим, время не важно\n\n- опыт без указания времени:\n> I've been to Rome. — Я был в Риме.\n- результат сейчас:\n> I've lost my wallet. — Я потерял кошелёк (его нет сейчас).\n- период **ещё не закончился** (today, this week, this year):\n> I've drunk three cups of coffee today. — Сегодня я выпил три чашки кофе (день ещё идёт).\n- действие началось в прошлом и **продолжается сейчас** (for / since):\n> He has lived in Berlin for three years. — Он живёт в Берлине три года (и сейчас живёт).\n\n!! Очень типичный разговор: начинаем с Present Perfect (новость или опыт), а затем переходим к Past Simple (детали). — Have you ever been to Spain? — Yes, I have. I went there in 2019. It was wonderful.\n\n## Как образуется (повторение)\n\n| | Past Simple | Present Perfect |\n|---|---|---|\n| + | I worked / I went | I have worked / I have gone |\n| − | I didn't work | I haven't worked |\n| ? | Did you work? | Have you worked? |\n| Краткий ответ | Yes, I did. | Yes, I have. |\n\n## for и since\n\nКогда действие началось в прошлом и **продолжается до сих пор**, по-русски мы используем настоящее время («Я живу здесь пять лет»), а по-английски — **Present Perfect**.\n\n| | Значение | Что после него | Примеры |\n|---|---|---|---|\n| **for** | в течение (сколько времени) | отрезок времени | for two hours, for five years, for a long time, for ages |\n| **since** | с (какого момента) | точка начала | since 2015, since Monday, since 9 o'clock, since I was a child |\n\n> I have known Anna for ten years. — Я знаю Анну десять лет.\n> I have known Anna since 2014. — Я знаю Анну с 2014 года.\n> She has worked here since she finished school. — Она работает здесь с тех пор, как окончила школу.\n\n⚠ После since в придаточном — Past Simple: since I **moved** here, since we **met**.\n\n### For с разными временами\n\n| Предложение | Смысл |\n|---|---|\n| I **have lived** in Kazan for 5 years. | живу до сих пор |\n| I **lived** in Kazan for 5 years. | жил раньше, теперь не живу |\n\n## How long…?\n\nВопрос «Как долго / сколько времени?» о действии, которое продолжается до сих пор:\n\n**How long + have / has + подлежащее + V3?**\n\n> How long have you lived here? — For six years. / Since 2018. — Сколько ты здесь живёшь?\n> How long has she been a teacher? — Since 2010. — Сколько она уже работает учителем?\n> How long have you had this car? — For two months. — Сколько у тебя эта машина?\n\nСравните с законченным периодом:\n> How long did you live in Moscow? — For three years (потом переехал). — Сколько ты прожил в Москве?\n\n## Слова-подсказки\n\n| Past Simple | Present Perfect |\n|---|---|\n| yesterday, last week, in 2010 | ever, never |\n| ... ago | just, already, yet |\n| when I was a child | for, since (до сих пор) |\n| When...? What time...? | How long...? (до сих пор) |\n| then, after that | today, this week, this year, so far |\n\n!! Вопрос **When...?** всегда требует Past Simple: When did you arrive? (не When have you arrived?)\n\n## Сравните с русским\n\n| По-русски | По-английски |\n|---|---|\n| Я живу здесь с 2010 года. | I **have lived** here since 2010. |\n| Я знаю его три года. | I **have known** him for three years. |\n| Сколько ты учишь английский? | How long **have** you **studied** English? |\n\nРусское настоящее время + «с / уже / сколько» → английский Present Perfect.\n\n## Типичные ошибки\n\n⚠ I live here since 2015. → I have lived here since 2015.\n⚠ I know him for five years. → I have known him for five years.\n⚠ I have seen this film last week. → I saw this film last week.\n⚠ When have you bought this car? → When did you buy this car?\n⚠ I have worked here since three years. → I have worked here for three years.\n⚠ How long do you live here? → How long have you lived here?\n⚠ I have been to Paris in 2018. → I went to Paris in 2018.\n\n!! Простой тест: если в предложении есть **точная дата или ago** — только Past Simple. Если есть **for/since, и действие продолжается** — Present Perfect.",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "I ___ in this flat since 2019.",
+      "options": [
+        "live",
+        "have lived",
+        "lived"
+      ],
+      "answer": 1,
+      "explain": "Since + продолжается до сих пор — Present Perfect."
+    },
+    {
+      "type": "choice",
+      "q": "We have been friends ___ ten years.",
+      "options": [
+        "since",
+        "for",
+        "ago"
+      ],
+      "answer": 1,
+      "explain": "Ten years — отрезок времени, поэтому for."
+    },
+    {
+      "type": "choice",
+      "q": "She has worked here ___ last March.",
+      "options": [
+        "for",
+        "since",
+        "from"
+      ],
+      "answer": 1,
+      "explain": "Last March — точка начала, поэтому since."
+    },
+    {
+      "type": "choice",
+      "q": "I ___ my grandmother last weekend.",
+      "options": [
+        "visited",
+        "have visited",
+        "have visit"
+      ],
+      "answer": 0,
+      "explain": "Last weekend — конкретное время в прошлом, Past Simple."
+    },
+    {
+      "type": "choice",
+      "q": "— Have you ever tried Thai food? — Yes, I ___ it in Bangkok two years ago.",
+      "options": [
+        "have tried",
+        "tried",
+        "try"
+      ],
+      "answer": 1,
+      "explain": "Детали с точным временем (two years ago) — Past Simple."
+    },
+    {
+      "type": "choice",
+      "q": "When ___ to Moscow?",
+      "options": [
+        "have you moved",
+        "did you move",
+        "you moved"
+      ],
+      "answer": 1,
+      "explain": "Вопрос When...? требует Past Simple."
+    },
+    {
+      "type": "input",
+      "q": "How long ___ (you / know) your best friend?",
+      "answer": [
+        "have you known"
+      ],
+      "explain": "How long + Present Perfect: have you known."
+    },
+    {
+      "type": "input",
+      "q": "My parents ___ (be) married for 30 years. They are very happy together.",
+      "answer": [
+        "have been"
+      ],
+      "explain": "Брак продолжается сейчас — have been for 30 years."
+    },
+    {
+      "type": "input",
+      "q": "He ___ (live) in Paris for two years, but then he moved to London.",
+      "answer": [
+        "lived"
+      ],
+      "explain": "Период закончился (потом переехал) — Past Simple."
+    },
+    {
+      "type": "input",
+      "q": "I ___ (not / see) Mike since we left school.",
+      "answer": [
+        "haven't seen",
+        "have not seen"
+      ],
+      "explain": "Since + до сих пор — Present Perfect, отрицание haven't seen."
+    },
+    {
+      "type": "input",
+      "q": "Tom ___ (start) his new job three weeks ago.",
+      "answer": [
+        "started"
+      ],
+      "explain": "Ago — только Past Simple."
+    },
+    {
+      "type": "choice",
+      "q": "I've had this phone ___ I was at university.",
+      "options": [
+        "for",
+        "since",
+        "ago"
+      ],
+      "answer": 1,
+      "explain": "После since может идти целое предложение — точка начала."
+    },
+    {
+      "type": "order",
+      "q": "Составьте вопрос",
+      "answer": "How long have you studied English?",
+      "explain": "How long + have + you + V3."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "She has known him since 2015.",
+      "explain": "Has known + since + точка начала."
+    },
+    {
+      "type": "order",
+      "q": "Составьте вопрос",
+      "answer": "When did you buy this car?",
+      "explain": "When + did + you + V1 — Past Simple."
+    }
+  ]
+}

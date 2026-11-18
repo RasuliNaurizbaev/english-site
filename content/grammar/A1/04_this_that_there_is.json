@@ -1,0 +1,148 @@
+{
+  "id": "A1_04_this_that_there_is",
+  "level": "A1",
+  "order": 4,
+  "title": "This / that / these / those; there is / there are",
+  "titleRu": "This, that и there is / there are",
+  "summary": "Указательные слова this, that, these, those и конструкция there is / there are («где-то есть что-то»).",
+  "theory": "## Часть 1. This / that / these / those\n\nВ русском мы говорим «этот» и «тот», и часто используем просто «это» для всего. В английском выбор слова зависит от двух вещей: **близко или далеко** предмет и **один или несколько**.\n\n| | Близко (здесь) | Далеко (там) |\n|---|---|---|\n| Один предмет | **this** — этот, эта, это | **that** — тот, та, то |\n| Несколько | **these** — эти | **those** — те |\n\n> This is my bag. — Это моя сумка. (она у меня в руках)\n> That is my car. — Вон то — моя машина. (она на улице)\n> These apples are sweet. — Эти яблоки сладкие.\n> Those people are my neighbours. — Те люди — мои соседи.\n\n### Два способа использования\n\n1. **Перед существительным** (какой?):\n> I like this dress. — Мне нравится это платье.\n> Who is that man? — Кто тот мужчина?\n2. **Вместо существительного** (самостоятельно):\n> This is Anna. — Это Анна. (так знакомят людей)\n> What is that? — Что это (там)?\n\n### Согласование с глаголом\n\nПосле **this / that** — глагол в единственном числе (**is**), после **these / those** — во множественном (**are**).\n\n> This is a pen. — These are pens.\n> That is a house. — Those are houses.\n\n!! Русское «Это мои друзья» по-английски будет **These are my friends**, а не *This is my friends*. Слово «это» в русском не меняется, а в английском — меняется!\n\n### Ответ на вопрос с this / that\n\nВ ответе вместо this / that используем **it**, а вместо these / those — **they**.\n\n> — Is this your phone? — Yes, it is. — Это твой телефон? — Да.\n> — Are those your shoes? — No, they aren't. — Это твои туфли? — Нет.\n\n!! *That's* = that is — очень частое сокращение: *That's great! That's right.* А вот *this is* обычно не сокращают.\n\n## Часть 2. There is / there are\n\n### Когда используем\n\nКонструкция **there is / there are** говорит, что **что-то где-то есть (находится, существует)**. По-русски: «В комнате есть стол», «На столе лежат книги», «В городе много парков».\n\n> There is a cat in the garden. — В саду (есть) кошка.\n> There are two beds in the room. — В комнате две кровати.\n\nОбратите внимание на **порядок слов**. В русском мы начинаем с места («В комнате…»), а в английском — с **there is / there are**, а место ставим **в конец**.\n\n| Русский | Английский |\n|---|---|\n| В холодильнике есть молоко. | There is some milk in the fridge. |\n| На стене висят картины. | There are pictures on the wall. |\n\n### Как образуется\n\n| | Ед. число / неисчисл. | Мн. число |\n|---|---|---|\n| + | There is (There's) a table. | There are two tables. |\n| − | There isn't a table. / There is no table. | There aren't any tables. / There are no tables. |\n| ? | Is there a table? | Are there any tables? |\n| Краткий ответ | Yes, there is. / No, there isn't. | Yes, there are. / No, there aren't. |\n\n> Is there a bank near here? — Yes, there is. — Здесь рядом есть банк? — Да.\n> Are there any shops in your street? — No, there aren't. — На твоей улице есть магазины? — Нет.\n> How many students are there in your group? — Сколько студентов в твоей группе?\n\nЕсли перечисляем несколько предметов, глагол согласуется с **первым**: *There is a sofa and two chairs in the room.*\n\n### There is или It is?\n\n**There is** вводит новую информацию — *что* есть. **It is** описывает уже известный предмет — *какой* он.\n\n> There is a new café in our street. It is very nice. — На нашей улице есть новое кафе. Оно очень милое.\n\n## Типичные ошибки\n\n⚠ This are my friends. → These are my friends.\n⚠ In the room is a table. → There is a table in the room.\n⚠ There are a book on the table. → There is a book on the table.\n⚠ There is two cats. → There are two cats.\n⚠ Is there any apples? → Are there any apples?\n⚠ There is many people here. → There are many people here.\n⚠ It is a cat in the garden. → There is a cat in the garden.\n⚠ — Is this your bag? — Yes, this is. → Yes, it is.\n\n!! Когда хотите сказать «где-то есть что-то» — начинайте с **There is / There are**, а место (*in the room, on the table, in my city*) ставьте в конец предложения.",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "___ is my phone. (у меня в руке)",
+      "options": [
+        "This",
+        "These",
+        "Those"
+      ],
+      "answer": 0,
+      "explain": "Один предмет рядом — this."
+    },
+    {
+      "type": "choice",
+      "q": "Look at ___ birds in the sky!",
+      "options": [
+        "this",
+        "that",
+        "those"
+      ],
+      "answer": 2,
+      "explain": "Несколько предметов далеко — those."
+    },
+    {
+      "type": "choice",
+      "q": "___ are my parents, Ivan and Olga. (рядом со мной)",
+      "options": [
+        "This",
+        "These",
+        "That"
+      ],
+      "answer": 1,
+      "explain": "Несколько человек рядом — these."
+    },
+    {
+      "type": "choice",
+      "q": "There ___ a big park in my town.",
+      "options": [
+        "is",
+        "are",
+        "be"
+      ],
+      "answer": 0,
+      "explain": "A big park — единственное число, поэтому there is."
+    },
+    {
+      "type": "choice",
+      "q": "There ___ three bedrooms in our flat.",
+      "options": [
+        "is",
+        "are",
+        "has"
+      ],
+      "answer": 1,
+      "explain": "Three bedrooms — множественное число, поэтому there are."
+    },
+    {
+      "type": "choice",
+      "q": "— Is that your car? — Yes, ___ is.",
+      "options": [
+        "that",
+        "it",
+        "this"
+      ],
+      "answer": 1,
+      "explain": "В кратком ответе this/that заменяется на it."
+    },
+    {
+      "type": "input",
+      "q": "___ (быть) there a bank near here?",
+      "answer": [
+        "Is"
+      ],
+      "explain": "Вопрос с a bank (ед. число): Is there…?"
+    },
+    {
+      "type": "input",
+      "q": "There ___ (not / be) any shops in my street.",
+      "answer": [
+        "aren't",
+        "are not"
+      ],
+      "explain": "Shops — мн. число, отрицание aren't."
+    },
+    {
+      "type": "input",
+      "q": "There ___ (not / be) a lift in this building.",
+      "answer": [
+        "isn't",
+        "is not"
+      ],
+      "explain": "A lift — ед. число, отрицание isn't."
+    },
+    {
+      "type": "input",
+      "q": "Are ___ any eggs in the fridge?",
+      "answer": [
+        "there"
+      ],
+      "explain": "Вопрос: Are there any…?"
+    },
+    {
+      "type": "input",
+      "q": "— Are there any chairs in the room? — Yes, there ___.",
+      "answer": [
+        "are"
+      ],
+      "explain": "Краткий ответ: Yes, there are (без сокращения)."
+    },
+    {
+      "type": "choice",
+      "q": "Choose the correct sentence.",
+      "options": [
+        "In my bag is a book.",
+        "There is a book in my bag.",
+        "It is a book in my bag."
+      ],
+      "answer": 1,
+      "explain": "Сообщаем, что где-то что-то есть: There is + предмет + место."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "There are two cats in the garden.",
+      "explain": "There are + предмет + место в конце."
+    },
+    {
+      "type": "order",
+      "q": "Составьте вопрос",
+      "answer": "Is there a supermarket near your house?",
+      "explain": "Вопрос: Is there + a + предмет + место."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "Those shoes are very expensive.",
+      "explain": "Those + существительное во мн. числе + are."
+    }
+  ]
+}

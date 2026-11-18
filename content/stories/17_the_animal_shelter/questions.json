@@ -1,0 +1,103 @@
+{
+  "questions": [
+    {
+      "type": "choice",
+      "q": "Why did Jack go to the animal shelter?",
+      "options": [
+        "He loved animals",
+        "It was the only place left on the list",
+        "His mum worked there"
+      ],
+      "answer": 1,
+      "explain": "Джек слишком долго ждал, и в списке осталось только одно место — приют для животных."
+    },
+    {
+      "type": "tf",
+      "q": "Jack's first job at the shelter was to walk the dogs.",
+      "answer": false,
+      "explain": "Неверно: сначала он чистил вольеры для собак, а выгуливать собак стал в следующую субботу."
+    },
+    {
+      "type": "choice",
+      "q": "Why didn't Bruno trust people?",
+      "options": [
+        "Someone had left him tied to a tree in winter",
+        "A child had hurt his nose",
+        "He had always lived in the forest"
+      ],
+      "answer": 0,
+      "explain": "Кто-то оставил Бруно привязанным к дереву посреди зимы."
+    },
+    {
+      "type": "choice",
+      "q": "What did Sarah tell Jack to do with Bruno?",
+      "options": [
+        "Go into the kennel and hold him",
+        "Take him for a long walk",
+        "Sit near the door and talk to him quietly"
+      ],
+      "answer": 2,
+      "explain": "Сара сказала не заходить, а сидеть у двери и тихо разговаривать с ним."
+    },
+    {
+      "type": "tf",
+      "q": "In the fifth week, Bruno let Jack touch his head.",
+      "answer": true,
+      "explain": "Верно: на пятой неделе Бруно позволил Джеку погладить его по голове."
+    },
+    {
+      "type": "choice",
+      "q": "\"The roof is leaking.\" What does \"leaking\" mean here?",
+      "options": [
+        "It is very old and beautiful",
+        "Water is coming through it",
+        "It is too low"
+      ],
+      "answer": 1,
+      "explain": "«Leaking» значит «протекает»: через крышу проходит вода."
+    },
+    {
+      "type": "tf",
+      "q": "The new roof would cost about three thousand pounds.",
+      "answer": true,
+      "explain": "Верно: Сара сказала, что крыша будет стоить около трёх тысяч фунтов."
+    },
+    {
+      "type": "choice",
+      "q": "What did Jack do for the fundraising event?",
+      "options": [
+        "He designed the posters",
+        "He asked shops for prizes",
+        "He made a short video about the shelter"
+      ],
+      "answer": 2,
+      "explain": "Джек снял короткое видео о приюте; плакаты делала Эмма, а призы искал Том."
+    },
+    {
+      "type": "tf",
+      "q": "The event made less money than the shelter needed.",
+      "answer": false,
+      "explain": "Неверно: они собрали 3420 фунтов — больше, чем было нужно."
+    },
+    {
+      "type": "choice",
+      "q": "Why did the young couple want to meet Bruno?",
+      "options": [
+        "They had seen Jack's video",
+        "Sarah had called them",
+        "They were Jack's neighbours"
+      ],
+      "answer": 0,
+      "explain": "Пара сказала: «We saw your video» — они увидели Бруно в видео Джека."
+    }
+  ],
+  "retell": [
+    "What was Jack like, and what was the school project?",
+    "What was Jack's first day at the shelter like?",
+    "Who was Bruno, and what was his story?",
+    "How did Jack slowly win Bruno's trust?",
+    "What problem did the shelter have?",
+    "How did Jack and his friends organise the fundraising event, and how did it go?",
+    "What happened to Bruno, and what did Jack say in his presentation?"
+  ]
+}

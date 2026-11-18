@@ -1,0 +1,146 @@
+{
+  "id": "A1_11_prepositions_time_place",
+  "level": "A1",
+  "order": 11,
+  "title": "Prepositions of time and place: in / on / at",
+  "titleRu": "Предлоги времени и места",
+  "summary": "Предлоги in, on, at для времени и места, а также next to, between, under, opposite и другие.",
+  "theory": "## Зачем это учить\n\nПредлоги — одна из самых коварных тем: они редко переводятся «один к одному». Русское «в» может быть и *in*, и *at*, и *on*: «в понедельник» — *on Monday*, «в 5 часов» — *at 5 o'clock*, «в мае» — *in May*. Поэтому предлоги лучше запоминать **вместе со словами**, как готовые фразы.\n\n## Часть 1. Предлоги времени: at / on / in\n\nПростое правило-«пирамида»: от точного момента к большому периоду.\n\n| Предлог | С чем используем | Примеры |\n|---|---|---|\n| **at** | точное время, моменты | at 7 o'clock, at noon, at midnight, at night, at the weekend (брит.), at Christmas |\n| **on** | дни и даты | on Monday, on Sunday morning, on 5 May, on my birthday, on New Year's Day |\n| **in** | месяцы, годы, времена года, части дня, долгие периоды | in June, in 2025, in summer, in the morning, in the evening |\n\n> The lesson starts at 9 o'clock. — Урок начинается в 9 часов.\n> I play football on Saturdays. — Я играю в футбол по субботам.\n> My birthday is in April. — Мой день рождения в апреле.\n> I drink coffee in the morning. — Я пью кофе утром.\n\n!! Запомните: **in the morning / in the afternoon / in the evening**, но **at night**. И если есть день недели — побеждает **on**: *on Monday morning*.\n\n### Без предлога\n\nС словами **this, next, last, every, today, tomorrow, yesterday** предлог не нужен:\n\n> I'm busy this week. — Я занят на этой неделе. (не *in this week*)\n> See you next Friday. — Увидимся в следующую пятницу. (не *on next Friday*)\n\n## Часть 2. Предлоги места: in / on / at\n\n| Предлог | Значение | Примеры |\n|---|---|---|\n| **in** | внутри (в чём-то с границами) | in the box, in the room, in the car, in Moscow, in Russia, in the park |\n| **on** | на поверхности | on the table, on the wall, on the floor, on the bus, on the second floor |\n| **at** | в точке, у места (где происходит что-то) | at home, at work, at school, at the station, at the bus stop, at the door |\n\n> The milk is in the fridge. — Молоко в холодильнике.\n> Your keys are on the table. — Твои ключи на столе.\n> I'm at work now. — Я сейчас на работе.\n> Wait for me at the bus stop. — Жди меня на остановке.\n\n!! Русское «на» не всегда = *on*: «на работе» — **at work**, «на вокзале» — **at the station**, «на концерте» — **at a concert**, «на улице (снаружи)» — **outside**. А «в» не всегда = *in*: «в школе (учусь)» — **at school**.\n\n### Транспорт\n\n> in a car, in a taxi — в машине, в такси (маленькое, внутри сидим)\n> on a bus, on a train, on a plane — в автобусе, поезде, самолёте (большое, можно ходить)\n> by bus, by car, by train — на автобусе, машине (способ передвижения)\n> on foot — пешком\n\n## Часть 3. Другие предлоги места\n\n| Предлог | Перевод | Пример |\n|---|---|---|\n| next to | рядом с | The bank is next to the café. |\n| near | недалеко от | I live near the park. |\n| between | между (двумя) | The shop is between the bank and the school. |\n| opposite | напротив | The hotel is opposite the station. |\n| in front of | перед | The car is in front of the house. |\n| behind | за, позади | The garden is behind the house. |\n| under | под | The cat is under the bed. |\n| above | над | The picture is above the sofa. |\n\n> The bathroom is next to the bedroom. — Ванная рядом со спальней.\n> The ball is under the chair. — Мяч под стулом.\n\n!! *Next to* = вплотную рядом, *near* = недалеко. *In front of* — «перед», а не «напротив» (это *opposite*).\n\n## Типичные ошибки\n\n⚠ in Monday → on Monday\n⚠ at the morning → in the morning\n⚠ in night → at night\n⚠ on 2020 → in 2020\n⚠ in next week → next week\n⚠ I am in home. → I am at home.\n⚠ I go to home. → I go home.\n⚠ on the picture → in the picture\n⚠ The cat is in the table. → The cat is on the table.\n⚠ near of the park → near the park\n⚠ next the bank → next to the bank\n\n!! Учите предлоги как часть фразы: не «work», а **at work**; не «Monday», а **on Monday**; не «the morning», а **in the morning**. Так они запомнятся автоматически.",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "The film starts ___ 8 o'clock.",
+      "options": [
+        "in",
+        "on",
+        "at"
+      ],
+      "answer": 2,
+      "explain": "С точным временем — at."
+    },
+    {
+      "type": "choice",
+      "q": "I go to the gym ___ Mondays.",
+      "options": [
+        "in",
+        "on",
+        "at"
+      ],
+      "answer": 1,
+      "explain": "С днями недели — on."
+    },
+    {
+      "type": "choice",
+      "q": "My birthday is ___ July.",
+      "options": [
+        "in",
+        "on",
+        "at"
+      ],
+      "answer": 0,
+      "explain": "С месяцами — in."
+    },
+    {
+      "type": "choice",
+      "q": "I'm busy. I'm ___ work.",
+      "options": [
+        "in",
+        "on",
+        "at"
+      ],
+      "answer": 2,
+      "explain": "Устойчивое выражение at work."
+    },
+    {
+      "type": "choice",
+      "q": "Your phone is ___ the table.",
+      "options": [
+        "in",
+        "on",
+        "at"
+      ],
+      "answer": 1,
+      "explain": "На поверхности — on."
+    },
+    {
+      "type": "choice",
+      "q": "I can't sleep ___ night.",
+      "options": [
+        "in",
+        "on",
+        "at"
+      ],
+      "answer": 2,
+      "explain": "Исключение: at night."
+    },
+    {
+      "type": "choice",
+      "q": "See you ___ next week!",
+      "options": [
+        "in",
+        "on",
+        "—"
+      ],
+      "answer": 2,
+      "explain": "С next предлог не нужен."
+    },
+    {
+      "type": "input",
+      "q": "We usually have dinner ___ the evening.",
+      "answer": [
+        "in"
+      ],
+      "explain": "Части дня: in the evening."
+    },
+    {
+      "type": "input",
+      "q": "My parents live ___ a small village.",
+      "answer": [
+        "in"
+      ],
+      "explain": "Внутри населённого пункта — in."
+    },
+    {
+      "type": "input",
+      "q": "The cat is sleeping ___ the bed. (под)",
+      "answer": [
+        "under"
+      ],
+      "explain": "Под — under."
+    },
+    {
+      "type": "input",
+      "q": "The bank is ___ the café and the shop. (между)",
+      "answer": [
+        "between"
+      ],
+      "explain": "Между двумя предметами — between."
+    },
+    {
+      "type": "input",
+      "q": "Wait for me ___ the bus stop.",
+      "answer": [
+        "at"
+      ],
+      "explain": "Точка, место встречи — at the bus stop."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "The pharmacy is next to the supermarket.",
+      "explain": "Рядом с — next to."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "I was born in 1995.",
+      "explain": "С годами — in."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "We are going to the sea on Saturday morning.",
+      "explain": "С днём недели побеждает on, даже если есть morning."
+    }
+  ]
+}

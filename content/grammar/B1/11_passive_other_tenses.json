@@ -1,0 +1,152 @@
+{
+  "id": "B1_11_passive_other_tenses",
+  "level": "B1",
+  "order": 11,
+  "title": "Passive in other tenses; have something done",
+  "titleRu": "Пассив в других временах и have something done",
+  "summary": "Пассив в Present Perfect, Continuous, будущем и с модальными глаголами; конструкция have something done.",
+  "theory": "## Когда используем\n\nПассив (**be + V3**) можно образовать почти в любом времени. Правило одно: **время показывает глагол be**, а основной глагол всегда стоит в третьей форме. Значения те же, что и в активе: Present Perfect — результат к настоящему, will — будущее и т.д.\n\n> The room has been cleaned. — Комнату убрали (уже, результат сейчас).\n> The results will be announced tomorrow. — Результаты объявят завтра.\n> This problem can be solved. — Эту проблему можно решить.\n\n## Как образуется\n\n### Таблица времён в пассиве (глагол make)\n| Время | Актив | Пассив |\n|---|---|---|\n| Present Simple | they make | it **is made** |\n| Present Continuous | they are making | it **is being made** |\n| Past Simple | they made | it **was made** |\n| Past Continuous | they were making | it **was being made** |\n| Present Perfect | they have made | it **has been made** |\n| Past Perfect | they had made | it **had been made** |\n| Future (will) | they will make | it **will be made** |\n| going to | they are going to make | it **is going to be made** |\n| Модальные | they can make | it **can be made** |\n\n### Present Perfect Passive: has / have been + V3\n> My phone has been stolen! — У меня украли телефон!\n> Have the tickets been booked yet? — Билеты уже забронированы?\n> The emails haven't been sent yet. — Письма ещё не отправлены.\n\n### Present Continuous Passive: am / is / are being + V3\n> The road is being repaired, so we have to go another way. — Дорогу ремонтируют, поэтому придётся ехать другим путём.\n> I think we're being followed. — Кажется, за нами следят.\n\n### Будущее: will be + V3\n> The new school will be opened next year. — Новую школу откроют в следующем году.\n> You will be met at the airport. — Вас встретят в аэропорту.\n\n### Модальные глаголы: modal + be + V3\n| Модальный | Пример | Перевод |\n|---|---|---|\n| can | It can be done. | Это можно сделать. |\n| can't | This bag can't be repaired. | Эту сумку нельзя починить. |\n| must | The form must be signed. | Анкету нужно подписать. |\n| should | Plants should be watered daily. | Растения следует поливать каждый день. |\n| may / might | The match might be cancelled. | Матч могут отменить. |\n| have to | The rooms have to be cleaned. | Комнаты должны быть убраны. |\n\n!! Русские безличные «можно сделать», «нужно подписать», «нельзя курить» очень часто переводятся модальным пассивом: *can be done, must be signed, smoking is not allowed*.\n\n## Have something done — «мне сделали»\n\nЭта конструкция означает, что вы **не делаете что-то сами**, а платите или просите кого-то сделать это для вас (парикмахер, мастер, механик).\n\n**have + предмет + V3**\n\n> I had my hair cut yesterday. — Вчера я подстригся (меня подстригли в парикмахерской).\n> We're having our kitchen painted. — Нам красят кухню.\n> You should have your eyes tested. — Тебе стоит проверить зрение.\n> Where do you have your car repaired? — Где ты ремонтируешь машину?\n\n| Время | Пример |\n|---|---|\n| Present Simple | I **have** my car **washed** every week. |\n| Present Continuous | I'm **having** my flat **cleaned**. |\n| Past Simple | She **had** her nails **done**. |\n| Present Perfect | We'**ve had** the windows **replaced**. |\n| will / going to | I'm **going to have** my phone **repaired**. |\n\nВ разговоре часто вместо *have* — **get**: *I need to get my hair cut.*\n\n### Сравните\n> I cut my hair. — Я сам подстригся (сам себя).\n> I had my hair cut. — Я подстригся (в парикмахерской).\n\nРусское «я подстригся / я починил машину» обычно означает, что сделал кто-то другой — в английском тогда нужно **have something done**.\n\nТакже have something done используется для неприятных событий:\n> He had his wallet stolen on the train. — У него в поезде украли кошелёк.\n\n## Слова-подсказки\n- **already, yet, just, recently** → Present Perfect Passive: *has already been sent*\n- **now, at the moment, currently** → Present Continuous Passive: *is being built*\n- **tomorrow, next year, soon** → *will be done*\n- **must, should, can** → *must be done*\n\n## Типичные ошибки\n\n⚠ The house is building now. → The house is being built now.\n⚠ The letter has sent. → The letter has been sent.\n⚠ It can done tomorrow. → It can be done tomorrow.\n⚠ The work will finished soon. → The work will be finished soon.\n⚠ I cut my hair at the hairdresser's. → I had my hair cut at the hairdresser's.\n⚠ I had cut my hair yesterday. (в значении «подстригся у мастера») → I had my hair cut yesterday.\n⚠ My car is repairing. → My car is being repaired.\n\n!! Формула пассива: **[время глагола be] + V3**. После модального глагола — всегда **be** (can be, must be), после have/has — **been**, в Continuous — **being**.",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "My phone ___! I can't find it anywhere.",
+      "options": [
+        "has stolen",
+        "has been stolen",
+        "is stealing"
+      ],
+      "answer": 1,
+      "explain": "Результат сейчас, действие над телефоном — has been + V3."
+    },
+    {
+      "type": "choice",
+      "q": "The road ___ at the moment, so we have to drive another way.",
+      "options": [
+        "is repairing",
+        "is being repaired",
+        "has repaired"
+      ],
+      "answer": 1,
+      "explain": "Процесс сейчас в пассиве — is being + V3."
+    },
+    {
+      "type": "choice",
+      "q": "This form must ___ in blue ink.",
+      "options": [
+        "sign",
+        "be signed",
+        "been signed"
+      ],
+      "answer": 1,
+      "explain": "После модального глагола в пассиве — be + V3."
+    },
+    {
+      "type": "choice",
+      "q": "The results ___ next Monday.",
+      "options": [
+        "will announce",
+        "will be announced",
+        "will announced"
+      ],
+      "answer": 1,
+      "explain": "Будущее в пассиве — will be + V3."
+    },
+    {
+      "type": "choice",
+      "q": "I ___ yesterday. Do you like my new haircut?",
+      "options": [
+        "cut my hair",
+        "had my hair cut",
+        "had cut my hair"
+      ],
+      "answer": 1,
+      "explain": "Подстригли в парикмахерской — have something done."
+    },
+    {
+      "type": "choice",
+      "q": "Have the tickets ___ yet?",
+      "options": [
+        "booked",
+        "been booked",
+        "being booked"
+      ],
+      "answer": 1,
+      "explain": "Вопрос в Present Perfect Passive — Have + подлежащее + been + V3."
+    },
+    {
+      "type": "input",
+      "q": "Don't worry, this problem can ___ easily. (solve)",
+      "answer": [
+        "be solved"
+      ],
+      "explain": "Модальный пассив: can be + V3."
+    },
+    {
+      "type": "input",
+      "q": "A new shopping centre ___ in our town right now. (build)",
+      "answer": [
+        "is being built"
+      ],
+      "explain": "Процесс в данный момент в пассиве — is being + V3."
+    },
+    {
+      "type": "input",
+      "q": "The emails ___ yet. I'll send them after lunch. (not / send)",
+      "answer": [
+        "haven't been sent",
+        "have not been sent"
+      ],
+      "explain": "Present Perfect Passive в отрицании с yet — haven't been + V3."
+    },
+    {
+      "type": "input",
+      "q": "We're having our kitchen ___ next week. (paint)",
+      "answer": [
+        "painted"
+      ],
+      "explain": "Have something done: have + объект + V3."
+    },
+    {
+      "type": "input",
+      "q": "You will ___ at the airport by our driver. (meet)",
+      "answer": [
+        "be met"
+      ],
+      "explain": "Будущее в пассиве — will be + V3."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "I need to have my car repaired.",
+      "explain": "have + объект + V3 — кто-то отремонтирует машину для меня."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "The new school will be opened next year.",
+      "explain": "will be + V3 — будущее в пассиве."
+    },
+    {
+      "type": "choice",
+      "q": "He ___ on the train. Somebody took it from his bag.",
+      "options": [
+        "had stolen his wallet",
+        "had his wallet stolen",
+        "has stolen his wallet"
+      ],
+      "answer": 1,
+      "explain": "Неприятное событие, сделанное другими, — have + объект + V3."
+    },
+    {
+      "type": "choice",
+      "q": "By the time we arrived, all the food ___.",
+      "options": [
+        "had eaten",
+        "had been eaten",
+        "was eating"
+      ],
+      "answer": 1,
+      "explain": "Past Perfect Passive: had been + V3 — еду съели до нашего прихода."
+    }
+  ]
+}

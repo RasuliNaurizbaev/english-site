@@ -1,0 +1,137 @@
+{
+  "id": "A1_07_adverbs_of_frequency",
+  "level": "A1",
+  "order": 7,
+  "title": "Adverbs of frequency: always, usually, often, sometimes, never",
+  "titleRu": "Наречия частотности",
+  "summary": "Слова always, usually, often, sometimes, never: значение и правильное место в предложении.",
+  "theory": "## Когда используем\n\nНаречия частотности отвечают на вопрос **How often?** — Как часто? Они показывают, насколько регулярно что-то происходит, и поэтому чаще всего используются с **Present Simple**.\n\n| Наречие | Перевод | Примерная частота |\n|---|---|---|\n| always | всегда | 100% |\n| usually | обычно | ~90% |\n| often | часто | ~70% |\n| sometimes | иногда | ~50% |\n| rarely / seldom | редко | ~10% |\n| never | никогда | 0% |\n\n> I always drink coffee in the morning. — Я всегда пью кофе утром.\n> We usually have dinner at seven. — Мы обычно ужинаем в семь.\n> She often goes to the gym. — Она часто ходит в спортзал.\n> They sometimes watch films at home. — Иногда они смотрят фильмы дома.\n> He rarely eats fast food. — Он редко ест фастфуд.\n> I never get up early on Sundays. — Я никогда не встаю рано по воскресеньям.\n\n## Место в предложении\n\nВ русском языке порядок слов свободный: «Я всегда пью», «Всегда я пью», «Пью я всегда». В английском место наречия **строго определено**. Запомните два правила.\n\n### Правило 1. Перед основным глаголом\n\n| Подлежащее | Наречие | Глагол | |\n|---|---|---|---|\n| I | always | walk | to work. |\n| My sister | often | reads | books. |\n| We | never | eat | meat. |\n\n> Tom usually takes the bus. — Том обычно ездит на автобусе.\n\n### Правило 2. После глагола to be (am / is / are)\n\n| Подлежащее | to be | Наречие | |\n|---|---|---|---|\n| I | am | always | tired in the evening. |\n| She | is | never | late. |\n| They | are | usually | at home on Sundays. |\n\n> He is often busy. — Он часто занят.\n> The bus is sometimes late. — Автобус иногда опаздывает.\n\n!! Простая схема: наречие стоит **после am/is/are**, но **перед** всеми остальными глаголами.\n\n### В отрицаниях и вопросах\n\nВ отрицании наречие стоит **после don't / doesn't**, в вопросе — **после подлежащего**:\n\n> I don't usually drink tea. — Я обычно не пью чай.\n> Do you often go to the cinema? — Ты часто ходишь в кино?\n> Is she always so happy? — Она всегда такая весёлая?\n\n### Особое слово: sometimes\n\n**Sometimes** может стоять и в начале, и в конце предложения:\n\n> Sometimes I cook dinner. / I sometimes cook dinner. / I cook dinner sometimes.\n\n## Never — уже отрицание\n\n**Never** само по себе означает «не… никогда». В английском **одно** отрицание в предложении, поэтому с never не нужно добавлять don't / doesn't / not.\n\n| Русский | Английский |\n|---|---|\n| Я **никогда не** ем мясо. | I **never** eat meat. |\n| Она **никогда не** опаздывает. | She is **never** late. |\n\n> He never calls me. — Он никогда мне не звонит. (глагол с -s, без doesn't)\n\n## Как спросить и ответить\n\n> — How often do you go swimming? — Как часто ты ходишь плавать?\n> — I sometimes go on Saturdays. — Иногда, по субботам.\n\n### Выражения частоты (в конце предложения)\n\nКроме наречий, можно использовать выражения, которые обычно ставятся **в конец** предложения:\n\n| Выражение | Перевод |\n|---|---|\n| every day / every week | каждый день / каждую неделю |\n| once a week | раз в неделю |\n| twice a month | дважды в месяц |\n| three times a year | три раза в год |\n\n> I visit my grandmother once a month. — Я навещаю бабушку раз в месяц.\n\n## Типичные ошибки\n\n⚠ I go always to work by bus. → I always go to work by bus.\n⚠ She always is late. → She is always late.\n⚠ I don't never eat meat. → I never eat meat.\n⚠ He never doesn't smoke. → He never smokes.\n⚠ Always I drink tea. → I always drink tea.\n⚠ I play every day football. → I play football every day.\n⚠ He usually go to bed at 11. → He usually goes to bed at 11.\n⚠ He often is busy. → He is often busy.\n\n!! Наречие частотности не отменяет правил Present Simple: после *he/she/it* глагол всё равно с -s — *She often **reads**, He never **calls***.",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "Choose the correct sentence.",
+      "options": [
+        "I always get up at seven.",
+        "I get up always at seven.",
+        "Always I get up at seven."
+      ],
+      "answer": 0,
+      "explain": "Наречие частотности стоит перед основным глаголом."
+    },
+    {
+      "type": "choice",
+      "q": "Choose the correct sentence.",
+      "options": [
+        "She always is happy.",
+        "She is always happy.",
+        "She is happy always."
+      ],
+      "answer": 1,
+      "explain": "С глаголом to be наречие стоит после is."
+    },
+    {
+      "type": "choice",
+      "q": "He ___ eats meat. He's a vegetarian.",
+      "options": [
+        "always",
+        "often",
+        "never"
+      ],
+      "answer": 2,
+      "explain": "Вегетарианец никогда не ест мясо — never."
+    },
+    {
+      "type": "choice",
+      "q": "Choose the correct sentence.",
+      "options": [
+        "I don't never drink coffee.",
+        "I never drink coffee.",
+        "I never don't drink coffee."
+      ],
+      "answer": 1,
+      "explain": "Never уже содержит отрицание, don't не нужен."
+    },
+    {
+      "type": "choice",
+      "q": "___ do you play tennis? — Twice a week.",
+      "options": [
+        "How often",
+        "How much",
+        "When often"
+      ],
+      "answer": 0,
+      "explain": "О частоте спрашивают How often."
+    },
+    {
+      "type": "choice",
+      "q": "Choose the correct sentence.",
+      "options": [
+        "They are usually at home in the evening.",
+        "They usually are at home in the evening.",
+        "They are at home usually in the evening."
+      ],
+      "answer": 0,
+      "explain": "Usually ставим после are."
+    },
+    {
+      "type": "input",
+      "q": "My brother usually ___ (go) to bed at eleven.",
+      "answer": [
+        "goes"
+      ],
+      "explain": "Наречие не отменяет -es в 3-м лице: goes."
+    },
+    {
+      "type": "input",
+      "q": "She never ___ (drink) tea.",
+      "answer": [
+        "drinks"
+      ],
+      "explain": "С never глагол в утвердительной форме, в 3-м лице с -s."
+    },
+    {
+      "type": "input",
+      "q": "I ___ (always / be) tired on Mondays.",
+      "answer": [
+        "am always",
+        "'m always"
+      ],
+      "explain": "С to be наречие после am."
+    },
+    {
+      "type": "input",
+      "q": "We ___ (often / watch) films at the weekend.",
+      "answer": [
+        "often watch"
+      ],
+      "explain": "Наречие перед основным глаголом."
+    },
+    {
+      "type": "input",
+      "q": "Tom ___ (sometimes / be) late for school.",
+      "answer": [
+        "is sometimes",
+        "'s sometimes"
+      ],
+      "explain": "Наречие стоит после is."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "My mother always cooks dinner.",
+      "explain": "Подлежащее + always + глагол с -s."
+    },
+    {
+      "type": "order",
+      "q": "Составьте вопрос",
+      "answer": "Do you often go to the cinema?",
+      "explain": "Do + подлежащее + often + глагол."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "The bus is never on time.",
+      "explain": "Never стоит после is."
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "id": "A1_05_present_simple_positive",
+  "level": "A1",
+  "order": 5,
+  "title": "Present Simple: positive",
+  "titleRu": "Present Simple: утверждение",
+  "summary": "Настоящее простое время: когда используется, окончание -s/-es в 3-м лице и правила написания.",
+  "theory": "## Когда используем\n\nPresent Simple — самое «простое» и самое частое время английского. Оно описывает то, что происходит **обычно, регулярно, всегда** — а не прямо сейчас.\n\n- **Привычки и регулярные действия** (что вы делаете каждый день, по выходным, иногда):\n> I get up at seven. — Я встаю в семь.\n> We play football on Sundays. — По воскресеньям мы играем в футбол.\n- **Факты о себе и о жизни**: где живёте, где работаете, что любите:\n> She lives in Minsk. — Она живёт в Минске.\n> My father works in a hospital. — Мой папа работает в больнице.\n> I like coffee. — Я люблю кофе.\n- **Общеизвестные факты и законы природы**:\n> Water boils at 100 degrees. — Вода кипит при 100 градусах.\n> The sun rises in the east. — Солнце встаёт на востоке.\n- **Расписания** (поезда, уроки, фильмы):\n> The train leaves at 8:15. — Поезд отправляется в 8:15.\n\n## Как образуется\n\nУтверждение очень простое: берём глагол в начальной форме (без *to*). Но есть одно важное правило: в **3-м лице единственного числа** (he, she, it, а также Tom, my mother, the dog) к глаголу добавляется окончание **-s** или **-es**.\n\n| Лицо | Глагол | Пример |\n|---|---|---|\n| I | work | I work in an office. |\n| you | work | You work hard. |\n| we / they | work | They work at night. |\n| **he / she / it** | **works** | **She works** in a shop. |\n\n!! В русском глагол меняется для каждого лица (работаю, работаешь, работает…). В английском — только одно изменение: **he / she / it + -s**. Зато его нельзя забывать!\n\n> My sister speaks English. — Моя сестра говорит по-английски.\n> The shop opens at nine. — Магазин открывается в девять.\n> My parents live in a village. — Мои родители живут в деревне. (they — без -s)\n\n## Правила написания -s / -es\n\n| Окончание глагола | Что добавляем | Примеры |\n|---|---|---|\n| большинство глаголов | -s | work → works, read → reads, play → plays |\n| -s, -ss, -sh, -ch, -x, -o | -es | watch → watches, wash → washes, kiss → kisses, go → goes, do → does |\n| согласная + y | y → -ies | study → studies, fly → flies, cry → cries |\n| гласная + y | -s | play → plays, buy → buys, say → says |\n\n### Особый глагол: have → has\n\n| I / you / we / they | he / she / it |\n|---|---|\n| have | **has** |\n\n> I have a brother. She has two sisters. — У меня есть брат. У неё две сестры.\n\n### Произношение окончания\n\n- [s] после глухих звуков: *works, helps, likes*\n- [z] после звонких и гласных: *lives, plays, reads*\n- [ɪz] после шипящих и свистящих: *watches, washes, dances*\n\n## Слова-подсказки\n\nPresent Simple часто идёт со словами, которые показывают регулярность:\n\n| Слово | Перевод |\n|---|---|\n| every day / week / year | каждый день / неделю / год |\n| on Mondays, at weekends | по понедельникам, по выходным |\n| in the morning / evening | утром / вечером |\n| always, usually, often, sometimes, never | всегда, обычно, часто, иногда, никогда |\n| once a week, twice a month | раз в неделю, два раза в месяц |\n\n> I go to the gym twice a week. — Я хожу в спортзал два раза в неделю.\n\n## Типичные ошибки\n\n⚠ She work in a bank. → She works in a bank.\n⚠ He haves a car. → He has a car.\n⚠ My mother watchs TV. → My mother watches TV.\n⚠ He studys English. → He studies English.\n⚠ They lives in Paris. → They live in Paris.\n⚠ I am work in an office. → I work in an office.\n⚠ I am like pizza. → I like pizza.\n⚠ He go to school. → He goes to school.\n\n!! Самая частая ошибка русскоговорящих — лишний am/is/are перед глаголом (*I am work*). Если в предложении есть глагол действия (work, like, live), to be **не нужен**. И проверяйте каждый раз: подлежащее he/she/it? — значит, глагол с -s.",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "My brother ___ in a bank.",
+      "options": [
+        "work",
+        "works",
+        "is work"
+      ],
+      "answer": 1,
+      "explain": "My brother = he, поэтому глагол с -s."
+    },
+    {
+      "type": "choice",
+      "q": "We ___ English at school.",
+      "options": [
+        "study",
+        "studies",
+        "are study"
+      ],
+      "answer": 0,
+      "explain": "С we окончание не добавляется."
+    },
+    {
+      "type": "choice",
+      "q": "She ___ two children.",
+      "options": [
+        "have",
+        "has",
+        "haves"
+      ],
+      "answer": 1,
+      "explain": "Have в 3-м лице — has."
+    },
+    {
+      "type": "choice",
+      "q": "Choose the correct sentence.",
+      "options": [
+        "I am live in Moscow.",
+        "I live in Moscow.",
+        "I lives in Moscow."
+      ],
+      "answer": 1,
+      "explain": "Am не нужен перед глаголом действия, а с I окончание -s не ставится."
+    },
+    {
+      "type": "choice",
+      "q": "The museum ___ at 10 o'clock.",
+      "options": [
+        "open",
+        "opens",
+        "opening"
+      ],
+      "answer": 1,
+      "explain": "The museum = it, поэтому opens."
+    },
+    {
+      "type": "choice",
+      "q": "My parents ___ TV every evening.",
+      "options": [
+        "watch",
+        "watches",
+        "watchs"
+      ],
+      "answer": 0,
+      "explain": "My parents = they, окончание не нужно."
+    },
+    {
+      "type": "input",
+      "q": "He ___ (watch) football on Saturdays.",
+      "answer": [
+        "watches"
+      ],
+      "explain": "После -ch добавляем -es."
+    },
+    {
+      "type": "input",
+      "q": "My sister ___ (study) at university.",
+      "answer": [
+        "studies"
+      ],
+      "explain": "Согласная + y → ies."
+    },
+    {
+      "type": "input",
+      "q": "Tom ___ (play) the guitar very well.",
+      "answer": [
+        "plays"
+      ],
+      "explain": "Гласная + y — просто -s."
+    },
+    {
+      "type": "input",
+      "q": "She ___ (go) to work by bus.",
+      "answer": [
+        "goes"
+      ],
+      "explain": "После -o добавляем -es: goes."
+    },
+    {
+      "type": "input",
+      "q": "My cat ___ (like) fish.",
+      "answer": [
+        "likes"
+      ],
+      "explain": "My cat = it, добавляем -s."
+    },
+    {
+      "type": "input",
+      "q": "Anna ___ (do) her homework in the evening.",
+      "answer": [
+        "does"
+      ],
+      "explain": "Do в 3-м лице — does."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "My father gets up at six every day.",
+      "explain": "Подлежащее + глагол с -s + время."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "We visit our grandparents at weekends.",
+      "explain": "С we глагол без окончания; время — в конце."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "The shop closes at nine in the evening.",
+      "explain": "The shop = it, поэтому closes."
+    }
+  ]
+}

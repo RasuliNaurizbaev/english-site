@@ -1,0 +1,103 @@
+{
+  "questions": [
+    {
+      "type": "tf",
+      "q": "The Parkers bought Max from a pet shop.",
+      "answer": false,
+      "explain": "Неверно: они нашли Макса щенком в коробке у супермаркета."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Max run away?",
+      "options": [
+        "He wanted to play in the rain",
+        "He was frightened by the thunder",
+        "He saw a cat in the garden"
+      ],
+      "answer": 1,
+      "explain": "Макс ненавидел гром и выбежал в открытую дверь после громкого удара грома."
+    },
+    {
+      "type": "choice",
+      "q": "Who had the idea to make posters?",
+      "options": [
+        "Lucy",
+        "Mrs Parker",
+        "Ben"
+      ],
+      "answer": 0,
+      "explain": "Идея сделать плакаты пришла Люси: «Let's make posters»."
+    },
+    {
+      "type": "tf",
+      "q": "The post on social media was shared more than three hundred times.",
+      "answer": true,
+      "explain": "Верно: к вечеру пост поделили более трёхсот раз."
+    },
+    {
+      "type": "choice",
+      "q": "What did the dog near the train station look like?",
+      "options": [
+        "Big and brown",
+        "Grey with a scar",
+        "Small with a red collar"
+      ],
+      "answer": 2,
+      "explain": "Это была другая собака — маленькая, с красным ошейником."
+    },
+    {
+      "type": "choice",
+      "q": "What did Lucy keep in her bag when she felt sad?",
+      "options": [
+        "A photo of Max",
+        "Max's old blue ball",
+        "Max's collar"
+      ],
+      "answer": 1,
+      "explain": "Люси носила в сумке старый синий мячик Макса."
+    },
+    {
+      "type": "tf",
+      "q": "Mrs Holmes said that Max was hurting her sheep.",
+      "answer": false,
+      "explain": "Неверно: она написала, что пёс не обижает овец, а как будто охраняет их."
+    },
+    {
+      "type": "choice",
+      "q": "In the story, Max was \"guarding\" the sheep. What does \"guarding\" mean here?",
+      "options": [
+        "Eating",
+        "Chasing away",
+        "Protecting and watching"
+      ],
+      "answer": 2,
+      "explain": "«Guard» значит «охранять»: Макс лежал и внимательно следил за овцами."
+    },
+    {
+      "type": "tf",
+      "q": "Mrs Holmes wanted to buy Max.",
+      "answer": true,
+      "explain": "Верно: она сказала, что купила бы его, если бы его продавали."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Mrs Parker put a new collar with a metal tag on Max?",
+      "options": [
+        "So people could call the family if he got lost again",
+        "Because the old collar was too small",
+        "Because Mrs Holmes asked her to"
+      ],
+      "answer": 0,
+      "explain": "На жетоне были имя Макса и номер телефона семьи — на случай, если он снова потеряется."
+    }
+  ],
+  "retell": [
+    "Who are the Parkers, and how did they get Max?",
+    "What happened on the stormy evening in October?",
+    "How did the family search for Max on the first day?",
+    "What did they do with posters and social media?",
+    "What happened when people called them?",
+    "What did Mrs Holmes write, and what did the family see at the farm?",
+    "How did the story end?"
+  ]
+}

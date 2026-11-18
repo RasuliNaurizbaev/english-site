@@ -1,0 +1,153 @@
+{
+  "id": "B1_13_reported_questions_commands",
+  "level": "B1",
+  "order": 13,
+  "title": "Reported questions and requests",
+  "titleRu": "Косвенные вопросы, просьбы и приказы",
+  "summary": "Как пересказать вопрос (if/whether, прямой порядок слов) и просьбу или приказ (ask/tell sb to do).",
+  "theory": "## Когда используем\n\nВ прошлой теме мы пересказывали утверждения. Теперь научимся пересказывать **вопросы** («Он спросил, где я живу») и **просьбы/приказы** («Она попросила меня закрыть окно»).\n\n## Косвенные вопросы\n\n### Главное правило: прямой порядок слов\nВ косвенном вопросе порядок слов **как в утверждении**: подлежащее + глагол. Вспомогательные **do / does / did не используются**, вопросительного знака нет.\n\n> \"Where do you live?\" → He asked me where I lived. — Он спросил, где я живу.\n> \"What are you doing?\" → She asked what I was doing. — Она спросила, что я делаю.\n> \"When did you arrive?\" → They asked when I had arrived. — Они спросили, когда я приехал.\n\nВремя сдвигается так же, как в утверждениях (Present → Past, will → would и т.д.).\n\n### Специальные вопросы (wh-questions)\n**asked (+ кого) + вопросительное слово + подлежащее + глагол**\n\n| Прямой вопрос | Косвенный вопрос |\n|---|---|\n| \"Where **is** the station?\" | She asked where the station **was**. |\n| \"How old **are** you?\" | He asked me how old I **was**. |\n| \"What time **does** the film start?\" | I asked what time the film **started**. |\n| \"Why **did** you leave?\" | She asked why I **had left**. |\n| \"Who **can** help me?\" | He asked who **could** help him. |\n\n### Общие вопросы (yes/no) — if или whether\nЕсли в вопросе нет вопросительного слова, добавляем **if** или **whether** («ли»).\n\n| Прямой вопрос | Косвенный вопрос |\n|---|---|\n| \"**Are** you tired?\" | He asked **if** I **was** tired. — Он спросил, устал ли я. |\n| \"**Do** you like coffee?\" | She asked **whether** I **liked** coffee. |\n| \"**Have** you seen my keys?\" | Mum asked **if** I **had seen** her keys. |\n| \"**Will** you help me?\" | He asked **if** I **would** help him. |\n\n**whether** чуть официальнее и часто используется с **or not**: *She asked whether or not I was coming.*\n\n!! В русском «ли» стоит после глагола («устал **ли** я»), а в английском **if / whether** стоит **в начале** придаточного: *asked if I was tired*.\n\n### Вежливые вопросы в настоящем\nТот же порядок слов используется в вежливых вопросах (без сдвига времени):\n> Could you tell me where the station is? — Не подскажете, где вокзал? (НЕ *where is the station*)\n> Do you know what time it is? — Вы не знаете, который час?\n> I wonder if she is at home. — Интересно, дома ли она.\n\n## Косвенные просьбы и приказы\n\n### Формула: глагол + кого + (not) to + V1\n> \"Close the window, please.\" → She asked me to close the window. — Она попросила меня закрыть окно.\n> \"Don't be late!\" → The teacher told us not to be late. — Учитель сказал нам не опаздывать.\n\n| Прямая речь | Косвенная речь |\n|---|---|\n| \"Please help me.\" | He **asked** me **to help** him. |\n| \"Sit down!\" | She **told** me **to sit** down. |\n| \"Don't touch it!\" | He **told** me **not to touch** it. |\n| \"Don't worry.\" | She **asked** us **not to worry**. |\n\n- **ask** — для просьб (please)\n- **tell** — для приказов, указаний\n- отрицание: **not to** + V1 (НЕ *don't to*)\n\nДругие глаголы с той же конструкцией: *advise* (советовать), *remind* (напоминать), *warn* (предупреждать), *invite* (приглашать), *order* (приказывать).\n> The doctor advised me to rest. — Врач посоветовал мне отдохнуть.\n> She reminded me to buy milk. — Она напомнила мне купить молоко.\n\n## Сравните\n\n| Тип | Формула | Пример |\n|---|---|---|\n| Утверждение | said / told sb + (that) + clause | He told me (that) he was busy. |\n| Wh-вопрос | asked + wh-word + S + V | He asked where I worked. |\n| Yes/no вопрос | asked + if/whether + S + V | He asked if I worked there. |\n| Просьба | asked sb + to + V1 | He asked me to wait. |\n| Приказ | told sb + (not) to + V1 | He told me not to wait. |\n\n### Русская «чтобы» не переводится\n«Она попросила, **чтобы** я пришёл» → *She asked me to come.* (НЕ *She asked that I come*)\n\n## Типичные ошибки\n\n⚠ He asked me where do I live. → He asked me where I lived.\n⚠ She asked me what was I doing. → She asked me what I was doing.\n⚠ He asked me do I like coffee. → He asked me if I liked coffee.\n⚠ She asked me that I close the window. → She asked me to close the window.\n⚠ He told me don't touch it. → He told me not to touch it.\n⚠ She said me to wait. → She told me to wait.\n⚠ Can you tell me where is the bank? → Can you tell me where the bank is?\n⚠ He asked if I was tired? → He asked if I was tired. (без вопросительного знака)\n\n!! Косвенный вопрос — это уже **не вопрос**, а утверждение о вопросе. Поэтому: прямой порядок слов, никаких do/does/did, в конце точка.",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "\"Where do you live?\" → He asked me where ___.",
+      "options": [
+        "do I live",
+        "I lived",
+        "did I live"
+      ],
+      "answer": 1,
+      "explain": "В косвенном вопросе прямой порядок слов и сдвиг времени: I lived."
+    },
+    {
+      "type": "choice",
+      "q": "\"Are you tired?\" → She asked me ___ I was tired.",
+      "options": [
+        "that",
+        "if",
+        "do"
+      ],
+      "answer": 1,
+      "explain": "Общий вопрос (yes/no) пересказываем с if/whether."
+    },
+    {
+      "type": "choice",
+      "q": "\"Please close the door.\" → She asked me ___ the door.",
+      "options": [
+        "close",
+        "to close",
+        "closing"
+      ],
+      "answer": 1,
+      "explain": "Просьба: ask + кого + to + V1."
+    },
+    {
+      "type": "choice",
+      "q": "\"Don't be late!\" → The teacher told us ___ late.",
+      "options": [
+        "not to be",
+        "don't be",
+        "to not being"
+      ],
+      "answer": 0,
+      "explain": "Отрицательный приказ: tell + кого + not to + V1."
+    },
+    {
+      "type": "choice",
+      "q": "Excuse me, could you tell me where ___?",
+      "options": [
+        "is the station",
+        "the station is",
+        "does the station be"
+      ],
+      "answer": 1,
+      "explain": "В вежливом косвенном вопросе прямой порядок: the station is."
+    },
+    {
+      "type": "choice",
+      "q": "She ___ me to wait outside.",
+      "options": [
+        "said",
+        "told",
+        "spoke"
+      ],
+      "answer": 1,
+      "explain": "Приказ с «кому» — told + кого + to + V1."
+    },
+    {
+      "type": "input",
+      "q": "\"What are you doing?\" → Mum asked me what I ___. (do)",
+      "answer": [
+        "was doing"
+      ],
+      "explain": "Present Continuous сдвигается в Past Continuous, порядок прямой."
+    },
+    {
+      "type": "input",
+      "q": "\"Do you like coffee?\" → He asked me ___ coffee. (I / like) — начните с if",
+      "answer": [
+        "if I liked",
+        "whether I liked"
+      ],
+      "explain": "Yes/no-вопрос пересказываем с if/whether, прямой порядок и сдвиг времени: if I liked."
+    },
+    {
+      "type": "input",
+      "q": "\"Help me, please!\" → She asked me ___ her. (help)",
+      "answer": [
+        "to help"
+      ],
+      "explain": "Просьба: asked + кого + to + V1."
+    },
+    {
+      "type": "input",
+      "q": "\"Don't touch the paintings!\" → The guide told us ___ the paintings. (touch)",
+      "answer": [
+        "not to touch"
+      ],
+      "explain": "Запрет передаём через not to + V1."
+    },
+    {
+      "type": "input",
+      "q": "\"Have you seen my keys?\" → Dad asked if I ___ his keys. (see)",
+      "answer": [
+        "had seen",
+        "'d seen"
+      ],
+      "explain": "Present Perfect в косвенном вопросе сдвигается в Past Perfect."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "He asked me where I worked.",
+      "explain": "asked + кого + where + подлежащее + глагол (прямой порядок)."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "The doctor advised me to rest.",
+      "explain": "advise + кого + to + V1."
+    },
+    {
+      "type": "choice",
+      "q": "\"When did you arrive?\" → They asked me when ___.",
+      "options": [
+        "did I arrive",
+        "I had arrived",
+        "had I arrived"
+      ],
+      "answer": 1,
+      "explain": "Прямой порядок слов и сдвиг Past Simple → Past Perfect."
+    },
+    {
+      "type": "choice",
+      "q": "Which sentence is correct?",
+      "options": [
+        "She asked me that I come early.",
+        "She asked me to come early.",
+        "She asked me come early."
+      ],
+      "answer": 1,
+      "explain": "Русское «попросила, чтобы» = asked sb to + V1."
+    }
+  ]
+}

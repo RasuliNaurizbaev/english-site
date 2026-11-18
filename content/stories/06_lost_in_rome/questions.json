@@ -1,0 +1,101 @@
+{
+  "questions": [
+    {
+      "type": "tf",
+      "q": "Daniel spoke Italian well.",
+      "answer": false,
+      "explain": "Неверно: Дэниел немного волновался, потому что не говорил по-итальянски."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Daniel decide to walk to the church?",
+      "options": [
+        "He had no money for a taxi",
+        "The weather was lovely and he wanted to see the streets",
+        "The buses didn't work"
+      ],
+      "answer": 1,
+      "explain": "Погода была прекрасной, и он хотел посмотреть узкие улочки и площади."
+    },
+    {
+      "type": "choice",
+      "q": "Why couldn't Daniel use his phone?",
+      "options": [
+        "The battery was empty",
+        "He left it at the hotel",
+        "There was no internet"
+      ],
+      "answer": 0,
+      "explain": "Батарея села — он забыл зарядить телефон накануне вечером."
+    },
+    {
+      "type": "tf",
+      "q": "Daniel was hot, hungry and thirsty when he was lost.",
+      "answer": true,
+      "explain": "Верно: «It was hot, and he was hungry and thirsty»."
+    },
+    {
+      "type": "choice",
+      "q": "Where did Daniel meet the old man?",
+      "options": [
+        "At a market",
+        "In the church",
+        "At a small café on a corner"
+      ],
+      "answer": 2,
+      "explain": "Старик сидел за столиком у маленького кафе на углу и читал газету."
+    },
+    {
+      "type": "choice",
+      "q": "Who was Marco?",
+      "options": [
+        "A tour guide",
+        "A retired teacher",
+        "A waiter at the café"
+      ],
+      "answer": 1,
+      "explain": "Марко был учителем на пенсии, а его сын жил в Лондоне."
+    },
+    {
+      "type": "choice",
+      "q": "In the story, Marco was a 'retired' teacher. 'Retired' means…",
+      "options": [
+        "he is a new teacher",
+        "he is very tired",
+        "he doesn't work any more because he is older"
+      ],
+      "answer": 2,
+      "explain": "«Retired» — на пенсии, человек больше не работает по возрасту."
+    },
+    {
+      "type": "tf",
+      "q": "The church was very far from the café.",
+      "answer": false,
+      "explain": "Неверно: Марко сказал «it's very near», до церкви было всего десять минут."
+    },
+    {
+      "type": "choice",
+      "q": "What was the best part of Daniel's day?",
+      "options": [
+        "Visiting the church",
+        "The conversation with Marco",
+        "Taking photos"
+      ],
+      "answer": 1,
+      "explain": "Дэниел решил, что лучшей частью дня был не осмотр достопримечательностей, а разговор с Марко."
+    },
+    {
+      "type": "tf",
+      "q": "Daniel sent Marco a card when he got back home.",
+      "answer": true,
+      "explain": "Верно: вернувшись домой, Дэниел отправил Марко открытку."
+    }
+  ],
+  "retell": [
+    "Who is Daniel, and where did he go last summer?",
+    "Where did Daniel want to go on the third day, and why did he get lost?",
+    "How did Daniel feel when he was lost?",
+    "Who helped Daniel, and what did they do together?",
+    "What two things does Daniel always remember now?"
+  ]
+}

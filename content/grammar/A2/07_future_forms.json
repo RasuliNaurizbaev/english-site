@@ -1,0 +1,152 @@
+{
+  "id": "A2_07_future_forms",
+  "level": "A2",
+  "order": 7,
+  "title": "Future forms: will, be going to, Present Continuous",
+  "titleRu": "Способы выражения будущего",
+  "summary": "Как выбрать между will, be going to и Present Continuous, говоря о решениях, планах, договорённостях, обещаниях и предсказаниях.",
+  "theory": "## Когда используем\n\nВ русском будущее время одно («я пойду», «я буду делать»). В английском для будущего есть несколько способов, и выбор зависит от того, **когда было принято решение** и **насколько всё уже спланировано**.\n\n### will — решение в момент речи, обещание, предложение, предсказание-мнение\n\n- **спонтанное решение** (решил прямо сейчас):\n> — It's cold in here. — I'll close the window. — Здесь холодно. — Я закрою окно.\n- **обещание**:\n> I'll call you tomorrow, I promise. — Я позвоню тебе завтра, обещаю.\n- **предложение помощи**:\n> That bag looks heavy. I'll help you. — Сумка выглядит тяжёлой. Я помогу.\n- **предсказание** на основе мнения (I think, probably, I'm sure):\n> I think it will be a great party. — Думаю, вечеринка будет отличная.\n- факты о будущем:\n> I'll be 30 next year. — В следующем году мне будет 30.\n\n### be going to — намерение (решили заранее), предсказание по признакам\n\n- **намерение, план**, решение уже принято до разговора:\n> I'm going to learn Spanish next year. — Я собираюсь учить испанский в следующем году.\n- **предсказание по тому, что видим сейчас**:\n> Look at those black clouds! It's going to rain. — Смотри на эти тучи! Сейчас будет дождь.\n\n### Present Continuous — договорённость, точное расписание личных планов\n\n- **уже организовано**: есть время, место, билеты, другие люди в курсе:\n> I'm meeting Anna at 6 tonight. — Я встречаюсь с Анной сегодня в 6.\n> We're flying to Rome on Friday. — В пятницу мы летим в Рим (билеты куплены).\n\n!! Шкала уверенности: will (решаю сейчас / думаю) → going to (решил раньше, намерение) → Present Continuous (всё договорено, есть в календаре).\n\n## Как образуется\n\n### will\n\n| | Форма | Пример |\n|---|---|---|\n| + | подлежащее + **will** + V1 | She will help. (She'll help) |\n| − | **won't** (will not) + V1 | I won't tell anyone. |\n| ? | **Will** + подлежащее + V1? | Will you come? — Yes, I will. / No, I won't. |\n\nWill одинаков для всех лиц, после него — глагол без to и без -s.\n\n### be going to\n\n| | Форма | Пример |\n|---|---|---|\n| + | am / is / are + going to + V1 | I'm going to cook. |\n| − | 'm not / isn't / aren't + going to + V1 | He isn't going to come. |\n| ? | Am / Is / Are + подлежащее + going to + V1? | Are you going to buy it? |\n\n### Present Continuous для будущего\n\n| | Пример |\n|---|---|\n| + | I'm seeing the doctor tomorrow. |\n| − | We aren't working on Saturday. |\n| ? | What are you doing this weekend? |\n\n!! Самый естественный вопрос о чужих планах: **What are you doing tonight / this weekend?** — Что делаешь сегодня вечером / на выходных?\n\n## Сравните\n\n| Ситуация | Форма | Пример |\n|---|---|---|\n| Звонит телефон: «Я возьму!» | will | I'll get it! |\n| Давно решил купить машину | going to | I'm going to buy a car. |\n| Встреча с врачом записана на 10:00 | Pres. Continuous | I'm seeing the doctor at 10. |\n| Мнение о будущем | will | I think he'll win. |\n| Видим признаки | going to | Be careful! You're going to fall! |\n\n> — We haven't got any milk. — Oh, I'll buy some. (решение сейчас)\n> — Why are you taking your bag? — I'm going to buy some milk. (решил заранее)\n\n## Слова-подсказки\n\n- will: **I think, I'm sure, probably, maybe, I promise, I hope**\n- going to: **look!, be careful!**; намерения: next year, one day\n- Present Continuous: **tonight, tomorrow at 5, on Friday, this weekend** + договорённость с людьми\n\n## Будущее время и расписание\n\nДля расписаний транспорта, кино, уроков используем **Present Simple**:\n> The train leaves at 7.15. — Поезд отправляется в 7:15.\n> The film starts at 8. — Фильм начинается в 8.\n\n## Типичные ошибки\n\n⚠ I will to call you. → I will call you.\n⚠ She wills come. → She will come.\n⚠ I going to buy a car. → I'm going to buy a car. (без am/is/are нельзя)\n⚠ — The phone is ringing. — I'm going to answer it. → I'll answer it. (решение в момент речи)\n⚠ I will meet my friend tonight, we booked a table. → I'm meeting my friend tonight. (договорённость)\n⚠ Look at the clouds! It will rain. → It's going to rain. (видим признаки — going to)\n⚠ Will you to help me? → Will you help me?\n\n!! Если сомневаетесь в разговоре — **going to** для планов и **will** для решений «на ходу» почти всегда звучат естественно.",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "— I'm thirsty. — Wait, I ___ you some water.",
+      "options": [
+        "'ll get",
+        "am getting",
+        "am going to get"
+      ],
+      "answer": 0,
+      "explain": "Решение, принятое в момент речи, — will ('ll get)."
+    },
+    {
+      "type": "choice",
+      "q": "Look at the sky! It ___ rain.",
+      "options": [
+        "will",
+        "is going to",
+        "rains"
+      ],
+      "answer": 1,
+      "explain": "Предсказание по видимым признакам — be going to."
+    },
+    {
+      "type": "choice",
+      "q": "I ___ my dentist at 10 tomorrow. I made an appointment last week.",
+      "options": [
+        "see",
+        "will see",
+        "am seeing"
+      ],
+      "answer": 2,
+      "explain": "Договорённость с точным временем — Present Continuous."
+    },
+    {
+      "type": "choice",
+      "q": "I promise I ___ late again.",
+      "options": [
+        "won't be",
+        "am not being",
+        "am not going to being"
+      ],
+      "answer": 0,
+      "explain": "Обещание — will; в отрицании won't be."
+    },
+    {
+      "type": "choice",
+      "q": "I think Spain ___ the match tonight.",
+      "options": [
+        "will win",
+        "is winning",
+        "wins"
+      ],
+      "answer": 0,
+      "explain": "Мнение о будущем после I think — will."
+    },
+    {
+      "type": "choice",
+      "q": "We ___ a new car next year. We've saved the money.",
+      "options": [
+        "will buy",
+        "are going to buy",
+        "buy"
+      ],
+      "answer": 1,
+      "explain": "Намерение, решение принято заранее — going to."
+    },
+    {
+      "type": "input",
+      "q": "— The phone is ringing. — OK, I ___ (answer) it.",
+      "answer": [
+        "'ll answer",
+        "will answer"
+      ],
+      "explain": "Решение в момент речи — will answer."
+    },
+    {
+      "type": "input",
+      "q": "She ___ (not / go) to the party. She has decided to stay at home.",
+      "answer": [
+        "isn't going to go",
+        "is not going to go",
+        "'s not going to go"
+      ],
+      "explain": "Решение принято заранее — отрицание с going to."
+    },
+    {
+      "type": "input",
+      "q": "What ___ (you / do) this weekend? Have you got any plans?",
+      "answer": [
+        "are you doing",
+        "are you going to do"
+      ],
+      "explain": "Вопрос о планах — Present Continuous или going to."
+    },
+    {
+      "type": "input",
+      "q": "Don't worry, I ___ (not / tell) anyone your secret.",
+      "answer": [
+        "won't tell",
+        "will not tell"
+      ],
+      "explain": "Обещание — won't tell."
+    },
+    {
+      "type": "input",
+      "q": "Be careful! That glass ___ (fall) off the table!",
+      "answer": [
+        "is going to fall",
+        "'s going to fall"
+      ],
+      "explain": "Видим, что сейчас случится — going to."
+    },
+    {
+      "type": "choice",
+      "q": "The train ___ at 6.30 tomorrow morning, so don't be late.",
+      "options": [
+        "leaves",
+        "will leaving",
+        "is going leave"
+      ],
+      "answer": 0,
+      "explain": "Расписание транспорта — Present Simple."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "I'm going to learn Spanish next year.",
+      "explain": "Am + going to + V1 — намерение."
+    },
+    {
+      "type": "order",
+      "q": "Составьте вопрос",
+      "answer": "Will you help me with this bag?",
+      "explain": "Will + подлежащее + V1 — просьба."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "We are meeting our friends on Saturday.",
+      "explain": "Present Continuous для договорённости."
+    }
+  ]
+}

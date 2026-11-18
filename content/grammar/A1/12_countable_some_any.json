@@ -1,0 +1,147 @@
+{
+  "id": "A1_12_countable_some_any",
+  "level": "A1",
+  "order": 12,
+  "title": "Countable and uncountable nouns: some / any, much / many",
+  "titleRu": "Исчисляемые и неисчисляемые, some / any",
+  "summary": "Исчисляемые и неисчисляемые существительные, some/any, much/many/a lot of, вопросы How much / How many.",
+  "theory": "## Исчисляемые и неисчисляемые существительные\n\nВ английском все существительные делятся на две группы, и от этого зависит, какие слова мы ставим рядом с ними.\n\n### Исчисляемые (countable)\n\nТо, что можно посчитать поштучно: одно яблоко, два яблока. У них есть **единственное и множественное число**, а в единственном числе нужен артикль **a/an**.\n\n> an apple — two apples, a chair — three chairs, a friend — many friends\n\n### Неисчисляемые (uncountable)\n\nТо, что нельзя посчитать поштучно: жидкости, вещества, продукты «массой», абстрактные понятия. У них **нет множественного числа** и нет артикля a/an. Глагол всегда в единственном числе.\n\n| Группа | Примеры |\n|---|---|\n| Жидкости | water, milk, juice, tea, coffee, oil |\n| Продукты | bread, cheese, butter, rice, sugar, salt, meat, pasta |\n| Вещества | money, paper, time, music, weather |\n| Абстрактные | advice, information, news, help, love, homework, work |\n\n> The water is cold. — Вода холодная.\n> Money isn't everything. — Деньги — это не всё.\n\n!! Осторожно: некоторые слова, исчисляемые в русском, в английском **неисчисляемые**: *advice* (советы), *information* (информация, сведения), *news* (новости), *money* (деньги), *furniture* (мебель), *hair* (волосы). Говорим: *The news **is** good*, *Your hair **is** beautiful*.\n\n### Как посчитать неисчисляемое?\n\nС помощью «единиц»:\n\n> a bottle of water — бутылка воды\n> a cup of tea — чашка чая\n> a glass of milk — стакан молока\n> a piece of cake — кусок торта\n> a loaf of bread — буханка хлеба\n> a kilo of apples — килограмм яблок\n\n## Some и any\n\n**Some** и **any** означают «немного, несколько, какое-то количество». Используются с **неисчисляемыми** и с **исчисляемыми во множественном числе**. Часто на русский не переводятся.\n\n| | Some | Any |\n|---|---|---|\n| Утверждение (+) | There is some milk. | — |\n| Отрицание (−) | — | There isn't any milk. |\n| Вопрос (?) | Would you like some tea? (предложение, просьба) | Is there any milk? |\n\n> I have some friends in London. — У меня есть несколько друзей в Лондоне.\n> We don't have any bread. — У нас нет хлеба.\n> Are there any eggs? — Яйца есть?\n> Can I have some water, please? — Можно мне воды? (просьба — some)\n\n!! С исчисляемыми в **единственном** числе some/any не используем, нужен a/an: *Is there a bank?* (не *any bank*).\n\n## Much, many, a lot of\n\nВсе три слова значат «много», но используются по-разному.\n\n| Слово | С чем | Где обычно | Пример |\n|---|---|---|---|\n| many | исчисляемые (мн. ч.) | вопросы, отрицания | I don't have many friends. |\n| much | неисчисляемые | вопросы, отрицания | There isn't much time. |\n| a lot of / lots of | любые | чаще в утверждениях | I have a lot of books. She drinks a lot of water. |\n\n> We don't have much money. — У нас мало денег (немного).\n> Are there many people at the party? — На вечеринке много людей?\n> There are a lot of cars in the street. — На улице много машин.\n\n!! В утвердительных предложениях *much* звучит неестественно: лучше **I drink a lot of coffee**, а не *I drink much coffee*.\n\n## How much / How many\n\n| Вопрос | С чем | Пример |\n|---|---|---|\n| How many…? | исчисляемые (мн. ч.) | How many brothers do you have? — Сколько у тебя братьев? |\n| How much…? | неисчисляемые | How much sugar do you want? — Сколько сахара ты хочешь? |\n| How much…? | цена | How much is this T-shirt? — Сколько стоит эта футболка? |\n\n## Типичные ошибки\n\n⚠ I need an advice. → I need some advice. / I need a piece of advice.\n⚠ The news are good. → The news is good.\n⚠ two breads → two loaves of bread\n⚠ How many money do you have? → How much money do you have?\n⚠ There isn't some milk. → There isn't any milk.\n⚠ I have much friends. → I have a lot of friends.\n⚠ informations → information\n⚠ Her hairs are long. → Her hair is long.\n⚠ Is there any supermarket near here? → Is there a supermarket near here?\n\n!! Перед тем как выбрать much или many, спросите себя: «Можно ли это посчитать поштучно?» Да → **many / How many**. Нет → **much / How much**. Сомневаетесь — в утверждении смело говорите **a lot of**.",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "There isn't ___ milk in the fridge.",
+      "options": [
+        "some",
+        "any",
+        "a"
+      ],
+      "answer": 1,
+      "explain": "В отрицании используем any."
+    },
+    {
+      "type": "choice",
+      "q": "I'd like ___ water, please.",
+      "options": [
+        "some",
+        "any",
+        "a"
+      ],
+      "answer": 0,
+      "explain": "В просьбах и предложениях используем some."
+    },
+    {
+      "type": "choice",
+      "q": "How ___ apples do you want?",
+      "options": [
+        "much",
+        "many",
+        "lot"
+      ],
+      "answer": 1,
+      "explain": "Apples исчисляемые — How many."
+    },
+    {
+      "type": "choice",
+      "q": "How ___ is this jacket?",
+      "options": [
+        "much",
+        "many",
+        "lot of"
+      ],
+      "answer": 0,
+      "explain": "Вопрос о цене — How much."
+    },
+    {
+      "type": "choice",
+      "q": "I don't have ___ time today.",
+      "options": [
+        "many",
+        "much",
+        "a"
+      ],
+      "answer": 1,
+      "explain": "Time неисчисляемое, отрицание — much."
+    },
+    {
+      "type": "choice",
+      "q": "Choose the correct sentence.",
+      "options": [
+        "The news are bad.",
+        "The news is bad.",
+        "The newses are bad."
+      ],
+      "answer": 1,
+      "explain": "News — неисчисляемое, глагол в единственном числе."
+    },
+    {
+      "type": "choice",
+      "q": "Can you give me ___ advice?",
+      "options": [
+        "an",
+        "some",
+        "many"
+      ],
+      "answer": 1,
+      "explain": "Advice неисчисляемое, с ним нельзя an и many; в просьбе — some."
+    },
+    {
+      "type": "input",
+      "q": "How ___ sugar do you take in your coffee?",
+      "answer": [
+        "much"
+      ],
+      "explain": "Sugar неисчисляемое — How much."
+    },
+    {
+      "type": "input",
+      "q": "There are ___ (много) people in the park today.",
+      "answer": [
+        "a lot of",
+        "lots of"
+      ],
+      "explain": "В утверждении «много» — a lot of."
+    },
+    {
+      "type": "input",
+      "q": "Are there ___ eggs in the fridge?",
+      "answer": [
+        "any"
+      ],
+      "explain": "В вопросе с мн. числом используем any."
+    },
+    {
+      "type": "input",
+      "q": "We have ___ (немного) bread, but we don't have any cheese.",
+      "answer": [
+        "some"
+      ],
+      "explain": "В утверждении «немного, какое-то количество» — some."
+    },
+    {
+      "type": "input",
+      "q": "I drink a ___ (стакан) of milk every morning.",
+      "answer": [
+        "glass"
+      ],
+      "explain": "Молоко неисчисляемое, считаем стаканами: a glass of milk."
+    },
+    {
+      "type": "order",
+      "q": "Составьте вопрос",
+      "answer": "How many brothers do you have?",
+      "explain": "Brothers исчисляемые — How many."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "We don't have much money.",
+      "explain": "Money неисчисляемое, в отрицании — much."
+    },
+    {
+      "type": "order",
+      "q": "Составьте вопрос",
+      "answer": "Is there any juice in the bottle?",
+      "explain": "Juice неисчисляемое, вопрос с any и is."
+    }
+  ]
+}

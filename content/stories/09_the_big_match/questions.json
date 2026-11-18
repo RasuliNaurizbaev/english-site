@@ -1,0 +1,101 @@
+{
+  "questions": [
+    {
+      "type": "tf",
+      "q": "Leo practises football three times a week.",
+      "answer": true,
+      "explain": "Верно: Лео тренируется три раза в неделю после уроков."
+    },
+    {
+      "type": "choice",
+      "q": "Where was the final?",
+      "options": [
+        "At Leo's school",
+        "At the city stadium",
+        "In the park"
+      ],
+      "answer": 1,
+      "explain": "Финал проходил в субботу на городском стадионе."
+    },
+    {
+      "type": "choice",
+      "q": "What did Mr Wilson tell the team on Friday?",
+      "options": [
+        "Go to bed early, eat a good breakfast and don't be late",
+        "Practise all night",
+        "Don't worry, the other team is weak"
+      ],
+      "answer": 0,
+      "explain": "Тренер советовал рано лечь, хорошо позавтракать и не опаздывать, и предупредил, что соперник сильный."
+    },
+    {
+      "type": "tf",
+      "q": "Leo's team scored the first goal of the match.",
+      "answer": false,
+      "explain": "Неверно: первый гол через десять минут забила другая команда."
+    },
+    {
+      "type": "choice",
+      "q": "Why were the players sad and angry in the break?",
+      "options": [
+        "The coach shouted at them",
+        "The other team scored two goals",
+        "Leo was hurt"
+      ],
+      "answer": 1,
+      "explain": "К перерыву соперники забили два гола."
+    },
+    {
+      "type": "choice",
+      "q": "Who scored the first two goals for Leo's team?",
+      "options": [
+        "Leo",
+        "Leo's brother",
+        "Omar"
+      ],
+      "answer": 2,
+      "explain": "Оба гола забил лучший друг Лео — Омар, второй головой после подачи Лео."
+    },
+    {
+      "type": "choice",
+      "q": "In the story, 'the crowd went crazy'. 'The crowd' is…",
+      "options": [
+        "the other team's players",
+        "the coach and his helpers",
+        "the people who are watching the match"
+      ],
+      "answer": 2,
+      "explain": "«The crowd» — толпа зрителей на стадионе."
+    },
+    {
+      "type": "tf",
+      "q": "Leo scored the winning goal in the ninetieth minute.",
+      "answer": true,
+      "explain": "Верно: на девяностой минуте Лео обвёл двух игроков и забил."
+    },
+    {
+      "type": "choice",
+      "q": "What was the final score?",
+      "options": [
+        "Three to two",
+        "Two to two",
+        "Three to one"
+      ],
+      "answer": 0,
+      "explain": "Команда Лео победила со счётом три–два."
+    },
+    {
+      "type": "tf",
+      "q": "After the match, the team had dinner at Mr Wilson's house.",
+      "answer": false,
+      "explain": "Неверно: вечером команда ела пиццу в местном ресторане."
+    }
+  ],
+  "retell": [
+    "Who is Leo, and what does he do?",
+    "What did Mr Wilson say to the team before the final?",
+    "What happened in the first half and in the break?",
+    "How did the team play in the second half?",
+    "Who scored the last goal, and what did Mr Wilson say after the match?"
+  ]
+}

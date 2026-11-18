@@ -1,0 +1,101 @@
+{
+  "questions": [
+    {
+      "type": "tf",
+      "q": "Jack wanted to go hiking in the hills with his friends.",
+      "answer": true,
+      "explain": "Верно: Джек хотел пойти в поход по холмам с друзьями и устроить пикник у озера."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Jack and his friends cancel the trip?",
+      "options": [
+        "Jack was ill",
+        "The weather was bad: rain, wind and a storm",
+        "His friends were busy"
+      ],
+      "answer": 1,
+      "explain": "Прогноз обещал дождь все выходные, сильный ветер и грозу."
+    },
+    {
+      "type": "tf",
+      "q": "Jack enjoyed playing a computer game alone.",
+      "answer": false,
+      "explain": "Неверно: играть одному было неинтересно (it wasn't fun alone)."
+    },
+    {
+      "type": "choice",
+      "q": "Who had the idea to make a film?",
+      "options": [
+        "Jack",
+        "Their mother",
+        "His sister Mia"
+      ],
+      "answer": 2,
+      "explain": "Идея снять фильм принадлежала восьмилетней сестре Миа."
+    },
+    {
+      "type": "choice",
+      "q": "In the story, Mia wrote about 'a brave cat'. 'Brave' means…",
+      "options": [
+        "very lazy",
+        "not afraid",
+        "very small"
+      ],
+      "answer": 1,
+      "explain": "«Brave» — храбрый, не боящийся."
+    },
+    {
+      "type": "choice",
+      "q": "Who was the star of the film?",
+      "options": [
+        "Snowy, their cat",
+        "Mia",
+        "Jack"
+      ],
+      "answer": 0,
+      "explain": "Звездой фильма была их кошка Сноуи, хотя она хотела только спать."
+    },
+    {
+      "type": "choice",
+      "q": "What did they use to build a ship?",
+      "options": [
+        "Chairs and a table",
+        "Wood and paper",
+        "Blankets, pillows and boxes"
+      ],
+      "answer": 2,
+      "explain": "Корабль в гостиной построили из одеял, подушек и коробок."
+    },
+    {
+      "type": "tf",
+      "q": "The film was two hours long.",
+      "answer": false,
+      "explain": "Неверно: фильм длился всего десять минут, хотя работа заняла целый день."
+    },
+    {
+      "type": "tf",
+      "q": "Jack's parents laughed a lot when they watched the film.",
+      "answer": true,
+      "explain": "Верно: родители смеялись так сильно, что мама даже заплакала."
+    },
+    {
+      "type": "choice",
+      "q": "How many people had watched the video by Monday?",
+      "options": [
+        "Fifty",
+        "Five hundred",
+        "Five thousand"
+      ],
+      "answer": 1,
+      "explain": "К понедельнику видео посмотрели пятьсот человек."
+    }
+  ],
+  "retell": [
+    "What were Jack's plans for the weekend, and why did they change?",
+    "What did Jack do at home at first?",
+    "What idea did Mia have, and what was the film about?",
+    "How did Jack and Mia make the film?",
+    "What happened when they showed the film to their parents and put it online?"
+  ]
+}

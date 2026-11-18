@@ -1,0 +1,146 @@
+{
+  "id": "B1_01_present_perfect_continuous",
+  "level": "B1",
+  "order": 1,
+  "title": "Present Perfect Continuous",
+  "titleRu": "Present Perfect Continuous: «делаю уже…»",
+  "summary": "Как сказать «я делаю это уже два года» и чем have been doing отличается от have done.",
+  "theory": "## Когда используем\n\n**Present Perfect Continuous** (have/has been + -ing) — это время, которое связывает прошлое с настоящим и подчёркивает **длительность процесса**. Действие началось в прошлом и продолжается до сих пор (или только что закончилось, и мы видим результат).\n\n### 1. Действие началось в прошлом и всё ещё продолжается\nЧаще всего с **for** (в течение) и **since** (с какого-то момента) и в вопросе **How long…?**\n\n> I have been learning English for two years. — Я учу английский (уже) два года.\n> She has been working here since 2020. — Она работает здесь с 2020 года.\n> How long have you been waiting? — Сколько ты уже ждёшь?\n\n!! Обратите внимание: в русском мы говорим в **настоящем** времени («я учу два года»), а в английском нужен Present Perfect Continuous. Сказать «I learn English for two years» — грубая ошибка.\n\n### 2. Действие только что закончилось, но виден результат\nМы видим «следы» процесса и объясняем их.\n\n> Your eyes are red. Have you been crying? — У тебя красные глаза. Ты плакала?\n> I'm tired because I've been running. — Я устал, потому что бегал.\n> The ground is wet. It has been raining. — Земля мокрая. Шёл дождь.\n\n### 3. Повторяющееся действие в последнее время\n> I've been sleeping badly lately. — Я плохо сплю в последнее время.\n> He has been calling me every day this week. — Он звонит мне каждый день на этой неделе.\n\n## Как образуется\n\nФормула: **have / has + been + глагол-ing**\n\n| | I / you / we / they | he / she / it |\n|---|---|---|\n| + | I **have been working** (I've been working) | She **has been working** (She's been working) |\n| − | I **haven't been working** | She **hasn't been working** |\n| ? | **Have** you **been working**? | **Has** she **been working**? |\n\nКраткие ответы: *Yes, I have. / No, I haven't. Yes, she has. / No, she hasn't.*\n\nВопрос с How long: **How long + have/has + подлежащее + been + -ing?**\n> How long has he been living in Moscow? — Сколько он уже живёт в Москве?\n\n## Слова-подсказки\n\n| Слово | Значение | Пример |\n|---|---|---|\n| for | в течение (период) | for three hours, for a long time |\n| since | с (момент в прошлом) | since Monday, since 9 o'clock, since I was a child |\n| How long…? | как долго? | How long have you been…? |\n| all day / all morning | весь день / всё утро | I've been cleaning all day. |\n| lately / recently | в последнее время | She's been feeling ill lately. |\n\n!! **for** + период (two days, an hour), **since** + точка отсчёта (2019, Monday, last summer). «С понедельника» = since Monday, а не from Monday.\n\n## Сравните: Present Perfect Continuous и Present Perfect Simple\n\n| Present Perfect Continuous | Present Perfect Simple |\n|---|---|\n| важен **процесс**, длительность | важен **результат**, итог |\n| How long? | How many / how much? |\n| действие могло не закончиться | действие завершено |\n\n> I've been reading this book all evening. — Я весь вечер читаю эту книгу (процесс).\n> I've read three chapters. — Я прочитал три главы (результат, количество).\n> She's been painting the kitchen. — Она красила кухню (вся в краске, может быть, ещё не закончила).\n> She's painted the kitchen. — Она покрасила кухню (работа готова).\n\n### Глаголы состояния — только Present Perfect Simple\nГлаголы, которые не употребляются в Continuous (*know, like, love, want, believe, understand, have* в значении «иметь», *be*), используются с for/since в простой форме:\n\n> I've known him for ten years. — Я знаю его десять лет. (НЕ have been knowing)\n> We've had this car since 2018. — У нас эта машина с 2018 года.\n> She's been a teacher for five years. — Она учитель уже пять лет.\n\n### Когда разница почти не видна\nС глаголами *live, work, teach, study* обе формы обычно возможны:\n> I've lived / I've been living here for six years. — Я живу здесь шесть лет.\nContinuous звучит чуть более «временно», Simple — более постоянно.\n\n## Типичные ошибки\n\n⚠ I learn English for two years. → I've been learning English for two years.\n⚠ I am waiting for you since 5 o'clock. → I've been waiting for you since 5 o'clock.\n⚠ I've been knowing her since school. → I've known her since school.\n⚠ I've been writing three emails today. → I've written three emails today. (количество = результат)\n⚠ She has been working here from 2019. → She has been working here since 2019.\n⚠ How long time have you been waiting? → How long have you been waiting?\n⚠ I've been working here since two years. → I've been working here for two years.\n\n!! Правило-шпаргалка: русское «я делаю это уже…/с…» почти всегда переводится через **have been + -ing** (или have + V3 для глаголов состояния). Спросите себя: важно «как долго» → Continuous; важно «сколько сделано» → Simple.",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "I ___ English for three years.",
+      "options": [
+        "learn",
+        "have been learning",
+        "am learning"
+      ],
+      "answer": 1,
+      "explain": "Действие началось в прошлом и продолжается сейчас (for three years) — нужен Present Perfect Continuous."
+    },
+    {
+      "type": "choice",
+      "q": "She has been working here ___ 2019.",
+      "options": [
+        "for",
+        "since",
+        "from"
+      ],
+      "answer": 1,
+      "explain": "2019 — точка отсчёта, поэтому since."
+    },
+    {
+      "type": "choice",
+      "q": "We've been waiting ___ forty minutes!",
+      "options": [
+        "since",
+        "for",
+        "during"
+      ],
+      "answer": 1,
+      "explain": "Forty minutes — период времени, поэтому for."
+    },
+    {
+      "type": "choice",
+      "q": "I ___ him since we were at school.",
+      "options": [
+        "have been knowing",
+        "have known",
+        "know"
+      ],
+      "answer": 1,
+      "explain": "Know — глагол состояния, он не используется в Continuous."
+    },
+    {
+      "type": "choice",
+      "q": "Your hands are dirty. What ___?",
+      "options": [
+        "have you been doing",
+        "have you done",
+        "do you do"
+      ],
+      "answer": 0,
+      "explain": "Видим «следы» процесса (грязные руки) — Present Perfect Continuous."
+    },
+    {
+      "type": "choice",
+      "q": "I've ___ five emails this morning.",
+      "options": [
+        "been writing",
+        "written",
+        "writing"
+      ],
+      "answer": 1,
+      "explain": "Указано количество (five emails) — важен результат, Present Perfect Simple."
+    },
+    {
+      "type": "input",
+      "q": "How long ___ for the bus? You look cold. (you / wait)",
+      "answer": [
+        "have you been waiting"
+      ],
+      "explain": "Вопрос о длительности: How long + have + you + been + waiting."
+    },
+    {
+      "type": "input",
+      "q": "It ___ all day, and the streets are wet. (rain)",
+      "answer": [
+        "has been raining",
+        "'s been raining"
+      ],
+      "explain": "Длительный процесс весь день с видимым результатом — has been raining."
+    },
+    {
+      "type": "input",
+      "q": "They ___ in this flat since last summer. (live)",
+      "answer": [
+        "have been living",
+        "'ve been living",
+        "have lived",
+        "'ve lived"
+      ],
+      "explain": "С live обе формы Present Perfect возможны: have been living / have lived."
+    },
+    {
+      "type": "input",
+      "q": "I'm so tired! I ___ for the exam all night. (study)",
+      "answer": [
+        "have been studying",
+        "'ve been studying"
+      ],
+      "explain": "Усталость — результат длительного процесса, нужен have been studying."
+    },
+    {
+      "type": "input",
+      "q": "She ___ three cups of coffee today. (drink)",
+      "answer": [
+        "has drunk",
+        "'s drunk"
+      ],
+      "explain": "Указано количество (three cups) — результат, Present Perfect Simple."
+    },
+    {
+      "type": "order",
+      "q": "Составьте вопрос",
+      "answer": "How long have you been living here?",
+      "explain": "How long + have + подлежащее + been + -ing."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "She has been feeling ill lately.",
+      "explain": "Повторяющееся/длительное состояние в последнее время: has been + -ing + lately."
+    },
+    {
+      "type": "choice",
+      "q": "A: You look hot! — B: Yes, I ___ in the garden for two hours.",
+      "options": [
+        "have worked",
+        "have been working",
+        "worked"
+      ],
+      "answer": 1,
+      "explain": "Подчёркиваем длительность процесса (for two hours) и видимый результат — Continuous."
+    }
+  ]
+}

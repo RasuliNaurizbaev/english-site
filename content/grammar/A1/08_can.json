@@ -1,0 +1,139 @@
+{
+  "id": "A1_08_can",
+  "level": "A1",
+  "order": 8,
+  "title": "Can / can't",
+  "titleRu": "Модальный глагол can",
+  "summary": "Глагол can/can't: умение, возможность, просьба и разрешение; вопросы и краткие ответы.",
+  "theory": "## Когда используем\n\n**Can** — модальный глагол. Он не обозначает само действие, а показывает **отношение** к нему: могу, умею, можно. По-русски can переводится как «мочь», «уметь» или «можно».\n\n### 1. Умение, способность\n\n> I can swim. — Я умею плавать.\n> She can speak three languages. — Она говорит (умеет говорить) на трёх языках.\n> My son can't read yet. — Мой сын ещё не умеет читать.\n\n!! В русском «умею» и «могу» — разные слова, а в английском оба передаются через **can**.\n\n### 2. Возможность\n\n> You can buy tickets online. — Билеты можно купить онлайн.\n> We can meet at six. — Мы можем встретиться в шесть.\n> I can't come today, I'm busy. — Я не могу прийти сегодня, я занят.\n\n### 3. Просьба\n\n> Can you help me, please? — Ты можешь мне помочь?\n> Can I have a glass of water? — Можно мне стакан воды?\n\nБолее вежливый вариант — **could**: *Could you open the window, please?*\n\n### 4. Разрешение и запрет\n\n> You can sit here. — Можете сесть здесь.\n> You can't smoke in the hospital. — В больнице нельзя курить.\n> — Can I use your phone? — Yes, of course. — Можно воспользоваться твоим телефоном? — Да, конечно.\n\n## Как образуется\n\nCan — очень удобный глагол: у него **одна форма для всех лиц**. Никаких -s, никаких do/does!\n\n### Утверждение и отрицание\n\n| Подлежащее | + | − (полная) | − (сокращённая) |\n|---|---|---|---|\n| I / you / we / they | can swim | cannot swim | can't swim |\n| he / she / it | can swim | cannot swim | can't swim |\n\n!! *Cannot* пишется **слитно**. В речи почти всегда говорят *can't* [kɑːnt].\n\nПосле can глагол стоит в **начальной форме без to**:\n\n> He can drive. — Он умеет водить. (не *He can to drive*, не *He can drives*)\n\n### Вопрос и краткие ответы\n\nВ вопросе **can** ставится перед подлежащим.\n\n| Вопрос | Да | Нет |\n|---|---|---|\n| Can you cook? | Yes, I can. | No, I can't. |\n| Can she ski? | Yes, she can. | No, she can't. |\n| Can they come? | Yes, they can. | No, they can't. |\n\nСо специальным вопросом: **вопросительное слово + can + подлежащее + глагол?**\n\n> What can I do for you? — Чем я могу вам помочь?\n> Where can I buy a SIM card? — Где можно купить сим-карту?\n> How many languages can you speak? — На скольких языках ты говоришь?\n\n## Произношение\n\nВ утвердительном предложении can звучит слабо: [kən] — *I can swim* [aɪ kən swɪm]. А *can't* звучит долго и с ударением: [kɑːnt] (брит.) или [kænt] (амер.). Поэтому различать их на слух помогает ударение: в отрицании can't — ударное.\n\n## Can и to be able to\n\nCan существует только в настоящем (и в прошлом — could). Для будущего и других времён используют **be able to**:\n\n> I will be able to help you tomorrow. — Я смогу помочь тебе завтра.\n\nНа уровне A1 достаточно знать **can / can't**.\n\n## Типичные ошибки\n\n⚠ He cans swim. → He can swim.\n⚠ She can to dance. → She can dance.\n⚠ He can plays the guitar. → He can play the guitar.\n⚠ Do you can help me? → Can you help me?\n⚠ I don't can speak French. → I can't speak French.\n⚠ I can not come. → I can't come. / I cannot come.\n⚠ — Can you swim? — Yes, I can swim it. → Yes, I can.\n⚠ Can I a coffee? → Can I have a coffee?\n\n!! Can никогда не «обрастает»: нет *cans*, нет *to* после него, нет *do* рядом с ним, а следующий глагол всегда в чистой начальной форме.",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "My sister ___ play the piano.",
+      "options": [
+        "can",
+        "cans",
+        "can to"
+      ],
+      "answer": 0,
+      "explain": "Can одинаков для всех лиц, без -s и без to."
+    },
+    {
+      "type": "choice",
+      "q": "He can ___ very fast.",
+      "options": [
+        "runs",
+        "run",
+        "to run"
+      ],
+      "answer": 1,
+      "explain": "После can глагол в начальной форме без to."
+    },
+    {
+      "type": "choice",
+      "q": "___ you help me with my bag?",
+      "options": [
+        "Do",
+        "Are",
+        "Can"
+      ],
+      "answer": 2,
+      "explain": "Просьба: Can you…? — do с can не используется."
+    },
+    {
+      "type": "choice",
+      "q": "— Can your brother drive? — No, he ___.",
+      "options": [
+        "can't",
+        "doesn't",
+        "isn't"
+      ],
+      "answer": 0,
+      "explain": "Краткий ответ повторяет модальный глагол: No, he can't."
+    },
+    {
+      "type": "choice",
+      "q": "You ___ smoke here. It's a hospital.",
+      "options": [
+        "can",
+        "can't",
+        "don't"
+      ],
+      "answer": 1,
+      "explain": "Запрет — can't."
+    },
+    {
+      "type": "choice",
+      "q": "Choose the correct sentence.",
+      "options": [
+        "I don't can swim.",
+        "I can't swim.",
+        "I can't to swim."
+      ],
+      "answer": 1,
+      "explain": "Отрицание can — can't + глагол без to."
+    },
+    {
+      "type": "input",
+      "q": "I ___ (can / not) speak Chinese.",
+      "answer": [
+        "can't",
+        "cannot"
+      ],
+      "explain": "Отрицание: can't или cannot (слитно)."
+    },
+    {
+      "type": "input",
+      "q": "___ I have a cup of tea, please?",
+      "answer": [
+        "Can",
+        "Could",
+        "May"
+      ],
+      "explain": "Просьба «можно мне…?» — Can I…? (вежливее Could I…?)."
+    },
+    {
+      "type": "input",
+      "q": "She can ___ (cook) very well.",
+      "answer": [
+        "cook"
+      ],
+      "explain": "После can глагол в начальной форме."
+    },
+    {
+      "type": "input",
+      "q": "— Can you ski? — Yes, I ___.",
+      "answer": [
+        "can"
+      ],
+      "explain": "Положительный краткий ответ: Yes, I can."
+    },
+    {
+      "type": "input",
+      "q": "Where ___ I buy a ticket? (Где можно купить билет?)",
+      "answer": [
+        "can",
+        "could"
+      ],
+      "explain": "Вопрос о возможности: Where can I…?"
+    },
+    {
+      "type": "order",
+      "q": "Составьте вопрос",
+      "answer": "Can you speak English?",
+      "explain": "Can + подлежащее + глагол?"
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "My grandmother can't use a computer.",
+      "explain": "Подлежащее + can't + глагол в начальной форме."
+    },
+    {
+      "type": "order",
+      "q": "Составьте вопрос",
+      "answer": "What can I do for you?",
+      "explain": "Вопр. слово + can + подлежащее + глагол."
+    }
+  ]
+}

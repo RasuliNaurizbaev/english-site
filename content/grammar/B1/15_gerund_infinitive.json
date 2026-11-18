@@ -1,0 +1,148 @@
+{
+  "id": "B1_15_gerund_infinitive",
+  "level": "B1",
+  "order": 15,
+  "title": "Gerund or infinitive",
+  "titleRu": "Герундий или инфинитив: doing или to do",
+  "summary": "Какие глаголы требуют -ing, а какие to + V1; stop, remember, forget, try с разным смыслом; -ing после предлогов.",
+  "theory": "## Когда используем\n\nКогда после одного глагола идёт второй, второй глагол может быть в форме **герундия** (*-ing*: doing, swimming) или **инфинитива** (*to do, to swim*). В русском в обоих случаях обычно инфинитив («люблю плавать», «решил уехать»), поэтому форму в английском нужно **запоминать вместе с первым глаголом**.\n\n> I enjoy swimming. — Мне нравится плавать.\n> I decided to leave. — Я решил уехать.\n\n## Как образуется\n\n### 1. Глаголы + -ing\n| Глагол | Перевод | Пример |\n|---|---|---|\n| enjoy | получать удовольствие | I enjoy cooking. |\n| finish | закончить | Have you finished eating? |\n| mind | возражать | Do you mind opening the window? |\n| avoid | избегать | He avoids driving at night. |\n| suggest | предлагать | She suggested going to the cinema. |\n| keep | продолжать, всё время | He keeps calling me. |\n| practise | практиковаться | I practise speaking every day. |\n| give up | бросить | I gave up smoking. |\n| can't stand | терпеть не могу | I can't stand waiting. |\n| miss | скучать | I miss living by the sea. |\n| imagine, consider, admit, deny | представлять, обдумывать, признавать, отрицать | Imagine living on an island! |\n\n### 2. Глаголы + to + V1\n| Глагол | Перевод | Пример |\n|---|---|---|\n| want / would like | хотеть | I'd like to see you. |\n| decide | решить | We decided to stay. |\n| hope | надеяться | I hope to see you soon. |\n| plan | планировать | They plan to move. |\n| promise | обещать | He promised to help. |\n| agree / refuse | согласиться / отказаться | She refused to answer. |\n| learn | учиться | I'm learning to drive. |\n| need | нуждаться | You need to rest. |\n| manage | суметь | I managed to find a taxi. |\n| afford | позволить себе | We can't afford to buy a house. |\n| offer, seem, expect, pretend | предлагать (сделать сам), казаться, ожидать, притворяться | He offered to carry my bag. |\n\n!! **suggest + -ing**, но **offer + to**: *She suggested going out* (предложила пойти вместе), *He offered to pay* (предложил сам заплатить).\n\n### 3. Глаголы, после которых возможно и то, и другое (без разницы в смысле)\n**like, love, hate, prefer, start, begin, continue**:\n> It started raining / to rain. — Пошёл дождь.\n> I love reading / to read. — Я люблю читать.\nНо **would like / would love / would prefer** — только с **to**: *I'd love to come.*\n\n### 4. После предлогов — всегда -ing\nПосле любого предлога (*in, at, of, about, for, without, before, after, by, instead of*) глагол стоит в форме **-ing**.\n> I'm interested in learning Spanish. — Мне интересно изучать испанский.\n> She's good at drawing. — Она хорошо рисует.\n> Thank you for helping me. — Спасибо, что помог.\n> He left without saying goodbye. — Он ушёл, не попрощавшись.\n> Before going to bed, I read. — Перед сном я читаю.\n> I'm looking forward to seeing you. — Жду встречи с тобой. (to — предлог!)\n\n### 5. Герундий как подлежащее\n> Swimming is good for your health. — Плавание полезно для здоровья.\n> Learning languages takes time. — Изучение языков требует времени.\n\n## Сравните: глаголы, меняющие смысл\n\n| Глагол | + to V1 | + -ing |\n|---|---|---|\n| **stop** | остановиться, **чтобы** сделать: *He stopped to smoke.* — Он остановился, чтобы покурить. | перестать делать: *He stopped smoking.* — Он бросил курить. |\n| **remember** | не забыть сделать (в будущем): *Remember to lock the door.* — Не забудь запереть дверь. | помнить, что сделал (в прошлом): *I remember locking the door.* — Помню, как запирал дверь. |\n| **forget** | забыть сделать: *I forgot to call him.* — Я забыл ему позвонить. | забыть, что делал (чаще never forget): *I'll never forget meeting him.* — Никогда не забуду нашу встречу. |\n| **try** | стараться, пытаться (трудно): *I tried to open the window, but it was stuck.* — Я пытался открыть окно, но его заело. | попробовать (как эксперимент): *Try opening the window — maybe it'll be cooler.* — Попробуй открыть окно — может, станет прохладнее. |\n\n!! Подсказка: **to** смотрит **вперёд** (действие ещё нужно сделать), **-ing** смотрит **назад** или на сам процесс.\n\n## Типичные ошибки\n\n⚠ I enjoy to swim. → I enjoy swimming.\n⚠ I decided going home. → I decided to go home.\n⚠ I'm interested in learn English. → I'm interested in learning English.\n⚠ I look forward to see you. → I look forward to seeing you.\n⚠ She suggested to go to the cinema. → She suggested going to the cinema.\n⚠ I'd like going out tonight. → I'd like to go out tonight.\n⚠ He stopped to smoke last year. (если бросил) → He stopped smoking last year.\n⚠ Don't forget locking the door. → Don't forget to lock the door.\n⚠ Thank you for help me. → Thank you for helping me.\n\n!! Учите глаголы «парами»: *enjoy doing, decide to do, look forward to doing*. Записывайте в словарь сразу с формой следующего глагола.",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "I really enjoy ___ in the sea.",
+      "options": [
+        "to swim",
+        "swimming",
+        "swim"
+      ],
+      "answer": 1,
+      "explain": "После enjoy — всегда -ing."
+    },
+    {
+      "type": "choice",
+      "q": "We decided ___ at home tonight.",
+      "options": [
+        "staying",
+        "to stay",
+        "stay"
+      ],
+      "answer": 1,
+      "explain": "После decide — to + V1."
+    },
+    {
+      "type": "choice",
+      "q": "She's very good at ___.",
+      "options": [
+        "draw",
+        "to draw",
+        "drawing"
+      ],
+      "answer": 2,
+      "explain": "После предлога (at) — -ing."
+    },
+    {
+      "type": "choice",
+      "q": "He felt tired, so he stopped ___ a coffee.",
+      "options": [
+        "having",
+        "to have",
+        "have"
+      ],
+      "answer": 1,
+      "explain": "Остановился, чтобы выпить кофе (цель) — stop + to."
+    },
+    {
+      "type": "choice",
+      "q": "My grandfather stopped ___ ten years ago. He feels much healthier now.",
+      "options": [
+        "smoking",
+        "to smoke",
+        "smoke"
+      ],
+      "answer": 0,
+      "explain": "Перестал делать — stop + -ing."
+    },
+    {
+      "type": "choice",
+      "q": "I'm looking forward to ___ you next week.",
+      "options": [
+        "see",
+        "seeing",
+        "have seen"
+      ],
+      "answer": 1,
+      "explain": "В look forward to предлог to, поэтому -ing."
+    },
+    {
+      "type": "input",
+      "q": "Don't forget ___ the door when you leave. (lock)",
+      "answer": [
+        "to lock"
+      ],
+      "explain": "Не забыть сделать в будущем — forget + to."
+    },
+    {
+      "type": "input",
+      "q": "I remember ___ him at a party many years ago, but I don't remember his name. (meet)",
+      "answer": [
+        "meeting"
+      ],
+      "explain": "Помнить событие из прошлого — remember + -ing."
+    },
+    {
+      "type": "input",
+      "q": "Would you mind ___ the window? It's hot in here. (open)",
+      "answer": [
+        "opening"
+      ],
+      "explain": "После mind — -ing."
+    },
+    {
+      "type": "input",
+      "q": "He left the room without ___ a word. (say)",
+      "answer": [
+        "saying"
+      ],
+      "explain": "После предлога without — -ing."
+    },
+    {
+      "type": "input",
+      "q": "I can't afford ___ a new car this year. (buy)",
+      "answer": [
+        "to buy"
+      ],
+      "explain": "После afford — to + V1."
+    },
+    {
+      "type": "input",
+      "q": "I tried ___ the box, but it was too heavy. (lift)",
+      "answer": [
+        "to lift"
+      ],
+      "explain": "Пытаться сделать что-то трудное — try + to."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "She suggested going to the cinema.",
+      "explain": "После suggest — -ing."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "Thank you for helping me with my homework.",
+      "explain": "После предлога for — -ing."
+    },
+    {
+      "type": "choice",
+      "q": "A: I can't sleep. — B: Why don't you try ___ a glass of warm milk before bed?",
+      "options": [
+        "to drink",
+        "drinking",
+        "drink"
+      ],
+      "answer": 1,
+      "explain": "Попробовать как эксперимент (вдруг поможет) — try + -ing."
+    }
+  ]
+}

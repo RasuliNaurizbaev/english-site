@@ -1,0 +1,153 @@
+{
+  "id": "B1_03_narrative_tenses",
+  "level": "B1",
+  "order": 3,
+  "title": "Narrative tenses",
+  "titleRu": "Рассказ о прошлом: три времени вместе",
+  "summary": "Как рассказывать истории о прошлом, сочетая Past Simple, Past Continuous и Past Perfect.",
+  "theory": "## Когда используем\n\nКогда мы рассказываем историю о прошлом (что случилось в отпуске, смешной случай, сюжет фильма), мы обычно используем **три времени вместе**. Их называют *narrative tenses* — «времена повествования». У каждого своя роль.\n\n| Время | Роль в рассказе | Пример |\n|---|---|---|\n| Past Simple | **главные события**, которые идут одно за другим | I opened the door and went in. |\n| Past Continuous | **фон**, обстановка, действие в процессе | It was raining and people were hurrying home. |\n| Past Perfect | события **раньше** основной линии рассказа | I realised I had left my phone at home. |\n\n### Past Simple — цепочка событий\nДействия, которые происходят по очереди, двигают историю вперёд.\n> I got up, had a shower and left the house. — Я встал, принял душ и вышел из дома.\n\n### Past Continuous — фон и прерванное действие\nОписывает, что происходило вокруг, или длительное действие, которое прервало короткое событие.\n> The sun was shining and the birds were singing. — Светило солнце, пели птицы.\n> I was walking to work when I saw an old friend. — Я шёл на работу, когда увидел старого друга.\n> While she was cooking, the phone rang. — Пока она готовила, зазвонил телефон.\n\n### Past Perfect — «шаг назад»\nЕсли нам нужно вернуться к событию, которое было ещё раньше, — Past Perfect.\n> When I got to the airport, I realised that I had forgotten my passport. — Когда я приехал в аэропорт, я понял, что забыл паспорт.\n\n## Как образуется\n\n| Время | + | − | ? |\n|---|---|---|---|\n| Past Simple | I **worked** / I **went** | I **didn't work** | **Did** you **work**? |\n| Past Continuous | I/he **was working**, we/they **were working** | I **wasn't working** | **Were** you **working**? |\n| Past Perfect | I **had worked** / **had gone** | I **hadn't worked** | **Had** you **worked**? |\n\n### Пример целой истории\n> Last Saturday I was walking in the park. — В прошлую субботу я гулял в парке. (фон)\n> The sun was shining and children were playing. — Светило солнце, играли дети. (фон)\n> Suddenly a dog ran up to me and took my sandwich. — Вдруг ко мне подбежала собака и схватила мой бутерброд. (события)\n> I hadn't eaten all day, so I was very angry! — Я ничего не ел весь день, так что очень разозлился! (шаг назад)\n\n## Слова-подсказки\n\n| Слова | Обычно с каким временем | Пример |\n|---|---|---|\n| when + короткое действие | Past Simple | I was reading when the lights went out. |\n| while / as + длительное действие | Past Continuous | While I was reading, the lights went out. |\n| suddenly, then, after that, finally | Past Simple | Then we went home. |\n| already, just, before, by the time | Past Perfect | By the time we arrived, they had gone. |\n| at that moment, all evening | Past Continuous | At that moment I was having dinner. |\n\n!! **When** обычно ставим перед коротким действием (Past Simple), **while** — перед длительным (Past Continuous).\n\n## Сравните\n\n### Три варианта с when — три разных смысла\n> When Tom arrived, we had dinner. — Когда Том пришёл, мы поужинали (он пришёл → потом ужин).\n> When Tom arrived, we were having dinner. — Когда Том пришёл, мы ужинали (ужин уже шёл).\n> When Tom arrived, we had had dinner. — Когда Том пришёл, мы уже поужинали (ужин закончился до его прихода).\n\n### Два длительных действия одновременно\nЕсли два процесса шли параллельно — оба в Past Continuous с **while**:\n> While I was cooking, my husband was watching TV. — Пока я готовила, муж смотрел телевизор.\n\n### В русском всё проще\nВ русском есть только одно прошедшее время, а разница передаётся видом (*делал / сделал*) и словами «уже», «до этого». Подсказка:\n- «делал» (процесс, фон) → часто Past Continuous\n- «сделал» (событие) → Past Simple\n- «уже сделал до того» → Past Perfect\n\n## Типичные ошибки\n\n⚠ When I was coming home, I was seeing an accident. → When I was coming home, I saw an accident.\n⚠ While I watched TV, the phone was ringing. → While I was watching TV, the phone rang.\n⚠ I was knowing the answer. → I knew the answer. (know — глагол состояния)\n⚠ When I got to the party, Anna left. (если она ушла до моего прихода) → When I got to the party, Anna had left.\n⚠ I had woken up, had a shower and had gone out. → I woke up, had a shower and went out. (цепочка событий — Past Simple)\n\n!! Хорошая история = фон (Past Continuous) + события (Past Simple) + иногда «взгляд назад» (Past Perfect). Не злоупотребляйте Past Perfect: ставьте его только там, где важно, что что-то случилось **раньше**.",
+  "exercises": [
+    {
+      "type": "choice",
+      "q": "I ___ to work when I saw the accident.",
+      "options": [
+        "walked",
+        "was walking",
+        "had walked"
+      ],
+      "answer": 1,
+      "explain": "Длительное действие-фон, которое прервало короткое событие, — Past Continuous."
+    },
+    {
+      "type": "choice",
+      "q": "While we were having lunch, it suddenly ___ to rain.",
+      "options": [
+        "started",
+        "was starting",
+        "had started"
+      ],
+      "answer": 0,
+      "explain": "Короткое событие, прервавшее процесс, — Past Simple."
+    },
+    {
+      "type": "choice",
+      "q": "He got up, ___ dressed and left the house.",
+      "options": [
+        "was getting",
+        "got",
+        "had got"
+      ],
+      "answer": 1,
+      "explain": "Цепочка последовательных событий — Past Simple."
+    },
+    {
+      "type": "choice",
+      "q": "When I got to the party, Anna wasn't there. She ___ home.",
+      "options": [
+        "went",
+        "was going",
+        "had gone"
+      ],
+      "answer": 2,
+      "explain": "Она ушла раньше моего прихода — Past Perfect."
+    },
+    {
+      "type": "choice",
+      "q": "When Tom arrived, we ___ dinner, so he joined us at the table.",
+      "options": [
+        "had",
+        "were having",
+        "had had"
+      ],
+      "answer": 1,
+      "explain": "Ужин шёл в момент прихода, и Том присоединился — Past Continuous."
+    },
+    {
+      "type": "choice",
+      "q": "I ___ the answer, so I put up my hand.",
+      "options": [
+        "was knowing",
+        "knew",
+        "had been knowing"
+      ],
+      "answer": 1,
+      "explain": "Know — глагол состояния, не используется в Continuous."
+    },
+    {
+      "type": "input",
+      "q": "The sun ___ and the children were playing in the park. (shine)",
+      "answer": [
+        "was shining"
+      ],
+      "explain": "Описание фона, обстановки — Past Continuous."
+    },
+    {
+      "type": "input",
+      "q": "I was reading a book when the lights suddenly ___ out. (go)",
+      "answer": [
+        "went"
+      ],
+      "explain": "Короткое действие, прервавшее процесс, — Past Simple."
+    },
+    {
+      "type": "input",
+      "q": "While I ___ dinner, my husband was watching TV. (cook)",
+      "answer": [
+        "was cooking"
+      ],
+      "explain": "Два параллельных длительных действия с while — оба в Past Continuous."
+    },
+    {
+      "type": "input",
+      "q": "At the airport I realised that I ___ my passport at home. (leave)",
+      "answer": [
+        "had left",
+        "'d left"
+      ],
+      "explain": "Паспорт оставлен раньше, чем я это понял, — Past Perfect."
+    },
+    {
+      "type": "input",
+      "q": "She couldn't pay for the coffee because she ___ her wallet earlier that day. (lose)",
+      "answer": [
+        "had lost",
+        "'d lost"
+      ],
+      "explain": "Кошелёк потерян раньше момента оплаты — Past Perfect."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "I was waiting for the bus when it started to rain.",
+      "explain": "Фон (was waiting) + when + короткое событие (started)."
+    },
+    {
+      "type": "order",
+      "q": "Составьте предложение",
+      "answer": "While she was cooking, the phone rang.",
+      "explain": "While + Past Continuous, затем Past Simple."
+    },
+    {
+      "type": "choice",
+      "q": "When I woke up, the house was quiet. Everyone ___ to work.",
+      "options": [
+        "went",
+        "had gone",
+        "was going"
+      ],
+      "answer": 1,
+      "explain": "Все ушли до моего пробуждения и дом уже пуст — Past Perfect."
+    },
+    {
+      "type": "choice",
+      "q": "We ___ along the beach when we found a strange box in the sand.",
+      "options": [
+        "walked",
+        "were walking",
+        "had walked"
+      ],
+      "answer": 1,
+      "explain": "Длительное действие в момент находки — Past Continuous."
+    }
+  ]
+}
