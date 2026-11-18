@@ -1,4 +1,5 @@
 // Основные сценарии учёбы: страницы, повторение слов, грамматика, рассказы, караоке, голос браузера.
+import { readFileSync } from "node:fs";
 import { expect, test } from "@playwright/test";
 import { GRAMMAR, STORIES, answerAll, fakeBrowserVoice, open, stored } from "./helpers";
 
@@ -113,4 +114,35 @@ test("список слов: по 100, «Ещё 100 →» заменяет со�
   await expect(page.getByRole("button", { name: "Ещё 100 →" })).toBeDisabled();
   await page.getByPlaceholder("Поиск").fill("ticket");                          // поиск — снова с начала
   await expect(page.locator(".words-range")).toHaveText(/Слова 1–/);
+});
+
+test("резервная копия: сохранить прогресс в файл и восстановить в чистом браузере", async ({ page, browser }) => {
+  // немного прогресса + ключ AI (он не должен попасть в файл)
+  await open(page, "/review");
+  await page.locator(".flashcard").click();
+  await page.locator(".g-good").click();
+  await page.evaluate(() => localStorage.setItem("es.ai", JSON.stringify({ gemini: { apiKey: "secret", model: "m" } })));
+  await open(page, "/");
+  await page.locator(".backup-panel summary").click();
+  const [download] = await Promise.all([page.waitForEvent("download"), page.getByRole("button", { name: "Сохранить в файл" }).click()]);
+  expect(download.suggestedFilename()).toMatch(/^english-progress-\d{4}-\d{2}-\d{2}\.json$/);
+  const saved = await download.path();
+  const text = readFileSync(saved!, "utf8");
+  expect(text).not.toContain("secret");
+
+  // «другой браузер»: пустой прогресс → загрузить файл → подтвердить
+  const other = await (await browser.newContext({ viewport: { width: 390, height: 844 } })).newPage();
+  await open(other, "/");
+  await other.locator(".backup-panel summary").click();
+  await other.locator(".backup-panel input[type=file]").setInputFiles(saved!);
+  await expect(other.locator(".restore-confirm")).toContainText("слов в изучении — 1");
+  await other.getByRole("button", { name: "Заменить прогресс" }).click();
+  await other.waitForLoadState();
+  await expect.poll(() => other.evaluate(() => Object.keys(JSON.parse(localStorage.getItem("es.srs") ?? "{}")).length)).toBe(1);
+  await expect(other.getByText("1 день подряд")).toBeVisible();
+
+  // чужой файл — понятная ошибка
+  await other.locator(".backup-panel summary").click();
+  await other.locator(".backup-panel input[type=file]").setInputFiles({ name: "x.json", mimeType: "application/json", buffer: Buffer.from('{"a":1}') });
+  await expect(other.getByText("Это не файл прогресса этого сайта.")).toBeVisible();
 });

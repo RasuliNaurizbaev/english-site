@@ -189,3 +189,9 @@
 .ai-service { border-top: 1px solid var(--border); padding-top: 12px; margin-top: 12px; }
 .ai-service-head { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; }
 .ai-service-head a { margin-left: auto; font-size: 13px; }
+
+/* ---------- резервная копия прогресса ---------- */
+.backup-panel { margin-top: 20px; }
+.backup-panel summary { cursor: pointer; }
+.restore-confirm { margin-top: 12px; padding: 12px; border-radius: 12px; background: var(--warn-bg); }
+.restore-confirm p { margin: 0 0 8px; }

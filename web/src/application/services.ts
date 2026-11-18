@@ -2,6 +2,7 @@
 import type { ContentRepository } from "@/data/contentRepository";
 import { ProgressRepository } from "@/data/progressRepository";
 import type { KeyValueStorage } from "@/data/storage";
+import { ProgressBackup } from "@/data/progressBackup";
 import { dayNumber } from "@/domain/text";
 import { WordReviewService } from "./wordReview";
 import { MistakesService } from "./mistakesService";
@@ -13,6 +14,7 @@ export interface Services {
   review: WordReviewService;
   mistakes: MistakesService;
   aiTests: AiTestService;
+  backup: ProgressBackup;
   today: () => number;
 }
 
@@ -24,5 +26,6 @@ export function createServices(content: ContentRepository, storage: KeyValueStor
     review: new WordReviewService(content, progress, today),
     mistakes: new MistakesService(content, progress, today),
     aiTests: new AiTestService(progress),
+    backup: new ProgressBackup(storage),
   };
 }

@@ -6,6 +6,7 @@ import { WordReviewService } from "./wordReview";
 import { wordsPlan } from "./todayPlan";
 import { MistakesService } from "./mistakesService";
 import { AiTestService } from "./aiTests";
+import { ProgressBackup } from "@/data/progressBackup";
 import type { GrammarTopic } from "@/domain/types";
 
 function setup(day = 100) {
@@ -51,7 +52,7 @@ describe("WordReviewService", () => {
     const s = setup();
     s.progress.updateWordSettings({ newPerDay: 0 });
     const mistakes = new MistakesService(s.content, s.progress, () => 100);
-    expect(wordsPlan({ content: s.content, progress: s.progress, review: s.review, mistakes, aiTests: new AiTestService(s.progress), today: () => 100 }, 100).done).toBe(true);
+    expect(wordsPlan({ content: s.content, progress: s.progress, review: s.review, mistakes, aiTests: new AiTestService(s.progress), backup: new ProgressBackup(s.storage), today: () => 100 }, 100).done).toBe(true);
   });
   it("слова из рассказа: добавляются сразу в сегодняшнее повторение и не тратят лимит новых", () => {
     const s = setup();

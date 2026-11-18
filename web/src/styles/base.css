@@ -128,3 +128,5 @@ button.small { border: 1px solid var(--border); background: var(--surface); bord
   background: var(--warn-bg); border: 1px dashed var(--border); border-radius: 12px;
   padding: 12px 14px; margin: 12px 0; color: var(--muted); font-size: 14px;
 }
+
+button.danger { color: var(--bad); border-color: var(--bad); }
