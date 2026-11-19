@@ -49,6 +49,8 @@ export function currentUser(request: Request, accessCodes: string | undefined): 
   return code ? userByCode(parseAccessCodes(accessCodes), code) : null;
 }
 
-export const loginCookie = (code: string) =>
-  `${COOKIE_NAME}=${encodeURIComponent(code)}; Path=/api; Max-Age=${COOKIE_MAX_AGE}; HttpOnly; Secure; SameSite=Strict`;
-export const logoutCookie = () => `${COOKIE_NAME}=; Path=/api; Max-Age=0; HttpOnly; Secure; SameSite=Strict`;
+// Secure — только по https. Локально (wrangler dev, http://localhost) Safari не отправляет Secure-cookie → вход не работал бы.
+const flags = (secure: boolean) => `Path=/api; HttpOnly;${secure ? " Secure;" : ""} SameSite=Strict`;
+export const loginCookie = (code: string, secure = true) =>
+  `${COOKIE_NAME}=${encodeURIComponent(code)}; Max-Age=${COOKIE_MAX_AGE}; ${flags(secure)}`;
+export const logoutCookie = (secure = true) => `${COOKIE_NAME}=; Max-Age=0; ${flags(secure)}`;

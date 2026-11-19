@@ -26,8 +26,9 @@ export const AI_SERVICES: AiService[] = [
     id: "gemini", label: "Google Gemini", role: "основной",
     baseUrl: "https://generativelanguage.googleapis.com/v1beta/openai",
     keyUrl: "https://aistudio.google.com/apikey",
-    // обычная «flash» (быстрая и бесплатная), не lite/preview/exp
-    preferredModels: [/^gemini-[\d.]+-flash$/i, /^gemini-.*flash(?!.*(lite|preview|exp))/i, /^gemini-.*flash/i, /gemini/i],
+    // облегчённая «flash-lite»: отвечает за секунды. Обычная «flash» новейшей версии бывает перегружена (503)
+    // или «думает» дольше 70 с (проверено 2026-11-19: gemini-3.8-flash и gemini-flash-latest не ответили за 75 с)
+    preferredModels: [/^gemini-flash-lite-latest$/i, /^gemini-[\d.]+-flash-lite$/i, /^gemini-[\d.]+-flash$/i, /^gemini-.*flash(?!.*(lite|preview|exp))/i, /^gemini-.*flash/i, /gemini/i],
   },
   {
     id: "groq", label: "Groq", role: "запасной",
@@ -53,37 +54,56 @@ export interface AiProvider {
   complete(system: string, user: string): Promise<string>;
 }
 
+// Сколько ждать ответа. Cloudflare обрывает запрос к сайту через 100 секунд (ошибка 524),
+// поэтому сервер должен успеть: список моделей (15 с) + тест (70 с) — и браузер сразу перейдёт к запасному сервису.
+const MODELS_TIMEOUT_MS = 15_000;
+const COMPLETE_TIMEOUT_MS = 70_000;
+const RETRY_DELAY_MS = 2_000;
+
 /** Сервис с OpenAI-совместимым API. */
 export class OpenAiCompatibleProvider implements AiProvider {
   constructor(private readonly service: AiService, private readonly settings: ServiceSettings) {}
 
   get name() { return this.service.label; }
 
-  private async request(path: string, init?: RequestInit): Promise<any> {
+  private async request(path: string, timeoutMs: number, init?: RequestInit, retried = false): Promise<any> {
     let response: Response;
     try {
       response = await fetch(this.service.baseUrl + path, {
         ...init,
         headers: { "Content-Type": "application/json", Authorization: "Bearer " + this.settings.apiKey.trim() },
+        signal: AbortSignal.timeout(timeoutMs),
       });
     } catch (error) {
+      if (error instanceof Error && error.name === "TimeoutError") {
+        throw new AiRequestError(`${this.name}: не ответил за ${timeoutMs / 1000} секунд.`, { cause: error });
+      }
       throw new AiRequestError(`${this.name}: нет связи с сервисом (нет интернета или запрос заблокирован браузером).`, { cause: error });
     }
-    if (response.status === 401 || response.status === 403) throw new AiRequestError(`${this.name}: ключ не подошёл — проверьте ключ.`);
+    // 401 — неверный ключ; 403 — бывает и при верном ключе (сервис не пускает с этого адреса/региона) — показываем ответ сервиса
+    if (response.status === 401) throw new AiRequestError(`${this.name}: ключ не подошёл — проверьте ключ (HTTP 401). ${(await response.text()).slice(0, 150)}`);
+    if (response.status === 403) throw new AiRequestError(`${this.name}: доступ запрещён (HTTP 403). ${(await response.text()).slice(0, 200)}`);
     if (response.status === 429) throw new AiRequestError(`${this.name}: превышен лимит бесплатного тарифа — попробуйте позже.`);
+    // 503 «модель перегружена» у бесплатного Gemini частый и короткий — один повтор через 2 секунды
+    if (response.status === 503 && !retried) {
+      await response.body?.cancel();
+      await new Promise(resolve => setTimeout(resolve, RETRY_DELAY_MS));
+      return this.request(path, timeoutMs, init, true);
+    }
+    if (response.status === 503) throw new AiRequestError(`${this.name}: сервис перегружен (HTTP 503) — попробуйте позже.`);
     if (!response.ok) throw new AiRequestError(`${this.name}: ошибка HTTP ${response.status}. ${(await response.text()).slice(0, 150)}`);
     return response.json();
   }
 
   /** Список моделей, доступных по ключу (заодно проверяет ключ). */
   async listModels(): Promise<string[]> {
-    const data = await this.request("/models");
+    const data = await this.request("/models", MODELS_TIMEOUT_MS);
     const ids: string[] = (data?.data ?? []).map((m: { id: string }) => m.id.replace(/^models\//, ""));
     return ids.filter(id => !/whisper|tts|embed|guard|image|audio|vision|aqa|imagen|veo/i.test(id)).sort();
   }
 
   async complete(system: string, user: string): Promise<string> {
-    const data = await this.request("/chat/completions", {
+    const data = await this.request("/chat/completions", COMPLETE_TIMEOUT_MS, {
       method: "POST",
       body: JSON.stringify({
         model: this.settings.model.trim(),

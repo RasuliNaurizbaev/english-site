@@ -4,6 +4,7 @@
 //   POST /api/login {code} → { user, services }   + cookie
 //   POST /api/logout
 //   POST /api/ai/complete { service, system, user } → { text }
+//   GET  /api/ai/check     → по каждому сервису: модель и время ответа (или ошибка) — открыть в браузере после входа
 // Порядок сервисов (Gemini → Groq) и проверку теста делает браузер (application/aiTests.ts),
 // сервер только отправляет запрос в выбранный сервис со своим ключом.
 import {
@@ -76,20 +77,40 @@ async function complete(request: Request, env: ApiEnv): Promise<Response> {
   }
 }
 
+/** Проверка AI: какая модель выбрана и сколько секунд занимает крошечный запрос (для поиска «почему медленно»). */
+async function check(env: ApiEnv): Promise<Response> {
+  const seconds = (start: number) => Math.round((Date.now() - start) / 100) / 10;
+  const results = await Promise.all(AI_SERVICES.filter(s => apiKey(env, s.id)).map(async service => {
+    let start = Date.now();
+    try {
+      const model = await modelFor(service, env);
+      const modelSeconds = seconds(start);
+      start = Date.now();
+      await createProvider(service.id, { apiKey: apiKey(env, service.id), model }).complete("Reply with JSON only.", 'Return {"ok":true}');
+      return { service: service.id, model, modelSeconds, answerSeconds: seconds(start) };
+    } catch (e) {
+      return { service: service.id, error: e instanceof Error ? e.message : String(e), seconds: seconds(start) };
+    }
+  }));
+  return json(results);
+}
+
 export async function handleApi(request: Request, env: ApiEnv): Promise<Response> {
-  const { pathname } = new URL(request.url);
+  const { pathname, protocol } = new URL(request.url);
+  const secure = protocol === "https:";
   const route = `${request.method} ${pathname}`;
 
   if (route === "POST /api/login") {
     const code = (await readJson(request))?.code;
     const user = typeof code === "string" ? userByCode(parseAccessCodes(env.ACCESS_CODES), code.trim()) : null;
     if (!user) return error("Неверный код доступа.", 401);
-    return json({ user, services: configuredServices(env) }, 200, { "Set-Cookie": loginCookie((code as string).trim()) });
+    return json({ user, services: configuredServices(env) }, 200, { "Set-Cookie": loginCookie((code as string).trim(), secure) });
   }
-  if (route === "POST /api/logout") return json({ user: null, services: [] }, 200, { "Set-Cookie": logoutCookie() });
+  if (route === "POST /api/logout") return json({ user: null, services: [] }, 200, { "Set-Cookie": logoutCookie(secure) });
 
   const user = currentUser(request, env.ACCESS_CODES);
   if (route === "GET /api/session") return json({ user, services: user ? configuredServices(env) : [] });
   if (route === "POST /api/ai/complete") return user ? complete(request, env) : error("Войдите по коду доступа.", 401);
+  if (route === "GET /api/ai/check") return user ? check(env) : error("Войдите по коду доступа.", 401);
   return error("Not found", 404);
 }

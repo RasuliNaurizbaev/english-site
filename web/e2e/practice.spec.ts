@@ -46,7 +46,7 @@ test("AI: есть ключ Gemini → сначала Gemini; Gemini отказ�
   await expect(page.locator("h1")).toHaveText("Тест от AI");
   expect(calls.filter(c => c.endsWith("completions"))).toEqual(["gemini completions", "groq completions"]);   // сначала Gemini, потом Groq
   expect(groqBody.model).toBe("llama-3.3-70b-versatile");
-  expect(await stored(page, "ai")).toMatchObject({ gemini: { apiKey: "gemini-key", model: "gemini-2.5-flash" }, groq: { apiKey: "groq-key" } });
+  expect(await stored(page, "ai")).toMatchObject({ gemini: { apiKey: "gemini-key", model: "gemini-2.5-flash-lite" }, groq: { apiKey: "groq-key" } });
 });
 
 test("AI: нет ключа Gemini → сразу Groq", async ({ page }) => {

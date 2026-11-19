@@ -30,6 +30,8 @@ describe("Вход по коду", () => {
     expect(ok.status).toBe(200);
     expect(await ok.json()).toEqual({ user: "rasul", services: ["gemini"] });
     expect(ok.headers.get("Set-Cookie")).toMatch(/^el_access=rasul-code-1234567;.*HttpOnly; Secure; SameSite=Strict/);
+    const local = await worker.fetch(new Request("http://localhost:8787/api/login", { method: "POST", body: JSON.stringify({ code: CODE }) }), env);
+    expect(local.headers.get("Set-Cookie")).not.toMatch(/Secure/);                  // http://localhost — без Secure (иначе Safari не войдёт)
     expect((await call("/api/login", { code: "short" })).status).toBe(401);
     expect((await call("/api/login", { code: CODE + "x" })).status).toBe(401);
   });
@@ -76,6 +78,44 @@ describe("AI-посредник", () => {
     const limited = await call("/api/ai/complete", { service: "gemini", system: "s", user: "u" }, loggedIn, { ...env, GEMINI_MODEL: "gemini-x" });
     expect(limited.status).toBe(502);
     expect((await limited.json()).error).toMatch(/лимит/);
+  });
+
+  it("сервис завис — запрос обрывается по таймауту с понятной ошибкой (а не 524 от Cloudflare)", async () => {
+    // время не ждём: сигнал «таймаут уже сработал», fetch реагирует на него как настоящий
+    const timeout = vi.spyOn(AbortSignal, "timeout").mockImplementation(() => AbortSignal.abort(new DOMException("timeout", "TimeoutError")));
+    try {
+      vi.stubGlobal("fetch", vi.fn(async (_url: string, init?: RequestInit) => { throw init?.signal?.reason; }));
+      const r = await call("/api/ai/complete", { service: "gemini", system: "s", user: "u" }, loggedIn, { ...env, GEMINI_MODEL: "slow-model" });
+      expect(r.status).toBe(502);
+      expect((await r.json()).error).toBe("Google Gemini: не ответил за 70 секунд.");
+      expect(timeout).toHaveBeenCalledWith(70_000);
+    } finally {
+      timeout.mockRestore();
+    }
+  });
+
+  it("503 «перегружен» — один повтор; второй 503 — понятная ошибка", async () => {
+    vi.useFakeTimers();
+    try {
+      const replies = [new Response("busy", { status: 503 }), Response.json({ choices: [{ message: { content: "{}" } }] })];
+      vi.stubGlobal("fetch", vi.fn(async () => replies.shift() ?? new Response("busy", { status: 503 })));
+      const e503 = { ...env, GEMINI_MODEL: "gemini-x" };
+      const first = call("/api/ai/complete", { service: "gemini", system: "s", user: "u" }, loggedIn, e503);
+      await vi.advanceTimersByTimeAsync(2_000);
+      expect(await (await first).json()).toEqual({ text: "{}" });
+      const second = call("/api/ai/complete", { service: "gemini", system: "s", user: "u" }, loggedIn, e503);
+      await vi.advanceTimersByTimeAsync(2_000);
+      expect((await (await second).json()).error).toBe("Google Gemini: сервис перегружен (HTTP 503) — попробуйте позже.");
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it("проверка AI: модель и время ответа по каждому сервису; только после входа", async () => {
+    vi.stubGlobal("fetch", vi.fn(async () => Response.json({ choices: [{ message: { content: '{"ok":true}' } }] })));
+    expect((await call("/api/ai/check")).status).toBe(401);
+    const report = await (await call("/api/ai/check", undefined, loggedIn, { ...env, GEMINI_MODEL: "gemini-x" })).json();
+    expect(report).toEqual([{ service: "gemini", model: "gemini-x", modelSeconds: expect.any(Number), answerSeconds: expect.any(Number) }]);
   });
 
   it("неизвестный адрес /api — 404 JSON, остальное — статические файлы", async () => {

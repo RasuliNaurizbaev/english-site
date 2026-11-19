@@ -48,6 +48,29 @@ export function testProblems(value: unknown): string[] {
   return problems;
 }
 
+/**
+ * Убрать сломанные вопросы (AI иногда ошибается в 1–2 вопросах из ~20 — из-за них не стоит выбрасывать весь тест).
+ * Ошибки раздела (нет текста, неизвестный kind) не исправляются — их найдёт testProblems.
+ * dropped — что убрано; total — сколько вопросов было.
+ */
+export function withoutBrokenExercises(value: unknown): { test: unknown; dropped: string[]; total: number } {
+  const test = value as Partial<LevelTest> | null;
+  if (!test || typeof test !== "object" || !Array.isArray(test.sections)) return { test: value, dropped: [], total: 0 };
+  const dropped: string[] = [];
+  let total = 0;
+  const sections = test.sections.map((section: Partial<TestSection>, s) => {
+    if (!section || !Array.isArray(section.exercises)) return section;
+    total += section.exercises.length;
+    const exercises = section.exercises.filter((e, i) => {
+      const problems = exerciseProblems(e as never, `раздел ${s + 1}, вопрос ${i + 1}`);
+      dropped.push(...problems.slice(0, 1));
+      return !problems.length;
+    });
+    return { ...section, exercises };
+  });
+  return { test: { ...test, sections }, dropped, total };
+}
+
 /** Уровень по проценту правильных ответов (bands отсортированы по min). */
 export function levelForScore(test: LevelTest, percent: number): string {
   const bands = [...(test.bands ?? [])].sort((a, b) => a.min - b.min);

@@ -5,7 +5,7 @@
 // 4) сохранить в списке созданных тестов.
 import type { AiProvider } from "@/data/ai/aiProvider";
 import type { ProgressRepository } from "@/data/progressRepository";
-import { testProblems } from "@/domain/testValidation";
+import { testProblems, withoutBrokenExercises } from "@/domain/testValidation";
 import type { LevelTest } from "@/domain/types";
 
 export interface GenerateOptions {
@@ -27,7 +27,9 @@ Exercise formats (exactly one correct answer each; "explain" is one sentence in 
   {"type":"choice","q":"She ___ here since 2020.","options":["lives","has lived","is living","lived"],"answer":1,"explain":"..."}
   {"type":"input","q":"If I ___ (have) time, I would help.","answer":["had"],"explain":"..."}   (exactly one ___ in q)
   {"type":"tf","q":"<statement about the reading text>","answer":true,"explain":"..."}   (only in reading)
-Use natural, everyday English. Do not repeat questions the learner has already seen.`;
+Use natural, everyday English. Do not repeat questions the learner has already seen.
+Before replying, check every exercise: an "input" q contains exactly one gap written as ___ (three underscores) and no other underscores;
+reading questions use only "choice" or "tf".`;
 
 /** Задание для AI: уровень, темы и уже заданные вопросы (последние 60), чтобы не было повторов. */
 export function buildUserPrompt(options: GenerateOptions, seenQuestions: string[]): string {
@@ -77,10 +79,11 @@ export class AiTestService {
 
   private async requestTest(provider: AiProvider, options: GenerateOptions): Promise<Partial<LevelTest>> {
     const answer = await provider.complete(SYSTEM_PROMPT, buildUserPrompt(options, this.seenQuestions()));
-    const raw = extractJson(answer) as Partial<LevelTest>;
-    const problems = testProblems(raw);
+    // сломанные вопросы убираем; тест бракуем, только если сломано больше четверти или осталась ошибка раздела
+    const { test, dropped, total } = withoutBrokenExercises(extractJson(answer));
+    const problems = dropped.length > total / 4 ? dropped : testProblems(test);
     if (problems.length) throw new Error(`${provider.name}: AI прислал тест с ошибками: ` + problems.slice(0, 3).join("; "));
-    return raw;
+    return test as Partial<LevelTest>;
   }
 
   private saveTest(raw: Partial<LevelTest>, options: GenerateOptions): LevelTest {
