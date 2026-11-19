@@ -35,7 +35,7 @@ test("AI: есть ключ Gemini → сначала Gemini; Gemini отказ�
     return route.fulfill({ json: { choices: [{ message: { content: JSON.stringify(AI_TEST) } }] } });
   });
   await open(page, "/tests");
-  await page.locator(".ai-panel summary").click();
+  await page.locator(".ai-panel > summary").click();
   await page.getByPlaceholder("ключ Google Gemini").fill("gemini-key");
   await page.getByRole("button", { name: "Проверить ключ" }).first().click();
   await expect(page.getByText("✓ Ключ работает, моделей: 2")).toBeVisible();
@@ -56,7 +56,7 @@ test("AI: нет ключа Gemini → сразу Groq", async ({ page }) => {
     ? route.fulfill({ json: { data: [{ id: "llama-3.3-70b-versatile" }] } })
     : route.fulfill({ json: { choices: [{ message: { content: JSON.stringify(AI_TEST) } }] } }));
   await open(page, "/tests");
-  await page.locator(".ai-panel summary").click();
+  await page.locator(".ai-panel > summary").click();
   await page.getByPlaceholder("ключ Groq").fill("groq-key");
   await page.getByRole("button", { name: "Проверить ключ" }).nth(1).click();
   await expect(page.getByText("✓ Ключ работает")).toBeVisible();
@@ -70,13 +70,44 @@ test("AI: неверный ключ и плохой тест — понятны�
     ? route.fulfill({ status: 401, body: "bad key" })
     : route.fulfill({ json: { choices: [{ message: { content: '{"title":"x","sections":[]}' } }] } }));
   await open(page, "/tests");
-  await page.locator(".ai-panel summary").click();
+  await page.locator(".ai-panel > summary").click();
   await page.getByPlaceholder("ключ Groq").fill("wrong");
   await page.getByRole("button", { name: "Проверить ключ" }).nth(1).click();
   await expect(page.getByText("Groq: ключ не подошёл")).toBeVisible();
   await page.getByPlaceholder("появится после").nth(1).fill("some-model");
   await page.getByRole("button", { name: "✨ Создать тест" }).click();
   await expect(page.getByText(/AI прислал тест с ошибками/)).toBeVisible();
+});
+
+test("AI через сервер сайта: вход по коду → тест создаётся без своих ключей", async ({ page }) => {
+  let loggedIn = false;
+  const completions: string[] = [];
+  await page.route("**/api/**", async route => {
+    const path = new URL(route.request().url()).pathname;
+    if (path.endsWith("/api/session")) return route.fulfill({ json: { user: loggedIn ? "rasul" : null, services: loggedIn ? ["gemini", "groq"] : [] } });
+    if (path.endsWith("/api/login")) {
+      if (route.request().postDataJSON().code !== "good-code-123456") return route.fulfill({ status: 401, json: { error: "Неверный код доступа." } });
+      loggedIn = true;
+      return route.fulfill({ json: { user: "rasul", services: ["gemini", "groq"] } });
+    }
+    const body = route.request().postDataJSON();
+    completions.push(body.service);
+    return body.service === "gemini"
+      ? route.fulfill({ status: 502, json: { error: "Google Gemini: превышен лимит" } })
+      : route.fulfill({ json: { text: JSON.stringify(AI_TEST) } });
+  });
+  await page.route(/googleapis|groq\.com/, route => route.abort());              // в сервисы напрямую — ни одного запроса
+  await open(page, "/tests");
+  await page.locator(".ai-panel > summary").click();
+  await page.getByPlaceholder("код доступа").fill("wrong");
+  await page.getByRole("button", { name: "Войти" }).click();
+  await expect(page.getByText("Неверный код доступа.")).toBeVisible();
+  await page.getByPlaceholder("код доступа").fill("good-code-123456");
+  await page.getByRole("button", { name: "Войти" }).click();
+  await expect(page.getByText("Вы вошли: rasul")).toBeVisible();
+  await page.getByRole("button", { name: "✨ Создать тест" }).click();
+  await expect(page.locator("h1")).toHaveText("Тест от AI");
+  expect(completions).toEqual(["gemini", "groq"]);                               // Gemini отказал → Groq
 });
 
 test("неправильные глаголы: правильный ответ засчитывается", async ({ page }) => {
