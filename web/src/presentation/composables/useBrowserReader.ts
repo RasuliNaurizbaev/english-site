@@ -2,20 +2,11 @@
 //   Safari (Mac, iPhone) — голоса Apple, без интернета;  Chrome — голоса Google (нужен интернет) или системные.
 // Читает по одному предложению, поэтому знает, какое звучит сейчас (для подсветки).
 import { onUnmounted, ref } from "vue";
+import { pickVoice } from "./useSpeech";
 
 export const browserVoiceSupported =
   typeof window !== "undefined" && "speechSynthesis" in window && "SpeechSynthesisUtterance" in window;
 
-/** Лучший английский голос: предпочтительно «хорошие» голоса, иначе любой американский. */
-function pickVoice(): SpeechSynthesisVoice | null {
-  const voices = speechSynthesis.getVoices().filter(v => /^en[-_]/i.test(v.lang));
-  const preferred = ["Google US English", "Samantha", "Ava", "Allison", "Microsoft Aria", "Microsoft Jenny", "Alex"];
-  for (const name of preferred) {
-    const voice = voices.find(v => v.name.includes(name));
-    if (voice) return voice;
-  }
-  return voices.find(v => /en[-_]US/i.test(v.lang)) ?? voices[0] ?? null;
-}
 
 export function useBrowserReader() {
   const reading = ref(false);
