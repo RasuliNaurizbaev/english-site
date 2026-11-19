@@ -15,5 +15,5 @@
     "types": ["vite/client", "vitest/globals", "node"],
     "paths": { "@/*": ["./src/*"] }
   },
-  "include": ["src/**/*.ts", "src/**/*.vue", "vite.config.ts"]
+  "include": ["src/**/*.ts", "src/**/*.vue", "worker/**/*.ts", "vite.config.ts"]
 }

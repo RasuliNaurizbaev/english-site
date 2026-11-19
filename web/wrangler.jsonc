@@ -1,4 +1,4 @@
-// Настройки Cloudflare Worker: сайт + mp3 как статические файлы.
+// Настройки Cloudflare Worker: сайт + mp3 как статические файлы, скрипт worker/index.ts — для перемотки mp3.
 // Сборка в Cloudflare: Root directory = web, Build command = npm run build:pages,
 // Deploy command = npx wrangler deploy (по умолчанию), для других веток — npx wrangler preview.
 // Адрес: https://open-english-for-beginner.rasuli-naurizbaev.workers.dev
@@ -6,10 +6,20 @@
   // должно совпадать с именем Worker'а в Cloudflare
   "name": "open-english-for-beginner",
   "compatibility_date": "2026-11-01",
+  // скрипт запускается только для run_worker_first (mp3 с перемоткой, /api), остальное — статические файлы
+  "main": "./worker/index.ts",
   "assets": {
     // npm run build:pages кладёт сюда сайт и mp3 (dist/audio); заголовки кеша — public/_headers
-    "directory": "./dist"
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "run_worker_first": ["/audio/*", "/api/*"]
   },
+  // Секреты (не здесь! панель Cloudflare → Worker → Settings → Variables and Secrets, тип Secret):
+  //   ACCESS_CODES    "rasul:код, anna:код" — коды входа (код ≥ 12 символов)
+  //   GEMINI_API_KEY  ключ Google Gemini (основной)
+  //   GROQ_API_KEY    ключ Groq (запасной)
+  // Необязательные переменные: GEMINI_MODEL, GROQ_MODEL — модель вручную (иначе выбирается сама).
+  // Локально: файл web/.dev.vars (в .gitignore) с теми же именами.
   // предпросмотр веток (development): пустой блок — те же настройки, что у основного сайта
   "previews": {}
 }
