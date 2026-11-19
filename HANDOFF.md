@@ -1,6 +1,6 @@
 # HANDOFF — состояние проекта, открытые вопросы и советы
 
-Дата: 2026-11-19 (обновлено: голос 🔊, статусы слов, рассказ дня, подготовка к деплою на Cloudflare Pages). Документ для того, кто продолжит работу (вы сами, другой разработчик или следующая сессия с Claude).
+Дата: 2026-11-19 (обновлено: голос 🔊, статусы слов, рассказ дня, деплой на Cloudflare Worker). Документ для того, кто продолжит работу (вы сами, другой разработчик или следующая сессия с Claude).
 Как устроен проект и как им пользоваться — в `README.md`. Здесь — **что не доделано, что не проверено, какие есть риски и что делать дальше**.
 
 ---
@@ -9,11 +9,8 @@
 
 ### Git
 ```
-GitHub  origin/main          b66d10a  Initial commit                          ← в Cloudflare подключается эта ветка
-GitHub  origin/development   590ceb8  Progress backup + HANDOFF
-local   development          a58c5a9  Голос для 🔊 (не «шуточные» голоса macOS)   ← не отправлено
-                             04519b1  Статусы слов, интервалы, рассказ дня      ← не отправлено
-                             + коммит «подготовка к деплою на Cloudflare Pages»  ← не отправлено
+GitHub  origin/main          2b6ac23  Merge PR #2 (development → main): голос, статусы слов, рассказ дня, build:pages
+local   development          + коммит «wrangler.jsonc для Cloudflare Worker»   ← не отправлено
 ```
 - **Схема веток (решено):** работа в `development` → Pull Request → `main`. Merge в `main` = автоматический деплой на Cloudflare.
 - **Push делаете вы**: защитный хук этой среды (`block-open-git-endpoint`) не разрешает Claude писать в `github.com/RasuliNaurizbaev/En`.
@@ -28,6 +25,7 @@ local   development          a58c5a9  Голос для 🔊 (не «шуточ�
 | Повторение: новое слово — Снова сегодня / Трудно завтра / Хорошо 1 неделя / Легко 4 недели, дальше интервал растёт; «Я это уже знаю» показывает сообщение | `domain/spacedRepetition.ts` (`FIRST_INTERVALS`), `pages/ReviewPage.vue` |
 | «Сегодня»: выбор уровня A2 (01–20) / B1 (21–40) → случайный рассказ, повторное нажатие — другой; выбор на день (ключ `storyPick`) | `components/StoryPlanCard.vue`, `application/todayPlan.ts`, `domain/storyLevel.ts` |
 | Деплой: `npm run build:pages` (сборка + mp3 в `dist/audio`), `public/_headers` (кеш), `.node-version` (22) | `web/scripts/copy-audio.mjs`, README → «Деплой» |
+| Хостинг — **Cloudflare Worker** `open-english-for-beginner` (а не Pages): `web/wrangler.jsonc` с `assets` и пустым `previews` — без него сборка веток падала (`wrangler preview`: missing `previews` block) | `web/wrangler.jsonc` |
 
 ### Что работает и проверено
 - `npm run check` (в `web/`): типы TypeScript, **55 модульных тестов**, сборка, **20 тестов в браузере** — всё проходит.
@@ -47,7 +45,7 @@ local   development          a58c5a9  Голос для 🔊 (не «шуточ�
 | **AI с настоящими ключами** (Gemini, Groq) | ключей не было; проверено только на подставных ответах | сервис может не принять запрос **из браузера (CORS)**; модель может не поддерживать `response_format: json_object`; лимиты | вставить ключ → «Проверить ключ» → «Создать тест»; если ошибка — прислать текст сообщения |
 | **Голос браузера на реальных устройствах** | в тестах голос подменяется «фейком» (в безэкранном браузере звука нет) | на iPhone/Android очередь фраз и события «начало предложения» могут вести себя иначе → караоке может отставать | открыть рассказ 21 на телефоне, нажать «▶ Читать вслух» и на предложение |
 | **mp3 на телефоне** | проверено в Chrome на Mac | Safari на iPhone строже с автозапуском и перемоткой | рассказ 01 на iPhone: плеер, смена голоса, нажатие на предложение |
-| **Сайт на Cloudflare Pages** | первый деплой ещё не сделан | сборка `main` упадёт, пока в `main` нет `build:pages` (см. совет 1); Safari на iPhone может не перематывать mp3, если сервер не отдаёт части файла | после merge: открыть сайт на компьютере и iPhone, рассказ 01 — плеер, перемотка нажатием на предложение |
+| **Сайт на Cloudflare Worker** | первый удачный деплой ещё не сделан (первая попытка упала без `wrangler.jsonc`) | имя в `wrangler.jsonc` должно совпадать с именем Worker'а; Safari на iPhone может не перематывать mp3, если сервер не отдаёт части файла | после merge: открыть сайт на компьютере и iPhone, рассказ 01 — плеер, перемотка нажатием на предложение |
 | **Внешний вид** | скриншоты сделаны для части страниц на ширине 390 px (в основном тёмная тема) | на планшете, широком экране или в светлой теме могут быть мелкие огрехи вёрстки | пройтись по всем вкладкам на телефоне и компьютере |
 | **Доступность** (экранные дикторы, клавиатура) | не проверялась | часть кнопок без подписей для экранного диктора | при необходимости — отдельная доработка |
 
@@ -96,31 +94,29 @@ local   development          a58c5a9  Голос для 🔊 (не «шуточ�
 
 | # | Вопрос | Статус |
 |---|---|---|
-| 1 | **Хостинг** сайта и mp3 | **решено:** Cloudflare Pages, сайт + mp3 вместе (`npm run build:pages`), сборка из GitHub; настройка — README → «Деплой». Проверить после первого деплоя: перемотка mp3 в Safari на iPhone |
+| 1 | **Хостинг** сайта и mp3 | **решено:** Cloudflare **Worker** со статическими файлами (не Pages — Worker основной продукт, удобнее для AI-посредника и будущих сервисов), сайт + mp3 вместе (`npm run build:pages`), сборка из GitHub; адрес https://open-english-for-beginner.rasuli-naurizbaev.workers.dev; настройка — README → «Деплой» |
 | 2 | Ветки | **решено:** `development` → Pull Request → `main` |
 | 3 | Прогресс между устройствами | **сделано:** резервная копия в файл («Сегодня» → «💾 Резервная копия прогресса») |
 | 4 | mp3 для рассказов 21–40 | **позже** |
 | 5 | mp3 в git | **пока остаются в git**, пока не выбран хостинг |
 | 6 | PWA | **позже**, после деплоя |
-| 7 | Ключ AI | **отложено** — AI пока не используется. Решено: ключ **не вписывать в код** и не класть в `.env` сайта. Для публичного сайта — бесплатный посредник (Cloudflare Pages Functions / Workers, Netlify / Vercel Functions, Deno Deploy, Supabase Edge Functions) |
+| 7 | Ключ AI | **следующий шаг** после деплоя: посредник в том же Worker'е (см. совет 6). Решено: ключ **не вписывать в код** и не класть в `.env` сайта. Для публичного сайта — бесплатный посредник (Cloudflare Pages Functions / Workers, Netlify / Vercel Functions, Deno Deploy, Supabase Edge Functions) |
 | 8 | Проверка контента преподавателем | преподавателя нет → ошибки в контенте сообщать Claude, он исправляет |
 
 ## 5. Советы (по приоритету)
 
 ### Сначала — деплой (текущая задача)
-1. `git push origin development` → Pull Request `development` → `main` → merge при зелёной проверке.
-2. Cloudflare: **Workers & Pages → Create → Pages → Connect to Git** → `RasuliNaurizbaev/En`;
-   Production branch `main`, Root directory `web`, Build command `npm run build:pages`, Output `dist` (подробно — README → «Деплой»).
-   ⚠ Пока в `main` только первый коммит, `build:pages` там нет — либо сначала merge, либо временно `npm run build` (сайт без mp3, читает голос браузера).
-3. Включить предпросмотр для `development` (Settings → Builds → Preview branches) — нужен для шага с AI.
-4. Проверить сайт на телефоне: рассказ 01 (mp3, караоке, перемотка), рассказ 21 (голос браузера), «Слова», диктант.
-5. **Пройти тест уровня** и **сохранить первую резервную копию прогресса** (прогресс на сайте `*.pages.dev` — отдельный от `localhost`; перенос — через файл).
+1. `git push origin development` → Pull Request `development` → `main` → merge (нужен `web/wrangler.jsonc` в `main`).
+2. Cloudflare: **Create → Worker → Import a repository** → `En`; имя `open-english-for-beginner`, Root directory `web`,
+   Build command `npm run build:pages`, Deploy command — по умолчанию (подробно — README → «Деплой»).
+3. Проверить сайт на телефоне: рассказ 01 (mp3, караоке, перемотка в Safari на iPhone), рассказ 21 (голос браузера), «Слова», диктант.
+4. **Пройти тест уровня** и **сохранить первую резервную копию прогресса** (прогресс на `*.workers.dev` — отдельный от `localhost`; перенос — через файл).
 
 ### Затем — дорожная карта
-6. **AI-ключ через посредника** (на `development`): Cloudflare Pages Function `web/functions/api/ai/…`, ключ Gemini/Groq — в секретах Cloudflare
-   (Settings → Variables and Secrets), не в коде и не в `.env` сайта. Сайт обращается к `/api/ai/…`, ключ в браузер не попадает.
+6. **AI-ключ через посредника** (на `development`): скрипт Worker'а (`main` в `wrangler.jsonc`) отвечает на `/api/ai/…`, остальное — статические файлы;
+   ключ Gemini/Groq — в секретах Worker'а (Settings → Variables and Secrets или `npx wrangler secret put`), не в коде и не в `.env` сайта. Сайт обращается к `/api/ai/…`, ключ в браузер не попадает.
    Обязательно защитить посредника (иначе любой, кто знает адрес, тратит ваш лимит): Cloudflare Access на сайт или общий пароль/токен.
-   Лимит функций на бесплатном плане — 100 000 запросов в день.
+   Лимит на бесплатном плане — 100 000 запросов к коду Worker'а в день (запросы к статическим файлам сюда не входят).
 7. **Улучшение кода**: обновление логики, архитектуры; отдельные сервисы — по необходимости (сейчас сайт статический, сервер нужен только для AI).
 8. **PWA** после деплоя: иконка на телефоне, офлайн-режим.
 
@@ -174,8 +170,8 @@ cd EL/web && npm run check
 python3 tools/find_story_words.py --force
 python3 tools/make_story_audio.py --only 21    # mp3 для одного рассказа (нужны edge-tts и ffmpeg)
 
-# сборка для Cloudflare Pages (сайт + mp3 в web/dist)
-cd EL/web && npm run build:pages
+# сборка для Cloudflare Worker (сайт + mp3 в web/dist) и проверка настроек
+cd EL/web && npm run build:pages && npx wrangler deploy --dry-run
 
 # git (push — вручную); деплой — merge development → main
 git push -u origin development
