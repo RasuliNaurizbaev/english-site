@@ -1,0 +1,103 @@
+{
+  "questions": [
+    {
+      "type": "tf",
+      "q": "Dmitry had read technical documents in English for five years before he came to London.",
+      "answer": true,
+      "explain": "Верно: пять лет он почти каждый день читал технические документы на английском."
+    },
+    {
+      "type": "choice",
+      "q": "Where did Dmitry find Emma's note?",
+      "options": [
+        "In a café near his office",
+        "On the noticeboard in the local library",
+        "On a university website"
+      ],
+      "answer": 1,
+      "explain": "Он увидел объявление на доске объявлений в местной библиотеке."
+    },
+    {
+      "type": "choice",
+      "q": "In the text, a colleague asks \"Fancy a cuppa?\". What does it mean?",
+      "options": [
+        "Would you like a cup of tea?",
+        "Do you like expensive cups?",
+        "Can you help me with my work?"
+      ],
+      "answer": 0,
+      "explain": "Позже Дмитрий узнал, что это было просто предложение выпить чашку чая."
+    },
+    {
+      "type": "tf",
+      "q": "Emma explained that \"quite good\" in British English always means \"excellent\".",
+      "answer": false,
+      "explain": "Неверно: она объяснила, что «quite good» часто значит «не очень хорошо»."
+    },
+    {
+      "type": "choice",
+      "q": "Why, according to Dmitry, don't Russians smile at strangers?",
+      "options": [
+        "Because they are always tired",
+        "Because smiling is not polite at work",
+        "Because a smile is for people you know"
+      ],
+      "answer": 2,
+      "explain": "Дмитрий объяснил, что в России улыбка — для знакомых людей."
+    },
+    {
+      "type": "choice",
+      "q": "Why didn't Emma come to the café for several weeks?",
+      "options": [
+        "She had lost interest in Russian",
+        "Her grandmother was in hospital and she had lost her phone",
+        "She was studying in Saint Petersburg"
+      ],
+      "answer": 1,
+      "explain": "Её бабушку положили в больницу, Эмма уехала в Лидс и потеряла телефон в поезде."
+    },
+    {
+      "type": "tf",
+      "q": "At first Dmitry thought that Emma had simply lost interest in their friendship.",
+      "answer": true,
+      "explain": "Верно: он решил, что их дружба была для неё лишь вежливой договорённостью."
+    },
+    {
+      "type": "choice",
+      "q": "How did Emma help Dmitry with his presentation?",
+      "options": [
+        "She showed him how to make his sentences shorter and more natural",
+        "She gave the presentation instead of him",
+        "She translated it into Russian"
+      ],
+      "answer": 0,
+      "explain": "Она показала ему, как делать фразы короче и естественнее."
+    },
+    {
+      "type": "tf",
+      "q": "Emma failed her oral exam in Russian.",
+      "answer": false,
+      "explain": "Неверно: она сдала экзамен с одной из самых высоких оценок на курсе."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Emma's cake mean so much to Dmitry?",
+      "options": [
+        "It was very expensive",
+        "It was made with his grandmother's recipe",
+        "It was his birthday"
+      ],
+      "answer": 1,
+      "explain": "Эмма испекла торт по рецепту бабушки Дмитрия, который он ей перевёл."
+    }
+  ],
+  "retell": [
+    "What problem did Dmitry have with English when he arrived in London?",
+    "How did Dmitry and Emma meet, and how did their exchange work?",
+    "What misunderstandings did they have about language and culture?",
+    "What happened in March, and what did Dmitry think?",
+    "Why had Emma disappeared?",
+    "How did they help each other before the exam and the presentation?",
+    "How did the story end?"
+  ]
+}

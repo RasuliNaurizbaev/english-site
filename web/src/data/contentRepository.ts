@@ -1,6 +1,7 @@
 // Загрузка контента (рассказы, словари, грамматика, аудио слов) из public/data/*.json.
 // Каждый файл грузится отдельно: если один не загрузится, остальные разделы работают.
-import type { GrammarTopic, Level, Story, Vocabulary, Word, WordAudio, WordAudioPart } from "@/domain/types";
+import type { GrammarTopic, Level, LevelTest, Story, Vocabulary, Word, WordAudio, WordAudioPart } from "@/domain/types";
+import type { IrregularVerb } from "@/domain/verbs";
 import { dataUrl } from "./config";
 
 export interface LoadProblem {
@@ -17,6 +18,8 @@ export class ContentRepository {
     private readonly vocabulary: Vocabulary,
     private readonly grammar: GrammarTopic[],
     private readonly wordAudio: WordAudio,
+    private readonly verbList: IrregularVerb[] = [],
+    private readonly testList: LevelTest[] = [],
   ) {
     this.levels = Object.keys(vocabulary) as Level[];
     for (const level of this.levels) {
@@ -46,6 +49,11 @@ export class ContentRepository {
   // ---------- аудио слов ----------
   wordAudioLevels(): Level[] { return (Object.keys(this.wordAudio) as Level[]).filter(l => (this.wordAudio[l] ?? []).length); }
   wordAudioParts(level: Level): WordAudioPart[] { return this.wordAudio[level] ?? []; }
+
+  // ---------- неправильные глаголы и тесты ----------
+  verbs(): IrregularVerb[] { return this.verbList; }
+  tests(): LevelTest[] { return this.testList; }
+  test(id: string): LevelTest | undefined { return this.testList.find(t => t.id === id); }
 }
 
 async function loadJson<T>(name: string, fallback: T, problems: LoadProblem[]): Promise<T> {
@@ -62,11 +70,13 @@ async function loadJson<T>(name: string, fallback: T, problems: LoadProblem[]): 
 /** Загружает весь контент. Ошибки не выбрасываются — они возвращаются списком problems. */
 export async function loadContent(): Promise<{ content: ContentRepository; problems: LoadProblem[] }> {
   const problems: LoadProblem[] = [];
-  const [stories, vocabulary, grammar, wordAudio] = await Promise.all([
+  const [stories, vocabulary, grammar, wordAudio, verbs, tests] = await Promise.all([
     loadJson<Story[]>("stories.json", [], problems),
     loadJson<Vocabulary>("words.json", {}, problems),
     loadJson<GrammarTopic[]>("grammar.json", [], problems),
     loadJson<WordAudio>("audio.json", {}, problems),
+    loadJson<IrregularVerb[]>("verbs.json", [], problems),
+    loadJson<LevelTest[]>("tests.json", [], problems),
   ]);
-  return { content: new ContentRepository(stories, vocabulary, grammar, wordAudio), problems };
+  return { content: new ContentRepository(stories, vocabulary, grammar, wordAudio, verbs, tests), problems };
 }

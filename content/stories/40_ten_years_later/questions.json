@@ -1,0 +1,103 @@
+{
+  "questions": [
+    {
+      "type": "tf",
+      "q": "The friends had promised to meet at the same Italian restaurant after ten years.",
+      "answer": true,
+      "explain": "Верно: они договорились встретиться ровно через десять лет в том же итальянском ресторане."
+    },
+    {
+      "type": "choice",
+      "q": "Why was the envelope given to Hannah?",
+      "options": [
+        "She was the most organised of them",
+        "She was the oldest",
+        "She was staying in their hometown"
+      ],
+      "answer": 0,
+      "explain": "Конверт отдали Ханне, потому что она была самой организованной."
+    },
+    {
+      "type": "tf",
+      "q": "Mr Rossi didn't recognise Hannah.",
+      "answer": false,
+      "explain": "Неверно: мистер Росси сразу её вспомнил."
+    },
+    {
+      "type": "tf",
+      "q": "Jack is now a famous musician in Los Angeles.",
+      "answer": false,
+      "explain": "Неверно: Джек работает в банке в Лондоне, а его группа распалась."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Sofia leave medical school?",
+      "options": [
+        "She failed her exams",
+        "She realised that she hated hospitals",
+        "She got married"
+      ],
+      "answer": 1,
+      "explain": "София объяснила, что поняла, что ненавидит больницы."
+    },
+    {
+      "type": "tf",
+      "q": "Marcus started his company in his parents' garage and never left his hometown.",
+      "answer": true,
+      "explain": "Верно: его компания началась в гараже родителей, и он так и не уехал из родного города."
+    },
+    {
+      "type": "choice",
+      "q": "Why had Hannah left her job?",
+      "options": [
+        "She was fired",
+        "She wanted to study law",
+        "She realised she wasn't happy working twelve hours a day"
+      ],
+      "answer": 2,
+      "explain": "Ханна выполнила все планы, но поняла, что несчастна, работая по двенадцать часов в день."
+    },
+    {
+      "type": "choice",
+      "q": "Why had Ella not told her friends about her mother's illness?",
+      "options": [
+        "She didn't want to be the sad friend while everyone was busy",
+        "She had lost their phone numbers",
+        "Her mother asked her not to tell anyone"
+      ],
+      "answer": 0,
+      "explain": "Элла сказала, что все были заняты новой жизнью, а она не хотела быть «грустной подругой»."
+    },
+    {
+      "type": "choice",
+      "q": "In the text, Ella thought she had \"fallen behind\" everyone else. What does this mean?",
+      "options": [
+        "She had moved further away than others",
+        "She was less successful or advanced than others",
+        "She had arrived later than others"
+      ],
+      "answer": 1,
+      "explain": "«Fall behind» здесь значит отстать от других в жизни и успехах."
+    },
+    {
+      "type": "choice",
+      "q": "What did the friends write on the napkins?",
+      "options": [
+        "Their plans for the next ten years",
+        "Their new addresses",
+        "One thing that each of them had learned"
+      ],
+      "answer": 2,
+      "explain": "По идее Эллы каждый написал одну вещь, которой научился, а не планы."
+    }
+  ],
+  "retell": [
+    "What promise did the five friends make on their last day at school?",
+    "How did Hannah find the envelope, and what did she do?",
+    "What was the beginning of the dinner like?",
+    "How were Jack's and Sofia's lives different from their plans?",
+    "What did Marcus and Hannah tell the others?",
+    "What was Ella's story, and what good news did she have?",
+    "What did the friends decide at the end of the evening?"
+  ]
+}

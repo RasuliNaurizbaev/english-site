@@ -6,12 +6,13 @@
     ├── content/              всё, что пишется руками
     │   ├── vocabulary/       A1.csv, A2.csv, B1.csv (+ backup/)
     │   ├── stories/          <id>/story.txt, words.csv, questions.json
-    │   └── grammar/          <LEVEL>/<NN>_<slug>.json
+    │   ├── grammar/          <LEVEL>/<NN>_<slug>.json
+    │   ├── tests/            placement.json, b1_mock_N.json
+    │   └── irregular_verbs.csv
     ├── audio/                всё сгенерированное аудио
     │   ├── stories/          <id>/<voice>.mp3 + <voice>.json (время предложений)
     │   └── words/            <LEVEL>/part_NN.mp3 + manifest.json
     ├── web/                  сайт: Vue + TypeScript (web/public/data — данные)
-    ├── site/                 старый сайт (до перехода на Vue)
     └── tools/                эти скрипты
 """
 from pathlib import Path
@@ -22,14 +23,13 @@ CONTENT = ROOT / "content"
 VOCABULARY_DIR = CONTENT / "vocabulary"
 STORIES_DIR = CONTENT / "stories"
 GRAMMAR_DIR = CONTENT / "grammar"
+TESTS_DIR = CONTENT / "tests"                         # тест уровня и пробные экзамены
+IRREGULAR_VERBS = CONTENT / "irregular_verbs.csv"
 
 AUDIO = ROOT / "audio"
 STORY_AUDIO_DIR = AUDIO / "stories"
 WORD_AUDIO_DIR = AUDIO / "words"
 WORD_AUDIO_MANIFEST = WORD_AUDIO_DIR / "manifest.json"
-
-SITE = ROOT / "site"                     # старый сайт (до перехода на Vue)
-SITE_DATA_DIR = SITE / "data"
 
 WEB = ROOT / "web"                       # новый сайт: Vue + TypeScript
 WEB_DATA_DIR = WEB / "public" / "data"   # JSON для нового сайта (создаёт build_site_data.py)
@@ -62,8 +62,3 @@ def story_audio_dir(story_id):
 def audio_relative(path):
     """Путь к mp3 относительно папки audio/ (например stories/01_x/jenny.mp3) — новый сайт добавляет к нему адрес хранилища."""
     return Path(path).resolve().relative_to(AUDIO).as_posix()
-
-
-def url_from_site(path):
-    """Путь к файлу так, как его видит страница site/index.html (например ../audio/words/A1/part_01.mp3)."""
-    return "../" + Path(path).resolve().relative_to(ROOT).as_posix()

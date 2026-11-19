@@ -28,6 +28,8 @@ const RATINGS: { rating: Exclude<Rating, "known">; label: string }[] = [
 ];
 function describeInterval(days: number): string {
   if (days < 1) return "сегодня";
+  if (days === 1) return "завтра";
+  if (days % 7 === 0 && days <= 28) return days / 7 + " " + plural(days / 7, "неделя", "недели", "недель");
   if (days < 30) return days + " " + plural(days, "день", "дня", "дней");
   return Math.round(days / 30) + " мес.";
 }
@@ -43,7 +45,9 @@ function reveal() {
   revealed.value = true;
   speak(word.value.en);
 }
+const knownNote = ref("");                 // отклик на «Я это уже знаю»: карточка сразу сменяется следующей
 function answer(rating: Exclude<Rating, "known">) {
+  knownNote.value = "";
   const current = queue.value.shift();
   if (!current) return;
   review.grade(current.key, rating);
@@ -55,6 +59,7 @@ function alreadyKnown() {
   const current = queue.value.shift();
   if (!current) return;
   review.grade(current.key, "known");
+  knownNote.value = `✓ «${content.word(current.key)?.en ?? ""}» → выучено (следующий показ через 60 дней)`;
   // вместо знакомого слова — следующее новое (знакомые не тратят лимит)
   const replacement = review.newWordKeys(review.newWordsLeftToday() + 1).find(k => k !== current.key && !queue.value.some(q => q.key === k));
   if (replacement && review.newWordsLeftToday() > 0) queue.value.push({ key: replacement, isNew: true });
@@ -83,6 +88,8 @@ onUnmounted(() => document.removeEventListener("keydown", onKey));
     <span class="muted">Осталось: {{ queue.length }}</span>
     <button class="small" @click="toggleDirection">{{ direction === "en-ru" ? "EN → RU" : "RU → EN" }}</button>
   </div>
+
+  <p v-if="knownNote" class="known-note">{{ knownNote }}</p>
 
   <template v-if="!item || !word">
     <div class="flashcard done">

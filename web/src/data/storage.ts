@@ -4,6 +4,9 @@
 export interface KeyValueStorage {
   get<T>(key: string, defaultValue: T): T;
   set(key: string, value: unknown): void;
+  remove(key: string): void;
+  /** Все сохранённые ключи (без префикса). */
+  keys(): string[];
   readonly persistent: boolean;
 }
 
@@ -16,6 +19,8 @@ export function createMemoryStorage(): KeyValueStorage {
     persistent: false,
     get: <T>(key: string, defaultValue: T) => (memory.has(key) ? (memory.get(key) as T) : defaultValue),
     set: (key, value) => { memory.set(key, value); },
+    remove: key => { memory.delete(key); },
+    keys: () => [...memory.keys()],
   };
 }
 
@@ -42,6 +47,16 @@ export function createBrowserStorage(): KeyValueStorage {
         localStorage.setItem(PREFIX + key, JSON.stringify(value));
       } catch {
         // места нет / запрещено — не сохраняем, но и не падаем
+      }
+    },
+    remove(key) {
+      try { localStorage.removeItem(PREFIX + key); } catch { /* запрещено — ничего не делаем */ }
+    },
+    keys() {
+      try {
+        return Object.keys(localStorage).filter(k => k.startsWith(PREFIX)).map(k => k.slice(PREFIX.length));
+      } catch {
+        return [];
       }
     },
   };

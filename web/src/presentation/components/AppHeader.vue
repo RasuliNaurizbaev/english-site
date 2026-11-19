@@ -12,6 +12,7 @@ const TABS = [
   { tab: "stories", to: "/stories", icon: "📖", label: "Рассказы" },
   { tab: "words", to: "/words", icon: "🗂", label: "Слова" },
   { tab: "grammar", to: "/grammar", icon: "📐", label: "Грамматика" },
+  { tab: "practice", to: "/practice", icon: "🎯", label: "Практика" },
   { tab: "audio", to: "/audio", icon: "🎧", label: "Аудио" },
 ] as const;
 </script>

@@ -1,6 +1,6 @@
-<!-- Словарь по уровням: поиск, фильтр по статусу, отметка «уже знаю». -->
+<!-- Словарь по уровням: поиск, фильтр по статусу; в фильтрах «Новые / Учу / Выучено» — кнопки смены статуса. -->
 <script setup lang="ts">
-import { computed, ref } from "vue";
+import { computed, ref, watch } from "vue";
 import { useServices } from "../composables/useServices";
 import { breakIfRequested } from "../problems";
 import type { Level } from "@/domain/types";
@@ -12,7 +12,7 @@ breakIfRequested("wordsPage");
 const props = defineProps<{ level?: string }>();
 const { content, review, progress } = useServices();
 
-const MAX_ROWS = 400;   // без поиска не больше 400 строк — так страница не тормозит
+const PAGE_SIZE = 100;  // показываем по 100 слов: «Ещё 100 →» заменяет текущую сотню следующей
 const STATUS_LABEL: Record<WordStatus, string> = { new: "новое", learning: "учу", learned: "выучено" };
 
 const level = computed<Level>(() => {
@@ -34,12 +34,36 @@ const matching = computed(() => {
     .map(([en, ru]) => ({ en, ru, key: level.value + "|" + en, status: review.status(level.value + "|" + en) }))
     .filter(w => (filter.value === "all" || w.status === filter.value) && (!q || w.en.toLowerCase().includes(q) || w.ru.toLowerCase().includes(q)));
 });
-const shown = computed(() => matching.value.slice(0, MAX_ROWS));
-const levelStats = computed(() => { void version.value; return content.levels.map(l => ({ level: l, ...review.levelStats(l) })); });
-const due = review.dueWordKeys().length;
-const fresh = review.newWordKeys(review.newWordsLeftToday()).length;
+// ---------- страницы по 100 слов ----------
+const page = ref(0);
+const pageCount = computed(() => Math.max(1, Math.ceil(matching.value.length / PAGE_SIZE)));
+const shown = computed(() => matching.value.slice(page.value * PAGE_SIZE, (page.value + 1) * PAGE_SIZE));
+const rangeText = computed(() => {
+  if (!matching.value.length) return "Ничего не найдено";
+  const from = page.value * PAGE_SIZE + 1;
+  return `Слова ${from}–${from + shown.value.length - 1} из ${matching.value.length}`;
+});
+// новый поиск, фильтр или уровень — снова с первой сотни
+watch([query, filter, level], () => { page.value = 0; });
+// слово сменило статус и ушло из фильтра — страниц могло стать меньше
+watch(pageCount, count => { if (page.value > count - 1) page.value = count - 1; });
 
-function toggle(key: string) { review.toggleKnown(key); version.value++; }
+const listTop = ref<HTMLElement | null>(null);
+function goToPage(next: number) {
+  page.value = Math.min(Math.max(next, 0), pageCount.value - 1);
+  listTop.value?.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+const levelStats = computed(() => { void version.value; return content.levels.map(l => ({ level: l, ...review.levelStats(l) })); });
+const due = computed(() => { void version.value; return review.dueWordKeys().length; });
+const fresh = computed(() => { void version.value; return review.newWordKeys(review.newWordsLeftToday()).length; });
+
+const lastChange = ref("");
+function setStatus(word: { key: string; en: string }, status: "learning" | "learned") {
+  if (status === "learning") review.markLearning(word.key);
+  else review.markLearned(word.key);
+  lastChange.value = `✓ «${word.en}» → ${STATUS_LABEL[status]}` + (status === "learning" ? " (уже в повторении на сегодня)" : "");
+  version.value++;
+}
 </script>
 
 <template>
@@ -58,14 +82,29 @@ function toggle(key: string) { review.toggleKnown(key); version.value++; }
 
   <input v-model="query" class="search" type="search" placeholder="Поиск по английскому или русскому…">
   <SegmentedControl v-model="filter" :options="filterOptions" small />
-  <p class="muted">Показано: {{ shown.length }}{{ matching.length > shown.length ? ` из ${matching.length} (используйте поиск)` : "" }}</p>
+  <p ref="listTop" class="muted words-range">{{ rangeText }}</p>
+  <p v-if="lastChange" class="words-change">{{ lastChange }}</p>
   <ul class="word-list">
     <li v-for="w in shown" :key="w.key" :class="'st-' + w.status">
+      <span class="speak-cell"><SpeakButton :text="w.en" /></span>
       <span class="en">{{ w.en }}</span>
       <span class="ru">{{ w.ru }}</span>
-      <button class="st" :title="w.status === 'new' ? 'Отметить как уже знакомое' : 'Вернуть в новые'" @click="toggle(w.key)">{{ STATUS_LABEL[w.status] }}</button>
-      <SpeakButton :text="w.en" />
+      <span class="word-status">
+        <span v-if="filter === 'all'" class="st">{{ STATUS_LABEL[w.status] }}</span>
+        <template v-else>
+          <button v-if="w.status !== 'learning'" class="st-btn to-learning" title="Учить: слово появится в повторении сегодня" @click="setStatus(w, 'learning')">учу</button>
+          <button v-if="w.status !== 'learned'" class="st-btn to-learned" title="Уже знаю: следующий показ через 60 дней" @click="setStatus(w, 'learned')">выучено</button>
+        </template>
+      </span>
     </li>
   </ul>
-  <p class="muted small-note">Нажмите на «новое», если слово уже знакомо, — оно не будет показываться как новое.</p>
+  <div v-if="pageCount > 1" class="pager">
+    <button class="small" :disabled="page === 0" @click="goToPage(page - 1)">← Назад</button>
+    <span class="muted">{{ page + 1 }} / {{ pageCount }}</span>
+    <button class="small primary-small" :disabled="page >= pageCount - 1" @click="goToPage(page + 1)">Ещё 100 →</button>
+  </div>
+  <p class="muted small-note">
+    Статус меняется в фильтрах «Новые», «Учу», «Выучено»: «учу» — слово попадёт в повторение уже сегодня,
+    «выучено» — следующий показ через 60 дней.
+  </p>
 </template>

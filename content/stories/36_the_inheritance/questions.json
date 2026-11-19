@@ -1,0 +1,103 @@
+{
+  "questions": [
+    {
+      "type": "tf",
+      "q": "Tom had met his great-aunt Edith only once, when he was a child.",
+      "answer": true,
+      "explain": "Верно: Том говорит, что видел её только один раз, когда ему было восемь лет."
+    },
+    {
+      "type": "choice",
+      "q": "What was the condition in Aunt Edith's will?",
+      "options": [
+        "Tom had to sell the house and give the money to the village",
+        "Tom had to live in the house for a year and look after the bees",
+        "Tom had to open a library in the house"
+      ],
+      "answer": 1,
+      "explain": "По завещанию Том должен прожить в доме целый год и ухаживать за пчёлами."
+    },
+    {
+      "type": "choice",
+      "q": "What would happen to the house if Tom left before the end of the year?",
+      "options": [
+        "It would be given to the village and turned into a library",
+        "It would be given to his mother",
+        "It would be sold to George"
+      ],
+      "answer": 0,
+      "explain": "Мистер Флетчер объяснил, что дом отдадут деревне и превратят в библиотеку."
+    },
+    {
+      "type": "tf",
+      "q": "Raj thought that moving to the village was a great idea.",
+      "answer": false,
+      "explain": "Неверно: Радж решил, что Том сошёл с ума, и сказал, что ему станет скучно через неделю."
+    },
+    {
+      "type": "choice",
+      "q": "Why was Tom stung three times the first time he opened a hive?",
+      "options": [
+        "He opened the hive at night",
+        "George frightened the bees",
+        "He had forgotten to put on his gloves"
+      ],
+      "answer": 2,
+      "explain": "Он забыл надеть перчатки, хотя в блокноте было сказано это сделать."
+    },
+    {
+      "type": "tf",
+      "q": "Edith had worked as a lawyer before she retired.",
+      "answer": false,
+      "explain": "Неверно: Эдит тридцать лет была учительницей естествознания в деревенской школе."
+    },
+    {
+      "type": "tf",
+      "q": "All forty jars of Tom's honey were sold in less than an hour.",
+      "answer": true,
+      "explain": "Верно: в тексте сказано, что за час были проданы все сорок банок."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Edith choose Tom to inherit her house?",
+      "options": [
+        "He was her only living relative",
+        "As a boy, he had watched the bees and said he wanted to live in a place like this",
+        "He had written her many letters"
+      ],
+      "answer": 1,
+      "explain": "В письме Эдит вспоминает, что маленький Том два часа смотрел на пчёл и сказал, что хочет жить в таком месте."
+    },
+    {
+      "type": "choice",
+      "q": "In the text, Tom \"handed in his notice\". What does this mean?",
+      "options": [
+        "He told his employer that he was leaving his job",
+        "He sent a letter to the lawyer",
+        "He gave his flat key to the owner"
+      ],
+      "answer": 0,
+      "explain": "«Hand in one's notice» значит официально сообщить работодателю об увольнении."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Tom open a reading room for children in the house?",
+      "options": [
+        "The lawyer told him he had to",
+        "He needed money from the village",
+        "He thought Edith would have liked the idea of a library"
+      ],
+      "answer": 2,
+      "explain": "Том подумал, что, если бы Эдит была жива, ей бы понравилась идея библиотеки."
+    }
+  ],
+  "retell": [
+    "Who was Tom and what was his life like in the city?",
+    "What did the lawyer tell Tom about the house and the will?",
+    "Why did Tom decide to move to Ashcombe?",
+    "What problems did Tom have in his first weeks?",
+    "How did George help Tom?",
+    "What did Tom find in the old dictionary?",
+    "What did Tom decide to do at the end of the year?"
+  ]
+}

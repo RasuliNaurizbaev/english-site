@@ -1,0 +1,78 @@
+{
+  "id": "b1_mock_2",
+  "kind": "mock",
+  "title": "B1 Practice Test 2",
+  "titleRu": "Пробный тест B1 — вариант 2",
+  "description": "Тренировочный тест в формате экзамена уровня B1: грамматика, лексика, чтение и аудирование. Займёт около 45 минут.",
+  "minutes": 45,
+  "sections": [
+    {
+      "kind": "grammar",
+      "title": "Грамматика",
+      "exercises": [
+        {"type": "choice", "q": "If we lived near the sea, we ___ swimming every day.", "options": ["go", "will go", "would go", "went"], "answer": 2, "explain": "Второе условное (нереальная ситуация): if + Past Simple, would + глагол."},
+        {"type": "input", "q": "What would you do if you ___ (find) a wallet in the street?", "answer": ["found"], "explain": "Во втором условном после if ставится Past Simple: found."},
+        {"type": "choice", "q": "When we got to the cinema, the film ___.", "options": ["already started", "had already started", "has already started", "was already start"], "answer": 1, "explain": "Фильм начался раньше, чем мы пришли, — Past Perfect."},
+        {"type": "choice", "q": "'I'm tired,' she said. → She said that she ___ tired.", "options": ["is being", "was", "were", "has"], "answer": 1, "explain": "В косвенной речи после said время сдвигается назад: am → was."},
+        {"type": "choice", "q": "Could you tell me ___?", "options": ["where is the station", "where the station is", "where does the station", "where is station"], "answer": 1, "explain": "В косвенном вопросе порядок слов прямой: where the station is."},
+        {"type": "input", "q": "We ___ (wait) for the bus for forty minutes, and it still hasn't come!", "answer": ["have been waiting", "'ve been waiting", "have waited", "'ve waited"], "explain": "Действие началось в прошлом и продолжается сейчас — Present Perfect Continuous."},
+        {"type": "input", "q": "The Mona Lisa ___ (paint) by Leonardo da Vinci.", "answer": ["was painted"], "explain": "Пассив в прошедшем времени: was + третья форма глагола."},
+        {"type": "choice", "q": "It was ___ a beautiful day that we went to the beach.", "options": ["so", "such", "very", "too"], "answer": 1, "explain": "Перед a + прилагательное + существительное используется such."},
+        {"type": "choice", "q": "Somebody is at the door. It ___ be Anna — she said she would come at six, and it's six now.", "options": ["must", "can't", "mustn't", "should to"], "answer": 0, "explain": "Must выражает уверенное предположение: «это наверняка Анна»."},
+        {"type": "choice", "q": "There's very ___ milk left. Can you buy some?", "options": ["few", "little", "many", "a few"], "answer": 1, "explain": "С неисчисляемыми существительными (milk) используется little."},
+        {"type": "choice", "q": "The shop is closed ___ Christmas Day.", "options": ["at", "in", "on", "by"], "answer": 2, "explain": "С днями и датами используется предлог on."},
+        {"type": "choice", "q": "I'd like to work as ___ engineer.", "options": ["a", "an", "the", "—"], "answer": 1, "explain": "Перед словом, начинающимся с гласного звука, ставится an."}
+      ]
+    },
+    {
+      "kind": "vocabulary",
+      "title": "Лексика",
+      "exercises": [
+        {"type": "choice", "q": "Please ___ in this form with your name and address.", "options": ["fill", "write", "put", "make"], "answer": 0, "explain": "Fill in a form — заполнить анкету."},
+        {"type": "choice", "q": "I can't ___ to buy a new phone right now; it's too expensive.", "options": ["afford", "spend", "pay", "cost"], "answer": 0, "explain": "Can't afford — не могу себе позволить (по деньгам)."},
+        {"type": "input", "q": "Air ___ (pollute) is a big problem in many cities.", "answer": ["pollution"], "explain": "Существительное от pollute — pollution (загрязнение)."},
+        {"type": "choice", "q": "We ran ___ of petrol on the motorway.", "options": ["out", "off", "away", "over"], "answer": 0, "explain": "Run out of — закончиться (о запасах)."},
+        {"type": "choice", "q": "He ___ a lot of money on clothes every month.", "options": ["spends", "pays", "costs", "buys"], "answer": 0, "explain": "Spend money on something — тратить деньги на что-то."},
+        {"type": "choice", "q": "I've ___ a cold, so I'm staying at home today.", "options": ["caught", "taken", "made", "done"], "answer": 0, "explain": "Catch a cold — простудиться."},
+        {"type": "input", "q": "It's ___ (possible) to finish this in one hour; we need at least three.", "answer": ["impossible"], "explain": "Противоположное possible образуется приставкой im-: impossible."},
+        {"type": "choice", "q": "The hotel staff were very ___ and answered all our questions.", "options": ["helpful", "useful", "careful", "harmful"], "answer": 0, "explain": "Helpful — готовый помочь (о людях); useful — полезный (о вещах)."},
+        {"type": "choice", "q": "I ___ my bus this morning, so I was late for work.", "options": ["missed", "lost", "failed", "left"], "answer": 0, "explain": "Miss a bus — опоздать на автобус."},
+        {"type": "input", "q": "Her father is a famous ___ (journal) who writes for The Times.", "answer": ["journalist"], "explain": "Профессия от journal — journalist (журналист)."}
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Чтение",
+      "text": "When Lucas Moreau left school at sixteen, his teachers didn't expect much from him. He found most lessons boring, and his exam results were poor. 'The only subject I enjoyed was food technology,' he says, 'because I could use my hands and see a result at the end of the lesson.'\n\nHis first job was washing dishes in a busy hotel restaurant in Lyon. The work was hard and the hours were long, but Lucas watched the chefs carefully. After a few months the head chef, Marie Dubois, noticed that he often stayed after his shift to practise cutting vegetables. She offered him a place as a trainee cook. 'He wasn't the most talented person I'd ever worked with,' she remembers, 'but he was the most hard-working. He never complained, and he asked questions all the time.'\n\nFor the next five years Lucas worked in different kitchens in France and Spain. He also took evening classes in business, because he had a dream: to open his own restaurant. In 2021, at the age of twenty-four, he borrowed money from a bank and from his parents and opened a small restaurant with just twelve tables in his home town.\n\nThe first year was difficult. During the first winter there were evenings when only two or three customers came, and Lucas thought about closing. Then a food journalist visited by chance and wrote an article about his simple, seasonal dishes. After that, the restaurant was full almost every night.\n\nToday Lucas's restaurant has a waiting list of three weeks. However, Lucas has not forgotten where he started. Every year he takes two young people who have left school without qualifications and trains them in his kitchen for free. 'School isn't the right place for everyone,' he says. 'Some people learn best by doing. I want to give them the chance that Marie gave me.'\n\nHe doesn't plan to open a second restaurant. 'A bigger business would mean less time in the kitchen,' he explains, 'and the kitchen is where I'm happiest.'",
+      "exercises": [
+        {"type": "tf", "q": "Lucas did very well in his school exams.", "answer": false, "explain": "В тексте сказано, что его результаты экзаменов были плохими (poor)."},
+        {"type": "choice", "q": "Why did Lucas enjoy food technology?", "options": ["The teacher was very kind.", "He could work with his hands and see a result.", "It was the easiest subject.", "His friends were in the same class."], "answer": 1, "explain": "Он мог работать руками и видеть результат в конце урока."},
+        {"type": "choice", "q": "What did Marie Dubois notice about Lucas?", "options": ["He cooked better than the other chefs.", "He often stayed after work to practise.", "He could speak Spanish.", "He wanted to become a head chef."], "answer": 1, "explain": "Он часто оставался после смены, чтобы тренироваться резать овощи."},
+        {"type": "tf", "q": "Marie thinks Lucas was the most talented cook she had ever worked with.", "answer": false, "explain": "Она говорит, что он был не самым талантливым, а самым трудолюбивым."},
+        {"type": "choice", "q": "Why did Lucas take evening classes in business?", "options": ["His parents wanted him to.", "He wanted to open his own restaurant.", "The hotel paid for them.", "He wanted to become a journalist."], "answer": 1, "explain": "Он мечтал открыть собственный ресторан."},
+        {"type": "choice", "q": "What made the restaurant popular?", "options": ["lower prices", "an article by a food journalist", "a programme on TV", "a bigger dining room"], "answer": 1, "explain": "После статьи кулинарного журналиста ресторан стал полным почти каждый вечер."},
+        {"type": "tf", "q": "Lucas trains some young people in his kitchen without asking them to pay.", "answer": true, "explain": "Каждый год он бесплатно (for free) обучает двух молодых людей."},
+        {"type": "choice", "q": "Why doesn't Lucas want to open a second restaurant?", "options": ["He hasn't got enough money.", "He wants to spend his time cooking.", "His town is too small.", "He can't find good staff."], "answer": 1, "explain": "Большой бизнес означал бы меньше времени на кухне, где он счастливее всего."}
+      ]
+    },
+    {
+      "kind": "listening",
+      "title": "Аудирование",
+      "script": "Mia: Hi, Ben. Have you got a minute? I want to talk about the camping trip next weekend.\nBen: Sure. Are we still going to the lake?\nMia: Well, that's the problem. I checked the weather forecast this morning, and it's going to rain at the lake all weekend. So I was thinking about the campsite near the coast instead. It should be dry and sunny there.\nBen: The coast? How far is that?\nMia: About three hours by car. The lake is only an hour and a half.\nBen: Hmm, that's quite a long drive. But I don't want to sleep in a wet tent. OK, let's go to the coast.\nMia: Great. My car is at the garage until Thursday, so can we use yours?\nBen: Yes, no problem. But it's small, so we can't take too much stuff. What about food? Should we buy it at the campsite?\nMia: The campsite has a small shop, but it's quite expensive. I think we should buy most of our food at the supermarket on Friday and cook on the camping stove.\nBen: Good idea. I'll do the shopping if you make a list.\nMia: Deal. And remember, you need to bring a warm sleeping bag. Even in summer it gets cold at night by the sea.\nBen: I haven't got a warm one. Mine is really thin.\nMia: You can borrow my brother's. He isn't using it this month.\nBen: Perfect. What time shall we leave on Saturday?\nMia: The campsite reception closes at six, so we need to arrive before that. How about leaving at eleven?\nBen: Could we make it twelve? I play football on Saturday mornings.\nMia: Twelve is fine. Three hours' drive, so we'll be there at about three. That's plenty of time.\nBen: Brilliant. I'll pick you up at your flat.",
+      "exercises": [
+        {"type": "choice", "q": "Why does Mia want to change the place for the trip?", "options": ["The campsite at the lake is full.", "The weather forecast for the lake is bad.", "The coast is cheaper.", "Their friends are at the coast."], "answer": 1, "explain": "У озера все выходные будет дождь."},
+        {"type": "choice", "q": "How long is the drive to the coast?", "options": ["an hour and a half", "two hours", "three hours", "four hours"], "answer": 2, "explain": "До побережья около трёх часов на машине."},
+        {"type": "choice", "q": "Whose car are they going to use?", "options": ["Mia's", "Ben's", "Mia's brother's", "a rented car"], "answer": 1, "explain": "Машина Мии в ремонте, поэтому поедут на машине Бена."},
+        {"type": "tf", "q": "They plan to buy most of their food at the campsite shop.", "answer": false, "explain": "Магазин в кемпинге дорогой, еду купят в супермаркете в пятницу."},
+        {"type": "choice", "q": "What is Ben going to borrow?", "options": ["a tent", "a camping stove", "a sleeping bag", "a map"], "answer": 2, "explain": "Бен возьмёт тёплый спальный мешок у брата Мии."},
+        {"type": "choice", "q": "Why can't Ben leave at eleven?", "options": ["He has to work.", "He plays football on Saturday mornings.", "He has to do the shopping.", "His car is at the garage."], "answer": 1, "explain": "По субботам утром он играет в футбол."},
+        {"type": "tf", "q": "Ben will go to Mia's flat to pick her up.", "answer": true, "explain": "Бен говорит: I'll pick you up at your flat."}
+      ]
+    }
+  ],
+  "bands": [
+    {"min": 0, "level": "A2"},
+    {"min": 60, "level": "B1"},
+    {"min": 85, "level": "B1+"}
+  ]
+}

@@ -17,11 +17,18 @@ export interface StoryAudioTrack {
   timings: [number, number][] | null;
 }
 
+/**
+ * Отметка словарного слова в тексте: [номер предложения, начало, длина, номера значений в story.words].
+ * Значений может быть несколько: "left" — «левый» и «to leave». Ищет слова tools/story_words.py.
+ */
+export type WordMark = [sentence: number, start: number, length: number, meanings: number[]];
+
 export interface Story {
   id: string;
   title: string;
-  paragraphs: string[][];              // абзацы → предложения
+  paragraphs: string[][];              // абзацы → предложения (номер предложения считается подряд по всем абзацам)
   words: StoryWord[];
+  marks: WordMark[];
   audio: StoryAudioTrack[];
   questions: StoryQuestions | null;
   wordCount: number;
@@ -78,3 +85,24 @@ export interface WordAudioPart {
 }
 
 export type WordAudio = Partial<Record<Level, WordAudioPart[]>>;
+
+// ---------- тесты (уровень и пробные экзамены) ----------
+
+export interface TestSection {
+  kind: "grammar" | "vocabulary" | "reading" | "listening";
+  title: string;
+  text?: string;                       // reading: текст для чтения
+  script?: string;                     // listening: текст, который читает голос ("Anna: …\nTom: …")
+  exercises: Exercise[];
+}
+
+export interface LevelTest {
+  id: string;
+  kind: "placement" | "mock" | "generated";
+  title: string;
+  titleRu: string;
+  description: string;
+  minutes: number;
+  sections: TestSection[];
+  bands: { min: number; level: string }[];     // min — процент правильных ответов
+}

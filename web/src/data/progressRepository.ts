@@ -1,16 +1,19 @@
 // Прогресс пользователя. Все ключи хранилища собраны здесь, чтобы было видно, что сохраняется.
 // Названия ключей совпадают со старой версией сайта — прогресс переносится.
 import type { Card } from "@/domain/spacedRepetition";
+import type { Mistake } from "@/domain/mistakes";
+import type { VerbStats } from "@/domain/verbs";
 import type { Level } from "@/domain/types";
 import { dayNumber } from "@/domain/text";
 import type { KeyValueStorage } from "./storage";
 
-export type ActivityKind = "reviews" | "newWords" | "stories" | "grammar" | "audio";
+export type ActivityKind = "reviews" | "newWords" | "stories" | "grammar" | "audio" | "dictation" | "verbs" | "tests" | "mistakes";
 export type DayActivity = Partial<Record<ActivityKind, number>>;
 
 export interface StoryResult { score: number; day: number }
 export interface GrammarResult { best: number; done: boolean; day: number }
 export interface WordSettings { newPerDay: number; levels: Level[] }
+export interface TestResult { testId: string; title: string; score: number; level: string; day: number }
 
 export const PASS_SCORE = 80;
 const DEFAULT_SETTINGS: WordSettings = { newPerDay: 10, levels: ["A1", "A2", "B1"] };
@@ -92,6 +95,27 @@ export class ProgressRepository {
   saveCards(cards: Record<string, Card>): void { this.storage.set("srs", cards); }
   /** Слова, отмеченные «выученными» в самой первой версии сайта (для переноса). */
   legacyKnownWords(): Record<string, string[]> { return this.storage.get("known", {}); }
+
+  // ---------- «Мои ошибки» в грамматике: { "<topicId>#<номер упражнения>": Mistake } ----------
+  mistakes(): Record<string, Mistake> { return this.storage.get("mistakes", {}); }
+  saveMistakes(all: Record<string, Mistake>): void { this.storage.set("mistakes", all); }
+
+  // ---------- неправильные глаголы: { go: { right: 3, wrong: 1 } } ----------
+  verbStats(): Record<string, VerbStats> { return this.storage.get("verbStats", {}); }
+  saveVerbAnswer(base: string, correct: boolean): void {
+    const all = this.verbStats();
+    const stats = all[base] ?? { right: 0, wrong: 0 };
+    if (correct) stats.right++; else stats.wrong++;
+    all[base] = stats;
+    this.storage.set("verbStats", all);
+  }
+
+  // ---------- результаты тестов (история) ----------
+  testResults(): TestResult[] { return this.storage.get("testResults", []); }
+  saveTestResult(result: Omit<TestResult, "day">): void {
+    this.storage.set("testResults", [...this.testResults(), { ...result, day: this.today() }]);
+    this.recordActivity("tests");
+  }
 
   // ---------- прочие настройки интерфейса ----------
   setting<T>(key: string, defaultValue: T): T { return this.storage.get(key, defaultValue); }

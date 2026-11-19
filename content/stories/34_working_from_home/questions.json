@@ -1,0 +1,103 @@
+{
+  "questions": [
+    {
+      "type": "choice",
+      "q": "Why did Lucy want to work from home?",
+      "options": [
+        "She didn't like her boss",
+        "She was tired of the long, crowded train journey",
+        "She wanted to move to the country"
+      ],
+      "answer": 1,
+      "explain": "Ей надоела долгая дорога в переполненных поездах — по часу с четвертью в каждую сторону."
+    },
+    {
+      "type": "tf",
+      "q": "At first Lucy finished her projects faster at home than in the office.",
+      "answer": true,
+      "explain": "Верно: дома она работала без помех и заканчивала проекты быстрее, чем когда-либо."
+    },
+    {
+      "type": "choice",
+      "q": "Which of these bad habits did Lucy develop?",
+      "options": [
+        "She started working in her pyjamas and answering emails in bed",
+        "She started going out every night",
+        "She stopped answering her boss's messages"
+      ],
+      "answer": 0,
+      "explain": "Она работала в пижаме, ела у компьютера и отвечала на письма в постели."
+    },
+    {
+      "type": "tf",
+      "q": "Lucy never missed her colleague Ben.",
+      "answer": false,
+      "explain": "Неверно: она скучала даже по Бену, который плохо пел за работой."
+    },
+    {
+      "type": "choice",
+      "q": "In the text, Lucy's work \"suffered\". What does this mean?",
+      "options": [
+        "It became more popular",
+        "It became worse",
+        "It became faster"
+      ],
+      "answer": 1,
+      "explain": "Здесь «suffered» значит, что её работа стала хуже — идеи казались скучными."
+    },
+    {
+      "type": "choice",
+      "q": "What did Kate notice when she arrived?",
+      "options": [
+        "Lucy had a new plant",
+        "Lucy was very busy with a client",
+        "There were dirty cups everywhere and the plant had died"
+      ],
+      "answer": 2,
+      "explain": "Повсюду стояли грязные чашки, а растение у окна давно засохло."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Kate know how to help Lucy?",
+      "options": [
+        "She had worked from home for years as a translator",
+        "She was a doctor",
+        "She worked at the same agency"
+      ],
+      "answer": 0,
+      "explain": "Кейт много лет работала из дома переводчиком."
+    },
+    {
+      "type": "tf",
+      "q": "One of the rules was that Lucy had to stop work at half past five.",
+      "answer": true,
+      "explain": "Верно: она должна была начинать в девять и заканчивать в половине шестого."
+    },
+    {
+      "type": "tf",
+      "q": "Lucy and Karen agreed that Lucy would come back to the office every day.",
+      "answer": false,
+      "explain": "Неверно: они договорились, что Люси будет приходить в агентство только по средам."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Karen write \"Welcome back\"?",
+      "options": [
+        "Lucy had returned from holiday",
+        "Lucy had been ill",
+        "Lucy's design for a children's book showed her old talent"
+      ],
+      "answer": 2,
+      "explain": "Дизайн Люси для детской книги выбрало крупное издательство — это была «прежняя Люси»."
+    }
+  ],
+  "retell": [
+    "What was Lucy's job, and why did she want to work from home?",
+    "What were the first few weeks at home like?",
+    "What bad habits did Lucy develop?",
+    "How did loneliness affect Lucy and her work?",
+    "What happened when Kate came to visit?",
+    "What rules did Lucy follow, and what changed?",
+    "What did Lucy learn in the end?"
+  ]
+}

@@ -2,14 +2,13 @@
 <script setup lang="ts">
 import { computed, reactive, ref } from "vue";
 import type { Story } from "@/domain/types";
-import type { WordFinder } from "@/domain/wordForms";
 import { buildGapExercises } from "@/domain/storyTasks";
 import { breakIfRequested, reportProblem } from "../problems";
 import { useServices } from "../composables/useServices";
 import ExerciseList from "./ExerciseList.vue";
 import SafeSection from "./SafeSection.vue";
 
-const props = defineProps<{ story: Story; finder: WordFinder }>();
+const props = defineProps<{ story: Story }>();
 const { progress, content } = useServices();
 
 const questions = computed(() => props.story.questions?.questions ?? []);
@@ -19,7 +18,7 @@ const retell = computed(() => props.story.questions?.retell ?? []);
 const gaps = computed(() => {
   try {
     breakIfRequested("storyTasks");
-    return buildGapExercises(props.story, props.finder, 8);
+    return buildGapExercises(props.story, 8);
   } catch (error) {
     reportProblem("задание «вставьте слово»", error);
     return [];

@@ -1,0 +1,103 @@
+{
+  "questions": [
+    {
+      "type": "tf",
+      "q": "Chloe had been a nurse for seven months.",
+      "answer": true,
+      "explain": "Верно: Хлоя работала медсестрой ровно семь месяцев."
+    },
+    {
+      "type": "choice",
+      "q": "What advice did Maria give Chloe at the start of the shift?",
+      "options": [
+        "To work faster than everyone else",
+        "To ask if she wasn't sure about something",
+        "To stay away from the doctors"
+      ],
+      "answer": 1,
+      "explain": "Мария сказала: если не уверена — спрашивай, гадать гораздо хуже."
+    },
+    {
+      "type": "tf",
+      "q": "Mr Hughes believed that his chest pain was serious from the start.",
+      "answer": false,
+      "explain": "Неверно: он повторял, что это просто несварение, и пришёл только из-за жены."
+    },
+    {
+      "type": "choice",
+      "q": "Why did the department become much busier after midnight?",
+      "options": [
+        "There had been a car accident on the motorway",
+        "A fire had started in the hospital",
+        "Several nurses had gone home"
+      ],
+      "answer": 0,
+      "explain": "На шоссе произошла авария, и сразу привезли троих пострадавших."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Chloe forget to check on Mr Hughes?",
+      "options": [
+        "She fell asleep",
+        "She was too busy doing many jobs at once",
+        "Dr Osei told her not to"
+      ],
+      "answer": 1,
+      "explain": "Она была настолько занята, что почти час не подходила к нему."
+    },
+    {
+      "type": "choice",
+      "q": "In the text, the young woman starts crying again, \"but this time with relief\". What does \"relief\" mean?",
+      "options": [
+        "Anger",
+        "Surprise and fear",
+        "A good feeling when a worry ends"
+      ],
+      "answer": 2,
+      "explain": "«Relief» — облегчение: хорошее чувство, когда тревога заканчивается."
+    },
+    {
+      "type": "tf",
+      "q": "When Chloe saw that Mr Hughes was worse, she pressed the emergency button.",
+      "answer": true,
+      "explain": "Верно: она нажала кнопку экстренного вызова и позвала доктора Осея."
+    },
+    {
+      "type": "choice",
+      "q": "Why, according to Maria, was Mr Hughes alive?",
+      "options": [
+        "Because Chloe called for help immediately",
+        "Because his wife was a doctor",
+        "Because the operation was easy"
+      ],
+      "answer": 0,
+      "explain": "Мария сказала, что Хлоя не запаниковала и сразу позвала на помощь."
+    },
+    {
+      "type": "tf",
+      "q": "The young woman's boyfriend had been taken to the same hospital as her.",
+      "answer": false,
+      "explain": "Неверно: его отвезли в другую больницу, и у него была только сломана рука."
+    },
+    {
+      "type": "choice",
+      "q": "How did Chloe feel at the end of the night?",
+      "options": [
+        "She wanted to change her job",
+        "She felt like a hero",
+        "She was very tired but didn't want any other job"
+      ],
+      "answer": 2,
+      "explain": "Она очень устала, но поняла, что не хочет другой работы."
+    }
+  ],
+  "retell": [
+    "Who was Chloe, and what did she think hospitals were like before?",
+    "Who was Maria, and what did she tell Chloe?",
+    "What happened in the first few hours of the shift?",
+    "Who was Mr Hughes, and what was wrong with him?",
+    "What happened after midnight, and what did Chloe forget?",
+    "What did Maria say to Chloe in the kitchen?",
+    "How did the night end for Chloe and Mr Hughes?"
+  ]
+}

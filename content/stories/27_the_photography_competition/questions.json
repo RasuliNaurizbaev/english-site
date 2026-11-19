@@ -1,0 +1,103 @@
+{
+  "questions": [
+    {
+      "type": "choice",
+      "q": "Who gave Tom his first camera?",
+      "options": [
+        "His girlfriend Anna",
+        "His father",
+        "His uncle"
+      ],
+      "answer": 2,
+      "explain": "Когда Тому было двенадцать, дядя подарил ему старый фотоаппарат на день рождения."
+    },
+    {
+      "type": "tf",
+      "q": "Tom wanted to enter the competition as soon as he saw the poster.",
+      "answer": false,
+      "explain": "Неверно: сначала он засмеялся и отказался, и Анна напоминала ему каждый день, пока он не согласился."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Tom have his camera with him at the bus stop?",
+      "options": [
+        "He had been planning to take photos at lunchtime",
+        "He was going to the competition office",
+        "He wanted to sell it"
+      ],
+      "answer": 0,
+      "explain": "Он взял фотоаппарат, потому что собирался фотографировать в обеденный перерыв."
+    },
+    {
+      "type": "tf",
+      "q": "In the photo, the little girl gave the old man a flower.",
+      "answer": true,
+      "explain": "Верно: девочка в жёлтом пальто подбежала, чтобы подарить старику цветок."
+    },
+    {
+      "type": "choice",
+      "q": "What did the competition rules NOT allow?",
+      "options": [
+        "Making the colours brighter",
+        "Adding or removing objects",
+        "Taking photos in the rain"
+      ],
+      "answer": 1,
+      "explain": "В правилах было сказано, что нельзя добавлять или удалять объекты."
+    },
+    {
+      "type": "choice",
+      "q": "Why did Tom decide not to remove the rubbish bin?",
+      "options": [
+        "He didn't know how to use the editing program",
+        "Anna told him he must not do it",
+        "He felt it would be dishonest, like changing numbers in his job"
+      ],
+      "answer": 2,
+      "explain": "Он вспомнил свою работу, где ненавидел, когда люди меняют мелкие детали в надежде, что никто не заметит."
+    },
+    {
+      "type": "tf",
+      "q": "Some finalists were removed from the competition because of editing.",
+      "answer": true,
+      "explain": "Верно: одиннадцать фото убрали, в том числе два из финалистов, потому что объекты были удалены или добавлены."
+    },
+    {
+      "type": "choice",
+      "q": "Mrs Hughes said the bin \"proved\" something. What does \"prove\" mean here?",
+      "options": [
+        "To show that something is true",
+        "To hide something",
+        "To make something more beautiful"
+      ],
+      "answer": 0,
+      "explain": "«Prove» — доказать, показать, что что-то правда."
+    },
+    {
+      "type": "choice",
+      "q": "Why was that morning special for the old man?",
+      "options": [
+        "It was his birthday",
+        "It was the first time he had smiled for months after his wife died",
+        "It was his first day in the city"
+      ],
+      "answer": 1,
+      "explain": "Старик рассказал, что после смерти жены в то утро он впервые за много месяцев улыбнулся."
+    },
+    {
+      "type": "tf",
+      "q": "Tom left his job as an accountant to become a professional photographer.",
+      "answer": false,
+      "explain": "Неверно: он до сих пор работает бухгалтером, а по субботам ведёт курс фотографии."
+    }
+  ],
+  "retell": [
+    "Who was Tom and what was his hobby?",
+    "How did Tom learn about the competition?",
+    "What did Tom see at the bus stop?",
+    "What problem did the photo have?",
+    "What did Tom decide to do, and why?",
+    "What happened at the museum on the opening night?",
+    "Who came to see Tom, and how did the story end?"
+  ]
+}

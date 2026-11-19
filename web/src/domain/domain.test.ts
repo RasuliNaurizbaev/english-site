@@ -1,40 +1,46 @@
 import { describe, expect, it } from "vitest";
 import { applyRating, nextIntervals, statusOf, KNOWN_INTERVAL } from "./spacedRepetition";
-import { createWordFinder, formsOf } from "./wordForms";
+import { highestLevel, marksBySentence, splitSentence } from "./storyText";
 import { parseMarkdown, inlineToHtml } from "./markdown";
 import { buildGapExercises } from "./storyTasks";
 import { normalizeAnswer, plural, formatDuration, shuffled } from "./text";
 import type { Story, StoryWord } from "./types";
 
-describe("wordForms", () => {
-  it("формы глаголов: правильные, неправильные, удвоение согласной", () => {
-    expect(formsOf("to go")).toEqual(expect.arrayContaining(["go", "goes", "went", "gone", "going"]));
-    expect(formsOf("to stop")).toEqual(expect.arrayContaining(["stopped", "stopping"]));
-    expect(formsOf("to study")).toEqual(expect.arrayContaining(["studies", "studied"]));
-    expect(formsOf("to get up")).toEqual(expect.arrayContaining(["got up", "getting up"]));
+describe("storyText", () => {
+  const words: StoryWord[] = [{ en: "left", ru: "левый", level: "A1" }, { en: "to leave", ru: "уходить", level: "A2" }, { en: "station", ru: "станция", level: "A2" }];
+  it("делит предложение на куски по отметкам; у слова может быть несколько значений", () => {
+    const text = "He left the station.";
+    const pieces = splitSentence(text, [[0, text.indexOf("left"), 4, [0, 1]], [0, text.indexOf("station"), 7, [2]]], words);
+    expect(pieces.map(p => p.text)).toEqual(["He ", "left", " the ", "station", "."]);
+    expect(pieces[1].meanings!.map(m => m.ru)).toEqual(["левый", "уходить"]);
+    expect(highestLevel(pieces[1].meanings!)).toBe("A2");
   });
-  it("множественное число, но не для коротких слов (hi → his — ошибка)", () => {
-    expect(formsOf("city")).toContain("cities");
-    expect(formsOf("knife")).toContain("knives");
-    expect(formsOf("hi")).toEqual(["hi"]);
-  });
-  it("находит слова в тексте и пропускает имена", () => {
-    const words: StoryWord[] = [{ en: "to go", ru: "идти", level: "A1" }, { en: "mark", ru: "оценка", level: "A2" }];
-    const found = createWordFinder(words).find("Yesterday Mark went home. Mark is a good mark.");
-    // первое Mark — имя в середине предложения (пропущено), второе — начало предложения (не отличить от слова)
-    expect(found.map(m => m.text)).toEqual(["went", "Mark", "mark"]);
+  it("отметки группируются по предложениям", () => {
+    const story = { marks: [[0, 1, 2, [0]], [2, 0, 3, [1]], [0, 5, 2, [2]]] } as unknown as Story;
+    const grouped = marksBySentence(story);
+    expect(grouped.get(0)!.length).toBe(2);
+    expect(grouped.get(2)!.length).toBe(1);
   });
 });
 
 describe("spacedRepetition", () => {
   const today = 1000;
-  it("новое слово: Хорошо → 1 день, затем 3 дня, затем × лёгкость", () => {
+  it("новое слово: Снова — сегодня, Трудно — завтра, Хорошо — через неделю, Легко — через 4 недели", () => {
+    expect(nextIntervals(undefined)).toEqual({ hard: 1, good: 7, easy: 28 });
+    expect(applyRating(undefined, "hard", today)).toMatchObject({ i: 1, d: today + 1 });
+    expect(applyRating(undefined, "easy", today)).toMatchObject({ i: 28, d: today + 28 });
+    expect(statusOf(applyRating(undefined, "easy", today))).toBe("learned");
     const c1 = applyRating(undefined, "good", today);
-    expect(c1).toMatchObject({ i: 1, d: today + 1, r: 1 });
-    const c2 = applyRating(c1, "good", today + 1);
-    expect(c2.i).toBe(3);
-    const c3 = applyRating(c2, "good", today + 4);
-    expect(c3.i).toBe(Math.round(3 * 2.5));
+    expect(c1).toMatchObject({ i: 7, d: today + 7, r: 1 });
+    expect(statusOf(c1)).toBe("learning");
+    const c2 = applyRating(c1, "good", today + 7);
+    expect(c2.i).toBe(Math.round(7 * 2.5));
+    expect(statusOf(applyRating(c2, "good", today + 25))).toBe("learned");
+  });
+  it("после «Снова» слово учится заново маленькими шагами", () => {
+    const forgotten = applyRating(undefined, "again", today);
+    expect(nextIntervals(forgotten)).toEqual({ hard: 1, good: 1, easy: 4 });
+    expect(applyRating(forgotten, "good", today).i).toBe(1);
   });
   it("Снова — показать сегодня, лёгкость падает, но не ниже 1.3", () => {
     let card = applyRating(undefined, "good", today);
@@ -88,21 +94,28 @@ describe("markdown", () => {
 });
 
 describe("storyTasks", () => {
+  const sentences = ["Yesterday Tom went to the old station early.", "He bought a return ticket at the station.", "The journey was long and very boring for him."];
   const story: Story = {
     id: "t", title: "T", wordCount: 0, audio: [], questions: null,
-    paragraphs: [["Yesterday Tom went to the old station early.", "He bought a return ticket at the station.", "The journey was long and very boring for him."]],
+    paragraphs: [sentences],
     words: [
-      { en: "to go", ru: "идти", level: "A1" }, { en: "return ticket", ru: "билет туда и обратно", level: "A2" },
-      { en: "journey", ru: "поездка", level: "A2" }, { en: "station", ru: "станция", level: "A2" }, { en: "boring", ru: "скучный", level: "A2" },
+      { en: "station", ru: "станция", level: "A2" }, { en: "return ticket", ru: "билет туда и обратно", level: "A2" },
+      { en: "journey", ru: "поездка", level: "A2" }, { en: "boring", ru: "скучный", level: "A2" },
     ],
+    marks: [],
   };
-  it("в каждом задании правильный ответ есть среди вариантов и совпадает с текстом", () => {
-    const gaps = buildGapExercises(story, createWordFinder(story.words), 5, () => 0.3);
-    expect(gaps.length).toBeGreaterThan(0);
-    for (const g of gaps) {
-      const filled = g.q.replace("___", g.options[g.answer]);
-      expect(story.paragraphs[0]).toContain(filled);
+  // отметка = [предложение, начало, длина, значения]; позиции считаем, а не пишем руками
+  const mark = (s: number, word: string, id: number, from = 0): Story["marks"][number] => [s, sentences[s].indexOf(word, from), word.length, [id]];
+  story.marks = [mark(0, "station", 0), mark(1, "return ticket", 1), mark(1, "station", 0), mark(2, "journey", 2), mark(2, "boring", 3)];
+  it("отметки указывают на правильные слова", () => {
+    for (const [s, start, length, ids] of story.marks) {
+      expect(sentences[s].slice(start, start + length).toLowerCase()).toBe(story.words[ids[0]].en.toLowerCase());
     }
+  });
+  it("в каждом задании правильный ответ есть среди вариантов и совпадает с текстом", () => {
+    const gaps = buildGapExercises(story, 5, () => 0.3);
+    expect(gaps.length).toBeGreaterThan(0);
+    for (const g of gaps) expect(sentences).toContain(g.q.replace("___", g.options[g.answer]));
   });
 });
 

@@ -1,0 +1,78 @@
+{
+  "id": "b1_mock_1",
+  "kind": "mock",
+  "title": "B1 Practice Test 1",
+  "titleRu": "Пробный тест B1 — вариант 1",
+  "description": "Тренировочный тест в формате экзамена уровня B1: грамматика, лексика, чтение и аудирование. Займёт около 45 минут.",
+  "minutes": 45,
+  "sections": [
+    {
+      "kind": "grammar",
+      "title": "Грамматика",
+      "exercises": [
+        {"type": "choice", "q": "Sorry, I can't come out tonight — I ___ my homework yet.", "options": ["didn't finish", "haven't finished", "don't finish", "wasn't finishing"], "answer": 1, "explain": "Со словом yet в британском английском используется Present Perfect."},
+        {"type": "choice", "q": "Look at those dark clouds! It ___ rain.", "options": ["is going to", "rains", "is raining", "rained"], "answer": 0, "explain": "Прогноз на основе того, что мы видим сейчас, выражается через be going to."},
+        {"type": "choice", "q": "This is ___ restaurant in our town.", "options": ["the best", "the better", "best", "better"], "answer": 0, "explain": "Превосходная степень с артиклем the: the best."},
+        {"type": "input", "q": "Tokyo is much ___ (big) than my home town.", "answer": ["bigger"], "explain": "Сравнительная степень big — bigger (согласная удваивается)."},
+        {"type": "choice", "q": "If you ___ the 8:15 train, you'll be late for the meeting.", "options": ["miss", "will miss", "missed", "would miss"], "answer": 0, "explain": "В первом условном после if ставится Present Simple, а не will."},
+        {"type": "input", "q": "English ___ (speak) in many countries around the world.", "answer": ["is spoken"], "explain": "Пассив в Present Simple: is/are + третья форма глагола."},
+        {"type": "choice", "q": "That's the shop ___ sells the best bread in town.", "options": ["who", "which", "where", "what"], "answer": 1, "explain": "Для предметов и мест в роли подлежащего придаточного используется which (или that)."},
+        {"type": "choice", "q": "I really enjoy ___ in the mountains.", "options": ["walk", "to walk", "walking", "walked"], "answer": 2, "explain": "После enjoy глагол ставится в форму -ing."},
+        {"type": "choice", "q": "We decided ___ a new car.", "options": ["buy", "to buy", "buying", "bought"], "answer": 1, "explain": "После decide используется инфинитив с to."},
+        {"type": "choice", "q": "You ___ smoke in the hospital. It isn't allowed.", "options": ["mustn't", "don't have to", "needn't", "shouldn't to"], "answer": 0, "explain": "Mustn't — запрет; don't have to означает «не обязательно»."},
+        {"type": "input", "q": "I ___ (walk) home when it started to rain.", "answer": ["was walking"], "explain": "Действие, которое длилось в момент другого события, — Past Continuous."},
+        {"type": "choice", "q": "This coffee is ___ hot to drink. Wait a few minutes.", "options": ["too", "enough", "very much", "so much"], "answer": 0, "explain": "Too + прилагательное + to-инфинитив значит «слишком … чтобы»."}
+      ]
+    },
+    {
+      "kind": "vocabulary",
+      "title": "Лексика",
+      "exercises": [
+        {"type": "choice", "q": "Could you ___ me a favour?", "options": ["do", "make", "give", "take"], "answer": 0, "explain": "Устойчивое выражение: do somebody a favour — сделать одолжение."},
+        {"type": "choice", "q": "Let's ___ a photo of the sunset.", "options": ["take", "make", "do", "bring"], "answer": 0, "explain": "По-английски фотографируют глаголом take: take a photo."},
+        {"type": "input", "q": "He drives very ___ (care); he has never had an accident.", "answer": ["carefully"], "explain": "Наречие от careful образуется с -ly: carefully."},
+        {"type": "choice", "q": "I'm going to ___ up smoking. It's bad for my health.", "options": ["give", "take", "put", "look"], "answer": 0, "explain": "Give up — бросить (привычку)."},
+        {"type": "choice", "q": "The meeting has been ___ until next week.", "options": ["put off", "put on", "taken off", "turned down"], "answer": 0, "explain": "Put off — отложить, перенести на более позднее время."},
+        {"type": "choice", "q": "Excuse me, how much does this jacket ___?", "options": ["cost", "pay", "spend", "buy"], "answer": 0, "explain": "Cost — стоить: How much does it cost?"},
+        {"type": "input", "q": "She gave me some good ___ (advise) about my career.", "answer": ["advice"], "explain": "Advise — глагол, advice — существительное «совет»."},
+        {"type": "choice", "q": "I'd like to ___ a table for two for tonight.", "options": ["book", "order", "pay", "rent"], "answer": 0, "explain": "Book a table — забронировать столик."},
+        {"type": "choice", "q": "He's very ___; he always tells the truth.", "options": ["honest", "lazy", "rude", "mean"], "answer": 0, "explain": "Honest — честный, тот, кто говорит правду."},
+        {"type": "input", "q": "My brother is a ___ (science) and works in a laboratory.", "answer": ["scientist"], "explain": "Профессия от science — scientist (учёный)."}
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Чтение",
+      "text": "Three years ago, the empty piece of land behind Mill Street was a sad place. People threw rubbish there, and parents told their children not to play there because of the broken glass. Today it is one of the most popular places in the neighbourhood: a community garden full of vegetables, flowers and fruit trees.\n\nThe idea came from Sandra Lee, a retired nurse who has lived on Mill Street for over thirty years. 'I walked past that land every day and thought what a waste it was,' she says. 'So I knocked on my neighbours' doors and asked who wanted to help.' Only six people came to the first meeting, but they wrote to the local council and asked for permission to use the land. The council agreed, and it also gave the group a small amount of money to buy tools and seeds.\n\nThe first months were hard work. The volunteers spent every weekend clearing rubbish, and they found more than two hundred bottles in the soil. 'Some people laughed at us,' remembers Daniel Okafor, a student who joined the project in its first year. 'They said nothing would grow there. But in the summer we had our first tomatoes, and suddenly everyone wanted to be part of it.'\n\nNow the garden has more than sixty members of all ages. Each family looks after a small area, but the fruit trees belong to everyone. Members don't pay to join, but they have to work in the garden for at least two hours a week. On the first Saturday of every month there is a market where members sell extra vegetables and homemade jam. The money goes towards new equipment and a water tank, because watering the garden in summer is expensive.\n\nThe garden has also changed the street in other ways. 'Before, I only knew the people who lived next door,' says Sandra. 'Now I know almost everybody, from the little children to the old men who come to play chess under the apple tree.' Next spring the group is planning to build a small greenhouse so that they can grow vegetables in winter too.",
+      "exercises": [
+        {"type": "tf", "q": "Before the garden existed, children often played on the land behind Mill Street.", "answer": false, "explain": "Родители запрещали детям играть там из-за битого стекла."},
+        {"type": "choice", "q": "What was Sandra Lee's job before she retired?", "options": ["a teacher", "a nurse", "a gardener", "a council worker"], "answer": 1, "explain": "В тексте: a retired nurse — медсестра на пенсии."},
+        {"type": "choice", "q": "What did the local council do?", "options": ["It refused at first.", "It gave permission and some money.", "It built a fence around the land.", "It sent workers to clear the rubbish."], "answer": 1, "explain": "Совет дал разрешение и немного денег на инструменты и семена."},
+        {"type": "tf", "q": "The volunteers found a lot of bottles while they were cleaning the land.", "answer": true, "explain": "Они нашли в земле больше двухсот бутылок."},
+        {"type": "choice", "q": "According to Daniel, what changed people's opinion of the project?", "options": ["an article in the newspaper", "the first tomatoes", "the monthly market", "a letter from the council"], "answer": 1, "explain": "Когда летом появились первые помидоры, все захотели участвовать."},
+        {"type": "tf", "q": "Members pay a small fee every month to be part of the garden.", "answer": false, "explain": "Участники не платят, но должны работать в саду минимум два часа в неделю."},
+        {"type": "choice", "q": "What is the money from the market used for?", "options": ["paying Sandra for her work", "new equipment and a water tank", "a party for the neighbours", "seeds for each family"], "answer": 1, "explain": "Деньги идут на новое оборудование и бак для воды."},
+        {"type": "choice", "q": "What does the group plan to do next spring?", "options": ["plant more fruit trees", "open a café", "build a greenhouse", "start a chess club"], "answer": 2, "explain": "Весной они планируют построить небольшую теплицу (greenhouse)."}
+      ]
+    },
+    {
+      "kind": "listening",
+      "title": "Аудирование",
+      "script": "Good morning, everyone, and welcome to the City History Museum. My name is Grace, and I'm going to tell you a few things before you start your visit.\n\nThe museum has three floors. On the ground floor you'll find the shop, the café and the cloakroom, where you can leave your coats and large bags. Please remember that bags bigger than a small backpack are not allowed in the exhibition rooms. The cloakroom is free, but you'll need a one-pound coin for the lockers, and you get the coin back when you open the locker.\n\nOn the first floor there's our most popular exhibition, Life by the River, which shows how people lived in the city two hundred years ago. Children love the old kitchen there, where they can try on clothes from that time. On the second floor there's a new exhibition about the history of football in the city. It opened only last week, so it may be quite busy this morning. If you prefer a quieter visit, I'd suggest starting at the top and walking down.\n\nFree guided tours start at eleven o'clock and at two o'clock from the main entrance. Each tour lasts about forty-five minutes. If you'd like a tour in Spanish or French, please speak to someone at the information desk, because those tours have to be booked in advance.\n\nYou're welcome to take photos everywhere in the museum, but please don't use a flash in the Life by the River rooms, because it can damage the old paintings.\n\nThe café is open until half past four, and today there's a special offer: if you show your museum ticket, you get a free cake with any hot drink. The museum itself closes at five o'clock.\n\nEnjoy your visit, and if you have any questions, just ask anyone wearing a green T-shirt.",
+      "exercises": [
+        {"type": "choice", "q": "Where is the cloakroom?", "options": ["On the ground floor", "On the first floor", "On the second floor", "In the basement"], "answer": 0, "explain": "Магазин, кафе и гардероб находятся на первом этаже (ground floor)."},
+        {"type": "choice", "q": "What do visitors need to use a locker?", "options": ["their ticket", "a one-pound coin", "a key from the information desk", "nothing — lockers are free"], "answer": 1, "explain": "Для шкафчика нужна монета в один фунт, её потом возвращают."},
+        {"type": "choice", "q": "What can children do in the old kitchen?", "options": ["cook a traditional meal", "try on old clothes", "watch a film", "draw pictures"], "answer": 1, "explain": "Дети могут примерить одежду того времени."},
+        {"type": "tf", "q": "The football exhibition opened last month.", "answer": false, "explain": "Выставка открылась только на прошлой неделе (last week)."},
+        {"type": "choice", "q": "Why does Grace suggest starting at the top of the building?", "options": ["The best exhibition is there.", "It will be a quieter visit.", "The lift isn't working.", "The tours start there."], "answer": 1, "explain": "Она советует начать сверху, если хочется более спокойного посещения."},
+        {"type": "tf", "q": "Tours in Spanish have to be booked in advance.", "answer": true, "explain": "Экскурсии на испанском и французском нужно бронировать заранее."},
+        {"type": "choice", "q": "What is today's special offer in the café?", "options": ["a free hot drink with any cake", "a free cake with a hot drink if you show your ticket", "a free sandwich after four o'clock", "a free museum guidebook"], "answer": 1, "explain": "При предъявлении билета к любому горячему напитку дают бесплатное пирожное."}
+      ]
+    }
+  ],
+  "bands": [
+    {"min": 0, "level": "A2"},
+    {"min": 60, "level": "B1"},
+    {"min": 85, "level": "B1+"}
+  ]
+}

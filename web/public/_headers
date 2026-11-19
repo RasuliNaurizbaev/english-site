@@ -1,0 +1,12 @@
+# Заголовки для Cloudflare Pages (файл попадает в dist/ и на сайт не влияет при локальном запуске).
+# Файлы сборки с хешем в имени — кешировать навсегда.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# mp3 меняются редко — неделя в кеше браузера.
+/audio/*
+  Cache-Control: public, max-age=604800
+
+# Данные сайта (слова, рассказы…) — всегда проверять, не обновились ли.
+/data/*
+  Cache-Control: public, max-age=0, must-revalidate

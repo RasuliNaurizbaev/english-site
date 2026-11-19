@@ -1,43 +1,25 @@
 #!/usr/bin/env python3
-"""Собирает весь контент в web/public/data/*.json (сайт на Vue) и site/data/*.js (старый сайт).
+"""Собирает весь контент в web/public/data/*.json для сайта.
 
     python3 tools/build_site_data.py
 
 Запускайте после любых изменений в content/ или audio/.
-(Сайт можно открыть и двойным щелчком, без сервера, поэтому данные лежат в .js, а не читаются из файлов.)
 """
+import csv
 import json
 
 import content
 import paths
+from story_words import WordFinder
 
 VOICE_ORDER = ["jenny", "sonia", "andrew"]
 VOICE_LABELS = {"jenny": "Jenny 🇺🇸", "sonia": "Sonia 🇬🇧", "andrew": "Andrew 🇺🇸"}
 
 
-def write_data_file(name, variable, data):
-    """Пишет данные для обоих сайтов: web/public/data/<name>.json (Vue) и site/data/<name>.js (старый)."""
+def write_data_file(name, data):
+    """Сохраняет данные сайта в web/public/data/<name>."""
     paths.WEB_DATA_DIR.mkdir(parents=True, exist_ok=True)
-    (paths.WEB_DATA_DIR / name.replace(".js", ".json")).write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
-
-    old_site_data = json.loads(json.dumps(data))           # копия: старому сайту нужны пути вида ../audio/...
-    add_old_site_urls(old_site_data)
-    paths.SITE_DATA_DIR.mkdir(parents=True, exist_ok=True)
-    js = (f"// Создано tools/build_site_data.py — не редактируйте вручную.\n"
-          f"window.{variable} = {json.dumps(old_site_data, ensure_ascii=False)};\n")
-    (paths.SITE_DATA_DIR / name).write_text(js, encoding="utf-8")
-
-
-def add_old_site_urls(data):
-    """В данных хранится путь относительно audio/ — старому сайту нужен ../audio/<путь>."""
-    if isinstance(data, dict):
-        if "src" in data and isinstance(data["src"], str):
-            data["src"] = "../audio/" + data["src"]
-        for value in data.values():
-            add_old_site_urls(value)
-    elif isinstance(data, list):
-        for value in data:
-            add_old_site_urls(value)
+    (paths.WEB_DATA_DIR / name).write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
 
 
 # ---------------------------------------------------------------- рассказы
@@ -60,25 +42,51 @@ def story_audio(story_id, sentence_count):
     return tracks
 
 
+def mark_words(sentences, finder):
+    """Отмечает словарные слова в предложениях.
+
+    Возвращает (words, marks):
+      words — словарные записи рассказа [{en, ru, level}, ...]
+      marks — [[номер предложения, начало, длина, [номера записей в words]], ...]
+              (у формы может быть несколько значений: left → «левый» и «to leave»)
+    """
+    words, index_of = [], {}
+    marks = []
+    for number, sentence in enumerate(sentences):
+        for start, length, rows in finder.find(sentence):
+            meaning_ids = []
+            for row in rows:
+                key = (row[2], row[0])
+                if key not in index_of:
+                    index_of[key] = len(words)
+                    words.append({"en": row[0].strip(), "ru": row[1].strip(), "level": row[2].strip()})
+                meaning_ids.append(index_of[key])
+            marks.append([number, start, length, meaning_ids])
+    return words, marks
+
+
 def build_stories():
+    finder = WordFinder()
     stories = []
     for story_id in paths.story_ids():
         title, paragraphs = content.read_story(story_id)
         sentences = [s for p in paragraphs for s in p]
+        words, marks = mark_words(sentences, finder)
         stories.append({
             "id": story_id,
             "title": title,
             "paragraphs": paragraphs,
-            "words": content.read_word_list(paths.story_dir(story_id) / paths.STORY_WORDS),
+            "words": words,
+            "marks": marks,
             "audio": story_audio(story_id, len(sentences)),
             "questions": content.read_questions(story_id),
             "wordCount": sum(len(s.split()) for s in sentences),
         })
-    write_data_file("stories.js", "STORIES", stories)
+    write_data_file("stories.json", stories)
     print(f"Рассказы: {len(stories)}")
     for s in stories:
         karaoke = sum(1 for t in s["audio"] if t["timings"])
-        print(f"  {s['id']}: {s['wordCount']} слов, из словаря {len(s['words'])}, "
+        print(f"  {s['id']}: {s['wordCount']} слов, из словаря {len(s['words'])} (отметок {len(s['marks'])}), "
               f"голосов {len(s['audio'])} (караоке {karaoke}), вопросы {'да' if s['questions'] else 'нет'}")
 
 
@@ -87,7 +95,7 @@ def build_stories():
 def build_vocabulary():
     vocabulary = {level: [[row[0].strip(), row[1].strip()] for row in content.read_vocabulary(level)]
                   for level in paths.LEVELS if paths.vocabulary_file(level).exists()}
-    write_data_file("words.js", "WORDS", vocabulary)
+    write_data_file("words.json", vocabulary)
     print("Словари: " + ", ".join(f"{level}={len(words)}" for level, words in vocabulary.items()))
 
 
@@ -99,7 +107,7 @@ def build_word_audio():
         parts[:] = [p for p in parts if (paths.WORD_AUDIO_DIR / p["file"]).exists()]
         for part in parts:
             part["src"] = paths.audio_relative(paths.WORD_AUDIO_DIR / part["file"])
-    write_data_file("audio.js", "AUDIO", manifest)
+    write_data_file("audio.json", manifest)
     print("Аудио слов: " + (", ".join(f"{level}={len(p)} mp3" for level, p in manifest.items()) or "нет"))
 
 
@@ -112,8 +120,32 @@ def build_grammar():
             topics.append(topic)
         except Exception as error:
             broken.append(f"{path.name}: {error}")
-    write_data_file("grammar.js", "GRAMMAR", topics)
+    write_data_file("grammar.json", topics)
     print(f"Грамматика: {len(topics)} тем" + (f"; с ошибками (пропущены): {broken}" if broken else ""))
+
+
+def build_verbs():
+    """content/irregular_verbs.csv → verbs.json: [{base, past: [...], participle: [...], ru, level}]"""
+    verbs = []
+    if paths.IRREGULAR_VERBS.exists():
+        with open(paths.IRREGULAR_VERBS, encoding="utf-8-sig", newline="") as f:
+            for row in csv.DictReader(f):
+                verbs.append({
+                    "base": row["base"].strip(),
+                    "past": [v.strip() for v in row["past"].split("/")],
+                    "participle": [v.strip() for v in row["participle"].split("/")],
+                    "ru": row["ru"].strip(),
+                    "level": row["level"].strip(),
+                })
+    write_data_file("verbs.json", verbs)
+    print(f"Неправильные глаголы: {len(verbs)}")
+
+
+def build_tests():
+    tests = [json.loads(p.read_text(encoding="utf-8")) for p in sorted(paths.TESTS_DIR.glob("*.json"))] if paths.TESTS_DIR.exists() else []
+    tests.sort(key=lambda t: (t.get("kind") != "placement", t["id"]))    # тест уровня — первым
+    write_data_file("tests.json", tests)
+    print(f"Тесты: {len(tests)}")
 
 
 if __name__ == "__main__":
@@ -121,3 +153,5 @@ if __name__ == "__main__":
     build_vocabulary()
     build_word_audio()
     build_grammar()
+    build_verbs()
+    build_tests()

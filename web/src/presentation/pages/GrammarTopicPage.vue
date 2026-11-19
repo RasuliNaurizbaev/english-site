@@ -11,7 +11,7 @@ import NotFoundPage from "./NotFoundPage.vue";
 
 breakIfRequested("grammarPages");
 const props = defineProps<{ id: string }>();
-const { content, progress } = useServices();
+const { content, progress, mistakes } = useServices();
 const topic = computed(() => content.grammarTopic(props.id));
 const next = computed(() => (topic.value ? content.nextGrammarTopicAfter(topic.value) : undefined));
 
@@ -23,6 +23,10 @@ function onComplete(share: number) {
   if (!topic.value) return;
   score.value = Math.round(share * 100);
   previous.value = progress.saveGrammarResult(topic.value.id, score.value);
+}
+/** Ошибка в упражнении → в «Мои ошибки» (повторится через 1, 3, 7, 14 дней). */
+function onItemAnswered(index: number, correct: boolean) {
+  if (topic.value) mistakes.recordAnswer(topic.value.id, index, correct);
 }
 function retry() {
   score.value = null;
@@ -46,7 +50,7 @@ function retry() {
     <section class="tasks">
       <h2 class="tasks-title">Упражнения ({{ topic.exercises.length }})</h2>
       <SafeSection title="Упражнения">
-        <ExerciseList :key="topic.id + attempt" :exercises="topic.exercises" @complete="onComplete" />
+        <ExerciseList :key="topic.id + attempt" :exercises="topic.exercises" @complete="onComplete" @item-answered="onItemAnswered" />
       </SafeSection>
 
       <div class="task-finish">

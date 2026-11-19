@@ -1,9 +1,11 @@
 // План на сегодня: что повторить, какой рассказ и какую тему взять следующими.
 import type { Services } from "./services";
 import { formatDuration } from "@/domain/text";
+import { storyLevel } from "@/domain/storyLevel";
+import type { Level, Story } from "@/domain/types";
 
 export interface PlanItem {
-  key: "words" | "story" | "grammar" | "audio";
+  key: "words" | "story" | "grammar" | "mistakes" | "audio";
   icon: string;
   title: string;
   text: string;
@@ -24,17 +26,50 @@ export function wordsPlan({ review, progress }: Services, today: number): PlanIt
   };
 }
 
-export function storyPlan({ content, progress }: Services, today: number): PlanItem {
+// ---------- рассказ дня: пользователь выбирает уровень → случайный рассказ этого уровня ----------
+
+/** Выбранный сегодня рассказ (ключ хранилища «storyPick»). */
+export interface StoryPick { day: number; level: Level; id: string }
+
+/** Случайный рассказ уровня: сначала из непройденных (если пройдены все — из всех), по возможности не тот же самый. */
+export function randomStory({ content, progress }: Services, level: Level, exceptId?: string, random = Math.random): Story | undefined {
+  const results = progress.storyResults();
+  const ofLevel = content.stories().filter(s => storyLevel(s.id) === level);
+  const unfinished = ofLevel.filter(s => !results[s.id]);
+  const pool = unfinished.length ? unfinished : ofLevel;
+  const candidates = pool.length > 1 ? pool.filter(s => s.id !== exceptId) : pool;
+  return candidates[Math.floor(random() * candidates.length)];
+}
+
+/** Рассказ, выбранный сегодня (вчерашний выбор не считается). */
+export function todayStoryPick({ content, progress }: Services, today: number): StoryPick | null {
+  const pick = progress.setting<StoryPick | null>("storyPick", null);
+  return pick && pick.day === today && content.story(pick.id) ? pick : null;
+}
+
+/** Выбрать уровень (или «другой рассказ» того же уровня) → случайный рассказ, запомнить на сегодня. */
+export function pickStory(services: Services, today: number, level: Level, random = Math.random): StoryPick | null {
+  const current = todayStoryPick(services, today);
+  const story = randomStory(services, level, current?.id, random);
+  if (!story) return null;
+  const pick: StoryPick = { day: today, level, id: story.id };
+  services.progress.saveSetting("storyPick", pick);
+  return pick;
+}
+
+export function storyPlan(services: Services, today: number): PlanItem {
+  const { content, progress } = services;
   const results = progress.storyResults();
   const stories = content.stories();
-  const next = stories.find(s => !results[s.id]);
   const finished = stories.filter(s => results[s.id]).length;
+  const pick = todayStoryPick(services, today);
+  const story = pick ? content.story(pick.id) : undefined;
   return {
     key: "story", icon: "📖", title: "Рассказ",
-    done: !next || (progress.activityOfDay(today)?.stories ?? 0) > 0,
-    text: next ? next.title + " · прочитать, послушать, ответить на вопросы" : "Все рассказы пройдены!",
+    done: (progress.activityOfDay(today)?.stories ?? 0) > 0,
+    text: story ? `${pick!.level} · ${story.title}${results[story.id] ? " (уже пройден)" : ""}` : "Выберите уровень — откроется случайный рассказ",
     note: `Пройдено ${finished} из ${stories.length}`,
-    link: next ? "/story/" + next.id : "/stories", action: next ? "Открыть" : "Список",
+    link: story ? "/story/" + story.id : "/stories", action: story ? "Открыть" : "Список",
   };
 }
 
@@ -48,6 +83,16 @@ export function grammarPlan({ content, progress }: Services, today: number): Pla
     text: next ? `${next.level} · ${next.title}${next.titleRu ? " — " + next.titleRu : ""}` : "Все темы изучены!",
     note: `Изучено ${finished} из ${topics.length} тем`,
     link: next ? "/grammar/" + next.id : "/grammar", action: next ? "Учить" : "Список",
+  };
+}
+
+/** «Мои ошибки»: показываем, только если на сегодня есть что повторить. */
+export function mistakesPlan({ mistakes }: Services): PlanItem | null {
+  const due = mistakes.due().length;
+  if (!due) return null;
+  return {
+    key: "mistakes", icon: "🔁", title: "Мои ошибки", done: false, link: "/mistakes",
+    text: `Повторить упражнения с ошибками: ${due}`, action: "Повторить",
   };
 }
 

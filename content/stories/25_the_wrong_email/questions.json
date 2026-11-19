@@ -1,0 +1,103 @@
+{
+  "questions": [
+    {
+      "type": "tf",
+      "q": "Laura worked in the customer support team.",
+      "answer": true,
+      "explain": "Верно: Лора работала в отделе поддержки клиентов."
+    },
+    {
+      "type": "choice",
+      "q": "Why were customers angry?",
+      "options": [
+        "The programs were too expensive",
+        "They had to wait for days for an answer",
+        "Laura was rude to them"
+      ],
+      "answer": 1,
+      "explain": "Из-за медленной новой системы клиентам приходилось ждать ответа несколько дней."
+    },
+    {
+      "type": "choice",
+      "q": "Who did Laura want to send her message to?",
+      "options": [
+        "Her friend Sophie",
+        "Mr Price",
+        "Her mother"
+      ],
+      "answer": 0,
+      "explain": "Она хотела написать своей подруге по работе Софи."
+    },
+    {
+      "type": "tf",
+      "q": "Laura's email was sent only to her team.",
+      "answer": false,
+      "explain": "Неверно: письмо ушло всем трёмстам сорока сотрудникам компании."
+    },
+    {
+      "type": "choice",
+      "q": "Why did the email go to the wrong people?",
+      "options": [
+        "Sophie forwarded it to everyone",
+        "The new system sent it by mistake",
+        "Laura clicked on the address list the computer suggested without looking"
+      ],
+      "answer": 2,
+      "explain": "Компьютер предложил список «Staff - All», и Лора нажала на него, не посмотрев."
+    },
+    {
+      "type": "choice",
+      "q": "What was her mother's advice?",
+      "options": [
+        "To call in sick and stay at home",
+        "To apologise for the way she said it, but not for what she meant",
+        "To look for another job immediately"
+      ],
+      "answer": 1,
+      "explain": "Мама сказала извиниться за форму, но не за смысл сказанного."
+    },
+    {
+      "type": "tf",
+      "q": "Laura had been recording the numbers about her team's work for weeks.",
+      "answer": true,
+      "explain": "Верно: цифры были у неё в телефоне, потому что она записывала их неделями."
+    },
+    {
+      "type": "choice",
+      "q": "In the text, Laura says \"Our team is exhausted\". What does \"exhausted\" mean?",
+      "options": [
+        "Very angry",
+        "Very bored",
+        "Very tired"
+      ],
+      "answer": 2,
+      "explain": "«Exhausted» значит «очень уставший, измотанный»."
+    },
+    {
+      "type": "choice",
+      "q": "What did Mrs Okafor announce in her email?",
+      "options": [
+        "New people would be hired and managers would work in customer support",
+        "Laura would be fired",
+        "The company would close the support team"
+      ],
+      "answer": 0,
+      "explain": "Она объявила о найме двух новых сотрудников и о том, что менеджеры будут работать в поддержке раз в месяц."
+    },
+    {
+      "type": "tf",
+      "q": "Mr Price stayed angry with Laura and never spoke to her again.",
+      "answer": false,
+      "explain": "Неверно: перед уходом он признал, что должен был её выслушать, и они пожали руки."
+    }
+  ],
+  "retell": [
+    "What problems did Laura's team have?",
+    "What did Laura write on Thursday evening?",
+    "What did she discover the next morning?",
+    "What did her mother advise her to do?",
+    "What happened in the meeting with Mr Price and Mrs Okafor?",
+    "What changes did Mrs Okafor announce?",
+    "What was Laura's situation six months later?"
+  ]
+}
