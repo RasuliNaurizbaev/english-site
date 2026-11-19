@@ -519,32 +519,37 @@ npm run check                       # типы → модульные тесты
 
 ## Деплой
 
-Хостинг: **Cloudflare Pages**, сайт и mp3 вместе. Cloudflare сам собирает сайт из GitHub при каждом push.
+Хостинг: **Cloudflare Worker со статическими файлами** — сайт и mp3 вместе. Cloudflare сам собирает сайт из GitHub при каждом push.
+(Почему не Pages: Worker — основной продукт Cloudflare; на нём проще добавить посредника для AI, базу данных, задачи по расписанию.)
 
-| Ветка | Адрес |
-|---|---|
-| `main` | основной сайт: `https://<проект>.pages.dev` |
-| `development` | предпросмотр: `https://development.<проект>.pages.dev` |
+| Ветка | Что происходит | Адрес |
+|---|---|---|
+| `main` | основной сайт (`npx wrangler deploy`) | https://open-english-for-beginner.rasuli-naurizbaev.workers.dev |
+| `development` и другие | предпросмотр (`npx wrangler preview`) | ссылка — в логе сборки / на странице Worker'а |
+
+Настройки — в `web/wrangler.jsonc`: имя Worker'а (`open-english-for-beginner`, **должно совпадать с именем в Cloudflare**),
+папка с файлами `./dist`, пустой блок `previews` (без него предпросмотр веток падает).
 
 ### Первая настройка (один раз, в браузере)
-1. Зарегистрироваться на https://dash.cloudflare.com (бесплатно).
-2. **Workers & Pages → Create → Pages → Connect to Git** → разрешить доступ к репозиторию `RasuliNaurizbaev/En`.
-3. Настройки сборки:
+1. https://dash.cloudflare.com → **Workers & Pages → Create → Worker → Import a repository** → `RasuliNaurizbaev/En`.
+2. Настройки:
 
    | Поле | Значение |
    |---|---|
+   | Project (Worker) name | `open-english-for-beginner` |
    | Production branch | `main` |
-   | Framework preset | `None` |
-   | Root directory | `web` |
+   | Root directory (path) | `web` |
    | Build command | `npm run build:pages` |
-   | Build output directory | `dist` |
+   | Deploy command | `npx wrangler deploy` (по умолчанию) |
+   | Non-production branch deploy command | `npx wrangler preview` (по умолчанию) |
 
    Версия Node берётся из `web/.node-version` (22). Переменные окружения не нужны.
-4. **Save and Deploy**. Через 1–3 минуты сайт доступен по адресу `*.pages.dev`.
-5. Settings → Builds → **Preview branches**: включить для `development` (или для всех веток).
+3. **Deploy**. Через 1–3 минуты сайт открывается по адресу выше.
+
+Проверить настройки локально (без входа в аккаунт): `cd web && npm run build:pages && npx wrangler deploy --dry-run`.
 
 ### Как устроена сборка
-- `npm run build:pages` = `npm run build` (типы + Vite) + `scripts/copy-audio.mjs` (копирует `EL/audio` → `web/dist/audio`).
+- `npm run build:pages` = `npm run build` (типы + Vite) + `scripts/copy-audio.mjs` (копирует `EL/audio` → `web/dist/audio`), затем Cloudflare выкладывает `web/dist`.
 - Сайт ищет mp3 по относительному адресу `audio/…`, поэтому `VITE_AUDIO_URL` не задаётся.
 - `web/public/_headers` — кеш: файлы сборки навсегда, mp3 на неделю, `data/*.json` всегда проверяются.
 - Данные сайта (`web/public/data`) берутся из git — Python на Cloudflare не нужен. **После правок контента не забудьте `build_site_data.py` и закоммитить данные.**
@@ -552,7 +557,7 @@ npm run check                       # типы → модульные тесты
 
 ### Лимиты бесплатного плана (проверено 2026-11)
 - Статические файлы: до 20 000 файлов, каждый до 25 МиБ. У нас ~170 файлов, самый большой mp3 ≈ 2.5 МБ.
-- Функции (посредник для AI на шаге 2): 100 000 запросов в день, 10 мс процессорного времени на запрос
+- Запросы к Worker'у с кодом (посредник для AI на шаге 2): 100 000 в день, 10 мс процессорного времени на запрос
   (ожидание ответа Gemini/Groq в эти 10 мс не входит).
 - Актуальное: https://developers.cloudflare.com/workers/platform/limits/
 

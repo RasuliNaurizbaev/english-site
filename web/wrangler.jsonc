@@ -1,0 +1,15 @@
+// Настройки Cloudflare Worker: сайт + mp3 как статические файлы.
+// Сборка в Cloudflare: Root directory = web, Build command = npm run build:pages,
+// Deploy command = npx wrangler deploy (по умолчанию), для других веток — npx wrangler preview.
+// Адрес: https://open-english-for-beginner.rasuli-naurizbaev.workers.dev
+{
+  // должно совпадать с именем Worker'а в Cloudflare
+  "name": "open-english-for-beginner",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    // npm run build:pages кладёт сюда сайт и mp3 (dist/audio); заголовки кеша — public/_headers
+    "directory": "./dist"
+  },
+  // предпросмотр веток (development): пустой блок — те же настройки, что у основного сайта
+  "previews": {}
+}
