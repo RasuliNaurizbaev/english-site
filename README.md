@@ -101,6 +101,8 @@
 Словарь по уровням A1 / A2 / B1: поиск по-английски и по-русски, фильтр «Все / Новые / Учу / Выучено».
 Показывается **по 100 слов**: кнопка «Ещё 100 →» заменяет текущую сотню следующей, «← Назад» — предыдущей.
 Строка слова: 🔊 · слово · перевод · справа статус или кнопки.
+🔊 — голос устройства: сайт сам выбирает лучший английский голос (улучшенные Premium/Enhanced, Samantha, Google US English…)
+и пропускает «шуточные» голоса macOS.
 
 | Фильтр | Справа | Что делают кнопки |
 |---|---|---|
@@ -517,16 +519,46 @@ npm run check                       # типы → модульные тесты
 
 ## Деплой
 
-План: **сайт и mp3 — раздельно**.
+Хостинг: **Cloudflare Pages**, сайт и mp3 вместе. Cloudflare сам собирает сайт из GitHub при каждом push.
 
-1. **mp3** — загрузить папку `audio/` целиком (с подпапками `stories/…` и `words/…`) в файловое хранилище,
-   например Cloudflare R2 (бесплатный объём и бесплатная раздача; актуальные условия проверьте на сайте сервиса).
-2. **Адрес хранилища** — в `web/.env.production` (образец: `web/.env.production.example`):
-   ```
-   VITE_AUDIO_URL=https://<ваш-бакет>…
-   ```
-3. **Сайт** — `cd web && npm run build` → папка `web/dist/` (≈1–2 МБ, mp3 туда не попадают) →
-   любой статический хостинг (Render, Cloudflare Pages, Netlify…). Хеш-адреса (`#/story/…`) не требуют настройки сервера.
+| Ветка | Адрес |
+|---|---|
+| `main` | основной сайт: `https://<проект>.pages.dev` |
+| `development` | предпросмотр: `https://development.<проект>.pages.dev` |
+
+### Первая настройка (один раз, в браузере)
+1. Зарегистрироваться на https://dash.cloudflare.com (бесплатно).
+2. **Workers & Pages → Create → Pages → Connect to Git** → разрешить доступ к репозиторию `RasuliNaurizbaev/En`.
+3. Настройки сборки:
+
+   | Поле | Значение |
+   |---|---|
+   | Production branch | `main` |
+   | Framework preset | `None` |
+   | Root directory | `web` |
+   | Build command | `npm run build:pages` |
+   | Build output directory | `dist` |
+
+   Версия Node берётся из `web/.node-version` (22). Переменные окружения не нужны.
+4. **Save and Deploy**. Через 1–3 минуты сайт доступен по адресу `*.pages.dev`.
+5. Settings → Builds → **Preview branches**: включить для `development` (или для всех веток).
+
+### Как устроена сборка
+- `npm run build:pages` = `npm run build` (типы + Vite) + `scripts/copy-audio.mjs` (копирует `EL/audio` → `web/dist/audio`).
+- Сайт ищет mp3 по относительному адресу `audio/…`, поэтому `VITE_AUDIO_URL` не задаётся.
+- `web/public/_headers` — кеш: файлы сборки навсегда, mp3 на неделю, `data/*.json` всегда проверяются.
+- Данные сайта (`web/public/data`) берутся из git — Python на Cloudflare не нужен. **После правок контента не забудьте `build_site_data.py` и закоммитить данные.**
+- Хеш-адреса (`#/story/…`) не требуют настройки сервера.
+
+### Лимиты бесплатного плана (проверено 2026-11)
+- Статические файлы: до 20 000 файлов, каждый до 25 МиБ. У нас ~170 файлов, самый большой mp3 ≈ 2.5 МБ.
+- Функции (посредник для AI на шаге 2): 100 000 запросов в день, 10 мс процессорного времени на запрос
+  (ожидание ответа Gemini/Groq в эти 10 мс не входит).
+- Актуальное: https://developers.cloudflare.com/workers/platform/limits/
+
+### Другой вариант: mp3 в отдельном хранилище
+Если mp3 станет слишком много: загрузить `audio/` в Cloudflare R2, адрес указать в `web/.env.production`
+(`VITE_AUDIO_URL=…`, образец `web/.env.production.example`) и собирать обычным `npm run build`.
 
 Локально `VITE_AUDIO_URL=/audio` (файл `web/.env.development`): Vite сам раздаёт `../audio` с поддержкой перемотки.
 
