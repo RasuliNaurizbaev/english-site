@@ -31,6 +31,17 @@ describe("AI-тесты", () => {
     await expect(service.generate([fakeAi(JSON.stringify(bad))], { level: "B1", focus: "" })).rejects.toThrow(/ошибками/);
     expect(service.generatedTests().length).toBe(0);
   });
+  it("один сломанный вопрос из многих убирается, тест принимается; сломано больше четверти — тест бракуется", async () => {
+    const many = structuredClone(goodTest);
+    many.sections[0].exercises = Array.from({ length: 8 }, (_, i) => ({ type: "input", q: `I ___ (go) ${i}.`, answer: ["went"], explain: "" }));
+    many.sections[0].exercises[4] = { type: "input", q: "No gap here.", answer: ["x"], explain: "" };   // как прислал Groq
+    const service = new AiTestService(new ProgressRepository(createMemoryStorage(), () => 1));
+    const test = await service.generate([fakeAi(JSON.stringify(many))], { level: "B1", focus: "" });
+    expect(test.sections[0].exercises.length).toBe(7);
+    expect(test.sections[0].exercises.some(e => e.q === "No gap here.")).toBe(false);
+    many.sections[0].exercises[5] = many.sections[0].exercises[6] = many.sections[0].exercises[4];         // 3 из 8 — больше четверти
+    await expect(service.generate([fakeAi(JSON.stringify(many))], { level: "B1", focus: "" })).rejects.toThrow(/ровно один ___/);
+  });
   it("Gemini не ответил или прислал плохой тест → берётся Groq", async () => {
     const service = new AiTestService(new ProgressRepository(createMemoryStorage(), () => 1));
     const viaGroq = await service.generate([brokenAi("Google Gemini"), fakeAi(JSON.stringify(goodTest), "Groq")], { level: "A2", focus: "" });
@@ -68,8 +79,9 @@ describe("настройки AI", () => {
     const { AI_SERVICES, pickDefaultModel, normalizeSettings, providersInOrder } = await import("@/data/ai/aiProvider");
     const [gemini, groq] = AI_SERVICES;
     expect(pickDefaultModel(groq, ["gemma2-9b-it", "llama-3.3-70b-versatile", "whisper-large"])).toBe("llama-3.3-70b-versatile");
-    expect(pickDefaultModel(gemini, ["gemini-2.5-flash-lite", "gemini-2.5-flash", "gemini-2.5-pro"])).toBe("gemini-2.5-flash");
-    expect(pickDefaultModel(gemini, ["gemini-2.0-flash", "gemini-3.0-flash", "gemini-3.0-flash-preview"])).toBe("gemini-3.0-flash");   // самая новая
+    expect(pickDefaultModel(gemini, ["gemini-2.5-flash-lite", "gemini-2.5-flash", "gemini-2.5-pro"])).toBe("gemini-2.5-flash-lite");   // lite — быстрая
+    expect(pickDefaultModel(gemini, ["gemini-3.5-flash-lite", "gemini-flash-lite-latest", "gemini-3.8-flash"])).toBe("gemini-flash-lite-latest");
+    expect(pickDefaultModel(gemini, ["gemini-2.0-flash", "gemini-3.0-flash", "gemini-3.0-flash-preview"])).toBe("gemini-3.0-flash");   // lite нет — самая новая flash
     expect(pickDefaultModel(groq, ["some-model"])).toBe("some-model");                                                           // ничего не подошло — первая
     const migrated = normalizeSettings({ preset: "groq", apiKey: "k1", model: "m1" });
     expect(migrated.groq).toEqual({ apiKey: "k1", model: "m1" });
