@@ -2,9 +2,9 @@
 //
 // Оценки после показа перевода:
 //   again — не вспомнил: показать ещё раз сегодня
-//   hard  — с трудом: интервал растёт чуть-чуть
-//   good  — вспомнил: 1 день → 3 дня → интервал × лёгкость
-//   easy  — легко: интервал растёт сильнее
+//   hard  — с трудом: новое слово — завтра, дальше интервал растёт чуть-чуть
+//   good  — вспомнил: новое слово — через неделю, дальше интервал × лёгкость
+//   easy  — легко: новое слово — через 4 недели (сразу «выучено»), дальше интервал растёт сильнее
 //   known — «я это уже знаю» для нового слова: следующий показ через 60 дней
 
 /** Карточка изучаемого слова. Короткие имена полей — совместимость с уже сохранённым прогрессом. */
@@ -21,6 +21,8 @@ export type WordStatus = "new" | "learning" | "learned";
 
 export const LEARNED_INTERVAL = 21;    // с интервала 21 день слово считаем выученным
 export const KNOWN_INTERVAL = 60;
+/** Первый показ нового слова: Трудно — завтра, Хорошо — через неделю, Легко — через 4 недели. */
+export const FIRST_INTERVALS = { hard: 1, good: 7, easy: 28 } as const;
 const MIN_EASE = 1.3;
 
 export function newCard(today: number): Card {
@@ -29,7 +31,8 @@ export function newCard(today: number): Card {
 
 /** Через сколько дней покажем слово при каждой оценке. */
 export function nextIntervals(card: Card | undefined): { hard: number; good: number; easy: number } {
-  if (!card || card.r === 0 || card.i < 1) return { hard: 1, good: 1, easy: 4 };
+  if (!card || (card.r === 0 && card.l === 0)) return { ...FIRST_INTERVALS };
+  if (card.i < 1) return { hard: 1, good: 1, easy: 4 };     // после «Снова» (или «учу» в списке) — учим заново, понемногу
   const good = card.i === 1 ? 3 : Math.round(card.i * card.e);
   return {
     hard: Math.max(1, Math.round(card.i * 1.2)),

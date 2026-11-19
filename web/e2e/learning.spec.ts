@@ -15,9 +15,10 @@ test("все разделы открываются без ошибок", async (
 test("повторение слов: оценки и интервалы", async ({ page }) => {
   await open(page, "/review");
   await page.locator(".flashcard").click();
+  await expect(page.locator(".fc-actions.four small")).toHaveText(["сегодня", "завтра", "1 неделя", "4 недели"]);
   await page.locator(".g-good").click();
   const cards = await stored(page, "srs");
-  expect(Object.values(cards)).toEqual([expect.objectContaining({ i: 1 })]);
+  expect(Object.values(cards)).toEqual([expect.objectContaining({ i: 7 })]);
   await page.locator(".flashcard").click();
   await page.locator(".g-again").click();
   await expect(page.getByText("Осталось: 9")).toBeVisible();
@@ -114,6 +115,65 @@ test("список слов: по 100, «Ещё 100 →» заменяет со�
   await expect(page.getByRole("button", { name: "Ещё 100 →" })).toBeDisabled();
   await page.getByPlaceholder("Поиск").fill("ticket");                          // поиск — снова с начала
   await expect(page.locator(".words-range")).toHaveText(/Слова 1–/);
+});
+
+test("повторение: «Я это уже знаю» — слово выучено, видно сообщение", async ({ page }) => {
+  await open(page, "/review");
+  const word = (await page.locator(".fc-main").textContent())!.trim();
+  await page.getByRole("button", { name: "Я это уже знаю" }).click();
+  await expect(page.locator(".known-note")).toHaveText(`✓ «${word}» → выучено (следующий показ через 60 дней)`);
+  await expect(page.locator(".fc-main")).not.toHaveText(word);
+  await open(page, "/words/A1");
+  await page.getByPlaceholder("Поиск").fill(word);
+  await expect(page.locator(".word-list li").filter({ has: page.locator(".en", { hasText: new RegExp(`^${word}$`) }) }).locator(".st")).toHaveText("выучено");
+});
+
+test("список слов: статусы в фильтрах — новые → учу → выучено → учу", async ({ page }) => {
+  await open(page, "/words/A1");
+  const row = page.locator(".word-list li").first();
+  await expect(row.locator(".speak-cell + .en")).toHaveText("apple");             // порядок: 🔊, слово, перевод, статус
+  await expect(row.locator(".st")).toHaveText("новое");
+  await expect(row.locator(".st-btn")).toHaveCount(0);                             // во «Все» — только статус
+
+  await page.locator(".segmented").getByRole("button", { name: "Новые", exact: true }).click();
+  await expect(row.locator(".st-btn")).toHaveText(["учу", "выучено"]);
+  await row.getByRole("button", { name: "учу", exact: true }).click();
+  await expect(page.locator(".words-change")).toContainText("«apple» → учу");
+  await expect(page.locator(".plan-card.compact")).toContainText("К повторению: 1");
+  await expect(page.locator(".word-list .en").first()).not.toHaveText("apple");    // ушло из «Новых»
+  expect((await stored(page, "srs"))["A1|apple"]).toMatchObject({ i: 0 });
+
+  await page.locator(".segmented").getByRole("button", { name: "Учу", exact: true }).click();
+  await expect(page.locator(".word-list li")).toHaveCount(1);
+  await expect(row.locator(".st-btn")).toHaveText(["выучено"]);
+  await row.getByRole("button", { name: "выучено", exact: true }).click();
+  await expect(page.locator(".word-list li")).toHaveCount(0);
+
+  await page.locator(".segmented").getByRole("button", { name: "Выучено", exact: true }).click();
+  await expect(row.locator(".en")).toHaveText("apple");
+  await expect(row.locator(".st-btn")).toHaveText(["учу"]);
+  await row.getByRole("button", { name: "учу", exact: true }).click();
+  await page.locator(".segmented").getByRole("button", { name: "Все", exact: true }).click();
+  await expect(row.locator(".st")).toHaveText("учу");
+});
+
+test("«Сегодня»: выбор уровня — случайный рассказ, повторное нажатие — другой", async ({ page }) => {
+  await open(page, "/");
+  const card = page.locator(".story-plan");
+  await expect(card.locator(".plan-text")).toContainText("Выберите уровень");
+  await card.getByRole("button", { name: "B1" }).click();
+  await expect(card.locator(".plan-text")).toContainText("B1 · ");
+  const first = (await card.locator(".plan-text").textContent())!;
+  await card.getByRole("button", { name: /B1/ }).click();
+  await expect(card.locator(".plan-text")).not.toHaveText(first);
+  await card.getByRole("button", { name: "A2" }).click();
+  await expect(card.locator(".plan-text")).toContainText("A2 · ");
+  const title = (await card.locator(".plan-text").textContent())!.replace("A2 · ", "");
+  await open(page, "/");                                                           // выбор запомнился
+  await expect(card.locator(".plan-text")).toContainText(title);
+  await card.getByRole("link", { name: "Открыть" }).click();
+  await expect(page.locator(".story-title")).toHaveText(title);
+  expect(Number(page.url().match(/story\/(\d+)/)![1])).toBeLessThanOrEqual(20);
 });
 
 test("резервная копия: сохранить прогресс в файл и восстановить в чистом браузере", async ({ page, browser }) => {

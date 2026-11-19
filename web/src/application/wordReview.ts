@@ -97,10 +97,22 @@ export class WordReviewService {
     return added;
   }
 
-  /** Из списка слов: «новое» ↔ «уже знаю». */
-  toggleKnown(key: string): void {
-    if (this.cards[key]) delete this.cards[key];
-    else this.cards[key] = { i: KNOWN_INTERVAL, e: 2.5, d: this.today() + KNOWN_INTERVAL, r: 1, l: 0 };
+  /**
+   * Из списка слов: «учу» — слово появится в повторении уже сегодня (не занимая лимит новых слов).
+   * Выученное слово начинает учиться заново маленькими шагами; история (лёгкость, ошибки) сохраняется.
+   */
+  markLearning(key: string): void {
+    if (!this.content.hasWord(key)) return;
+    const card = this.cards[key];
+    this.cards[key] = card ? { ...card, i: 0, d: this.today() } : { i: 0, e: 2.5, d: this.today(), r: 0, l: 0 };
+    this.progress.saveCards(this.cards);
+  }
+
+  /** Из списка слов: «выучено» — следующий показ через 60 дней. */
+  markLearned(key: string): void {
+    if (!this.content.hasWord(key)) return;
+    const card = this.cards[key] ?? { i: 0, e: 2.5, d: this.today(), r: 0, l: 0 };
+    this.cards[key] = { ...card, i: KNOWN_INTERVAL, d: this.today() + KNOWN_INTERVAL, r: Math.max(card.r, 1) };
     this.progress.saveCards(this.cards);
   }
 

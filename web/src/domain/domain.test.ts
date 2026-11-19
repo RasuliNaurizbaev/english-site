@@ -25,13 +25,22 @@ describe("storyText", () => {
 
 describe("spacedRepetition", () => {
   const today = 1000;
-  it("новое слово: Хорошо → 1 день, затем 3 дня, затем × лёгкость", () => {
+  it("новое слово: Снова — сегодня, Трудно — завтра, Хорошо — через неделю, Легко — через 4 недели", () => {
+    expect(nextIntervals(undefined)).toEqual({ hard: 1, good: 7, easy: 28 });
+    expect(applyRating(undefined, "hard", today)).toMatchObject({ i: 1, d: today + 1 });
+    expect(applyRating(undefined, "easy", today)).toMatchObject({ i: 28, d: today + 28 });
+    expect(statusOf(applyRating(undefined, "easy", today))).toBe("learned");
     const c1 = applyRating(undefined, "good", today);
-    expect(c1).toMatchObject({ i: 1, d: today + 1, r: 1 });
-    const c2 = applyRating(c1, "good", today + 1);
-    expect(c2.i).toBe(3);
-    const c3 = applyRating(c2, "good", today + 4);
-    expect(c3.i).toBe(Math.round(3 * 2.5));
+    expect(c1).toMatchObject({ i: 7, d: today + 7, r: 1 });
+    expect(statusOf(c1)).toBe("learning");
+    const c2 = applyRating(c1, "good", today + 7);
+    expect(c2.i).toBe(Math.round(7 * 2.5));
+    expect(statusOf(applyRating(c2, "good", today + 25))).toBe("learned");
+  });
+  it("после «Снова» слово учится заново маленькими шагами", () => {
+    const forgotten = applyRating(undefined, "again", today);
+    expect(nextIntervals(forgotten)).toEqual({ hard: 1, good: 1, easy: 4 });
+    expect(applyRating(forgotten, "good", today).i).toBe(1);
   });
   it("Снова — показать сегодня, лёгкость падает, но не ниже 1.3", () => {
     let card = applyRating(undefined, "good", today);

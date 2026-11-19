@@ -94,3 +94,4 @@ button.check { margin-top: 4px; }
 .voice-note { font-size: 13px; color: var(--muted); margin-bottom: 8px; }
 .voice-controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 button.primary-small { background: var(--accent); color: #fff; border-color: var(--accent); font-weight: 700; }
+.known-note { margin: 0 0 8px; font-size: 13px; color: var(--ok); text-align: center; }

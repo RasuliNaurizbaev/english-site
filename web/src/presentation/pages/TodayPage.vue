@@ -7,6 +7,7 @@ import { audioPlan, grammarPlan, mistakesPlan, storyPlan, wordsPlan, type PlanIt
 import { plural } from "@/domain/text";
 import type { Level } from "@/domain/types";
 import PlanCard from "../components/PlanCard.vue";
+import StoryPlanCard from "../components/StoryPlanCard.vue";
 import SafeSection from "../components/SafeSection.vue";
 import SegmentedControl from "../components/SegmentedControl.vue";
 import ProgressBackupPanel from "../components/ProgressBackupPanel.vue";
@@ -79,7 +80,10 @@ const perDayOptions: [number, string][] = [5, 10, 15, 20, 30].map(n => [n, Strin
   <div class="plan">
     <template v-for="card in plan" :key="card.title">
       <div v-if="card.failed" class="error-box">⚠ {{ card.title }} — временно не работает.</div>
-      <SafeSection v-else-if="card.item" :title="'План: ' + card.title"><PlanCard :item="card.item" /></SafeSection>
+      <SafeSection v-else-if="card.item" :title="'План: ' + card.title">
+        <StoryPlanCard v-if="card.item.key === 'story'" />
+        <PlanCard v-else :item="card.item" />
+      </SafeSection>
     </template>
   </div>
 
@@ -107,7 +111,7 @@ const perDayOptions: [number, string][] = [5, 10, 15, 20, 30].map(n => [n, Strin
         <button v-for="level in content.levels" :key="level" :class="{ active: chosenLevels.includes(level) }" @click="toggleLevel(level)">{{ level }}</button>
       </div>
     </div>
-    <p class="muted small-note">Новые слова берутся по порядку: сначала A1, потом A2, потом B1. Если слово уже знакомо, нажмите «Я это уже знаю» — оно не будет считаться новым.</p>
+    <p class="muted small-note">Новые слова берутся по порядку: сначала A1, потом A2, потом B1. Если слово уже знакомо, нажмите «Я это уже знаю» — оно сразу станет выученным и не потратит лимит новых.</p>
   </SafeSection>
 
   <SafeSection title="Резервная копия прогресса">

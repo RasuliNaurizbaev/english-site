@@ -52,14 +52,25 @@
 }
 .word-list { list-style: none; padding: 0; margin: 4px 0 0; display: grid; gap: 6px; }
 .word-list li {
-  display: grid; grid-template-columns: 1fr 1fr auto 34px; gap: 10px; align-items: center;
+  display: grid; grid-template-columns: 34px 1fr 1fr auto; gap: 10px; align-items: center;
   background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 6px 10px;
 }
 .word-list .en { font-weight: 600; }
 .word-list .ru { color: var(--muted); }
-.word-list .st { border: 1px solid var(--border); background: var(--surface2); border-radius: 999px; font-size: 12px; padding: 2px 10px; cursor: pointer; color: var(--muted); }
+.word-list .word-status { display: flex; gap: 6px; justify-content: flex-end; }
+.word-list .st { border: 1px solid var(--border); background: var(--surface2); border-radius: 999px; font-size: 12px; padding: 2px 10px; color: var(--muted); white-space: nowrap; }
 .word-list .st-learning .st { color: var(--a2); border-color: var(--a2); background: var(--a2-bg); }
-.word-list .st-mature .st { color: var(--ok); border-color: var(--ok); background: var(--ok-bg); }
+.word-list .st-learned .st { color: var(--ok); border-color: var(--ok); background: var(--ok-bg); }
+.word-list .st-btn { border: 1px solid; border-radius: 999px; font-size: 12px; font-weight: 600; padding: 4px 12px; cursor: pointer; white-space: nowrap; }
+.word-list .st-btn.to-learning { color: var(--a2); border-color: var(--a2); background: var(--a2-bg); }
+.word-list .st-btn.to-learned { color: var(--ok); border-color: var(--ok); background: var(--ok-bg); }
+.words-change { margin: 4px 0 8px; font-size: 13px; color: var(--ok); }
+.story-levels { display: flex; gap: 6px; margin: 8px 0 4px; flex-wrap: wrap; }
+.level-pick { font-weight: 700; min-width: 56px; }
+.level-pick.A2 { color: var(--a2); border-color: var(--a2); }
+.level-pick.B1 { color: var(--b1); border-color: var(--b1); }
+.level-pick.A2.active { background: var(--a2-bg); }
+.level-pick.B1.active { background: var(--b1-bg); }
 
 /* ---------- рассказы ---------- */
 .cards { display: grid; gap: 12px; }
