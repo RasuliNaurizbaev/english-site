@@ -1,7 +1,7 @@
 # HANDOFF — состояние проекта, открытые вопросы и советы
 
-Дата: 2026-11-20 (на сайте: перемотка mp3, вход по коду, AI-посредник — в `main`. **Не закоммичено:** «Мои слова», mp3 из своих слов через edge-tts в Worker'е, «Выучено» — последние сверху. D1 — позже). Документ для того, кто продолжит работу (вы сами, другой разработчик или следующая сессия с Claude).
-Как устроен проект и как им пользоваться — в `README.md`. Здесь — **что не доделано, что не проверено, какие есть риски и что делать дальше**.
+Дата: 2026-11-20 (закоммичено в `development`: «Мои слова», озвучка edge-tts, «Учу» → Play, mp3 → Supabase Storage, аккаунты (имя + пароль) и миграции Supabase. Дальше — деплой и проверка входа на сайте, потом шаг 5: профиль и админ-панель). Документ для того, кто продолжит работу (вы сами, другой разработчик или следующая сессия с Claude).
+Как устроен проект и как им пользоваться — в `README.md`. **Настройка с нуля после `git clone`:** `docs/SETUP_LOCAL.md` (компьютер), `docs/SETUP_SUPABASE.md` (база, mp3, миграции), `docs/SETUP_CLOUDFLARE.md` (сайт, секреты, деплой); смена адреса сайта / проекта Supabase — `docs/CHANGE_DOMAIN_OR_PROJECT.md`. Здесь — **что не доделано, что не проверено, какие есть риски и что делать дальше**.
 
 ---
 
@@ -9,12 +9,12 @@
 
 ### Git
 ```
-GitHub  origin/main          aca7bd0  Merge PR #5 → задеплоено: https://open-english-for-beginner.rasuli-naurizbaev.workers.dev
-GitHub/local development     80bb922  Make AI test generation reliable: faster Gemini model, timeouts, retries
-                             dc46bc8  Add mp3 seeking, access-code login and AI proxy in the Worker
-рабочая папка                НЕ ЗАКОММИЧЕНО (2026-11-20): «Мои слова», озвучка /api/tts (worker/edgeTts/), mp3 групп, LIFO в «Выучено»,
-                             «Учу» → Play, mp3 → Supabase (84 mp3 удалены из индекса git — `git rm --cached`, файлы на диске)
-                             + README, HANDOFF; web/.dev.vars — локальные секреты, в .gitignore
+GitHub  origin/main          задеплоено: https://english.foryourself.workers.dev (push/PR/merge — пользователь)
+local   development          e8bf1be  Add accounts: username/password login, sessions and Supabase migrations
+                             4317409  Add my words, word playback, edge-tts audio and move mp3 to Supabase
+                             80bb922  последний коммит, где mp3 ещё в git (восстановить: docs/SETUP_LOCAL.md → «mp3 после clone»)
+рабочая папка                docs/SETUP_*.md, правки README/HANDOFF/комментариев (не закоммичено);
+                             секреты — web/.dev.vars, tools/.env (в .gitignore)
 ```
 - ⚠ **Коммиты — только по команде пользователя.** Claude не коммитит сам (был случай — откатили `git reset HEAD~1`).
   Сделал работу → показал → спросил «закоммитить?».
@@ -30,8 +30,8 @@ GitHub/local development     80bb922  Make AI test generation reliable: faster G
 | «Слова»: строка 🔊 · слово · перевод · статус; кнопки «учу» / «выучено» в фильтрах «Новые / Учу / Выучено»; старый переключатель, стиравший историю, убран | `pages/WordsPage.vue`, `application/wordReview.ts` (`markLearning`, `markLearned`) |
 | Повторение: новое слово — Снова сегодня / Трудно завтра / Хорошо 1 неделя / Легко 4 недели, дальше интервал растёт; «Я это уже знаю» показывает сообщение | `domain/spacedRepetition.ts` (`FIRST_INTERVALS`), `pages/ReviewPage.vue` |
 | «Сегодня»: выбор уровня A2 (01–20) / B1 (21–40) → случайный рассказ, повторное нажатие — другой; выбор на день (ключ `storyPick`) | `components/StoryPlanCard.vue`, `application/todayPlan.ts`, `domain/storyLevel.ts` |
-| Деплой: `npm run build:pages` (сборка + mp3 в `dist/audio`), `public/_headers` (кеш), `.node-version` (22) | `web/scripts/copy-audio.mjs`, README → «Деплой» |
-| Хостинг — **Cloudflare Worker** `open-english-for-beginner` (а не Pages): `web/wrangler.jsonc` с `assets` и пустым `previews` — без него сборка веток падала (`wrangler preview`: missing `previews` block) | `web/wrangler.jsonc` |
+| Деплой: `npm run build:pages` (сборка; mp3 с 2026-11-20 — из Supabase, в сборку не входят), `public/_headers` (кеш), `.node-version` (22) | `web/scripts/copy-audio.mjs`, README → «Деплой» |
+| Хостинг — **Cloudflare Worker** `english` (а не Pages): `web/wrangler.jsonc` с `assets` и пустым `previews` — без него сборка веток падала (`wrangler preview`: missing `previews` block) | `web/wrangler.jsonc` |
 | Перемотка mp3: статические файлы Worker'а отдаются только целиком, поэтому скрипт Worker'а для `/audio/*` отдаёт части. **Проверено на сайте:** `Range: bytes=0-1` → `HTTP/2 206` | `web/worker/index.ts`, `web/worker/range.ts` |
 | **Вход по коду доступа** (вместо Cloudflare Access — тот требует карту): секрет `ACCESS_CODES` = `имя:код, имя:код` (код ≥ 12 символов); на сайте вводится **только код**; HttpOnly-cookie на год (`Path=/api`; `Secure` только по https — иначе Safari на `http://localhost` не входит) | `web/worker/auth.ts` |
 | **AI-посредник** `/api/*`: `GET /api/session`, `POST /api/login`, `POST /api/logout`, `POST /api/ai/complete`, `GET /api/ai/check` (модель и время ответа по сервисам — открыть в браузере после входа). Ключи `GEMINI_API_KEY`, `GROQ_API_KEY` — только в секретах Worker'а | `web/worker/api.ts`, `web/src/data/ai/serverAi.ts` |
@@ -50,10 +50,10 @@ GitHub/local development     80bb922  Make AI test generation reliable: faster G
 | **mp3 «Моих слов»**: «Аудио → Мои» — по группам: слово → пауза; склейка в браузере (тихие mp3-кадры, без перекодирования), хранение **только на устройстве** (IndexedDB `english-my-audio`), скачать / удалить / пересоздать | `domain/mp3.ts`, `data/audioStore.ts`, `data/ttsClient.ts`, `application/myAudio.ts`, `components/MyWordsAudio.vue` |
 
 Проверено: токен совпадает с Python edge-tts на 4 эталонах; **настоящая озвучка из `wrangler dev` (локально)** — mp3 того же размера и длины, что у Python edge-tts (12 672 байта, 2,112 с);
-склеенный mp3 декодируется `ffmpeg` без ошибок, паузы на месте. `npm run check`: 94 модульных теста, 25 в браузере — всё проходит; `wrangler deploy --dry-run` — собирается.
+склеенный mp3 декодируется `ffmpeg` без ошибок, паузы на месте. `npm run check`: 94 модульных теста, 25 в браузере — всё проходит (на момент этих изменений; сейчас — 118 и 25); `wrangler deploy --dry-run` — собирается.
 
 ### Что работает и проверено
-- `npm run check` (в `web/`): типы TypeScript, **94 модульных теста** (в т.ч. 31 для Worker'а: Range, вход, AI-посредник, таймаут, 503, токен и протокол edge-tts, `/api/tts`), сборка, **25 тестов в браузере** — всё проходит.
+- `npm run check` (в `web/`): типы TypeScript, **118 модульных тестов** (в т.ч. миграции базы в PGlite, вход/сессии/перебор паролей, и для Worker'а: Range, вход, AI-посредник, таймаут, 503, токен и протокол edge-tts, `/api/tts`), сборка, **25 тестов в браузере** — всё проходит.
 - **Настоящий AI проверен на сайте** (2026-11-19, после PR #5): `/api/ai/check` — Gemini `gemini-flash-lite-latest` 3.8 с, Groq `openai/gpt-oss-120b` 0.6 с;
   полный тест B1 через `/api/ai/complete`: Gemini 13 с, Groq 4 с, оба 8/6/5 вопросов без ошибок. Из браузера кнопкой — пользователь ещё не подтвердил.
 - Сайт на Cloudflare открывается: страница, `data/*.json`, mp3 (`200`), заголовки кеша из `_headers` работают.
@@ -76,7 +76,7 @@ GitHub/local development     80bb922  Make AI test generation reliable: faster G
 | **mp3 «Моих слов» на iPhone** | проверено в Chrome (Mac, тесты) | Safari может удалить данные сайта (IndexedDB и localStorage), если сайт не открывали 7 дней и он не добавлен на экран «Домой» | открыть на iPhone, сделать mp3, проверить через пару дней; при необходимости — PWA (добавить на экран «Домой») |
 | **«Создать тест» кнопкой в браузере на сайте** | сервер проверен (тест создаётся Gemini и Groq), кнопку в браузере пользователь ещё не нажимал после PR #5 | бесплатный Gemini часто перегружен (503) — тогда тест делает Groq | войти → `…/api/ai/check` → «✨ Создать тест»; ошибку прислать текстом |
 | **Свои ключи в браузере** (запасной режим) | запрос из браузера напрямую в Gemini/Groq не проверялся | **CORS** может не пустить запрос из браузера | нужно только для `npm run dev`; на сайте используется сервер |
-| **Секреты в предпросмотре веток** (`development`) | не проверялось | документация Cloudflare молчит, видны ли секреты в preview | открыть адрес предпросмотра → войти по коду |
+| **Секреты в предпросмотре веток** (`development`) | не проверялось | по документации Cloudflare (2026-11-20) предпросмотры **не наследуют** секреты основного Worker'а → вход, AI, озвучка на предпросмотре, скорее всего, не работают | задать секреты предпросмотрам: `npx wrangler preview secret put …` (см. docs/SETUP_CLOUDFLARE.md) и проверить |
 | **Голос браузера на реальных устройствах** | в тестах голос подменяется «фейком» (в безэкранном браузере звука нет) | на iPhone/Android очередь фраз и события «начало предложения» могут вести себя иначе → караоке может отставать | открыть рассказ 21 на телефоне, нажать «▶ Читать вслух» и на предложение |
 | **mp3 на телефоне** | проверено в Chrome на Mac | Safari на iPhone строже с автозапуском и перемоткой | рассказ 01 на iPhone: плеер, смена голоса, нажатие на предложение |
 | **Сайт на Cloudflare Worker** | деплой сделан, сайт открывается; перемотка mp3 (`206`) — проверена локально, на сайте — после merge | имя в `wrangler.jsonc` должно совпадать с именем Worker'а; Safari на iPhone может не перематывать mp3, если сервер не отдаёт части файла | после merge: открыть сайт на компьютере и iPhone, рассказ 01 — плеер, перемотка нажатием на предложение |
@@ -140,11 +140,11 @@ GitHub/local development     80bb922  Make AI test generation reliable: faster G
 
 | # | Вопрос | Статус |
 |---|---|---|
-| 1 | **Хостинг** сайта и mp3 | **решено:** Cloudflare **Worker** со статическими файлами (не Pages — Worker основной продукт, удобнее для AI-посредника и будущих сервисов), сайт + mp3 вместе (`npm run build:pages`), сборка из GitHub; адрес https://open-english-for-beginner.rasuli-naurizbaev.workers.dev; настройка — README → «Деплой» |
+| 1 | **Хостинг** сайта и mp3 | **решено:** Cloudflare **Worker** со статическими файлами (не Pages — Worker основной продукт, удобнее для AI-посредника и будущих сервисов), сайт (`npm run build:pages`; mp3 — в Supabase Storage с 2026-11-20), сборка из GitHub; адрес https://english.foryourself.workers.dev; настройка — README → «Деплой» |
 | 2 | Ветки | **решено:** `development` → Pull Request → `main` |
 | 3 | Прогресс между устройствами | **сделано:** резервная копия в файл («Сегодня» → «💾 Резервная копия прогресса») |
 | 4 | mp3 для рассказов 21–40 | **позже** |
-| 5 | mp3 в git | **пока остаются в git**, пока не выбран хостинг |
+| 5 | mp3 в git | **решено 2026-11-20: mp3 не в git, а в Supabase Storage** (в git — только json с таймингами; история до `80bb922` ещё содержит mp3) |
 | 6 | PWA | **позже**, после деплоя |
 | 7 | Ключ AI | **решено:** один **общий** ключ Gemini и Groq (пользователей максимум ~5) в **секретах Worker'а** (`GEMINI_API_KEY`, `GROQ_API_KEY`); браузер ключа не знает, сайт ходит в `/api/ai/…`. Ключ не в коде, не в `.env`, не в базе |
 | 9 | Кто может пользоваться | **будет изменено (план 2026-11-20): гость или аккаунт username/пароль, аккаунты создаёт админ.** Сейчас (2026-11-19): **личный код доступа** для каждого (~5 человек) в секрете Worker'а `ACCESS_CODES` (`имя:код, имя:код`); код → HttpOnly-cookie на год; имя = id пользователя. Cloudflare Access отклонён: Zero Trust требует карту даже на бесплатном тарифе |
@@ -256,14 +256,14 @@ Supabase Free (проверено 2026-11-20 на supabase.com/pricing): фай�
 - изменить username (проверка уникальности); **новый пароль + повтор** (все сессии пользователя закрываются);
 - AI пользователя: Gemini / Groq — «отдельный ключ» (вписать; видны только последние 4 символа) или «общий ключ сайта», или выключено;
 - удалить — с подтверждением («удалить? прогресс тоже удалится»). Нельзя удалить себя и последнего админа.
-- **Первый админ:** скрипт `tools/create_admin.mjs` спрашивает username и пароль и печатает SQL (с хешем, не с паролем) → вставить в SQL Editor.
+- **Первый админ:** скрипт `tools/create_user.ts` (`--user` — обычный пользователь) спрашивает username и пароль и печатает SQL (с хешем, не с паролем) → вставить в SQL Editor.
 
 **Изменения структуры базы без потери данных** (структура будет меняться много раз):
 1. **Миграции — SQL-файлы в git:** `supabase/migrations/<ГГГГММДДччммсс>_<имя>.sql` (так требует Supabase CLI; порядок — по времени в имени). Каждое изменение — новый файл,
    старые не правятся. Применяет **Supabase CLI** (`npx supabase db push --remote`; таблица применённых миграций ведётся сама) — одна команда из Терминала.
 2. **Только «расширить → перенести → убрать»:** новый столбец — с `default` или `null`; переименование = новый столбец + копирование данных +
    код читает новый; старый столбец удаляется отдельной миграцией позже, когда код на сайте уже обновлён. `drop` / `rename` за один шаг — нельзя.
-3. **Перед каждой миграцией — копия данных:** `npx supabase db dump --data-only -f backups/<дата>.sql` (папка в `.gitignore`).
+3. **Перед каждой миграцией — копия данных:** `npx supabase db dump --remote --data-only -f backups/<дата>.sql` (без `--remote` CLI 3.x идёт в локальную базу) (папка в `.gitignore`).
 4. **Сначала на тестовом проекте:** у Supabase Free 2 проекта → второй, «тестовый», для ветки `development`; миграция проверяется там, потом — на основном.
 5. **Гибкое поле `extra jsonb`** в таблицах: новое экспериментальное поле можно хранить там без миграции; когда устоится — сделать столбцом.
 6. Worker выбирает **явный список столбцов** (не `select *`) и не падает, если в строке есть лишние поля → старый код переживает новые столбцы.
@@ -358,7 +358,7 @@ cd EL/web && npm run check
 python3 tools/find_story_words.py --force
 python3 tools/make_story_audio.py --only 21    # mp3 для одного рассказа (нужны edge-tts и ffmpeg)
 
-# сборка для Cloudflare Worker (сайт + mp3 в web/dist) и проверка настроек
+# сборка для Cloudflare Worker (сайт без mp3 — они в Supabase) и проверка настроек
 cd EL/web && npm run build:pages && npx wrangler deploy --dry-run
 npx wrangler dev        # локально на движке Cloudflare: http://localhost:8787
 
