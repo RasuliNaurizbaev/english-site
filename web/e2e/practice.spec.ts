@@ -82,16 +82,22 @@ test("AI: неверный ключ и плохой тест — понятны�
   await expect(page.getByText(/AI прислал тест с ошибками/)).toBeVisible();
 });
 
-test("AI через сервер сайта: вход по коду → тест создаётся без своих ключей", async ({ page }) => {
-  let loggedIn = false;
+test("вход по имени и паролю (👤 в шапке) → AI через сервер сайта без своих ключей; выход", async ({ page }) => {
+  let user: string | null = null;
   const completions: string[] = [];
+  const logins: unknown[] = [];
   await page.route("**/api/**", async route => {
     const path = new URL(route.request().url()).pathname;
-    if (path.endsWith("/api/session")) return route.fulfill({ json: { user: loggedIn ? "rasul" : null, services: loggedIn ? ["gemini", "groq"] : [] } });
+    const session = () => ({ user, role: user ? "user" : null, services: user ? ["gemini", "groq"] : [] });
+    if (path.endsWith("/api/session")) return route.fulfill({ json: session() });
+    if (path.endsWith("/api/logout")) { user = null; return route.fulfill({ json: session() }); }
     if (path.endsWith("/api/login")) {
-      if (route.request().postDataJSON().code !== "good-code-123456") return route.fulfill({ status: 401, json: { error: "Неверный код доступа." } });
-      loggedIn = true;
-      return route.fulfill({ json: { user: "rasul", services: ["gemini", "groq"] } });
+      const body = route.request().postDataJSON();
+      logins.push(body);
+      if (body.username === "Rasul" && body.password === "correct horse") user = "Rasul";
+      else if (body.code === "good-code-123456") user = "rasul";
+      else return route.fulfill({ status: 401, json: { error: body.code ? "Неверный код доступа." : "Неверное имя или пароль." } });
+      return route.fulfill({ json: session() });
     }
     const body = route.request().postDataJSON();
     completions.push(body.service);
@@ -101,16 +107,34 @@ test("AI через сервер сайта: вход по коду → тест
   });
   await page.route(/googleapis|groq\.com/, route => route.abort());              // в сервисы напрямую — ни одного запроса
   await open(page, "/tests");
-  await page.locator(".ai-panel > summary").click();
-  await page.getByPlaceholder("код доступа").fill("wrong");
-  await page.getByRole("button", { name: "Войти" }).click();
-  await expect(page.getByText("Неверный код доступа.")).toBeVisible();
-  await page.getByPlaceholder("код доступа").fill("good-code-123456");
-  await page.getByRole("button", { name: "Войти" }).click();
-  await expect(page.getByText("Вы вошли: rasul")).toBeVisible();
+  await expect(page.locator(".account-link")).toContainText("Войти");
+  await page.locator(".account-link").click();
+  await expect(page.locator("h1")).toHaveText("Вход");
+  await page.getByLabel("Имя").fill("rasul");                                    // регистр важен: rasul ≠ Rasul
+  await page.getByLabel("Пароль").fill("correct horse");
+  await page.getByRole("button", { name: "Войти", exact: true }).click();
+  await expect(page.getByText("Неверное имя или пароль.")).toBeVisible();
+  await page.getByLabel("Имя").fill("Rasul");
+  await page.getByRole("button", { name: "Войти", exact: true }).click();
+  await expect(page.locator(".account-link")).toContainText("Rasul");
+  expect(logins.at(-1)).toEqual({ username: "Rasul", password: "correct horse" });
+
+  await open(page, "/tests");
+  await expect(page.locator(".ai-panel")).toHaveAttribute("open", "");           // вошли и есть AI сайта — панель открыта сама
+  await expect(page.getByText("Вы вошли: Rasul")).toBeVisible();
   await page.getByRole("button", { name: "✨ Создать тест" }).click();
   await expect(page.locator("h1")).toHaveText("Тест от AI");
   expect(completions).toEqual(["gemini", "groq"]);                               // Gemini отказал → Groq
+
+  await page.locator(".account-link").click();
+  await page.getByRole("button", { name: "Выйти" }).click();
+  await expect(page.locator(".account-link")).toContainText("Войти");
+
+  // старый способ — код доступа (пока не у всех есть аккаунт)
+  await page.getByRole("button", { name: "Войти по коду доступа (старый способ)" }).click();
+  await page.getByLabel("Код доступа").fill("good-code-123456");
+  await page.getByRole("button", { name: "Войти", exact: true }).click();
+  await expect(page.locator(".account-link")).toContainText("rasul");
 });
 
 test("неправильные глаголы: правильный ответ засчитывается", async ({ page }) => {

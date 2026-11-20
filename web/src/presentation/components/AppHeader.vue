@@ -3,9 +3,11 @@
 import { useRoute } from "vue-router";
 import { useServices } from "../composables/useServices";
 import { changeFontSize, useReaderSettings } from "../composables/useReaderSettings";
+import { useSession } from "../composables/useSession";
 
 const route = useRoute();
 const settings = useReaderSettings(useServices().progress);
+const { session } = useSession();
 
 const TABS = [
   { tab: "today", to: "/", icon: "☀️", label: "Сегодня" },
@@ -26,6 +28,9 @@ const TABS = [
           {{ t.icon }} <span>{{ t.label }}</span>
         </RouterLink>
       </nav>
+      <RouterLink v-if="session !== null" to="/login" class="account-link" :title="session?.user ? 'Вы вошли: ' + session.user : 'Войти'">
+        👤 <span>{{ session?.user ?? "Войти" }}</span>
+      </RouterLink>
     </div>
     <div v-if="route.meta.reader" class="controls">
       <button title="Меньше шрифт" @click="changeFontSize(settings, -1)">A−</button>

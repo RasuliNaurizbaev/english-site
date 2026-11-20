@@ -1,10 +1,11 @@
 // AI через сервер сайта (Worker, worker/api.ts): ключи Gemini и Groq хранятся в секретах Worker'а,
-// браузер их не знает. Пользоваться могут только вошедшие по личному коду доступа.
+// браузер их не знает. Пользоваться могут только вошедшие (имя + пароль или старый код доступа).
 // Локально (npm run dev) сервера нет — loadSession() вернёт null, и останутся только свои ключи.
 import { AI_SERVICES, AiRequestError, type AiProvider, type AiService, type AiServiceId } from "./aiProvider";
 
 export interface ServerSession {
-  user: string | null;            // имя из кода доступа или null — не вошли
+  user: string | null;            // имя (аккаунт или старый код доступа) или null — гость
+  role?: "user" | "admin" | "code" | null;   // code — вошли старым кодом доступа
   services: AiServiceId[];        // для каких сервисов на сервере есть ключ
 }
 
@@ -30,7 +31,10 @@ export async function loadSession(): Promise<ServerSession | null> {
   try { return await api("/api/session"); } catch { return null; }
 }
 
-export const login = (code: string): Promise<ServerSession> => api("/api/login", { code });
+/** Вход по имени и паролю (аккаунт). Имя — с учётом регистра. */
+export const loginWithPassword = (username: string, password: string): Promise<ServerSession> => api("/api/login", { username, password });
+/** Старый вход по коду доступа — пока не у всех есть аккаунт. */
+export const loginWithCode = (code: string): Promise<ServerSession> => api("/api/login", { code });
 export const logout = (): Promise<ServerSession> => api("/api/logout", {});
 
 /** Сервис AI, к которому ходит сервер сайта со своим ключом. */

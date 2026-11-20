@@ -13,3 +13,6 @@ tools/.env
 # mp3 — в Supabase Storage (tools/upload_audio.py); главная копия — папка audio/ на компьютере.
 # json с таймингами (audio/**/*.json) остаются в git: из них build_site_data.py собирает данные сайта.
 audio/**/*.mp3
+
+# Копии данных базы перед миграциями (npx supabase db dump) — личные данные, не в git
+backups/

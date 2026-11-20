@@ -26,6 +26,7 @@ const routes: RouteRecordRaw[] = [
   { path: "/verbs", name: "verbs", component: () => import("./pages/VerbsPage.vue"), meta: { tab: "practice" } },
   { path: "/dictation/:id", name: "dictation", component: () => import("./pages/DictationPage.vue"), props: true, meta: { tab: "practice" } },
   { path: "/audio/:level?", name: "audio", component: () => import("./pages/AudioPage.vue"), props: true, meta: { tab: "audio" } },
+  { path: "/login", name: "login", component: () => import("./pages/LoginPage.vue"), meta: { tab: "today" } },
   { path: "/:pathMatch(.*)*", name: "notFound", component: () => import("./pages/NotFoundPage.vue"), meta: { tab: "today" } },
 ];
 

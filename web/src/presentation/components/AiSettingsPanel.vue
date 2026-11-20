@@ -1,6 +1,6 @@
 <!--
   Новый тест с помощью AI: Google Gemini (основной) и Groq (запасной).
-  Основной способ — вход по личному коду доступа: ключи хранятся на сервере сайта (секреты Worker'а).
+  Основной способ — войти (👤 в шапке): тогда AI работает через сервер сайта, ключи браузер не видит.
   Запасной — свои ключи в этом браузере (работает и при локальном запуске без сервера).
   Порядок: Gemini, потом Groq; ошибка или плохой тест — пробуем следующий.
 -->
@@ -12,7 +12,8 @@ import {
   AI_SERVICES, createProvider, isConfigured, isServiceReady, normalizeSettings, pickDefaultModel, providersInOrder,
   type AiServiceId, type AiSettings,
 } from "@/data/ai/aiProvider";
-import { loadSession, login, logout, serverProviders, type ServerSession } from "@/data/ai/serverAi";
+import { serverProviders } from "@/data/ai/serverAi";
+import { useSession } from "../composables/useSession";
 
 const { progress, aiTests } = useServices();
 const router = useRouter();
@@ -25,15 +26,13 @@ const focus = ref("");
 const busy = ref(false);
 const message = ref("");
 
-// вход по коду доступа: undefined — ещё проверяем, null — сервера нет (локальный запуск)
-const session = ref<ServerSession | null | undefined>(undefined);
-const code = ref("");
-const loginMessage = ref("");
+// кто вошёл: undefined — ещё проверяем, null — сервера нет (локальный запуск)
+const { session, ready, signOut } = useSession();
 // раскрыты ли блоки — решается один раз при загрузке, дальше их открывает и закрывает пользователь
 const panelOpen = ref(isConfigured(settings) ? true : undefined);
 const ownKeysOpen = ref<true | undefined>(undefined);
 onMounted(async () => {
-  session.value = await loadSession();
+  await ready();
   if (canGenerate.value) panelOpen.value = true;
   if (session.value === null) ownKeysOpen.value = true;            // сервера нет — остаются только свои ключи
 });
@@ -45,21 +44,6 @@ const providers = () => {
   return server.length ? server : providersInOrder(settings);
 };
 const canGenerate = computed(() => serverNames.value !== "" || isConfigured(settings));
-
-async function signIn() {
-  loginMessage.value = "";
-  try {
-    session.value = await login(code.value.trim());
-    code.value = "";
-    if (!session.value.services.length) loginMessage.value = "Вы вошли, но на сервере пока нет ключей AI.";
-  } catch (error) {
-    loginMessage.value = "⚠ " + (error instanceof Error ? error.message : String(error));
-  }
-}
-
-async function signOut() {
-  try { session.value = await logout(); } catch { session.value = { user: null, services: [] }; }
-}
 
 function save() { progress.saveSetting("ai", settings); }
 
@@ -102,21 +86,15 @@ async function generate() {
     </p>
 
     <div v-if="session" class="ai-service">
-      <template v-if="session.user">
-        <div class="ai-service-head">
-          <b>Вы вошли: {{ session.user }}</b>
-          <span v-if="serverNames" class="badge done-badge">AI сайта: {{ serverNames }}</span>
-          <button class="small" @click="signOut">Выйти</button>
-        </div>
-      </template>
-      <template v-else>
-        <div class="ai-service-head"><b>Вход по коду доступа</b> <span class="muted">— тогда AI работает на ключах сайта</span></div>
-        <form class="voice-controls" @submit.prevent="signIn">
-          <input v-model="code" class="search" type="password" autocomplete="current-password" placeholder="код доступа">
-          <button class="small" type="submit" :disabled="!code.trim()">Войти</button>
-        </form>
-      </template>
-      <p v-if="loginMessage" class="muted">{{ loginMessage }}</p>
+      <div v-if="session.user" class="ai-service-head">
+        <b>Вы вошли: {{ session.user }}</b>
+        <span v-if="serverNames" class="badge done-badge">AI сайта: {{ serverNames }}</span>
+        <span v-else class="muted">на сервере для вас пока нет ключей AI</span>
+        <button class="small" @click="signOut">Выйти</button>
+      </div>
+      <div v-else class="ai-service-head">
+        <RouterLink to="/login"><b>Войти →</b></RouterLink> <span class="muted">— тогда AI работает через сервер сайта; без входа — со своим ключом (ниже)</span>
+      </div>
     </div>
 
     <details class="ai-own-keys" :open="ownKeysOpen">

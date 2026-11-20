@@ -233,3 +233,10 @@
 .word-player .segmented { margin-bottom: 0; }
 .word-player-now { margin: 8px 0 0; font-size: 15px; }
 .word-list li.playing { border-color: var(--accent); background: var(--accent-bg); }
+
+/* ---------- страница входа ---------- */
+.login-box { display: grid; gap: 10px; max-width: 420px; }
+.login-field { display: grid; gap: 4px; font-size: 14px; }
+.login-field .search { margin: 0; }
+.login-name { font-size: 18px; }
+.link-button { background: none; border: none; padding: 0; color: var(--accent); cursor: pointer; font: inherit; font-size: 14px; text-align: left; }

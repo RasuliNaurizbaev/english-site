@@ -242,7 +242,7 @@ test("«Аудио → Мои»: mp3 группы — сделать, устар
   await expect(kitchen.locator(".audio-range")).toHaveText("fork, spoon");
 
   await kitchen.getByRole("button", { name: "🎙 Сделать mp3" }).click();
-  await expect(page.locator(".my-word-message")).toContainText("после входа по коду");
+  await expect(page.locator(".my-word-message")).toContainText("после входа");
   loggedIn = true;
   await kitchen.getByRole("button", { name: "🎙 Сделать mp3" }).click();
   await expect(kitchen.locator("audio")).toHaveCount(1);
