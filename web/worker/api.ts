@@ -1,7 +1,7 @@
-// /api/* — вход по коду и посредник к AI. Ключи Gemini и Groq — только в секретах Worker'а,
-// браузер их не знает. AI доступен только вошедшим по коду (см. auth.ts).
-//   GET  /api/session      → { user, services }   кто вошёл и какие AI-сервисы настроены на сервере
-//   POST /api/login {code} → { user, services }   + cookie
+// /api/* — вход и посредник к AI. Ключи Gemini и Groq — только в секретах Worker'а, браузер их не знает.
+// Вход: имя + пароль (аккаунты в Supabase, accounts.ts) или — пока не у всех есть аккаунт — старый код доступа (auth.ts).
+//   GET  /api/session      → { user, role, services }   кто вошёл и какие AI-сервисы настроены на сервере
+//   POST /api/login {username, password} | {code} → { user, role, services }   + cookie (сессия на 30 дней / код)
 //   POST /api/logout
 //   POST /api/ai/complete { service, system, user } → { text }
 //   GET  /api/ai/check     → по каждому сервису: модель и время ответа (или ошибка) — открыть в браузере после входа
@@ -11,11 +11,19 @@
 import {
   AI_SERVICES, AiRequestError, createProvider, pickDefaultModel, type AiService, type AiServiceId,
 } from "../src/data/ai/aiProvider";
-import { currentUser, loginCookie, logoutCookie, parseAccessCodes, userByCode } from "./auth";
+import { currentUser, loginCookie, logoutCookie, parseAccessCodes, readCookie, userByCode } from "./auth";
+import {
+  clearSessionCookie, login as accountLogin, logout as accountLogout, sessionCookie, sessionUser,
+  SESSION_COOKIE, type AccountsDb, type Role,
+} from "./accounts";
+import { supabaseFrom } from "./db/supabase";
+import { SupabaseAccounts } from "./db/supabaseAccounts";
 import { synthesize, TtsError, VOICES, type VoiceId } from "./edgeTts/synthesize";
 
 export interface ApiEnv {
-  ACCESS_CODES?: string;        // секрет: "имя:код, имя:код"
+  ACCESS_CODES?: string;        // секрет: "имя:код, имя:код" — старый вход, убрать после перехода на аккаунты
+  SUPABASE_URL?: string;        // секрет: https://<ref>.supabase.co — база аккаунтов и прогресса
+  SUPABASE_SECRET_KEY?: string; // секрет: секретный ключ Supabase (service_role)
   GEMINI_API_KEY?: string;      // секрет
   GROQ_API_KEY?: string;        // секрет
   GEMINI_MODEL?: string;        // необязательно: модель вручную; иначе выбирается сама (pickDefaultModel)
@@ -33,11 +41,11 @@ const SETTINGS: Record<AiServiceId, { key: keyof ApiEnv; model: keyof ApiEnv }> 
 const apiKey = (env: ApiEnv, id: AiServiceId) => env[SETTINGS[id].key]?.trim() ?? "";
 const configuredServices = (env: ApiEnv) => AI_SERVICES.filter(s => apiKey(env, s.id)).map(s => s.id);
 
-const json = (data: unknown, status = 200, headers: Record<string, string> = {}) =>
-  new Response(JSON.stringify(data), {
-    status,
-    headers: { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-store", ...headers },
-  });
+const json = (data: unknown, status = 200, cookies: string[] = []) => {
+  const headers = new Headers({ "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-store" });
+  for (const cookie of cookies) headers.append("Set-Cookie", cookie);
+  return new Response(JSON.stringify(data), { status, headers });
+};
 const error = (message: string, status: number) => json({ error: message }, status);
 
 /** Модель для сервиса: из настройки Worker'а или по списку моделей ключа (запоминается, пока Worker жив). */
@@ -113,23 +121,64 @@ async function tts(request: Request): Promise<Response> {
   }
 }
 
-export async function handleApi(request: Request, env: ApiEnv): Promise<Response> {
+/** Зависимости, которые тесты подменяют (база аккаунтов). На сайте — Supabase из секретов. */
+export interface ApiDeps { accounts?: AccountsDb | null }
+
+interface Caller { name: string; role: Role | "code" }
+
+/** Кто делает запрос: сессия аккаунта (cookie el_session) или старый код доступа. */
+async function whoIs(request: Request, env: ApiEnv, accounts: AccountsDb | null): Promise<Caller | null> {
+  const token = readCookie(request, SESSION_COOKIE);
+  if (token && accounts) {
+    try {
+      const user = await sessionUser(accounts, token);
+      if (user) return { name: user.username, role: user.role };
+    } catch (e) {
+      console.error("session: база", e instanceof Error ? e.message : e);       // как будто не вошли (сайт работает как у гостя)
+    }
+  }
+  const byCode = currentUser(request, env.ACCESS_CODES);
+  return byCode ? { name: byCode, role: "code" } : null;
+}
+
+const NOT_SIGNED_IN = "Войдите: имя и пароль (или код доступа).";
+
+export async function handleApi(request: Request, env: ApiEnv, deps: ApiDeps = {}): Promise<Response> {
   const { pathname, protocol } = new URL(request.url);
   const secure = protocol === "https:";
   const route = `${request.method} ${pathname}`;
+  const db = supabaseFrom(env);
+  const accounts = deps.accounts !== undefined ? deps.accounts : db ? new SupabaseAccounts(db) : null;
 
   if (route === "POST /api/login") {
-    const code = (await readJson(request))?.code;
+    const body = await readJson(request);
+    if (typeof body?.username === "string" && typeof body.password === "string") {
+      if (!accounts) return error("Вход по имени и паролю ещё не настроен на сервере.", 503);
+      try {
+        const result = await accountLogin(accounts, body.username.trim(), body.password, request.headers.get("CF-Connecting-IP") ?? "local");
+        if (!result.ok) return error(result.error, result.status);
+        return json({ user: result.user.username, role: result.user.role, services: configuredServices(env) }, 200,
+          [sessionCookie(result.token, secure), logoutCookie(secure)]);                     // старый код больше не нужен
+      } catch (e) {
+        console.error("login: база", e instanceof Error ? e.message : e);       // видно в wrangler dev и в логах Worker'а
+        return error("База недоступна — попробуйте через минуту.", 503);
+      }
+    }
+    const code = body?.code;
     const user = typeof code === "string" ? userByCode(parseAccessCodes(env.ACCESS_CODES), code.trim()) : null;
     if (!user) return error("Неверный код доступа.", 401);
-    return json({ user, services: configuredServices(env) }, 200, { "Set-Cookie": loginCookie((code as string).trim(), secure) });
+    return json({ user, role: "code", services: configuredServices(env) }, 200, [loginCookie((code as string).trim(), secure)]);
   }
-  if (route === "POST /api/logout") return json({ user: null, services: [] }, 200, { "Set-Cookie": logoutCookie(secure) });
+  if (route === "POST /api/logout") {
+    const token = readCookie(request, SESSION_COOKIE);
+    if (token && accounts) await accountLogout(accounts, token).catch(() => {});
+    return json({ user: null, role: null, services: [] }, 200, [clearSessionCookie(secure), logoutCookie(secure)]);
+  }
 
-  const user = currentUser(request, env.ACCESS_CODES);
-  if (route === "GET /api/session") return json({ user, services: user ? configuredServices(env) : [] });
-  if (route === "POST /api/ai/complete") return user ? complete(request, env) : error("Войдите по коду доступа.", 401);
-  if (route === "GET /api/ai/check") return user ? check(env) : error("Войдите по коду доступа.", 401);
-  if (route === "POST /api/tts") return user ? tts(request) : error("Войдите по коду доступа.", 401);
+  const caller = await whoIs(request, env, accounts);
+  if (route === "GET /api/session") return json({ user: caller?.name ?? null, role: caller?.role ?? null, services: caller ? configuredServices(env) : [] });
+  if (route === "POST /api/ai/complete") return caller ? complete(request, env) : error(NOT_SIGNED_IN, 401);
+  if (route === "GET /api/ai/check") return caller ? check(env) : error(NOT_SIGNED_IN, 401);
+  if (route === "POST /api/tts") return caller ? tts(request) : error(NOT_SIGNED_IN, 401);
   return error("Not found", 404);
 }

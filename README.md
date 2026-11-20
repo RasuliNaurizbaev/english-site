@@ -261,7 +261,7 @@ npm run preview      # открыть сборку (тоже показывае�
 
 Необязательно (тип Text): `GEMINI_MODEL`, `GROQ_MODEL` — модель вручную, иначе выбирается сама.
 Отозвать доступ — убрать код из `ACCESS_CODES`. Локально (`npx wrangler dev`) — те же имена в файле `web/.dev.vars` (не попадает в git).
-Адреса сервера: `GET /api/session`, `POST /api/login`, `POST /api/logout`, `POST /api/ai/complete`, `POST /api/tts` (озвучка слова → mp3) — `web/worker/api.ts`.
+Адреса сервера: `GET /api/session`, `POST /api/login` (`{username, password}` — аккаунт из Supabase, или старый `{code}`), `POST /api/logout`, `POST /api/ai/complete`, `POST /api/tts` (озвучка слова → mp3) — `web/worker/api.ts`.
 **Проверка AI:** после входа откройте `…/api/ai/check` — по каждому сервису модель и время ответа (или ошибка).
 Сервис, не ответивший за 70 с, пропускается (Cloudflare обрывает запрос через 100 с — ошибка 524). Если AI ошибся в 1–2 вопросах, они убираются; тест бракуется, только если сломано больше четверти.
 
@@ -587,6 +587,8 @@ npm run check                       # типы → модульные тесты
   поэтому `.github/workflows/keep-supabase-awake.yml` два раза в неделю запрашивает 2 байта mp3.
 - Локально (`npm run dev`) mp3 берутся из папки `audio/` (`web/.env.development`: `VITE_AUDIO_URL=/audio`).
 - Тесты в браузере mp3 подменяют (`fakeMp3` в `e2e/helpers.ts`) — сеть и трафик Supabase не нужны.
+- **Если mp3 станет больше ~500 МБ** (бесплатно в Supabase — 1 ГБ на все файлы), хранилище mp3 можно сменить на **Backblaze B2** или **Hugging Face** (датасет с файлами).
+  Для сайта меняется только адрес (`SUPABASE_AUDIO_URL` / `VITE_AUDIO_URL`) и скрипт загрузки; новое хранилище должно отдавать части файла (`Range` → `206`), иначе на iPhone не будет перемотки.
 - **Откат** (mp3 снова рядом с сайтом): Build command `npm run build:pages-with-audio` — но mp3 нет в git, поэтому так можно собрать только на компьютере,
   где есть папка `audio/` (`npm run build:pages-with-audio && npx wrangler deploy`).
 

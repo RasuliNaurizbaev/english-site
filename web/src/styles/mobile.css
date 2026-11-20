@@ -33,3 +33,10 @@
   .md table { font-size: 14px; }
   .md th, .md td { padding: 6px 8px; }
 }
+
+/* вход в шапке на телефоне — только значок; подписи вкладок чуть мельче, чтобы всё поместилось */
+@media (max-width: 600px) {
+  .account-link { padding: 4px 6px; }
+  .account-link span { display: none; }
+  .tabs a span { font-size: 9.5px; letter-spacing: -0.2px; }
+}

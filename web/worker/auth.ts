@@ -1,4 +1,5 @@
-// Вход по личному коду доступа (без Cloudflare Access — он требует карту даже на бесплатном тарифе).
+// Вход по личному коду доступа — СТАРЫЙ способ, работает, пока у всех нет аккаунтов (accounts.ts); потом ACCESS_CODES удалить.
+// (Без Cloudflare Access — он требует карту даже на бесплатном тарифе.)
 // Коды — в секрете Worker'а ACCESS_CODES, формат: "rasul:код1, anna:код2" (через запятую или с новой строки).
 // После входа код лежит в cookie (HttpOnly — скрипты сайта его не видят) и проверяется при каждом запросе,
 // поэтому чтобы отозвать доступ, достаточно убрать код из секрета.
@@ -35,7 +36,7 @@ export function userByCode(codes: Map<string, string>, code: string): string | n
   return user;
 }
 
-function readCookie(request: Request, name: string): string | null {
+export function readCookie(request: Request, name: string): string | null {
   for (const part of (request.headers.get("Cookie") ?? "").split(";")) {
     const eq = part.indexOf("=");
     if (eq > 0 && part.slice(0, eq).trim() === name) return decodeURIComponent(part.slice(eq + 1).trim());

@@ -28,7 +28,7 @@ describe("Вход по коду", () => {
   it("верный код — имя и cookie; неверный — 401", async () => {
     const ok = await call("/api/login", { code: ` ${CODE} ` });
     expect(ok.status).toBe(200);
-    expect(await ok.json()).toEqual({ user: "rasul", services: ["gemini"] });
+    expect(await ok.json()).toEqual({ user: "rasul", role: "code", services: ["gemini"] });
     expect(ok.headers.get("Set-Cookie")).toMatch(/^el_access=rasul-code-1234567;.*HttpOnly; Secure; SameSite=Strict/);
     const local = await worker.fetch(new Request("http://localhost:8787/api/login", { method: "POST", body: JSON.stringify({ code: CODE }) }), env);
     expect(local.headers.get("Set-Cookie")).not.toMatch(/Secure/);                  // http://localhost — без Secure (иначе Safari не войдёт)
@@ -37,14 +37,14 @@ describe("Вход по коду", () => {
   });
 
   it("сессия: без cookie — никто, с cookie — пользователь; выход стирает cookie", async () => {
-    expect(await (await call("/api/session")).json()).toEqual({ user: null, services: [] });
-    expect(await (await call("/api/session", undefined, loggedIn)).json()).toEqual({ user: "rasul", services: ["gemini"] });
+    expect(await (await call("/api/session")).json()).toEqual({ user: null, role: null, services: [] });
+    expect(await (await call("/api/session", undefined, loggedIn)).json()).toEqual({ user: "rasul", role: "code", services: ["gemini"] });
     expect((await call("/api/logout", {})).headers.get("Set-Cookie")).toMatch(/Max-Age=0/);
   });
 
   it("код убрали из секрета — cookie больше не действует", async () => {
     const revoked = { ...env, ACCESS_CODES: "anna:anna-code-7654321" };
-    expect(await (await call("/api/session", undefined, loggedIn, revoked)).json()).toEqual({ user: null, services: [] });
+    expect(await (await call("/api/session", undefined, loggedIn, revoked)).json()).toEqual({ user: null, role: null, services: [] });
   });
 });
 
