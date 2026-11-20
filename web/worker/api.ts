@@ -5,12 +5,14 @@
 //   POST /api/logout
 //   POST /api/ai/complete { service, system, user } → { text }
 //   GET  /api/ai/check     → по каждому сервису: модель и время ответа (или ошибка) — открыть в браузере после входа
+//   POST /api/tts { text, voice? } → audio/mpeg   озвучка слова/фразы через edge-tts (см. edgeTts/); mp3 на сервере не хранится
 // Порядок сервисов (Gemini → Groq) и проверку теста делает браузер (application/aiTests.ts),
 // сервер только отправляет запрос в выбранный сервис со своим ключом.
 import {
   AI_SERVICES, AiRequestError, createProvider, pickDefaultModel, type AiService, type AiServiceId,
 } from "../src/data/ai/aiProvider";
 import { currentUser, loginCookie, logoutCookie, parseAccessCodes, userByCode } from "./auth";
+import { synthesize, TtsError, VOICES, type VoiceId } from "./edgeTts/synthesize";
 
 export interface ApiEnv {
   ACCESS_CODES?: string;        // секрет: "имя:код, имя:код"
@@ -21,6 +23,7 @@ export interface ApiEnv {
 }
 
 const MAX_PROMPT_CHARS = 30_000;          // задание для теста ~5 000 символов; больше — подозрительно
+const MAX_TTS_CHARS = 100;                // озвучиваем слова и короткие фразы
 
 const SETTINGS: Record<AiServiceId, { key: keyof ApiEnv; model: keyof ApiEnv }> = {
   gemini: { key: "GEMINI_API_KEY", model: "GEMINI_MODEL" },
@@ -95,6 +98,21 @@ async function check(env: ApiEnv): Promise<Response> {
   return json(results);
 }
 
+/** Озвучить слово. mp3 отдаётся браузеру и нигде на сервере не сохраняется. */
+async function tts(request: Request): Promise<Response> {
+  const body = await readJson(request);
+  const text = typeof body?.text === "string" ? body.text.trim() : "";
+  const voice = (body?.voice ?? "jenny") as VoiceId;
+  if (!text || !/[a-z]/i.test(text) || !(voice in VOICES)) return error("Неверный запрос.", 400);
+  if (text.length > MAX_TTS_CHARS) return error("Слишком длинный текст.", 413);
+  try {
+    const mp3 = await synthesize(text, { voice });
+    return new Response(mp3 as Uint8Array<ArrayBuffer>, { headers: { "Content-Type": "audio/mpeg", "Cache-Control": "private, max-age=86400" } });
+  } catch (e) {
+    return error(e instanceof TtsError ? e.message : "Озвучка: ошибка на сервере.", 502);
+  }
+}
+
 export async function handleApi(request: Request, env: ApiEnv): Promise<Response> {
   const { pathname, protocol } = new URL(request.url);
   const secure = protocol === "https:";
@@ -112,5 +130,6 @@ export async function handleApi(request: Request, env: ApiEnv): Promise<Response
   if (route === "GET /api/session") return json({ user, services: user ? configuredServices(env) : [] });
   if (route === "POST /api/ai/complete") return user ? complete(request, env) : error("Войдите по коду доступа.", 401);
   if (route === "GET /api/ai/check") return user ? check(env) : error("Войдите по коду доступа.", 401);
+  if (route === "POST /api/tts") return user ? tts(request) : error("Войдите по коду доступа.", 401);
   return error("Not found", 404);
 }

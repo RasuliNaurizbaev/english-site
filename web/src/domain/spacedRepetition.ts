@@ -14,6 +14,7 @@ export interface Card {
   d: number;   // номер дня следующего показа
   r: number;   // сколько раз повторено успешно
   l: number;   // сколько раз забыто
+  t?: number;  // когда слово изучали последний раз (мс); у карточек до 2026-11-20 нет — см. studiedAtMs
 }
 
 export type Rating = "again" | "hard" | "good" | "easy" | "known";
@@ -27,6 +28,16 @@ const MIN_EASE = 1.3;
 
 export function newCard(today: number): Card {
   return { i: 0, e: 2.5, d: today, r: 0, l: 0 };
+}
+
+/**
+ * Когда слово изучали последний раз (мс) — для списка «последние изученные сверху».
+ * У старых карточек без t время восстанавливается из интервала: d − i — день последней оценки (начало дня).
+ */
+export function studiedAtMs(card: Card): number {
+  if (card.t !== undefined) return card.t;
+  const day = card.d - card.i;
+  return day * 86_400_000 + new Date(day * 86_400_000).getTimezoneOffset() * 60_000;
 }
 
 /** Через сколько дней покажем слово при каждой оценке. */

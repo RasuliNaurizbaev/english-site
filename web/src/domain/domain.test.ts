@@ -5,6 +5,7 @@ import { parseMarkdown, inlineToHtml } from "./markdown";
 import { buildGapExercises } from "./storyTasks";
 import { normalizeAnswer, plural, formatDuration, shuffled } from "./text";
 import type { Story, StoryWord } from "./types";
+import { phrasesOf, roundOrder } from "./wordPlayback";
 
 describe("storyText", () => {
   const words: StoryWord[] = [{ en: "left", ru: "левый", level: "A1" }, { en: "to leave", ru: "уходить", level: "A2" }, { en: "station", ru: "станция", level: "A2" }];
@@ -127,5 +128,23 @@ describe("text", () => {
     const a = [1, 2, 3];
     shuffled(a);
     expect(a).toEqual([1, 2, 3]);
+  });
+});
+
+describe("проигрывание слов вслух («Учу» → ▶ / 🔀)", () => {
+  it("что произносить в каждом режиме", () => {
+    const w = { en: "apple", ru: "яблоко" };
+    expect(phrasesOf(w, "en")).toEqual([{ text: "apple", lang: "en" }]);
+    expect(phrasesOf(w, "en-ru").map(p => p.lang)).toEqual(["en", "ru"]);
+    expect(phrasesOf(w, "ru-en").map(p => p.text)).toEqual(["яблоко", "apple"]);
+    expect(phrasesOf(w, "ru")).toEqual([{ text: "яблоко", lang: "ru" }]);
+  });
+  it("по порядку — как в списке; вперемешку — все слова, новый круг не начинается с последнего слова", () => {
+    expect(roundOrder(["a", "b", "c"], false)).toEqual(["a", "b", "c"]);
+    const mixed = roundOrder(["a", "b", "c", "d"], true, undefined, () => 0);
+    expect([...mixed].sort()).toEqual(["a", "b", "c", "d"]);
+    expect(mixed).not.toEqual(["a", "b", "c", "d"]);
+    for (let k = 0; k < 20; k++) expect(roundOrder(["a", "b", "c"], true, "b", () => k / 20)[0]).not.toBe("b");
+    expect(roundOrder(["a"], true, "a")).toEqual(["a"]);
   });
 });

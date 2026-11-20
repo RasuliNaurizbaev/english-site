@@ -1,8 +1,8 @@
 // Сценарии повторения слов: какие слова показать сегодня, оценка, статистика.
 import type { ContentRepository } from "@/data/contentRepository";
 import type { ProgressRepository } from "@/data/progressRepository";
-import { applyRating, nextIntervals, statusOf, KNOWN_INTERVAL, type Card, type Rating, type WordStatus } from "@/domain/spacedRepetition";
-import type { Level } from "@/domain/types";
+import { applyRating, nextIntervals, statusOf, studiedAtMs, KNOWN_INTERVAL, type Card, type Rating, type WordStatus } from "@/domain/spacedRepetition";
+import type { WordLevel } from "@/domain/types";
 
 export interface QueueItem { key: string; isNew: boolean }
 export interface LevelStats { total: number; learning: number; learned: number }
@@ -14,6 +14,7 @@ export class WordReviewService {
     private readonly content: ContentRepository,
     private readonly progress: ProgressRepository,
     private readonly today: () => number,
+    private readonly now: () => number = () => Date.now(),
   ) {
     this.cards = progress.loadCards() ?? this.migrateLegacyProgress();
   }
@@ -72,7 +73,7 @@ export class WordReviewService {
 
   grade(key: string, rating: Rating): void {
     const isNew = !this.cards[key];
-    this.cards[key] = applyRating(this.cards[key], rating, this.today());
+    this.cards[key] = { ...applyRating(this.cards[key], rating, this.today()), t: this.now() };
     this.progress.saveCards(this.cards);
     if (rating !== "known") {
       this.progress.recordActivity("reviews");
@@ -82,6 +83,12 @@ export class WordReviewService {
 
   status(key: string): WordStatus { return statusOf(this.cards[key]); }
 
+  /** Когда слово изучали последний раз (мс); 0 — ещё не изучали. Для сортировки «последние сверху». */
+  studiedAt(key: string): number {
+    const card = this.cards[key];
+    return card ? studiedAtMs(card) : 0;
+  }
+
   /**
    * Добавить слова (например, из рассказа) в повторение: они появятся в карточках уже сегодня,
    * не занимая лимит «новых слов в день». Уже изучаемые слова не трогаем. Возвращает, сколько добавлено.
@@ -90,7 +97,7 @@ export class WordReviewService {
     let added = 0;
     for (const key of keys) {
       if (this.cards[key] || !this.content.hasWord(key)) continue;
-      this.cards[key] = { i: 0, e: 2.5, d: this.today(), r: 0, l: 0 };
+      this.cards[key] = { i: 0, e: 2.5, d: this.today(), r: 0, l: 0, t: this.now() };
       added++;
     }
     if (added) this.progress.saveCards(this.cards);
@@ -104,7 +111,7 @@ export class WordReviewService {
   markLearning(key: string): void {
     if (!this.content.hasWord(key)) return;
     const card = this.cards[key];
-    this.cards[key] = card ? { ...card, i: 0, d: this.today() } : { i: 0, e: 2.5, d: this.today(), r: 0, l: 0 };
+    this.cards[key] = { ...(card ?? { e: 2.5, r: 0, l: 0 }), i: 0, d: this.today(), t: this.now() };
     this.progress.saveCards(this.cards);
   }
 
@@ -112,11 +119,26 @@ export class WordReviewService {
   markLearned(key: string): void {
     if (!this.content.hasWord(key)) return;
     const card = this.cards[key] ?? { i: 0, e: 2.5, d: this.today(), r: 0, l: 0 };
-    this.cards[key] = { ...card, i: KNOWN_INTERVAL, d: this.today() + KNOWN_INTERVAL, r: Math.max(card.r, 1) };
+    this.cards[key] = { ...card, i: KNOWN_INTERVAL, d: this.today() + KNOWN_INTERVAL, r: Math.max(card.r, 1), t: this.now() };
     this.progress.saveCards(this.cards);
   }
 
-  levelStats(level: Level): LevelStats {
+  /** Слово удалено: история повторений больше не нужна. */
+  forget(key: string): void {
+    if (!this.cards[key]) return;
+    delete this.cards[key];
+    this.progress.saveCards(this.cards);
+  }
+
+  /** Слово переименовано (исправили написание): история повторений переходит к новому ключу. */
+  renameKey(from: string, to: string): void {
+    if (from === to || !this.cards[from]) return;
+    this.cards[to] = this.cards[from];
+    delete this.cards[from];
+    this.progress.saveCards(this.cards);
+  }
+
+  levelStats(level: WordLevel): LevelStats {
     const stats: LevelStats = { total: 0, learning: 0, learned: 0 };
     for (const [en] of this.content.wordsOfLevel(level)) {
       stats.total++;

@@ -1,4 +1,4 @@
-<!-- mp3 со словами по уровням: по 100 слов в файле, следующая часть включается сама. -->
+<!-- mp3 со словами по уровням: по 100 слов в файле, следующая часть включается сама. «Мои» — mp3 из своих слов. -->
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import { useServices } from "../composables/useServices";
@@ -6,19 +6,22 @@ import { breakIfRequested } from "../problems";
 import { audioUrl } from "@/data/config";
 import { formatDuration } from "@/domain/text";
 import type { Level } from "@/domain/types";
+import { MY_LEVEL } from "@/domain/myWords";
+import MyWordsAudio from "../components/MyWordsAudio.vue";
 
 breakIfRequested("audioPage");
 const props = defineProps<{ level?: string }>();
 const { content, progress } = useServices();
 const levels = content.wordAudioLevels();
 
+const mine = computed(() => props.level === MY_LEVEL);
 const level = computed<Level | undefined>(() => {
   const wanted = (props.level ?? progress.setting("alevel", levels[0])) as Level;
   const chosen = levels.includes(wanted) ? wanted : levels[0];
-  if (chosen) progress.saveSetting("alevel", chosen);
+  if (chosen && !mine.value) progress.saveSetting("alevel", chosen);
   return chosen;
 });
-const parts = computed(() => (level.value ? content.wordAudioParts(level.value) : []));
+const parts = computed(() => (level.value && !mine.value ? content.wordAudioParts(level.value) : []));
 const listened = ref(progress.listenedParts());
 // Плееры по номеру части (явный индекс: порядок ref-массива в v-for Vue не гарантирует)
 const players: HTMLAudioElement[] = [];
@@ -41,14 +44,16 @@ function onEnded(index: number) {
 </script>
 
 <template>
-  <p v-if="!levels.length" class="intro">mp3 пока нет. Запустите tools/make_word_audio.py.</p>
+  <div class="levels">
+    <RouterLink v-for="l in levels" :key="l" :to="'/audio/' + l" class="level-chip" :class="[l, { active: !mine && l === level }]">
+      <b>{{ l }}</b><span>{{ content.wordAudioParts(l).length }} mp3 · {{ wordsIn(l) }} сл.</span>
+    </RouterLink>
+    <RouterLink :to="'/audio/' + MY_LEVEL" class="level-chip MY" :class="{ active: mine }"><b>Мои</b><span>свои слова</span></RouterLink>
+  </div>
+  <MyWordsAudio v-if="mine" />
+  <p v-else-if="!levels.length" class="intro">mp3 пока нет. Запустите tools/make_word_audio.py.</p>
   <template v-else>
     <p class="intro">Слушайте и повторяйте: английское слово → пауза, чтобы повторить вслух. По 100 слов в файле. Следующая часть включается сама.</p>
-    <div class="levels">
-      <RouterLink v-for="l in levels" :key="l" :to="'/audio/' + l" class="level-chip" :class="[l, { active: l === level }]">
-        <b>{{ l }}</b><span>{{ content.wordAudioParts(l).length }} mp3 · {{ wordsIn(l) }} сл.</span>
-      </RouterLink>
-    </div>
     <div class="audio-list">
       <div v-for="(part, index) in parts" :key="part.file" class="audio-card" :class="{ listened: listened[part.file] }">
         <div class="audio-head">

@@ -65,3 +65,22 @@ export async function fakeBrowserVoice(page: Page) {
 
 /** Значение из localStorage сайта. */
 export const stored = (page: Page, key: string) => page.evaluate(k => JSON.parse(localStorage.getItem("es." + k) ?? "null"), key);
+
+/**
+ * mp3 на сайте — из Supabase Storage. В тестах вместо них — тихий mp3 нужной длины (кадры как у edge-tts),
+ * с поддержкой перемотки (Range → 206): тесты не зависят от сети и не тратят трафик Supabase.
+ */
+export async function fakeMp3(page: Page, seconds = 600) {
+  const frame = Buffer.alloc(144);
+  frame.set([0xff, 0xf3, 0x64, 0xc4]);
+  const mp3 = Buffer.concat(Array(Math.ceil(seconds / 0.024)).fill(frame));
+  await page.route("**/*.mp3", async route => {
+    const range = /bytes=(\d+)-(\d*)/.exec(route.request().headers()["range"] ?? "");
+    if (!range) return route.fulfill({ contentType: "audio/mpeg", body: mp3, headers: { "Accept-Ranges": "bytes" } });
+    const start = Number(range[1]), end = range[2] ? Math.min(Number(range[2]), mp3.length - 1) : mp3.length - 1;
+    await route.fulfill({
+      status: 206, contentType: "audio/mpeg", body: mp3.subarray(start, end + 1),
+      headers: { "Accept-Ranges": "bytes", "Content-Range": `bytes ${start}-${end}/${mp3.length}` },
+    });
+  });
+}

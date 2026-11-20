@@ -1,6 +1,6 @@
-// Сборка для хостинга (Cloudflare Pages): кладёт mp3 рядом с сайтом — EL/audio → web/dist/audio.
-// Сайт по умолчанию ищет аудио по относительному адресу "audio/" (см. src/data/config.ts),
-// поэтому VITE_AUDIO_URL на хостинге задавать не нужно.
+// Запасной вариант (npm run build:pages-with-audio): mp3 рядом с сайтом — EL/audio → web/dist/audio.
+// Обычно mp3 берутся из Supabase Storage (src/data/config.ts) и не копируются.
+// Сайт с VITE_AUDIO_URL=audio ищет их по относительному адресу "audio/".
 import { cpSync, existsSync, readdirSync, statSync } from "node:fs";
 import { basename } from "node:path";
 import { fileURLToPath } from "node:url";

@@ -1,7 +1,10 @@
 // Основные сценарии учёбы: страницы, повторение слов, грамматика, рассказы, караоке, голос браузера.
 import { readFileSync } from "node:fs";
 import { expect, test } from "@playwright/test";
-import { GRAMMAR, STORIES, answerAll, fakeBrowserVoice, open, stored } from "./helpers";
+import { answerAll, fakeBrowserVoice, fakeMp3, GRAMMAR, open, stored, STORIES } from "./helpers";
+
+// mp3 на сайте — из Supabase; в тестах — подменённые (без сети и без трафика Supabase)
+test.beforeEach(({ page }) => fakeMp3(page));
 
 test("все разделы открываются без ошибок", async ({ page }) => {
   for (const route of ["/", "/review", "/stories", "/story/" + STORIES[0].id, "/words/A2", "/grammar", "/grammar/" + GRAMMAR[0].id,
@@ -79,6 +82,7 @@ test("слова рассказа добавляются в повторение
 test("караоке: подсветка по времени и перемотка по нажатию", async ({ page }) => {
   await page.addInitScript(() => localStorage.setItem("es.voice", JSON.stringify("jenny")));
   await open(page, "/story/" + STORIES[0].id);
+  await expect(page.locator(".player audio")).toHaveAttribute("src", /^https:\/\/rmbcltczrruvlepsmtwd\.supabase\.co\/storage\/v1\/object\/public\/mp3%20audios\/stories\/.+\/jenny\.mp3$/);
   const timings = STORIES[0].audio.find(t => t.voice === "jenny")!.timings!;
   const audio = page.locator(".player audio");
   await expect.poll(() => audio.evaluate((a: HTMLAudioElement) => a.readyState)).toBeGreaterThan(0);
@@ -155,6 +159,151 @@ test("список слов: статусы в фильтрах — новые �
   await row.getByRole("button", { name: "учу", exact: true }).click();
   await page.locator(".segmented").getByRole("button", { name: "Все", exact: true }).click();
   await expect(row.locator(".st")).toHaveText("учу");
+});
+
+test("«Выучено»: последние изученные — сверху", async ({ page }) => {
+  await open(page, "/words/A1");
+  await page.locator(".segmented").getByRole("button", { name: "Новые", exact: true }).click();
+  const words = page.locator(".word-list .en");
+  const first = await words.nth(0).textContent(), third = await words.nth(2).textContent();
+  await page.locator(".word-list li").nth(0).getByRole("button", { name: "выучено", exact: true }).click();   // сначала первое
+  await expect(words.first()).not.toHaveText(first!);
+  await page.locator(".word-list li").filter({ hasText: third! }).getByRole("button", { name: "выучено", exact: true }).click();
+  await page.locator(".segmented").getByRole("button", { name: "Выучено", exact: true }).click();
+  await expect(words).toHaveText([third!, first!]);                               // последнее выученное — первым
+  await expect(page.locator(".words-range")).toContainText("последние изученные — сверху");
+});
+
+test("«Мои слова»: добавить по группам, повторить, исправить, удалить", async ({ page }) => {
+  await open(page, "/words/MY");
+  await expect(page.locator(".level-chip.MY")).toContainText("Мои");
+  await expect(page.getByText("Своих слов пока нет")).toBeVisible();
+  const form = page.locator(".my-word-form");
+  const add = async (en: string, ru: string, group: string) => {
+    await form.getByPlaceholder("English").fill(en);
+    await form.getByPlaceholder("Перевод").fill(ru);
+    await form.getByPlaceholder("Группа").fill(group);
+    await form.getByRole("button", { name: "+ Добавить слово" }).click();
+  };
+  await add("frying pan", "сковорода", "Кухня");
+  await expect(page.locator(".words-change")).toContainText("«frying pan» добавлено в «Кухня»");
+  await add("deadline", "срок сдачи", "Работа");
+  await add("Frying  Pan", "ещё раз", "Кухня");
+  await expect(page.locator(".my-word-message")).toContainText("уже есть");
+
+  await expect(page.locator(".word-list li")).toHaveCount(2);
+  await page.locator(".segmented").first().getByRole("button", { name: "Работа", exact: true }).click();   // группы
+  await expect(page.locator(".word-list .en")).toHaveText(["deadline"]);
+  await page.locator(".segmented").first().getByRole("button", { name: "Все группы", exact: true }).click();
+  await expect(page.locator(".plan-card.compact")).toContainText("К повторению: 2");
+  await page.screenshot({ path: "test-results/my-words.png", fullPage: true });
+
+  // исправить написание: история повторений сохраняется
+  await page.locator(".word-list li").filter({ hasText: "deadline" }).getByTitle("Исправить").click();
+  await form.getByPlaceholder("English").fill("dead line");
+  await form.getByRole("button", { name: "Сохранить" }).click();
+  await expect(page.locator(".word-list .en")).toHaveText(["frying pan", "dead line"]);
+  expect(Object.keys(await stored(page, "srs")).sort()).toEqual(["MY|dead line", "MY|frying pan"]);
+
+  // удалить — двумя нажатиями
+  const row = page.locator(".word-list li").filter({ hasText: "dead line" });
+  await row.getByTitle("Удалить").click();
+  await row.getByRole("button", { name: "удалить?" }).click();
+  await expect(page.locator(".word-list li")).toHaveCount(1);
+  expect(Object.keys(await stored(page, "srs"))).toEqual(["MY|frying pan"]);
+
+  // в повторении — с пометкой «Мои слова» (новые словарные слова отключены, чтобы карточка была одна)
+  await page.evaluate(() => localStorage.setItem("es.srsSettings", JSON.stringify({ newPerDay: 0 })));
+  await open(page, "/review");
+  await expect(page.locator(".flashcard .badge").first()).toHaveText("Мои слова");
+  await expect(page.locator(".fc-main")).toHaveText("frying pan");
+});
+
+test("«Аудио → Мои»: mp3 группы — сделать, устарел после изменения слов, удалить; без входа — понятная ошибка", async ({ page }) => {
+  const words = [
+    { en: "fork", ru: "вилка", group: "Кухня", added: 1 },
+    { en: "spoon", ru: "ложка", group: "Кухня", added: 2 },
+    { en: "boss", ru: "начальник", group: "Работа", added: 3 },
+  ];
+  await open(page, "/");
+  await page.evaluate(w => localStorage.setItem("es.myWords", JSON.stringify(w)), words);
+  const asked: string[] = [];
+  let loggedIn = false;
+  await page.route("**/api/tts", async route => {
+    if (!loggedIn) return route.fulfill({ status: 401, contentType: "application/json", body: JSON.stringify({ error: "Войдите по коду доступа." }) });
+    asked.push(route.request().postDataJSON().text);
+    const frame = Buffer.alloc(144); frame.set([0xff, 0xf3, 0x64, 0xc4]);
+    await route.fulfill({ contentType: "audio/mpeg", body: Buffer.concat(Array(40).fill(frame)) });   // ~1 с тишины
+  });
+  await open(page, "/audio/MY");
+  await page.reload();                                                      // «Мои слова» читаются при запуске сайта
+  const kitchen = page.locator(".my-audio-card").filter({ hasText: "Кухня" });
+  await expect(page.locator(".my-audio-card .audio-title b")).toHaveText(["Кухня", "Работа"]);
+  await expect(kitchen.locator(".audio-range")).toHaveText("fork, spoon");
+
+  await kitchen.getByRole("button", { name: "🎙 Сделать mp3" }).click();
+  await expect(page.locator(".my-word-message")).toContainText("после входа по коду");
+  loggedIn = true;
+  await kitchen.getByRole("button", { name: "🎙 Сделать mp3" }).click();
+  await expect(kitchen.locator("audio")).toHaveCount(1);
+  expect(asked.sort()).toEqual(["fork", "spoon"]);
+  await expect.poll(() => kitchen.locator("audio").evaluate((a: HTMLAudioElement) => a.duration)).toBeCloseTo(0.5 + 2 * (0.96 + 1.8), 1);
+  await expect(kitchen.getByRole("link", { name: "⬇ Скачать" })).toHaveAttribute("download", "my-words-Кухня.mp3");
+  await page.screenshot({ path: "test-results/my-audio.png", fullPage: true });
+
+  // mp3 хранится на устройстве: после перезагрузки на месте; новое слово в группе — «слова изменились»
+  await page.evaluate(w => localStorage.setItem("es.myWords", JSON.stringify(w)), [...words, { en: "pan", ru: "сковорода", group: "Кухня", added: 4 }]);
+  await page.reload();
+  await expect(kitchen.locator("audio")).toHaveCount(1);
+  await expect(kitchen.locator(".my-audio-outdated")).toHaveText("слова изменились");
+  await kitchen.getByRole("button", { name: "🔄 Пересоздать mp3" }).click();
+  await expect(kitchen.locator(".my-audio-outdated")).toHaveCount(0);
+  expect(asked.sort()).toEqual(["fork", "pan", "spoon"]);                  // fork и spoon не озвучивались заново
+
+  await kitchen.getByRole("button", { name: "🗑 Удалить mp3" }).click();
+  await kitchen.getByRole("button", { name: "Удалить mp3?" }).click();
+  await expect(kitchen.locator("audio")).toHaveCount(0);
+  await page.reload();
+  await expect(kitchen.getByRole("button", { name: "🎙 Сделать mp3" })).toBeVisible();
+});
+
+test("«Учу»: ▶ Play читает слова по кругу до ⏹ Stop; 🔀 Random; EN / EN → RU / RU", async ({ page }) => {
+  await fakeBrowserVoice(page);
+  await open(page, "/words/A1");
+  await page.locator(".segmented").getByRole("button", { name: "Новые", exact: true }).click();
+  const learn: [string, string][] = [];
+  for (let k = 0; k < 3; k++) {
+    const row = page.locator(".word-list li").first();
+    learn.push([(await row.locator(".en").textContent())!, (await row.locator(".ru").textContent())!]);
+    await row.getByRole("button", { name: "учу", exact: true }).click();
+  }
+  await page.locator(".segmented").first().getByRole("button", { name: "Учу", exact: true }).click();
+  const spoken = () => page.evaluate(() => (window as any).spoken as string[]);
+  const player = page.locator(".word-player");
+
+  await player.getByRole("button", { name: "▶ Play" }).click();                       // по умолчанию EN → RU
+  await expect.poll(async () => (await spoken()).length, { timeout: 30_000 }).toBeGreaterThanOrEqual(8);
+  expect((await spoken()).slice(0, 8)).toEqual([...learn.flat(), ...learn[0]]);       // по порядку и снова с начала
+  await expect(page.locator(".word-list li.playing")).toHaveCount(1);
+  await page.screenshot({ path: "test-results/word-player.png" });
+  await player.getByRole("button", { name: "⏹ Stop" }).click();
+  const stoppedAt = (await spoken()).length;
+  await page.waitForTimeout(2500);
+  expect((await spoken()).length).toBe(stoppedAt);                                    // после «Стоп» тишина
+  await expect(page.locator(".word-list li.playing")).toHaveCount(0);
+
+  await player.getByRole("button", { name: "EN", exact: true }).click();
+  await page.evaluate(() => ((window as any).spoken.length = 0));
+  await player.getByRole("button", { name: "🔀 Random" }).click();
+  await expect.poll(async () => (await spoken()).length, { timeout: 30_000 }).toBeGreaterThanOrEqual(3);
+  expect([...(await spoken()).slice(0, 3)].sort()).toEqual(learn.map(w => w[0]).sort()); // каждое слово по разу, только английский
+  await player.getByRole("button", { name: "RU", exact: true }).click();               // режим меняется на ходу
+  await expect.poll(async () => (await spoken()).some(t => learn.some(w => w[1] === t)), { timeout: 30_000 }).toBe(true);
+  await page.locator(".segmented").first().getByRole("button", { name: "Все", exact: true }).click();   // ушли из «Учу» — стоп
+  await expect(player).toHaveCount(0);
+  const after = (await spoken()).length;
+  await page.waitForTimeout(2500);
+  expect((await spoken()).length).toBe(after);
 });
 
 test("«Сегодня»: выбор уровня — случайный рассказ, повторное нажатие — другой", async ({ page }) => {
