@@ -8,8 +8,8 @@ const audioDir = fileURLToPath(new URL("../audio", import.meta.url));
 
 /**
  * Локально mp3 раздаются прямо из папки EL/audio по адресу /audio/... (с поддержкой перемотки).
- * `npm run build` их в dist/ не копирует; `npm run build:pages` (для Cloudflare Pages) — копирует в dist/audio.
- * Если mp3 лежат в отдельном хранилище — его адрес задаёт VITE_AUDIO_URL (см. .env.production.example).
+ * Сборка (`npm run build`, `build:pages`) mp3 не копирует: на сайте они из Supabase Storage (src/data/config.ts);
+ * запасной вариант с mp3 рядом с сайтом — `npm run build:pages-with-audio`. Другой адрес mp3 — VITE_AUDIO_URL.
  */
 function serveLocalAudio(): Plugin {
   const serve = sirv(audioDir, { dev: true });

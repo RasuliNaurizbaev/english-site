@@ -1,4 +1,5 @@
-// Настройки Cloudflare Worker: сайт + mp3 как статические файлы, скрипт worker/index.ts — для перемотки mp3.
+// Настройки Cloudflare Worker: сайт — статические файлы, скрипт worker/index.ts — /api (вход, AI, озвучка) и /audio (запасной вариант).
+// mp3 — в Supabase Storage (src/data/config.ts). Подробно: docs/SETUP_CLOUDFLARE.md.
 // Сборка в Cloudflare: Root directory = web, Build command = npm run build:pages,
 // Deploy command = npx wrangler deploy (по умолчанию), для других веток — npx wrangler preview.
 // Адрес: https://open-english-for-beginner.rasuli-naurizbaev.workers.dev
@@ -9,17 +10,20 @@
   // скрипт запускается только для run_worker_first (mp3 с перемоткой, /api), остальное — статические файлы
   "main": "./worker/index.ts",
   "assets": {
-    // npm run build:pages кладёт сюда сайт и mp3 (dist/audio); заголовки кеша — public/_headers
+    // npm run build:pages кладёт сюда сайт (mp3 — нет, они в Supabase; build:pages-with-audio — с mp3); заголовки кеша — public/_headers
     "directory": "./dist",
     "binding": "ASSETS",
     "run_worker_first": ["/audio/*", "/api/*"]
   },
   // Секреты (не здесь! панель Cloudflare → Worker → Settings → Variables and Secrets, тип Secret):
-  //   ACCESS_CODES    "rasul:код, anna:код" — коды входа (код ≥ 12 символов)
+  //   SUPABASE_URL         https://rmbcltczrruvlepsmtwd.supabase.co — основной проект (аккаунты)
+  //   SUPABASE_SECRET_KEY  секретный ключ sb_secret_… основного проекта (НЕ publishable)
+  //   ACCESS_CODES    "rasul:код, anna:код" — СТАРЫЙ вход по коду (код ≥ 12 символов); убрать, когда у всех аккаунты
   //   GEMINI_API_KEY  ключ Google Gemini (основной)
   //   GROQ_API_KEY    ключ Groq (запасной)
   // Необязательные переменные: GEMINI_MODEL, GROQ_MODEL — модель вручную (иначе выбирается сама).
-  // Локально: файл web/.dev.vars (в .gitignore) с теми же именами.
-  // предпросмотр веток (development): пустой блок — те же настройки, что у основного сайта
+  // Локально: файл web/.dev.vars (в .gitignore) с теми же именами; SUPABASE_* — тестового проекта (llpbzemgndrsupnpbvhp).
+  // Предпросмотры веток, по документации Cloudflare, секреты основного Worker'а НЕ наследуют — см. docs/SETUP_CLOUDFLARE.md.
+  // предпросмотр веток (development): пустой блок обязателен — без него сборка веток падает
   "previews": {}
 }

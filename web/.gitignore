@@ -4,3 +4,5 @@ dist/
 test-results/
 playwright-report/
 .wrangler
+# личные настройки Vite (.env.local, .env.development.local …) — не в git
+*.local
