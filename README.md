@@ -162,6 +162,7 @@ mp3 со словами по уровням, по ~100 слов в файле: �
 
 > **Настройка с нуля после `git clone`** — подробно и по шагам: [docs/SETUP_LOCAL.md](docs/SETUP_LOCAL.md) (компьютер, mp3, секреты, тесты),
 > [docs/SETUP_SUPABASE.md](docs/SETUP_SUPABASE.md) (база, Storage, миграции, аккаунты), [docs/SETUP_CLOUDFLARE.md](docs/SETUP_CLOUDFLARE.md) (сайт, секреты, деплой, логи).
+> Сменился адрес сайта, имя Worker'а, проект или бакет Supabase — [docs/CHANGE_DOMAIN_OR_PROJECT.md](docs/CHANGE_DOMAIN_OR_PROJECT.md).
 
 **Нужно:** Node.js (проверено на 24, в CI — 22; для `tools/create_user.ts` — 22.18+) и Python 3.
 
