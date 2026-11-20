@@ -1,6 +1,9 @@
 // Практика: тесты, AI-тест (с подменённым сервисом), глаголы, диктант, защита от сбоев.
 import { expect, test } from "@playwright/test";
-import { STORIES, TESTS, answerAll, fakeBrowserVoice, open, stored } from "./helpers";
+import { answerAll, fakeBrowserVoice, fakeMp3, open, stored, STORIES, TESTS } from "./helpers";
+
+// mp3 на сайте — из Supabase; в тестах — подменённые (без сети и без трафика Supabase)
+test.beforeEach(({ page }) => fakeMp3(page));
 
 test("тест уровня: все ответы верны → высший уровень и запись в историю", async ({ page }) => {
   const placement = TESTS.find(t => t.kind === "placement")!;

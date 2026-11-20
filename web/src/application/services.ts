@@ -7,11 +7,13 @@ import { dayNumber } from "@/domain/text";
 import { WordReviewService } from "./wordReview";
 import { MistakesService } from "./mistakesService";
 import { AiTestService } from "./aiTests";
+import { MyWordsService } from "./myWords";
 
 export interface Services {
   content: ContentRepository;
   progress: ProgressRepository;
   review: WordReviewService;
+  myWords: MyWordsService;
   mistakes: MistakesService;
   aiTests: AiTestService;
   backup: ProgressBackup;
@@ -21,9 +23,10 @@ export interface Services {
 export function createServices(content: ContentRepository, storage: KeyValueStorage): Services {
   const today = () => dayNumber();
   const progress = new ProgressRepository(storage, today);
+  const review = new WordReviewService(content, progress, today);
   return {
-    content, progress, today,
-    review: new WordReviewService(content, progress, today),
+    content, progress, today, review,
+    myWords: new MyWordsService(content, progress, review),
     mistakes: new MistakesService(content, progress, today),
     aiTests: new AiTestService(progress),
     backup: new ProgressBackup(storage),

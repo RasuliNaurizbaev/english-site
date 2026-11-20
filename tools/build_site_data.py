@@ -25,21 +25,31 @@ def write_data_file(name, data):
 # ---------------------------------------------------------------- рассказы
 
 def story_audio(story_id, sentence_count):
-    """Записи рассказа разными голосами. Тайминги берём, только если они совпадают с текстом."""
+    """Записи рассказа разными голосами. Тайминги берём, только если они совпадают с текстом.
+
+    Запись = файл <голос>.json (его создаёт make_story_audio.py вместе с <голос>.mp3). mp3 в git нет —
+    они в Supabase Storage (upload_audio.py), поэтому ищем по json: данные одинаковы с mp3 на диске и без них.
+    """
     tracks = []
     folder = paths.story_audio_dir(story_id)
-    for mp3 in sorted(folder.glob("*.mp3")) if folder.exists() else []:
+    for timing_file in sorted(folder.glob("*.json")) if folder.exists() else []:
+        mp3 = timing_file.with_suffix(".mp3")
         voice = mp3.stem
-        timing_file = mp3.with_suffix(".json")
+        warn_if_missing(mp3)
         timings = None
-        if timing_file.exists():
-            segments = json.loads(timing_file.read_text(encoding="utf-8")).get("segments", [])
-            if len(segments) == sentence_count + 1:          # заголовок + все предложения
-                timings = segments
+        segments = json.loads(timing_file.read_text(encoding="utf-8")).get("segments", [])
+        if len(segments) == sentence_count + 1:              # заголовок + все предложения
+            timings = segments
         tracks.append({"voice": voice, "label": VOICE_LABELS.get(voice, voice.capitalize()),
                        "src": paths.audio_relative(mp3), "timings": timings})
     tracks.sort(key=lambda t: VOICE_ORDER.index(t["voice"]) if t["voice"] in VOICE_ORDER else 99)
     return tracks
+
+
+def warn_if_missing(mp3):
+    """На компьютере (папка audio/ с mp3) — предупредить о забытом mp3. В CI mp3 нет совсем — молчим."""
+    if any(paths.AUDIO.rglob("*.mp3")) and not mp3.exists():
+        print("⚠ Нет mp3 (на сайте не будет играть): " + paths.audio_relative(mp3))
 
 
 def mark_words(sentences, finder):
@@ -104,8 +114,8 @@ def build_word_audio():
     if paths.WORD_AUDIO_MANIFEST.exists():
         manifest = json.loads(paths.WORD_AUDIO_MANIFEST.read_text(encoding="utf-8"))
     for level, parts in manifest.items():
-        parts[:] = [p for p in parts if (paths.WORD_AUDIO_DIR / p["file"]).exists()]
         for part in parts:
+            warn_if_missing(paths.WORD_AUDIO_DIR / part["file"])
             part["src"] = paths.audio_relative(paths.WORD_AUDIO_DIR / part["file"])
     write_data_file("audio.json", manifest)
     print("Аудио слов: " + (", ".join(f"{level}={len(p)} mp3" for level, p in manifest.items()) or "нет"))

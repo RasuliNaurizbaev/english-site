@@ -50,3 +50,34 @@ export function speak(text: string): void {
   try { if (voice) { utterance.voice = voice; utterance.lang = voice.lang; } } catch { /* голос по умолчанию */ }
   speechSynthesis.speak(utterance);
 }
+
+/** Лучший русский голос (для перевода): улучшенный → известный → любой русский. */
+export function chooseRussianVoice(all: readonly SpeechSynthesisVoice[]): SpeechSynthesisVoice | null {
+  const russian = all.filter(v => /^ru[-_]/i.test(v.lang));
+  const rank = (v: SpeechSynthesisVoice) =>
+    (/premium|enhanced|natural|neural/i.test(v.name) ? 0 : 10) + (/Milena|Google|Microsoft/i.test(v.name) ? 0 : 1);
+  return [...russian].sort((a, b) => rank(a) - rank(b))[0] ?? null;
+}
+
+/**
+ * Произнести и дождаться конца (для проигрывания списка слов). Не отменяет то, что уже звучит.
+ * Если браузер не прислал «конец» (бывает в Chrome и Safari), ждём не дольше, чем нужно на такой текст.
+ */
+export function speakAndWait(text: string, lang: "en" | "ru"): Promise<void> {
+  if (!speechSupported) return Promise.resolve();
+  return new Promise(resolve => {
+    const utterance = new SpeechSynthesisUtterance(speechText(text));
+    utterance.lang = lang === "en" ? "en-US" : "ru-RU";
+    utterance.rate = 0.9;
+    try {
+      const voice = lang === "en" ? pickVoice() : chooseRussianVoice(speechSynthesis.getVoices());
+      if (voice) { utterance.voice = voice; utterance.lang = voice.lang; }
+    } catch { /* голос по умолчанию */ }
+    const fallback = setTimeout(done, 3000 + text.length * 250);
+    function done() { clearTimeout(fallback); resolve(); }
+    utterance.onend = done;
+    utterance.onerror = done;
+    (speakAndWait as { current?: SpeechSynthesisUtterance }).current = utterance;   // ссылка, чтобы Chrome не потерял onend
+    speechSynthesis.speak(utterance);
+  });
+}

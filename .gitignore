@@ -8,3 +8,8 @@ web/node_modules/
 web/dist/
 web/.env.production
 .dev.vars
+tools/.env
+
+# mp3 — в Supabase Storage (tools/upload_audio.py); главная копия — папка audio/ на компьютере.
+# json с таймингами (audio/**/*.json) остаются в git: из них build_site_data.py собирает данные сайта.
+audio/**/*.mp3

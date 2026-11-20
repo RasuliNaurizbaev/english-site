@@ -1,6 +1,8 @@
 // Типы данных сайта. Данные собирает tools/build_site_data.py в web/public/data/*.json.
 
 export type Level = "A1" | "A2" | "B1";
+/** Уровень слова: словарь A1/A2/B1 или «Мои слова» (MY). */
+export type WordLevel = Level | "MY";
 
 /** Слово из словаря рассказа. */
 export interface StoryWord {
@@ -67,7 +69,7 @@ export type Vocabulary = Partial<Record<Level, [string, string][]>>;
 
 export interface Word {
   key: string;                         // "A1|apple"
-  level: Level;
+  level: WordLevel;
   en: string;
   ru: string;
 }

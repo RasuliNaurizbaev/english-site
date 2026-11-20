@@ -4,6 +4,7 @@ import type { Card } from "@/domain/spacedRepetition";
 import type { Mistake } from "@/domain/mistakes";
 import type { VerbStats } from "@/domain/verbs";
 import type { Level } from "@/domain/types";
+import type { MyWord } from "@/domain/myWords";
 import { dayNumber } from "@/domain/text";
 import type { KeyValueStorage } from "./storage";
 
@@ -95,6 +96,10 @@ export class ProgressRepository {
   saveCards(cards: Record<string, Card>): void { this.storage.set("srs", cards); }
   /** Слова, отмеченные «выученными» в самой первой версии сайта (для переноса). */
   legacyKnownWords(): Record<string, string[]> { return this.storage.get("known", {}); }
+
+  // ---------- «Мои слова» (добавлены пользователем) ----------
+  myWords(): MyWord[] { return this.storage.get("myWords", []); }
+  saveMyWords(words: MyWord[]): void { this.storage.set("myWords", words); }
 
   // ---------- «Мои ошибки» в грамматике: { "<topicId>#<номер упражнения>": Mistake } ----------
   mistakes(): Record<string, Mistake> { return this.storage.get("mistakes", {}); }

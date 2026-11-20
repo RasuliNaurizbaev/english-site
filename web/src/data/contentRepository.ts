@@ -1,6 +1,7 @@
 // Загрузка контента (рассказы, словари, грамматика, аудио слов) из public/data/*.json.
 // Каждый файл грузится отдельно: если один не загрузится, остальные разделы работают.
-import type { GrammarTopic, Level, LevelTest, Story, Vocabulary, Word, WordAudio, WordAudioPart } from "@/domain/types";
+import type { GrammarTopic, Level, LevelTest, Story, Vocabulary, Word, WordAudio, WordAudioPart, WordLevel } from "@/domain/types";
+import { MY_LEVEL, myWordKey, type MyWord } from "@/domain/myWords";
 import type { IrregularVerb } from "@/domain/verbs";
 import { dataUrl } from "./config";
 
@@ -12,6 +13,7 @@ export interface LoadProblem {
 export class ContentRepository {
   readonly levels: Level[];
   private readonly wordsByKey = new Map<string, Word>();
+  private myWordList: [string, string][] = [];
 
   constructor(
     private readonly storyList: Story[],
@@ -36,9 +38,16 @@ export class ContentRepository {
   nextStoryAfter(story: Story): Story | undefined { return this.storyList[this.storyList.indexOf(story) + 1]; }
 
   // ---------- слова ----------
-  wordsOfLevel(level: Level): [string, string][] { return this.vocabulary[level] ?? []; }
+  wordsOfLevel(level: WordLevel): [string, string][] { return level === MY_LEVEL ? this.myWordList : this.vocabulary[level] ?? []; }
   word(key: string): Word | undefined { return this.wordsByKey.get(key); }
   hasWord(key: string): boolean { return this.wordsByKey.has(key); }
+
+  /** «Мои слова» (из прогресса пользователя): после каждого изменения список заменяется целиком. */
+  setMyWords(words: readonly MyWord[]): void {
+    for (const [en] of this.myWordList) this.wordsByKey.delete(myWordKey(en));
+    this.myWordList = words.map(w => [w.en, w.ru]);
+    for (const w of words) this.wordsByKey.set(myWordKey(w.en), { key: myWordKey(w.en), level: MY_LEVEL, en: w.en, ru: w.ru });
+  }
 
   // ---------- грамматика ----------
   grammarTopics(): GrammarTopic[] { return this.grammar; }

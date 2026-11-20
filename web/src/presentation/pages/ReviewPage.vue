@@ -103,7 +103,7 @@ onUnmounted(() => document.removeEventListener("keydown", onKey));
   <template v-else>
     <div class="flashcard" :class="{ revealed }" @click="reveal">
       <div class="fc-top">
-        <span><span class="badge" :class="word.level">{{ word.level }}</span> <span v-if="item.isNew" class="badge plain new">новое</span></span>
+        <span><span class="badge" :class="word.level">{{ word.level === "MY" ? "Мои слова" : word.level }}</span> <span v-if="item.isNew" class="badge plain new">новое</span></span>
         <SpeakButton :text="word.en" />
       </div>
       <div class="fc-main">{{ front }}</div>

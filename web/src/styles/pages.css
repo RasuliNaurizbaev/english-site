@@ -206,3 +206,30 @@
 .backup-panel summary { cursor: pointer; }
 .restore-confirm { margin-top: 12px; padding: 12px; border-radius: 12px; background: var(--warn-bg); }
 .restore-confirm p { margin: 0 0 8px; }
+
+/* ---------- «Мои слова» ---------- */
+.level-chip.MY .chip-bar { background: var(--accent); } .level-chip.MY.active { border-color: var(--accent); }
+.badge.MY { color: var(--accent); background: var(--accent-bg); }
+.my-words-title { margin: 4px 0 8px; font-size: 16px; }
+.my-word-form { display: grid; gap: 0; margin-bottom: 12px; }
+.my-word-ru { display: flex; gap: 8px; align-items: flex-start; }
+.my-word-ru .search { flex: 1; min-width: 0; }
+.my-word-ru button { padding: 10px 14px; }
+.my-word-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.my-word-message { margin: 8px 0 0; font-size: 13px; color: var(--muted); }
+.my-group-tag { margin-left: 8px; font-size: 11px; border: 1px solid var(--border); border-radius: 999px; padding: 1px 8px; white-space: nowrap; }
+.word-list .st-btn.my-edit, .word-list .st-btn.my-delete { color: var(--muted); border-color: var(--border); background: var(--surface); padding: 4px 10px; }
+.word-list .st-btn.my-delete.confirm { color: var(--bad); border-color: var(--bad); background: var(--bad-bg); }
+.my-word-form + .segmented { margin-bottom: 10px; }
+.my-audio-settings { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+.my-audio-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 8px; }
+.my-audio-actions .small-link { font-size: 14px; padding: 6px 4px; }
+.my-audio-outdated { font-size: 12px; color: var(--a2); background: var(--a2-bg); border-radius: 999px; padding: 2px 10px; }
+.problem-note { background: var(--warn-bg); border-radius: 10px; padding: 8px 12px; font-size: 14px; }
+
+/* ---------- «Учу»: слушать по кругу ---------- */
+.word-player { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 10px 12px; margin: 4px 0 10px; }
+.word-player-buttons { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+.word-player .segmented { margin-bottom: 0; }
+.word-player-now { margin: 8px 0 0; font-size: 15px; }
+.word-list li.playing { border-color: var(--accent); background: var(--accent-bg); }
