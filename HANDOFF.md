@@ -1,6 +1,6 @@
 # HANDOFF — состояние проекта, открытые вопросы и советы
 
-Дата: 2026-11-20 (закоммичено в `development`: «Мои слова», озвучка edge-tts, «Учу» → Play, mp3 → Supabase Storage, аккаунты (имя + пароль) и миграции Supabase. Дальше — деплой и проверка входа на сайте, потом шаг 5: профиль и админ-панель). Документ для того, кто продолжит работу (вы сами, другой разработчик или следующая сессия с Claude).
+Дата: 2026-11-20 (в `main` и на сайте: «Мои слова», озвучка edge-tts, «Учу» → Play, mp3 → Supabase Storage, аккаунты (имя + пароль) и миграции Supabase; **новый адрес сайта https://english.foryourself.workers.dev**, репозиторий переименован в `english-site`. Дальше — проверка входа на новом адресе, потом шаг 5: профиль и админ-панель). Документ для того, кто продолжит работу (вы сами, другой разработчик или следующая сессия с Claude).
 Как устроен проект и как им пользоваться — в `README.md`. **Настройка с нуля после `git clone`:** `docs/SETUP_LOCAL.md` (компьютер), `docs/SETUP_SUPABASE.md` (база, mp3, миграции), `docs/SETUP_CLOUDFLARE.md` (сайт, секреты, деплой); смена адреса сайта / проекта Supabase — `docs/CHANGE_DOMAIN_OR_PROJECT.md`. Здесь — **что не доделано, что не проверено, какие есть риски и что делать дальше**.
 
 ---
@@ -9,19 +9,40 @@
 
 ### Git
 ```
-GitHub  origin/main          задеплоено: https://english.foryourself.workers.dev (push/PR/merge — пользователь)
-local   development          e8bf1be  Add accounts: username/password login, sessions and Supabase migrations
-                             4317409  Add my words, word playback, edge-tts audio and move mp3 to Supabase
+GitHub  RasuliNaurizbaev/english-site (до 2026-11-20 — RasuliNaurizbaev/En; GitHub перенаправляет старый адрес)
+        origin/main          15e801a  Merge PR #9 — задеплоено: https://english.foryourself.workers.dev (push/PR/merge — пользователь)
+local   development          47db82e  Rename Worker to english and switch site address to english.foryourself.workers.dev
+                             5b90dbb  Add runbook for changing site address or Supabase project
+                             9cca141  Add setup runbooks for local, Supabase and Cloudflare
+                             e8bf1be  Add accounts: username/password login, sessions and Supabase migrations
                              80bb922  последний коммит, где mp3 ещё в git (восстановить: docs/SETUP_LOCAL.md → «mp3 после clone»)
-рабочая папка                docs/SETUP_*.md, правки README/HANDOFF/комментариев (не закоммичено);
-                             секреты — web/.dev.vars, tools/.env (в .gitignore)
+секреты                      web/.dev.vars, tools/.env (в .gitignore)
 ```
 - ⚠ **Коммиты — только по команде пользователя.** Claude не коммитит сам (был случай — откатили `git reset HEAD~1`).
   Сделал работу → показал → спросил «закоммитить?».
 - **Схема веток (решено):** работа в `development` → Pull Request → `main`. Merge в `main` = автоматический деплой на Cloudflare.
-- **Push делаете вы**: защитный хук этой среды (`block-open-git-endpoint`) не разрешает Claude писать в `github.com/RasuliNaurizbaev/En`.
+- **Push делаете вы**: защитный хук этой среды (`block-open-git-endpoint`) не разрешает Claude писать в `github.com/RasuliNaurizbaev/english-site`.
   Команда: `git push origin development`.
 - **GitHub Actions** — зелёные (проверено вами на `development`).
+
+### Смена адреса сайта и имени репозитория (2026-11-20)
+| Что | Было | Стало |
+|---|---|---|
+| Адрес сайта | `https://open-english-for-beginner.rasuli-naurizbaev.workers.dev` (**больше не открывается**) | **https://english.foryourself.workers.dev** |
+| Имя Worker'а (`web/wrangler.jsonc` → `name`) | `open-english-for-beginner` | `english` |
+| Поддомен аккаунта Cloudflare | `rasuli-naurizbaev` | `foryourself` |
+| Репозиторий GitHub | `RasuliNaurizbaev/En` | `RasuliNaurizbaev/english-site` (`origin` обновлён) |
+
+- Сборка из GitHub после переименования **прошла** (предпросмотр `development` и `main` после PR #9).
+- ⚠ **Урок:** после переименования у Worker'а оказались пустые настройки сборки (Root directory не `web`, нет Build command).
+  Признак в логе: `No dependencies detected`, нет `npm run build:pages`, ошибка `missing a previews block` (хотя `previews` в `wrangler.jsonc` есть).
+  Лечится в Cloudflare → `english` → Settings → Builds: Root directory `web`, Build command `npm run build:pages`.
+- Прогресс в браузере (localStorage, IndexedDB) и вход (cookie) на старом адресе остались там — на новом адресе нужно войти заново;
+  прогресс переносится только резервной копией, а старый адрес уже не открывается. Аккаунты и mp3 (Supabase) не затронуты.
+- Не проверено после смены: полный чек-лист `docs/CHANGE_DOMAIN_OR_PROJECT.md` (вход 👤, mp3 рассказа 01, «✨ Создать тест», «🎙 Сделать mp3»),
+  наличие секретов у Worker'а `english` (Settings → Variables and Secrets).
+- Как менять адрес в будущем — `docs/CHANGE_DOMAIN_OR_PROJECT.md`. Убрать поддомен из адреса `*.workers.dev` нельзя;
+  бесплатно его можно только сменить, без поддомена — свой домен (платно) или Pages (`*.pages.dev`, но это переезд с Worker'а).
 
 ### Последние изменения (2026-11-19)
 | Что | Где |

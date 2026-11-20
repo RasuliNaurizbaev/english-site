@@ -33,7 +33,7 @@
 - **Где хранится:** сайт — Cloudflare Worker (автодеплой из `main`); mp3 — Supabase Storage (публичный бакет);
   аккаунты — Supabase Postgres; прогресс гостя — localStorage браузера.
 - **Адрес:** https://english.foryourself.workers.dev
-- **Репозиторий:** https://github.com/RasuliNaurizbaev/En (работа — в ветке `development`, сайт — из `main`).
+- **Репозиторий:** https://github.com/RasuliNaurizbaev/english-site (работа — в ветке `development`, сайт — из `main`).
 
 | Документ | Что в нём |
 |---|---|
@@ -82,7 +82,7 @@ brew install ffmpeg
 ### 2.1. Склонировать и перейти в рабочую ветку
 
 ```bash
-git clone https://github.com/RasuliNaurizbaev/En.git EL
+git clone https://github.com/RasuliNaurizbaev/english-site.git EL
 cd EL
 git switch development          # по умолчанию после clone открыта main; работаем в development
 ```

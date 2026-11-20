@@ -16,7 +16,7 @@
 |---|---|
 | Имя Worker'а | `english` |
 | Адрес сайта | https://english.foryourself.workers.dev |
-| Репозиторий GitHub | `RasuliNaurizbaev/En` (`https://github.com/RasuliNaurizbaev/En.git`) |
+| Репозиторий GitHub | `RasuliNaurizbaev/english-site` (`https://github.com/RasuliNaurizbaev/english-site.git`) |
 | Основной проект Supabase (сайт) | `https://rmbcltczrruvlepsmtwd.supabase.co` |
 | Тестовый проект Supabase (только локально) | `llpbzemgndrsupnpbvhp` → `https://llpbzemgndrsupnpbvhp.supabase.co` |
 | Публичный бакет mp3 | `mp3 audios` (адрес — `SUPABASE_AUDIO_URL` в `web/src/data/config.ts`) |
@@ -135,7 +135,7 @@
 |---|---|---|---|
 | Аккаунт Cloudflare | https://dash.cloudflare.com/sign-up (бесплатный план, карта не нужна) | — | да |
 | Поддомен `foryourself.workers.dev` | задаётся один раз при первом Worker'е в аккаунте (Workers & Pages → подпункт с subdomain; название могло измениться) | — | да |
-| Доступ Cloudflare к GitHub | при импорте репозитория Cloudflare попросит установить GitHub-приложение и выбрать репозиторий `RasuliNaurizbaev/En` | — | да |
+| Доступ Cloudflare к GitHub | при импорте репозитория Cloudflare попросит установить GitHub-приложение и выбрать репозиторий `RasuliNaurizbaev/english-site` | — | да |
 | Имя Worker'а | `web/wrangler.jsonc` → `name` = `english` | поле имени при создании Worker'а | да, **должно совпадать** |
 | `GEMINI_API_KEY` | https://aistudio.google.com → **API keys** (прямая ссылка https://aistudio.google.com/apikey) → Create API key | секрет Worker'а; локально `web/.dev.vars` | хотя бы один из двух AI-ключей |
 | `GROQ_API_KEY` | https://console.groq.com → **API Keys** (https://console.groq.com/keys) → Create API Key. **Ключ показывается один раз** — сразу сохранить в менеджер паролей | секрет Worker'а; `web/.dev.vars` | хотя бы один из двух AI-ключей |
@@ -161,7 +161,7 @@
 ### 3.1. Подготовка (на компьютере)
 
 ```bash
-git clone https://github.com/RasuliNaurizbaev/En.git
+git clone https://github.com/RasuliNaurizbaev/english-site.git
 cd En
 git checkout development
 cd web
@@ -195,9 +195,9 @@ env.ASSETS         Assets
 
 1. https://dash.cloudflare.com → **Workers & Pages** → **Create** (в документации кнопка называется **Create application**) →
    **Worker** → **Import a repository** (в документации — выбрать **GitHub**). *(Названия пунктов могли измениться.)*
-2. Если просит — **авторизовать GitHub** и дать приложению Cloudflare доступ к репозиторию `RasuliNaurizbaev/En`
-   (достаточно «Only select repositories» → `En`).
-3. Выбрать репозиторий `RasuliNaurizbaev/En`.
+2. Если просит — **авторизовать GitHub** и дать приложению Cloudflare доступ к репозиторию `RasuliNaurizbaev/english-site`
+   (достаточно «Only select repositories» → `english-site`).
+3. Выбрать репозиторий `RasuliNaurizbaev/english-site`.
 4. Заполнить настройки:
 
    | Поле в Cloudflare | Значение | Почему |

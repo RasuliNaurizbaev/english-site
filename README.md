@@ -598,7 +598,7 @@ npm run check                       # типы → модульные тесты
   где есть папка `audio/` (`npm run build:pages-with-audio && npx wrangler deploy`).
 
 ### Первая настройка (один раз, в браузере)
-1. https://dash.cloudflare.com → **Workers & Pages → Create → Worker → Import a repository** → `RasuliNaurizbaev/En`.
+1. https://dash.cloudflare.com → **Workers & Pages → Create → Worker → Import a repository** → `RasuliNaurizbaev/english-site`.
 2. Настройки:
 
    | Поле | Значение |
@@ -614,6 +614,9 @@ npm run check                       # типы → модульные тесты
 3. **Deploy**. Через 1–3 минуты сайт открывается по адресу выше.
 
 Проверить настройки локально (без входа в аккаунт): `cd web && npm run build:pages && npx wrangler deploy --dry-run`.
+
+**Сменить адрес сайта / имя Worker'а / проект Supabase** — `docs/CHANGE_DOMAIN_OR_PROJECT.md`. История: до 2026-11-20 адрес был
+`open-english-for-beginner.rasuli-naurizbaev.workers.dev` (больше не открывается), репозиторий — `RasuliNaurizbaev/En`.
 
 ### Как устроена сборка
 - `npm run build:pages` = `npm run build` (типы + Vite), затем Cloudflare выкладывает `web/dist`. mp3 в сборку не входят — сайт берёт их из Supabase.
@@ -639,7 +642,7 @@ npm run check                       # типы → модульные тесты
 - В репозитории — код, контент, данные сайта, json с таймингами аудио. **mp3 — нет** (с 2026-11-20 они в Supabase Storage, `audio/**/*.mp3` в `.gitignore`).
   Старые коммиты по-прежнему содержат ≈ 115 МБ mp3 — история не переписывалась.
 - Исключено (`.gitignore`): `.DS_Store`, `__pycache__`, `web/node_modules`, `web/dist`, `web/.env.production`, `.dev.vars`, `tools/.env`, mp3, `backups/`; в `web/.gitignore` — `.wrangler`, `*.local`, отчёты тестов.
-- Удалённый репозиторий: `origin` → `https://github.com/RasuliNaurizbaev/En.git`, ветка `main`.
+- Удалённый репозиторий: `origin` → `https://github.com/RasuliNaurizbaev/english-site.git`, ветка `main`.
 
 ---
 
@@ -656,4 +659,6 @@ npm run check                       # типы → модульные тесты
 | AI: «превышен лимит» | подождите или добавьте второй сервис (Gemini + Groq) |
 | AI: «нет связи с сервисом» | нет интернета, или свой ключ в браузере не прошёл (CORS) — войдите 👤: тогда AI идёт через сервер сайта |
 | `npm audit` предупреждает про `picomatch` | уязвимость в инструментах сборки (ReDoS), на сайт не попадает; исправления пока нет |
+| Сборка в Cloudflare: `missing a previews block`, в логе `No dependencies detected` и нет `npm run build:pages` | у Worker'а пустые настройки сборки (так было после переименования): Settings → Builds → Root directory `web`, Build command `npm run build:pages` |
+| Сайт открывается, но вход / AI / озвучка не работают | у Worker'а `english` нет секретов: Settings → Variables and Secrets (`SUPABASE_URL`, `SUPABASE_SECRET_KEY`, `GEMINI_API_KEY`, `GROQ_API_KEY`) |
 | Озвучка зависла | в `tts.py` есть таймаут 60 с и повторы; просто запустите скрипт снова — готовые файлы пропускаются |
