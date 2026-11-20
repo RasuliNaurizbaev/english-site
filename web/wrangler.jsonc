@@ -2,10 +2,10 @@
 // mp3 — в Supabase Storage (src/data/config.ts). Подробно: docs/SETUP_CLOUDFLARE.md.
 // Сборка в Cloudflare: Root directory = web, Build command = npm run build:pages,
 // Deploy command = npx wrangler deploy (по умолчанию), для других веток — npx wrangler preview.
-// Адрес: https://open-english-for-beginner.rasuli-naurizbaev.workers.dev
+// Адрес: https://english.foryourself.workers.dev
 {
   // должно совпадать с именем Worker'а в Cloudflare
-  "name": "open-english-for-beginner",
+  "name": "english",
   "compatibility_date": "2026-11-01",
   // скрипт запускается только для run_worker_first (mp3 с перемоткой, /api), остальное — статические файлы
   "main": "./worker/index.ts",

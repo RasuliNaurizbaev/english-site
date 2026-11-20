@@ -32,7 +32,7 @@
   контент — CSV/JSON/TXT (`content/`), собирается Python-скриптами (`tools/`) в `web/public/data/*.json`.
 - **Где хранится:** сайт — Cloudflare Worker (автодеплой из `main`); mp3 — Supabase Storage (публичный бакет);
   аккаунты — Supabase Postgres; прогресс гостя — localStorage браузера.
-- **Адрес:** https://open-english-for-beginner.rasuli-naurizbaev.workers.dev
+- **Адрес:** https://english.foryourself.workers.dev
 - **Репозиторий:** https://github.com/RasuliNaurizbaev/En (работа — в ветке `development`, сайт — из `main`).
 
 | Документ | Что в нём |
@@ -505,7 +505,7 @@ git push origin development                 # первый раз: git push -u o
 ```
 
 Затем на GitHub: **Pull requests → New → base: `main` ← compare: `development`** → дождаться зелёной проверки → **Merge**.
-Merge в `main` = автоматический деплой на https://open-english-for-beginner.rasuli-naurizbaev.workers.dev (1–3 минуты).
+Merge в `main` = автоматический деплой на https://english.foryourself.workers.dev (1–3 минуты).
 Как настроена сборка в Cloudflare — `docs/SETUP_CLOUDFLARE.md`.
 
 - Что не попадает в git — таблица в [разделе 4](#что-исключено-из-git-gitignore-и-webgitignore).

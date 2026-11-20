@@ -34,8 +34,8 @@
 
 | Идентификатор | Пример | Где зашит |
 |---|---|---|
-| Имя Worker'а | `open-english-for-beginner` | `web/wrangler.jsonc` (`"name"`) — **должно совпадать** с именем Worker'а в Cloudflare, иначе сборка из GitHub падает; тексты README/HANDOFF/docs |
-| Поддомен аккаунта Cloudflare | `rasuli-naurizbaev` | нигде в коде; только тексты README/HANDOFF/docs |
+| Имя Worker'а | `english` | `web/wrangler.jsonc` (`"name"`) — **должно совпадать** с именем Worker'а в Cloudflare, иначе сборка из GitHub падает; тексты README/HANDOFF/docs |
+| Поддомен аккаунта Cloudflare | `foryourself` | нигде в коде; только тексты README/HANDOFF/docs |
 | Адрес сайта | `https://<имя Worker'а>.<поддомен>.workers.dev` | нигде в коде (сайт использует относительные адреса `/api`, `data/…`) |
 | Ref основного проекта Supabase | `rmbcltczrruvlepsmtwd` | `web/src/data/config.ts` (`SUPABASE_AUDIO_URL`), `.github/workflows/keep-supabase-awake.yml`, `web/e2e/learning.spec.ts` (проверка адреса mp3), `tools/.env.example`, `web/wrangler.jsonc` (комментарий), секрет Cloudflare `SUPABASE_URL`, свой `tools/.env`, тексты |
 | Ref тестового проекта | `llpbzemgndrsupnpbvhp` | только свой `web/.dev.vars`, комментарий `web/wrangler.jsonc`, тексты |
@@ -44,7 +44,7 @@
 
 Найти все упоминания перед любой сменой (из папки `EL`):
 ```bash
-grep -rn "open-english-for-beginner\|rasuli-naurizbaev" --exclude-dir=node_modules --exclude-dir=dist --exclude-dir=.git .
+grep -rn "foryourself\|\"english\"\|\`english\`" --exclude-dir=node_modules --exclude-dir=dist --exclude-dir=.git .
 grep -rn "rmbcltczrruvlepsmtwd\|llpbzemgndrsupnpbvhp\|mp3%20audios\|mp3 audios" --exclude-dir=node_modules --exclude-dir=dist --exclude-dir=.git .
 ```
 
@@ -52,17 +52,17 @@ grep -rn "rmbcltczrruvlepsmtwd\|llpbzemgndrsupnpbvhp\|mp3%20audios\|mp3 audios" 
 
 ## 1. Cloudflare: сменился адрес сайта
 
-### Случай 1.1. Сменили поддомен аккаунта (`rasuli-naurizbaev.workers.dev` → другой)
+### Случай 1.1. Сменили поддомен аккаунта (`foryourself.workers.dev` → другой)
 Поддомен общий для всех Worker'ов аккаунта; меняется в панели: Workers & Pages → раздел с поддоменом `workers.dev` → Change
 (название пункта могло измениться). Код и `wrangler.jsonc` **не меняются**.
 
 1. **До смены** — предупредить всех: сохранить резервную копию прогресса (раздел 0). После смены старый адрес перестанет открываться сразу.
-2. Сменить поддомен в панели. Новый адрес: `https://open-english-for-beginner.<новый-поддомен>.workers.dev`.
+2. Сменить поддомен в панели. Новый адрес: `https://english.<новый-поддомен>.workers.dev`.
 3. Проверить новый адрес по чек-листу [SETUP_CLOUDFLARE.md → «Проверка после деплоя»](SETUP_CLOUDFLARE.md).
 4. Всем: открыть новый адрес → загрузить резервную копию → войти заново (👤).
 5. Обновить тексты (адрес): `README.md`, `HANDOFF.md`, `docs/*.md` (команда `grep` из раздела 0) → коммит.
 
-### Случай 1.2. Сменить имя Worker'а (`open-english-for-beginner` → другое)
+### Случай 1.2. Сменить имя Worker'а (`english` → другое)
 Адрес станет `https://<новое-имя>.<поддомен>.workers.dev`. Два способа.
 
 **Способ А — переименовать существующий Worker** (проще; старый адрес перестаёт работать сразу):

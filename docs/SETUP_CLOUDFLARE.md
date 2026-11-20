@@ -14,8 +14,8 @@
 
 | Что | Значение |
 |---|---|
-| Имя Worker'а | `open-english-for-beginner` |
-| Адрес сайта | https://open-english-for-beginner.rasuli-naurizbaev.workers.dev |
+| Имя Worker'а | `english` |
+| Адрес сайта | https://english.foryourself.workers.dev |
 | Репозиторий GitHub | `RasuliNaurizbaev/En` (`https://github.com/RasuliNaurizbaev/En.git`) |
 | Основной проект Supabase (сайт) | `https://rmbcltczrruvlepsmtwd.supabase.co` |
 | Тестовый проект Supabase (только локально) | `llpbzemgndrsupnpbvhp` → `https://llpbzemgndrsupnpbvhp.supabase.co` |
@@ -56,7 +56,7 @@
 
 ```
                          ┌──────────────────────────────────────────────────────────────┐
- Браузер ──────────────▶ │ Cloudflare: Worker open-english-for-beginner                 │
+ Браузер ──────────────▶ │ Cloudflare: Worker english                 │
   (сайт, iPhone, Mac)    │                                                              │
                          │  /, /assets/*, /data/*, index.html …  → статические файлы    │
                          │                                         (web/dist, без кода)  │
@@ -134,9 +134,9 @@
 | Значение | Откуда взять | Куда вписать | Обязательно? |
 |---|---|---|---|
 | Аккаунт Cloudflare | https://dash.cloudflare.com/sign-up (бесплатный план, карта не нужна) | — | да |
-| Поддомен `rasuli-naurizbaev.workers.dev` | задаётся один раз при первом Worker'е в аккаунте (Workers & Pages → подпункт с subdomain; название могло измениться) | — | да |
+| Поддомен `foryourself.workers.dev` | задаётся один раз при первом Worker'е в аккаунте (Workers & Pages → подпункт с subdomain; название могло измениться) | — | да |
 | Доступ Cloudflare к GitHub | при импорте репозитория Cloudflare попросит установить GitHub-приложение и выбрать репозиторий `RasuliNaurizbaev/En` | — | да |
-| Имя Worker'а | `web/wrangler.jsonc` → `name` = `open-english-for-beginner` | поле имени при создании Worker'а | да, **должно совпадать** |
+| Имя Worker'а | `web/wrangler.jsonc` → `name` = `english` | поле имени при создании Worker'а | да, **должно совпадать** |
 | `GEMINI_API_KEY` | https://aistudio.google.com → **API keys** (прямая ссылка https://aistudio.google.com/apikey) → Create API key | секрет Worker'а; локально `web/.dev.vars` | хотя бы один из двух AI-ключей |
 | `GROQ_API_KEY` | https://console.groq.com → **API Keys** (https://console.groq.com/keys) → Create API Key. **Ключ показывается один раз** — сразу сохранить в менеджер паролей | секрет Worker'а; `web/.dev.vars` | хотя бы один из двух AI-ключей |
 | `SUPABASE_URL` | Supabase → **основной** проект → Project URL. Для сайта = `https://rmbcltczrruvlepsmtwd.supabase.co` | секрет Worker'а. В `web/.dev.vars` — URL **тестового** проекта `https://llpbzemgndrsupnpbvhp.supabase.co` | да (для входа по имени и паролю) |
@@ -202,7 +202,7 @@ env.ASSETS         Assets
 
    | Поле в Cloudflare | Значение | Почему |
    |---|---|---|
-   | Project name / Worker name | `open-english-for-beginner` | должно совпадать с `name` в `web/wrangler.jsonc`, иначе `wrangler deploy` создаст/обновит **другой** Worker или сборка упадёт |
+   | Project name / Worker name | `english` | должно совпадать с `name` в `web/wrangler.jsonc`, иначе `wrangler deploy` создаст/обновит **другой** Worker или сборка упадёт |
    | Production branch (в документации — **Git branch**) | `main` | деплой основного сайта только из `main` |
    | Root directory (path) | `web` | `package.json` и `wrangler.jsonc` лежат в `web/` |
    | Build command | `npm run build:pages` | типы + сборка Vite → `web/dist` |
@@ -215,7 +215,7 @@ env.ASSETS         Assets
    Можно также задать `NODE_VERSION` в Build variables — **не** делать без нужды, источником должен оставаться `.node-version`.
    Пакетный менеджер — npm (по `package-lock.json`); зависимости ставятся автоматически перед Build command.
 5. **Deploy** (или **Save and Deploy**). Сборка занимает 1–3 минуты. Сайт откроется по адресу
-   https://open-english-for-beginner.rasuli-naurizbaev.workers.dev (поддомен `rasuli-naurizbaev` — свой у каждого аккаунта; в новом аккаунте адрес будет другим —
+   https://english.foryourself.workers.dev (поддомен `foryourself` — свой у каждого аккаунта; в новом аккаунте адрес будет другим —
    тогда обновите его в `README.md`, `HANDOFF.md`, шапке `web/wrangler.jsonc` и этом документе).
 6. Задать **секреты** (раздел 4). До этого сайт открывается, но вход, AI и озвучка не работают.
 7. Пройти **чек-лист** (раздел 7).
@@ -260,7 +260,7 @@ Worker → **Settings** → **Build(s)**: репозиторий, ветка, Ro
 
 ### 4.2. Способ 1 — панель Cloudflare
 
-Workers & Pages → (Overview) → `open-english-for-beginner` → **Settings** → **Variables and Secrets** → **Add** →
+Workers & Pages → (Overview) → `english` → **Settings** → **Variables and Secrets** → **Add** →
 Type: **Secret** (для `GEMINI_MODEL`/`GROQ_MODEL` — **Text**) → Variable name → Value → **Deploy**.
 
 Значение вставлять **без кавычек и пробелов/переводов строки по краям** (код делает `trim()`, но лучше не рассчитывать).
@@ -332,7 +332,7 @@ development  ──(push)──▶  предпросмотр (npx wrangler previ
 
 - История сборок и логи: Worker → **Deployments** → внизу **View build history** (хранятся 90 дней). Там же — **Retry build**.
 - Ссылка предпросмотра для ветки — **в логе сборки** этой ветки и в разделе **Previews** страницы Worker'а.
-  Формат адреса (по документации): `<имя-ветки>-open-english-for-beginner.rasuli-naurizbaev.workers.dev`.
+  Формат адреса (по документации): `<имя-ветки>-english.foryourself.workers.dev`.
 
 ### 5.3. Секреты в предпросмотре — ⚠ НЕ проверено
 
@@ -431,7 +431,7 @@ npx wrangler deploy
 
 ## 7. Проверка после деплоя (чек-лист)
 
-Адрес: https://open-english-for-beginner.rasuli-naurizbaev.workers.dev
+Адрес: https://english.foryourself.workers.dev
 
 | # | Что сделать | Ожидаемо | Если нет |
 |---|---|---|---|
@@ -454,7 +454,7 @@ curl -s -o /dev/null -w "%{http_code}\n" -H "Range: bytes=0-1" \
 ```
 
 ```bash
-curl -s https://open-english-for-beginner.rasuli-naurizbaev.workers.dev/api/session
+curl -s https://english.foryourself.workers.dev/api/session
 # ожидается {"user":null,"role":null,"services":[]}
 ```
 
@@ -471,7 +471,7 @@ Worker → **Deployments** → **View build history** → нужная сбор�
 
 Код пишет ошибки через `console.error`, например `login: база <текст>` и `session: база <текст>`. Где смотреть:
 
-- **В реальном времени, панель:** Workers & Pages → `open-english-for-beginner` → **Logs** → справа **Live**. Открыть, затем повторить действие на сайте.
+- **В реальном времени, панель:** Workers & Pages → `english` → **Logs** → справа **Live**. Открыть, затем повторить действие на сайте.
 - **Сохранённые логи (Workers Logs):** Worker → **Observability**. По документации включены по умолчанию у новых Worker'ов;
   на бесплатном плане хранятся 3 дня, до 200 000 событий в день. В `web/wrangler.jsonc` блока `observability` **нет** —
   если раздел пустой, добавить `"observability": { "enabled": true }` (изменение кода, через PR).
@@ -507,7 +507,7 @@ Worker → **Deployments** → **View build history** → нужная сбор�
 | Сборка веток падает: `wrangler preview`: missing `previews` block | удалён `"previews": {}` из `web/wrangler.jsonc` | вернуть пустой блок |
 | Сборка падает на `vue-tsc` / `vite build` | ошибка в коде или данных | воспроизвести локально `cd web && npm run build:pages`; проверить, что `web/public/data` пересобраны (`python3 tools/build_site_data.py`) и закоммичены |
 | Сборка падает на `npm ci` | `package-lock.json` не совпадает с `package.json` | локально `npm install`, закоммитить `package-lock.json` |
-| Деплой ушёл в другой Worker / ошибка про имя | `name` в `wrangler.jsonc` ≠ имени Worker'а в Cloudflare | привести к `open-english-for-beginner` |
+| Деплой ушёл в другой Worker / ошибка про имя | `name` в `wrangler.jsonc` ≠ имени Worker'а в Cloudflare | привести к `english` |
 | После merge сайт не обновился | сборка упала или ещё идёт; браузер держит кеш | лог сборки (8.1); жёсткая перезагрузка (`Cmd+Shift+R`) |
 | `/api/...` отдаёт HTML страницы сайта или 404 | нет `"/api/*"` в `run_worker_first` | вернуть `run_worker_first: ["/audio/*", "/api/*"]` |
 | «Вход по имени и паролю ещё не настроен на сервере.» (503) | не задан `SUPABASE_URL` или `SUPABASE_SECRET_KEY` | задать секреты (раздел 4); `npx wrangler secret list` |

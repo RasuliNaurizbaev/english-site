@@ -573,10 +573,10 @@ npm run check                       # типы → модульные тесты
 
 | Ветка | Что происходит | Адрес |
 |---|---|---|
-| `main` | основной сайт (`npx wrangler deploy`) | https://open-english-for-beginner.rasuli-naurizbaev.workers.dev |
+| `main` | основной сайт (`npx wrangler deploy`) | https://english.foryourself.workers.dev |
 | `development` и другие | предпросмотр (`npx wrangler preview`) | ссылка — в логе сборки / на странице Worker'а |
 
-Настройки — в `web/wrangler.jsonc`: имя Worker'а (`open-english-for-beginner`, **должно совпадать с именем в Cloudflare**),
+Настройки — в `web/wrangler.jsonc`: имя Worker'а (`english`, **должно совпадать с именем в Cloudflare**),
 папка с файлами `./dist`, пустой блок `previews` (без него предпросмотр веток падает).
 
 **Скрипт Worker'а** (`web/worker/`) запускается только для `/api/*` и `/audio/*` (`run_worker_first`), всё остальное — статические файлы без кода.
@@ -603,7 +603,7 @@ npm run check                       # типы → модульные тесты
 
    | Поле | Значение |
    |---|---|
-   | Project (Worker) name | `open-english-for-beginner` |
+   | Project (Worker) name | `english` |
    | Production branch | `main` |
    | Root directory (path) | `web` |
    | Build command | `npm run build:pages` |

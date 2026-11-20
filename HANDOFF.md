@@ -9,7 +9,7 @@
 
 ### Git
 ```
-GitHub  origin/main          задеплоено: https://open-english-for-beginner.rasuli-naurizbaev.workers.dev (push/PR/merge — пользователь)
+GitHub  origin/main          задеплоено: https://english.foryourself.workers.dev (push/PR/merge — пользователь)
 local   development          e8bf1be  Add accounts: username/password login, sessions and Supabase migrations
                              4317409  Add my words, word playback, edge-tts audio and move mp3 to Supabase
                              80bb922  последний коммит, где mp3 ещё в git (восстановить: docs/SETUP_LOCAL.md → «mp3 после clone»)
@@ -31,7 +31,7 @@ local   development          e8bf1be  Add accounts: username/password login, ses
 | Повторение: новое слово — Снова сегодня / Трудно завтра / Хорошо 1 неделя / Легко 4 недели, дальше интервал растёт; «Я это уже знаю» показывает сообщение | `domain/spacedRepetition.ts` (`FIRST_INTERVALS`), `pages/ReviewPage.vue` |
 | «Сегодня»: выбор уровня A2 (01–20) / B1 (21–40) → случайный рассказ, повторное нажатие — другой; выбор на день (ключ `storyPick`) | `components/StoryPlanCard.vue`, `application/todayPlan.ts`, `domain/storyLevel.ts` |
 | Деплой: `npm run build:pages` (сборка; mp3 с 2026-11-20 — из Supabase, в сборку не входят), `public/_headers` (кеш), `.node-version` (22) | `web/scripts/copy-audio.mjs`, README → «Деплой» |
-| Хостинг — **Cloudflare Worker** `open-english-for-beginner` (а не Pages): `web/wrangler.jsonc` с `assets` и пустым `previews` — без него сборка веток падала (`wrangler preview`: missing `previews` block) | `web/wrangler.jsonc` |
+| Хостинг — **Cloudflare Worker** `english` (а не Pages): `web/wrangler.jsonc` с `assets` и пустым `previews` — без него сборка веток падала (`wrangler preview`: missing `previews` block) | `web/wrangler.jsonc` |
 | Перемотка mp3: статические файлы Worker'а отдаются только целиком, поэтому скрипт Worker'а для `/audio/*` отдаёт части. **Проверено на сайте:** `Range: bytes=0-1` → `HTTP/2 206` | `web/worker/index.ts`, `web/worker/range.ts` |
 | **Вход по коду доступа** (вместо Cloudflare Access — тот требует карту): секрет `ACCESS_CODES` = `имя:код, имя:код` (код ≥ 12 символов); на сайте вводится **только код**; HttpOnly-cookie на год (`Path=/api`; `Secure` только по https — иначе Safari на `http://localhost` не входит) | `web/worker/auth.ts` |
 | **AI-посредник** `/api/*`: `GET /api/session`, `POST /api/login`, `POST /api/logout`, `POST /api/ai/complete`, `GET /api/ai/check` (модель и время ответа по сервисам — открыть в браузере после входа). Ключи `GEMINI_API_KEY`, `GROQ_API_KEY` — только в секретах Worker'а | `web/worker/api.ts`, `web/src/data/ai/serverAi.ts` |
@@ -140,7 +140,7 @@ local   development          e8bf1be  Add accounts: username/password login, ses
 
 | # | Вопрос | Статус |
 |---|---|---|
-| 1 | **Хостинг** сайта и mp3 | **решено:** Cloudflare **Worker** со статическими файлами (не Pages — Worker основной продукт, удобнее для AI-посредника и будущих сервисов), сайт (`npm run build:pages`; mp3 — в Supabase Storage с 2026-11-20), сборка из GitHub; адрес https://open-english-for-beginner.rasuli-naurizbaev.workers.dev; настройка — README → «Деплой» |
+| 1 | **Хостинг** сайта и mp3 | **решено:** Cloudflare **Worker** со статическими файлами (не Pages — Worker основной продукт, удобнее для AI-посредника и будущих сервисов), сайт (`npm run build:pages`; mp3 — в Supabase Storage с 2026-11-20), сборка из GitHub; адрес https://english.foryourself.workers.dev; настройка — README → «Деплой» |
 | 2 | Ветки | **решено:** `development` → Pull Request → `main` |
 | 3 | Прогресс между устройствами | **сделано:** резервная копия в файл («Сегодня» → «💾 Резервная копия прогресса») |
 | 4 | mp3 для рассказов 21–40 | **позже** |
